@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mumu.iml" filepath="$PROJECT_DIR$/mumu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-blog/mumu-blog.iml" filepath="$PROJECT_DIR$/mumu-blog/mumu-blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-cms/mumu-cms.iml" filepath="$PROJECT_DIR$/mumu-cms/mumu-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-cms/mumu-cms-api/mumu-cms-api.iml" filepath="$PROJECT_DIR$/mumu-cms/mumu-cms-api/mumu-cms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-cms/mumu-cms-service/mumu-cms-service.iml" filepath="$PROJECT_DIR$/mumu-cms/mumu-cms-service/mumu-cms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml" filepath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-fdfs/mumu-common-fdfs.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/mumu-common-fdfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-redis/mumu-common-redis.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-redis/mumu-common-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-oa/mumu-oa.iml" filepath="$PROJECT_DIR$/mumu-oa/mumu-oa.iml" />
+    </modules>
+  </component>
+</project>

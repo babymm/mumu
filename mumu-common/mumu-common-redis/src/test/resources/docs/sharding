@@ -1,0 +1,8 @@
+Different implementations of partitioning
+Partitioning can be the responsibility of different parts of a software stack.
+
+Client side partitioning means that the clients directly select the right node where to write or read a given key. Many Redis clients implement client side partitioning.
+
+Proxy assisted partitioning means that our clients send requests to a proxy that is able to speak the Redis protocol, instead of sending requests directly to the right Redis instance. The proxy will make sure to forward our request to the right Redis instance accordingly to the configured partitioning schema, and will send the replies back to the client. The Redis and Memcached proxy Twemproxy implements proxy assisted partitioning.
+
+Query routing means that you can send your query to a random instance, and the instance will make sure to forward your query to the right node. Redis Cluster implements an hybrid form of query routing, with the help of the client (the request is not directly forwarded from a Redis instance to another, but the client gets redirected to the right node).

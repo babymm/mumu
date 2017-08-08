@@ -1,0 +1,24 @@
+1配置sentinel
+port 63791
+daemonize yes
+logfile "/var/log/sentinel_63791.log"
+protected-mode no
+sentinel monitor mymaster 120.77.13.93 6379 1
+sentinel down-after-milliseconds mymaster 5000
+sentinel failover-timeout mymaster 18000
+sentinel auth-pass mymaster 123456
+sentinel parallel-syncs mymaster 1
+
+2 主redis服务器(master)
+port 6379
+daemonize yes
+requirepass 123456
+masterauth 123456
+
+3 从redis服务器(slave)
+port 6379
+daemonize yes
+requirepass 123456
+slaveof 120.77.13.93 6379  #master redis地址
+masterauth 123456
+

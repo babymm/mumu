@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-blog" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-cms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-cms/mumu-cms-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-cms/mumu-cms-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-cms/mumu-cms-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-fdfs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-security" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-template" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-oa" charset="UTF-8" />
+  </component>
+</project>

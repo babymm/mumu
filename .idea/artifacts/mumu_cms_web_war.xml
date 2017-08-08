@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mumu-cms-web:war">
+    <output-path>$PROJECT_DIR$/mumu-cms/mumu-cms-web/target</output-path>
+    <root id="archive" name="cms.war">
+      <element id="artifact" artifact-name="mumu-cms-web:war exploded" />
+    </root>
+  </artifact>
+</component>

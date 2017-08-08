@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- 采用注释的方式配置bean -->
+    <context:annotation-config/>
+
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <context:property-placeholder location="classpath:properties/*.properties"/>
+
+    <!-- 配置要扫描的包 -->
+    <context:component-scan base-package="com.lovecws.mumu,com.lovecws.mumu.common"/>
+    <!--<import resource="classpath*:spring/spring-cms-service.xml"/>-->
+
+    <import resource="classpath:spring/spring-dao.xml"/>
+    <import resource="classpath*:spring/spring-cms-context.xml"/>
+
+    <!---redis缓存-->
+    <import resource="classpath:spring/spring-common-redis.xml"/>
+
+    <!---apache shiro权限控制-->
+    <import resource="classpath:spring/spring-shiro.xml"/>
+
+    <!---图片服务器-->
+    <import resource="classpath:spring/spring-common-fdfs.xml"/>
+</beans>

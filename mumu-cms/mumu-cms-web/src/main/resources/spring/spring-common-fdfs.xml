@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- proxy-target-class默认"false",更改为"ture"使用CGLib动态代理 -->
+	<aop:config proxy-target-class="true" />
+
+	<!-- 采用注释的方式配置bean -->
+	<context:annotation-config />
+
+	<!-- 配置要扫描的包 -->
+	<!--<context:component-scan base-package="com.lovecws.mumu.storage.fdfs.service" />-->
+
+	<!-- fastdfs分布式文件系统 -->
+	<bean id="fdfsAttachmentService" class="com.lovecws.mumu.common.fdfs.service.FDFSAttachmentServiceImpl"
+		init-method="init" destroy-method="destory" scope="singleton"
+		lazy-init="true">
+		<property name="configPath" value="fdfs_client.conf" />
+		<property name="webPath" value="http://www.xiaomoc.top" />
+	</bean>
+</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mumu-blog" />
+        <module name="mumu-cms-api" />
+        <module name="mumu-cms-service" />
+        <module name="mumu-cms-web" />
+        <module name="mumu-common-core" />
+        <module name="mumu-common-fdfs" />
+        <module name="mumu-common-redis" />
+        <module name="mumu-common-security" />
+        <module name="mumu-common-template" />
+        <module name="mumu-oa" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mumu" target="1.8" />
+      <module name="mumu-blog" target="1.8" />
+      <module name="mumu-cms" target="1.8" />
+      <module name="mumu-cms-api" target="1.8" />
+      <module name="mumu-cms-service" target="1.8" />
+      <module name="mumu-cms-web" target="1.8" />
+      <module name="mumu-common" target="1.8" />
+      <module name="mumu-common-core" target="1.8" />
+      <module name="mumu-common-fdfs" target="1.8" />
+      <module name="mumu-common-redis" target="1.8" />
+      <module name="mumu-common-security" target="1.8" />
+      <module name="mumu-common-template" target="1.8" />
+      <module name="mumu-oa" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
