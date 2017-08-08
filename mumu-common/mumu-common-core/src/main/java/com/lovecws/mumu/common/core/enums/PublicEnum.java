@@ -8,19 +8,19 @@ package com.lovecws.mumu.common.core.enums;
 public enum PublicEnum {
 
 	/**
-	 * 禁用 0
+	 * 禁用 forbit
 	 */
-	FORBIDDEN("0"),
+	FORBIDDEN("forbit"),
 
 	/**
-	 * 正常 1
+	 * 正常 normal
 	 */
-	NORMAL("1"),
+	NORMAL("normal"),
 
 	/**
-	 * 删除 2
+	 * 删除 delete
 	 */
-	DELETE("2");
+	DELETE("delete");
 
 	/** 描述 */
 	private String status;

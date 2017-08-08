@@ -52,7 +52,6 @@ public class PageParam implements Serializable {
 	/**
 	 * 带参数的构造函数
 	 * @param currentPage
-	 * @param numPerPage
 	 */
 	public PageParam(int currentPage) {
 		if(currentPage<1){

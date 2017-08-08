@@ -78,4 +78,8 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>common-fdfs</finalName>
+    </build>
 </project>

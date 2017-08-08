@@ -7,22 +7,22 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 模块是否缓存注解
+ * 模块接口访问限制
  * @author ganliang
  */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface ModularCache {
+public @interface MumuLimit {
 
 	/**
-	 * 是否缓存 ;默认缓存
+	 * 模块限制
 	 * @return
 	 */
-	public boolean cache() default true;
+	public boolean limit() default true;
 	
 	/**
-	 * 缓存的key前缀
+	 * 前缀
 	 * @return
 	 */
 	public String prefix();
@@ -34,10 +34,14 @@ public @interface ModularCache {
 	public int[] order() default {0};
 	
 	/**
-	 * -1 默认永不过期
-	 * >0 设置缓存时间
-	 * 0 设置删除缓存
+	 * 限制次数
 	 * @return
 	 */
-	public int expire() default -1;
+	public int count() default 3;
+	
+	/**
+	 * 过期时间 默认3600s
+	 * @return
+	 */
+	public int expire() default 3600;
 }
