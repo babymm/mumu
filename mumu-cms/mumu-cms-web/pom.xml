@@ -10,7 +10,7 @@
     <packaging>war</packaging>
     <name>mumu-cms-web Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    <description>华四金融后台管理系统</description>
+    <description>内容管理系统</description>
     <dependencies>
         <!--common -->
         <dependency>
