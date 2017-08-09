@@ -1,0 +1,114 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<style type="text/css">
+    .wrapper .layui-form-label{
+        width: 120px;
+    }
+    .wrapper .layui-input-block{
+        margin-left: 120px;
+    }
+</style>
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>数据字典详情</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/ddl/index','ddls')">数据字典</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/ddl/view/$!systemDDL.id','ddls',true)">数据字典详情</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <input type="hidden" name="id" value="$!systemDDL.id">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">数据字典内码</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="ddlCode" value="$!systemDDL.ddlCode" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入数据字典内码*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">上级字典内码</label>
+                            <div class="layui-input-inline">
+                                <select class="form-control" id="parentCode" name="parentCode">
+                                    <option value="">全部</option>
+                                    #foreach($ddl in $systemDDLs)
+                                        #if($!systemDDL.parentCode==$!ddl.ddlCode)
+                                            <option value="$!ddl.ddlCode" selected="selected">$ddl.ddlValue</option>
+                                        #else
+                                            <option value="$!ddl.ddlCode">$ddl.ddlValue</option>
+                                            #*#if($!systemDDL.ddlCode!=$!ddl.ddlCode)
+                                                <option value="$!ddl.ddlCode">$ddl.ddlValue</option>
+                                            #end*#
+                                        #end
+                                    #end
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入产品分类*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">数据字典数值</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="ddlValue" value="$!systemDDL.ddlValue" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入数据字典数值*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">数据字典排序</label>
+                            <div class="layui-input-inline">
+                                <input type="number" name="ddlNumber" value="$!systemDDL.ddlNumber" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">数据字典排序*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block submit-btn">
+                                <button class="layui-btn" lay-submit lay-filter="systemDDLForm">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/lay/modules/element.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        layui.use(['form'], function(){
+            var form = layui.form();
+            //监听提交
+            form.on('submit(systemDDLForm)', function(data){
+                $.post("$request.getContextPath()/system/ddl/edit",data.field,function(responseData){
+                    //保存成功 关闭当前页
+                    layer.msg(responseData.msg,{
+                        icon: 1,
+                        skin: 'demo-class',
+                        title :'信息',
+                        time:2000,
+                        area: ['300px', '200px'],
+                        offset: 'rb',
+                        end :function(){
+                            if(responseData.code==200){
+                                changeFrameSrc("$request.getContextPath()/system/ddl/index",'ddls')
+                            }
+                        }
+                    });
+                });
+                return false;
+            });
+        });
+    });
+</script>

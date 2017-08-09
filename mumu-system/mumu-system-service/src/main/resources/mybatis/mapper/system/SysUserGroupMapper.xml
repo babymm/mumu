@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysUserGroupDaoImpl">
+	<resultMap id="SysUserGroupResultMap" type="com.lovecws.mumu.system.entity.SysUserGroup">
+		<id column="user_group_id" property="userGroupId" jdbcType="INTEGER" />
+		<result column="user_group_status" property="userGroupStatus" jdbcType="VARCHAR" />
+		<result column="creator" property="creator" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" />
+		
+		<result column="group_id" property="groupId" jdbcType="INTEGER" />
+		<result column="user_id" property="userId" jdbcType="INTEGER"/>
+		<result column="privilage" property="privilage" jdbcType="INTEGER"/>
+		
+		<result column="user_name" property="userName" jdbcType="INTEGER"/>
+	</resultMap>
+	<sql id="SysUserGroupColumn">
+		user_group_id,user_group_status,creator,create_time,group_id,user_id,privilage
+  	</sql>
+
+    <!-- 查询用户组织关系数据 -->
+	<select id="listByColumn" resultMap="SysUserGroupResultMap"
+		parameterType="map">
+		select
+		<include refid="SysUserGroupColumn"></include>
+		from sys_user_group
+		<where>
+			<if test="groupId!=null and groupId!=''">
+				or group_id=#{groupId}
+			</if>
+			<if test="userId!=null and userId!=''">
+				and user_id=#{userId}
+			</if>
+		</where>
+	</select>
+	
+    
+	<!-- 插入组织机构-->
+	<insert id="insert" parameterType="SysUserGroup" useGeneratedKeys="true"
+		keyProperty="userGroupId">
+		insert into sys_user_group
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userGroupStatus != null">
+				user_group_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="groupId != null">
+				group_id,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="privilage != null">
+				privilage,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userGroupStatus != null">
+				#{userGroupStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="groupId != null">
+				#{groupId},
+			</if>
+			<if test="userId != null">
+				#{userId},
+			</if>
+			<if test="privilage != null">
+				#{privilage},
+			</if>
+		</trim>
+	</insert>
+	
+	<!-- 更改-->
+	<update id="updateByPrimaryKey" parameterType="SysUserGroup">
+		update sys_user_group
+		<set>
+			<if test="userGroupStatus != null">
+				user_uroup_status=#{userGroupStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="groupId != null">
+				group_id=#{groupId},
+			</if>
+			<if test="userId != null">
+				user_id=#{userId},
+			</if>
+			<if test="privilage != null">
+				privilage=#{privilage},
+			</if>
+		</set>
+		where user_group_id = #{userGroupId}
+	</update>
+
+	<!-- 删除组用户关系-->
+	<delete id="deleteByPrimaryKey" parameterType="map">
+		delete from
+		sys_user_group where user_group_id=#{userGroupId}
+	</delete>
+	
+	<!-- 根据用户组id、用户id 删除用户角色-->
+	<delete id="batchDeleteByColumn" parameterType="map">
+		delete from sys_user_group
+		<where>
+			<if test="userId!=null">
+				and user_id=#{userId}
+			</if>
+			<if test="groupId!=null">
+				and group_id=#{groupId}
+			</if>
+		</where>
+	</delete>
+	
+	<!-- 获取详情 -->
+	<select id="selectByPrimaryKey" resultType="SysUserGroup"
+		parameterType="map">
+		select
+		ug.*,u.user_name
+		from sys_user_group ug inner join sys_user u on(ug.user_id=u.user_id)
+		where ug.user_group_id = #{userGroupId}
+	</select>
+</mapper>

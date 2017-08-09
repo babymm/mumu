@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--配置全局属性 -->
+	<settings>
+		<!-- 开启全局缓存 -->
+		<setting name="cacheEnabled" value="true" />
+		<!--使用jdbc的getGeneratekeys获取自增主键值 -->
+		<setting name="useGeneratedKeys" value="true" />
+		<!--使用列别名替换别名 默认true -->
+		<setting name="useColumnLabel" value="true" />
+		<!--开启驼峰命名转换Table:create_time到 Entity(createTime) -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<!-- 配置方言 -->
+	<typeAliases>
+	    <!-- system -->
+		<typeAlias type="com.lovecws.mumu.system.entity.SysDDL" alias="SysDDL" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysMenu" alias="SysMenu" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysPermission" alias="SysPermission" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysRole" alias="SysRole" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysRoleMenu" alias="SysRoleMenu" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysRolePermission" alias="SysRolePermission" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysUser" alias="SysUser" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysUserRole" alias="SysUserRole" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysUserLog" alias="SysUserLog" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysExportModel" alias="SysExportModel" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysOrganize" alias="SysOrganize" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysGroup" alias="SysGroup" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysUserGroup" alias="SysUserGroup" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysGroupRole" alias="SysGroupRole" />
+	</typeAliases>
+
+	<!-- 配置映射文件 -->
+	<mappers>
+	    <!--system -->
+		<mapper resource="mybatis/mapper/system/SysDDLMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysMenuMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysPermissionMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysRoleMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysRoleMenuMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysRolePermissionMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysUserMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysUserRoleMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysUserLogMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysExportModelMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysOrganizeMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysGroupMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysUserGroupMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysGroupRoleMapper.xml" />
+	</mappers>
+</configuration>

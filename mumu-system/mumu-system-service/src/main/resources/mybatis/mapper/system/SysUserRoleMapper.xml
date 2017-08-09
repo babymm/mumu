@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysUserRoleDaoImpl">
+	<resultMap id="SysUserRoleResultMap" type="com.lovecws.mumu.system.entity.SysUserRole">
+		<id column="user_role_id" property="userRoleId" />
+		<result column="user_role_status" property="userRoleStatus" />
+
+		<result column="creator" property="creator" />
+		<result column="create_time" property="createTime" />
+
+		<result column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="role_id" property="roleId" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="SysUserRoleColumn">
+		user_role_id,user_role_status,creator,create_time,role_id,user_id
+	</sql>
+
+	<!-- 根据角色id、用户id 删除用户角色-->
+	<delete id="batchDeleteByColumn" parameterType="map">
+		delete from sys_user_role
+		<where>
+			<if test="userId!=null">
+				and user_id=#{userId}
+			</if>
+			<if test="roleId!=null">
+				and role_id=#{roleId}
+			</if>
+		</where>
+	</delete>
+
+	<!-- 批量添加 用户角色 -->
+	<insert id="batchInsert" parameterType="SysUserRole"
+		useGeneratedKeys="true" keyProperty="userRoleId">
+		insert into sys_user_role
+		(user_role_status,creator,create_time,role_id,user_id)
+		values
+		<foreach collection="list" item="item" index="index"
+			separator=",">
+			(
+			#{item.userRoleStatus},
+			#{item.creator},
+			#{item.createTime},
+			#{item.roleId},
+			#{item.userId}
+			)
+		</foreach>
+	</insert>
+</mapper>

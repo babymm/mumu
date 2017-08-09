@@ -1,0 +1,43 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>导出模型详情</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/export/index','exports')">导出设置</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/export/view/$!modelId','exports',true)">导出模型详情</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <table id="table" data-toggle="table" data-click-to-select="true"
+                           data-url="$request.getContextPath()/system/export/viewSelect/$!modelId" data-query-params="queryParams">
+                        <thead>
+                        <tr>
+                            <th data-field="fieldName">字段</th>
+                            <th data-field="remarks">注释</th>
+                            <th data-field="fieldType">类型</th>
+                            <th data-field="fieldSize">长度</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>

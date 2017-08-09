@@ -1,0 +1,113 @@
+<head>
+    <style type="text/css">
+        .foot-wrap{
+            background-color: #373f48;
+            margin-top:80px;
+        }
+        .container-fluid .container .row .row-content h3{
+            text-align: center;
+        }
+        .container-fluid .container .row .row-content ul li{
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 1px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--采用container-fluid，使得整个页尾的宽度为100%，并设置它的背景色-->
+<footer class="container-fluid foot-wrap navbar-fixed-bottom">
+<!--<footer class="container-fluid foot-wrap">-->
+    <!--采用container，使得页尾内容居中 -->
+    <div class="container">
+        <div class="row">
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><a href="tencent://message/?uin=915827225&Site=&menu=yes" target="_blank">QQ:915827225</a></li>
+                    <li><a href="https://wx.qq.com/" target="_blank">微信:loveCWS</a></li>
+                    <li><a href="https://mail.google.com" target="_blank">邮箱:lovercws@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
+                <h3>我的项目</h3>
+                <ul>
+                    <li><a href="#">CMS管理系统</a></li>
+                    <li><a href="#">慕慕博客系统</a></li>
+                    <li><a href="#">慕慕小家贴吧</a></li>
+                </ul>
+            </div>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
+                <h3>网站信息</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Why One Page?</a></li>
+                    <li><a href="#">OPL Blog</a></li>
+                    <li><a href="#">Product Hunt</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
+                <h3>RESOURCES</h3>
+                <ul>
+                    <li><a href="#">Browse All</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+            </div>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
+                <h3>项目发展</h3>
+                <ul>
+                    <li><a href="http://maven.apache.org/" target="_blank">maven搭建</a></li>
+                    <li><a href="http://pre.conf.hipac.cn/" target="_blank">disconf分布式配置</a></li>
+                </ul>
+            </div>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
+                <h3>站点信息</h3>
+                <ul>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">文章归档</a></li>
+                </ul>
+            </div>
+
+        </div><!--/.row -->
+    </div><!--/.container-->
+
+    <!-- 社交图标列表，其中图标采用的是Font Awesome图标字体库-->
+    <ul class="social">
+        <li>
+            <a href="#" title="Twitter Profile">
+                <span class="icon fa fa-twitter"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Facebook Page">
+                <span class="icon fa fa-facebook"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="LinkedIn Profile">
+                <span class="icon fa fa-linkedin"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Goole+ Profile">
+                <span class="icon fa fa-google"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" title="Github Profile">
+                <span class="icon fa fa-github"></span>
+            </a>
+        </li>
+    </ul>
+    <p align="center" style="margin-top: 20px;color:#878B91;">
+        Copyright &copy;2017 慕慕 官网
+    </p>
+</footer>
+</body>
+

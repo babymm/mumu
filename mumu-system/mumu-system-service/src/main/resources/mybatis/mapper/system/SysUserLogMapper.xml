@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysUserLogDaoImpl">
+	<resultMap id="SysUserLogResultMap" type="com.lovecws.mumu.system.entity.SysUserLog">
+		<id column="user_log_id" property="userLogId" />
+		<result column="user_log_status" property="userLogStatus" />
+
+		<result column="creator" property="creator" />
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" />
+
+		<result column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="user_name" property="userName" jdbcType="VARCHAR" />
+		<result column="operate_type" property="operateType" jdbcType="VARCHAR" />
+
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+		<result column="method" property="method" jdbcType="VARCHAR" />
+
+		<result column="parameter" property="parameter" jdbcType="VARCHAR" />
+		<result column="result" property="result" jdbcType="VARCHAR" />
+		<result column="usetime" property="usetime" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<resultMap id="logStatisticsResultMap" type="SysUserLog">
+		<id column="logCount" property="logCount"/>
+		<result column="logTime" property="logTime"/>
+	</resultMap>
+	
+	<sql id="SysUserLogColumn">
+		user_log_id,user_log_status,creator,create_time,editor,edit_time,remark,user_id,user_name,operate_type,ip,content,method,parameter,result,usetime
+	</sql>
+
+	<!-- 分页获取用户日志列表 -->
+	<select id="listPage" resultMap="SysUserLogResultMap"
+		parameterType="map">
+		select
+		<include refid="SysUserLogColumn"></include>
+		from sys_user_log
+		<where>
+			<if test="userLogStatus!=null">
+				and user_log_status=#{userLogStatus}
+			</if>
+			<if test="startDate!='' and endDate==''">
+				and DATE_FORMAT(create_time,'%Y-%m-%d') &gt;= DATE_FORMAT(#{startDate},'%Y-%m-%d')
+			</if>
+			<if test="startDate=='' and endDate!=''">
+				and DATE_FORMAT(create_time,'%Y-%m-%d') &lt;=  DATE_FORMAT(#{endDate},'%Y-%m-%d')
+			</if>
+			<if test="startDate!='' and endDate!=''">
+				and DATE_FORMAT(create_time,'%Y-%m-%d') BETWEEN DATE_FORMAT(#{startDate},'%Y-%m-%d') and DATE_FORMAT(#{endDate},'%Y-%m-%d')
+			</if>
+		</where>
+		order by create_time desc
+		limit #{pageFirst},#{pageSize}
+	</select>
+
+	<!-- 查询用户日志数据量 -->
+	<select id="listPageCount" resultType="LONG">
+		select count(user_log_id) from sys_user_log
+		<where>
+			<if test="userLogStatus!=null">
+				and user_log_status=#{userLogStatus}
+			</if>
+			<if test="startDate!='' and endDate==''">
+				and DATE_FORMAT(create_time,'%Y-%m-%d') &gt;= DATE_FORMAT(#{startDate},'%Y-%m-%d')
+			</if>
+			<if test="startDate=='' and endDate!=''">
+				and DATE_FORMAT(create_time,'%Y-%m-%d') &lt;=  DATE_FORMAT(#{endDate},'%Y-%m-%d')
+			</if>
+			<if test="startDate!='' and endDate!=''">
+				and DATE_FORMAT(create_time,'%Y-%m-%d') BETWEEN DATE_FORMAT(#{startDate},'%Y-%m-%d') and DATE_FORMAT(#{endDate},'%Y-%m-%d')
+			</if>
+		</where>
+	</select>
+	<!-- 插入日志 -->
+	<insert id="insert" parameterType="SysUserLog" useGeneratedKeys="true"
+		keyProperty="userLogId">
+		insert into sys_user_log
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userLogStatus != null">
+				user_log_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="userName != null">
+				user_name,
+			</if>
+			<if test="operateType != null">
+				operate_type,
+			</if>
+			<if test="ip != null">
+				ip,
+			</if>
+			<if test="content != null">
+				content,
+			</if>
+			<if test="method != null">
+				method,
+			</if>
+			<if test="parameter != null">
+				parameter,
+			</if>
+			<if test="result != null">
+				result,
+			</if>
+			<if test="usetime != null">
+				usetime,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userLogStatus != null">
+				#{userLogStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="userId != null">
+				#{userId},
+			</if>
+			<if test="userName != null">
+				#{userName},
+			</if>
+			<if test="operateType != null">
+				#{operateType},
+			</if>
+			<if test="ip != null">
+				#{ip},
+			</if>
+			<if test="content != null">
+				#{content},
+			</if>
+			<if test="method != null">
+				#{method},
+			</if>
+			<if test="parameter != null">
+				#{parameter},
+			</if>
+			<if test="result != null">
+				#{result},
+			</if>
+			<if test="usetime != null">
+				#{usetime},
+			</if>
+		</trim>
+	</insert>
+	
+	<!-- 删除用户操作日志 -->
+	<delete id="deleteByPrimaryKey" parameterType="map">
+		delete from
+		sys_user_log where user_log_id=#{userLogId}
+	</delete>
+	
+	<!-- 分页获取用户日志列表 -->
+	<select id="logStatistics" resultMap="logStatisticsResultMap"
+		parameterType="map">
+		select count(*) logCount,DATE_FORMAT(create_time,'%Y-%m-%d 00:00:00') logTime from sys_user_log group by logTime
+	</select>
+</mapper>

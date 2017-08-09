@@ -1,0 +1,130 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<style type="text/css">
+    .wrapper .layui-form-label{
+        width: 120px;
+    }
+    .wrapper .layui-input-block{
+        margin-left: 120px;
+    }
+</style>
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>菜单详情</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/menu/index','menus')">菜单管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/menu/view/$!menu.menuId','menus',true)">菜单详情</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <input type="hidden" name="menuId" value="$!menu.menuId">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">菜单内码</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="menuCode" value="$!menu.menuCode" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入菜单内码*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">菜单名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="menuName" value="$!menu.menuName" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入菜单名称*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">菜单地址</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="menuUrl" value="$!menu.menuUrl" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入菜单地址*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">菜单编号</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="menuNum" value="$!menu.menuNum" required lay-verify="required" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入菜单编号(影响菜单排序规则)*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">菜单图标</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="menuIcon" value="$!menu.menuIcon" required lay-verify="required" autocomplete="off"
+                                       class="layui-input menuIcon">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入菜单图标*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">可见性</label>
+                            <div class="layui-input-inline">
+                                #if($!menu.menuVisible=='show')
+                                    <input type="radio" name="menuVisible" value="show" title="可见" checked>
+                                    <input type="radio" name="menuVisible" value=hidden title="隐藏">
+                                #else
+                                    <input type="radio" name="menuVisible" value="show" title="可见">
+                                    <input type="radio" name="menuVisible" value=hidden title="隐藏" checked>
+                                #end
+
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">父菜单</label>
+                            <div class="layui-input-inline">
+                                <select name="parentMenuId" required lay-verify="required">
+                                    <option value="0">顶级菜单</option>
+                                    #foreach($m in $topMenus)
+                                        #if($!menu.parentMenuId==$!m.menuId)
+                                            <option selected="selected" value="$!m.menuId">$!m.menuName</option>
+                                        #else
+                                            <option value="$!m.menuId">$!m.menuName</option>
+                                        #end
+                                    #end
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">指定菜单类型</div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">角色描述</label>
+                            <div class="layui-input-block">
+                                <textarea id="menuDesc" name="remark" placeholder="请输入角色描述" class="layui-textarea">$!menu.remark</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //菜单图标选择
+        $("input[name='menuIcon']").click(function (e) {
+            layer.open({
+                type: 2,
+                title: '选择图标',
+                maxmin: true,
+                content: ['$request.getContextPath()/common/image/icon', 'yes'],
+                area: ['800px', '600px']
+            });
+        });
+        layui.use(['form', 'layedit'], function(){
+            var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+            var menuDescIndex = layedit.build('menuDesc', {tool: ['strong', 'italic' , 'underline' , '|', 'left' , 'center' , 'right' ]});
+        });
+    });
+</script>

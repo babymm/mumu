@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>baby慕慕开发平台</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="$request.getContextPath()/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="$request.getContextPath()/resources/css/AdminLTE.min.css">
+</head>
+<body class="hold-transition login-page" style="height: auto;background-color:#fff;">
+#parse("header.vm")
+<div class="login-box" id="rrapp" style="width: 22%;min-width: 400px;">
+  <div class="login-logo">
+    <b>baby慕慕权限管理系统<br></b>
+  </div>
+  <div class="login-box-body">
+      <form action="/system/logining" method="post" enctype="application/x-www-form-urlencoded">
+      <p class="login-box-msg" style="display: none">管理员登录</p>
+      #if($!shiroLoginFailure)
+          <div class="alert alert-danger alert-dismissible">
+              <h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i>$!shiroLoginFailure</h4>
+          </div>
+      #end
+      <div class="form-group has-feedback">
+        <input type="text" name="username" class="form-control" placeholder="账号">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" class="form-control" placeholder="密码">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+          <input type="text" name="captchaCode" class="form-control" placeholder="验证码">
+          <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+          <img id="rcCaptchaImg" alt="如果看不清楚，请单击图片刷新！" class="pointer" src="$request.getContextPath()/rcCaptcha" onclick="changeRcCaptchaImg()">
+          &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" onclick="changeRcCaptchaImg()">点击刷新</a>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" style="margin: 0 auto;" class="btn btn-primary btn-block btn-flat">登录</button>
+        </div>
+      </div>
+      </form>
+  </div>
+</div>
+#parse("footer.vm")
+<script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function changeRcCaptchaImg() {
+        $("#rcCaptchaImg").attr("src","$request.getContextPath()/rcCaptcha?t="+new Date().getTime());
+    }
+</script>
+</body>
+</html>

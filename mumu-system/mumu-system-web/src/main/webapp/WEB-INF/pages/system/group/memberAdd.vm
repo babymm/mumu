@@ -1,0 +1,101 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<style type="text/css">
+    .wrapper .layui-form-label{
+        width: 120px;
+    }
+    .wrapper .layui-input-block{
+        margin-left: 120px;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>群组添加用户</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/group/index','groups')">用户群组</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/group/members/$!groupId','groups',true)">用户组成员</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/group/memberAdd/$!groupId','groups',true)">群组添加用户</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <input type="hidden" name="groupId" value="$!groupId">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">选择用户</label>
+                            <div class="layui-input-inline">
+                                <select name="userId" required lay-verify="required">
+                                    #foreach($user in $users)
+                                        <option value="$user.userId">$user.userName</option>
+                                    #end
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户权限</label>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="privilage" value="1" title="员工" checked>
+                                <input type="radio" name="privilage" value="2" title="副组长">
+                                <input type="radio" name="privilage" value="3" title="组长">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">用户描述</label>
+                            <div class="layui-input-block">
+                                <textarea id="groupDesc" name="remark" placeholder="请输入用户组描述"
+                                          class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block submit-btn">
+                                <button class="layui-btn" lay-submit lay-filter="addGroupUserForm">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        layui.use(['form', 'layedit'], function(){
+            var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+            var groupDescIndex = layedit.build('groupDesc', {tool: ['strong', 'italic' , 'underline' , '|', 'left' , 'center' , 'right' ]});
+            //监听提交
+            form.on('submit(addGroupUserForm)', function(data){
+                var remark = layedit.getContent(groupDescIndex);
+                data.field.remark = remark;
+                $.post("$request.getContextPath()/system/group/memberAdd",data.field,function(responseData){
+                    //保存成功 关闭当前页
+                    layer.msg(responseData.msg,{
+                        icon: 1,
+                        skin: 'demo-class',
+                        title :'信息',
+                        time:2000,
+                        area: ['300px', '200px'],
+                        offset: 'rb',
+                        end :function(){
+                            if(responseData.code==200){
+                                changeFrameSrc("$request.getContextPath()/system/group/members/$!groupId",'groups')
+                            }
+                        }
+                    });
+                });
+                return false;
+            });
+        });
+    });
+</script>

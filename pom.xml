@@ -10,6 +10,7 @@
     <module>mumu-cms</module>
     <module>mumu-oa</module>
     <module>mumu-blog</module>
+      <module>mumu-system</module>
   </modules>
   <packaging>pom</packaging>
 

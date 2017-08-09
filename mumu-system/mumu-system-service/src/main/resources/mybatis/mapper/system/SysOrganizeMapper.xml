@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysOrganizeDaoImpl">
+	<resultMap id="SysOrgResultMap" type="com.lovecws.mumu.system.entity.SysOrganize">
+		<id column="org_id" property="orgId" jdbcType="INTEGER" />
+		<result column="org_status" property="orgStatus" jdbcType="INTEGER" />
+		<result column="creator" property="creator" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" />
+		
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+
+		<result column="org_name" property="orgName" jdbcType="VARCHAR" />
+		<result column="parent_org_id" property="parentOrgId" jdbcType="INTEGER"/>
+		<result column="parent_org_name" property="parentOrgName" jdbcType="VARCHAR"/>
+	</resultMap>
+	<sql id="SysOrgColumn">
+		org_id,org_status,creator,create_time,editor,edit_time,remark,
+		org_name,parent_org_id
+	</sql>
+
+	<!-- 分页查询组织机构列表 -->
+	<select id="listPage" resultMap="SysOrgResultMap"
+		parameterType="map">
+		select
+		org.org_id,org.org_status,org.creator,org.create_time,org.editor,org.edit_time,org.remark,org.org_name,org.parent_org_id,
+		(select org_name from sys_organize where org_id=org.parent_org_id) parent_org_name
+		from sys_organize org
+		<where>
+			<if test="orgName!=null and orgName!=''">
+				and org.org_name=#{orgName}
+			</if>
+			<if test="orgStatus!=null and orgStatus!=''">
+				and org.org_status=#{orgStatus}
+			</if>
+		</where>
+		order by org.create_time desc
+		limit #{pageFirst},#{pageSize}
+	</select>
+	
+    <!-- 分页获取组织机构数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(org_id) from sys_organize
+    	<where>
+			<if test="orgName!=null and orgName!=''">
+				and org_name=#{orgName}
+			</if>
+			<if test="orgStatus!=null and orgStatus!=''">
+				and org_status=#{orgStatus}
+			</if>
+		</where>
+    </select>
+    
+    <!-- 查询组织机构列表 -->
+	<select id="listByColumn" resultMap="SysOrgResultMap"
+		parameterType="map">
+		select
+		org.org_id,org.org_status,org.creator,org.create_time,org.editor,org.edit_time,org.remark,org.org_name,org.parent_org_id,
+		(select org_name from sys_organize where org_id=org.parent_org_id) parent_org_name
+		from sys_organize org
+		<where>
+			<if test="orgName!=null and orgName!=''">
+				or org.org_name=#{orgName}
+			</if>
+			<if test="orgStatus!=null and orgStatus!=''">
+				and org.org_status=#{orgStatus}
+			</if>
+		</where>
+		order by org.org_id asc
+	</select>
+	
+    
+	<!-- 插入组织机构-->
+	<insert id="insert" parameterType="SysOrganize" useGeneratedKeys="true"
+		keyProperty="orgId">
+		insert into sys_organize
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="orgStatus != null">
+				org_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="orgName != null">
+				org_name,
+			</if>
+			<if test="parentOrgId != null">
+				parent_org_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="orgStatus != null">
+				#{orgStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="orgName != null">
+				#{orgName},
+			</if>
+			<if test="parentOrgId != null">
+				#{parentOrgId},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改组织机构 -->
+	<update id="updateByPrimaryKey" parameterType="SysOrganize">
+		update sys_organize
+		<set>
+			<if test="orgStatus != null">
+				org_status=#{orgStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="orgName != null">
+				org_name=#{orgName},
+			</if>
+			<if test="parentOrgId != null">
+				parent_org_id=#{parentOrgId},
+			</if>
+		</set>
+		where org_id = #{orgId}
+	</update>
+
+	<!-- 获取组织机构详情 -->
+	<select id="selectByPrimaryKey" resultType="SysOrganize" parameterType="map">
+		select
+		org.org_id,org.org_status,org.creator,org.create_time,org.editor,org.edit_time,org.remark,org.org_name,org.parent_org_id,
+		(select org_name from sys_organize where org_id=org.parent_org_id) parent_org_name
+		from sys_organize org
+		where org.org_id = #{orgId}
+	</select>
+	
+	<!-- 删除组织机构-->
+	<delete id="deleteByPrimaryKey" parameterType="map">
+		delete from
+		sys_organize where org_id=#{orgId}
+	</delete>
+</mapper>

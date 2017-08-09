@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysUserDaoImpl">
+	<resultMap id="SysUserResultMap" type="com.lovecws.mumu.system.entity.SysUser">
+		<id column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="user_status" property="userStatus" />
+
+		<result column="creator" property="creator" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+
+		<result column="user_name" property="userName" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="salt" property="salt" jdbcType="VARCHAR" />
+
+		<result column="real_name" property="realName" jdbcType="VARCHAR" />
+		<result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="VARCHAR" />
+
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="email_active" property="emailActive" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="phone_active" property="phoneActive" jdbcType="VARCHAR" />
+		<result column="avator" property="avator" jdbcType="VARCHAR" />
+
+		<result column="sex" property="sex" jdbcType="VARCHAR" />
+		<result column="birthday" property="birthday" />
+		<result column="detail_area" property="detailArea" jdbcType="VARCHAR" />
+
+		<result column="province" property="province" jdbcType="VARCHAR" />
+		<result column="city" property="city" />
+		<result column="area" property="area" jdbcType="VARCHAR" />
+		
+		<result column="privilage" property="privilage" jdbcType="VARCHAR" />
+		<result column="user_group_id" property="userGroupId" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="SysUserColumn">
+		user_id,user_status,creator,create_time,editor,edit_time,remark,
+		user_name,password,salt,real_name,nick_name,type,email,email_active,
+		phone,phone_active,avator,sex,birthday,detail_area,province,city,area
+	</sql>
+
+	<!-- 查询用户列表 -->
+	<select id="listByColumn" resultMap="SysUserResultMap"
+		parameterType="map">
+		select
+		<include refid="SysUserColumn"></include>
+		from sys_user
+		<where>
+			<if test="userName!=null and userName!=''">
+				or user_name=#{userName}
+			</if>
+			<if test="nickName!=null and nickName!=''">
+				or nick_name=#{nickName}
+			</if>
+			<if test="email!=null and email!=''">
+				or email=#{email}
+			</if>
+			<if test="phone!=null and phone!=''">
+				or phone=#{phone}
+			</if>
+			<if test="userStatus!=null and userStatus!=''">
+				and user_status=#{userStatus}
+			</if>
+		</where>
+		order by create_time desc
+	</select>
+
+	<!-- 分页查询用户列表 -->
+	<select id="listPage" resultType="SysUser"
+		parameterType="map">
+		select
+		<include refid="SysUserColumn"></include>
+		from sys_user
+		<where>
+			<if test="userName!=null and userName!=''">
+				and user_name=#{userName}
+			</if>
+			<if test="nickName!=null and nickName!=''">
+				and nick_name=#{nickName}
+			</if>
+			<if test="email!=null and email!=''">
+				and email=#{email}
+			</if>
+			<if test="phone!=null and phone!=''">
+				and phone=#{phone}
+			</if>
+			<if test="userStatus!=null and userStatus!=''">
+				and user_status=#{userStatus}
+			</if>
+		</where>
+		order by create_time desc
+		limit #{pageFirst},#{pageSize}
+	</select>
+
+	<!-- 查询用户数据量 -->
+	<select id="listPageCount" resultType="LONG">
+		select count(user_id) from sys_user
+		<where>
+			<if test="userName!=null and userName!=''">
+				and user_name=#{userName}
+			</if>
+			<if test="nickName!=null and nickName!=''">
+				and nick_name=#{nickName}
+			</if>
+			<if test="email!=null and email!=''">
+				and email=#{email}
+			</if>
+			<if test="phonel!=null and phone!=''">
+				and phone=#{phone}
+			</if>
+			<if test="userStatus!=null and userStatus!=''">
+				and user_status=#{userStatus}
+			</if>
+		</where>
+	</select>
+
+	<!-- 根据数据字典id 获取数据字典详情 -->
+	<select id="selectByPrimaryKey" resultType="SysUser"
+		parameterType="map">
+		select
+		<include refid="SysUserColumn"></include>
+		from sys_user
+		where user_id = #{userId}
+	</select>
+
+	<!-- 插入用户 -->
+	<insert id="insert" parameterType="SysUser" useGeneratedKeys="true"
+		keyProperty="userId">
+		insert into sys_user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="userStatus != null">
+				user_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="userName != null">
+				user_name,
+			</if>
+			<if test="password != null">
+				password,
+			</if>
+			<if test="salt != null">
+				salt,
+			</if>
+			<if test="realName != null">
+				real_name,
+			</if>
+			<if test="nickName != null">
+			    nick_name,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="email != null">
+				email,
+			</if>
+			<if test="emailActive != null">
+				email_active,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="phoneActive != null">
+				phone_active,
+			</if>
+			<if test="avator != null">
+				avator,
+			</if>
+			<if test="sex != null">
+				sex,
+			</if>
+			<if test="birthday != null">
+				birthday,
+			</if>
+			<if test="detailArea != null">
+				detail_area,
+			</if>
+			<if test="province != null">
+				province,
+			</if>
+			<if test="city != null">
+				city,
+			</if>
+			<if test="area != null">
+				area,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="userStatus != null">
+				#{userStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="userName != null">
+				#{userName},
+			</if>
+			<if test="password != null">
+				#{password},
+			</if>
+			<if test="salt != null">
+				#{salt},
+			</if>
+			<if test="realName != null">
+				#{realName},
+			</if>
+			<if test="nickName != null">
+				#{nickName},
+			</if>
+			<if test="type != null">
+				#{type},
+			</if>
+			<if test="email != null">
+				#{email},
+			</if>
+			<if test="emailActive != null">
+				#{emailActive},
+			</if>
+			<if test="phone != null">
+				#{phone},
+			</if>
+			<if test="phoneActive != null">
+				#{phoneActive},
+			</if>
+			<if test="avator != null">
+				#{avator},
+			</if>
+			<if test="sex != null">
+				#{sex},
+			</if>
+			<if test="birthday != null">
+				#{birthday},
+			</if>
+			<if test="detailArea != null">
+				#{detailArea},
+			</if>
+			<if test="province != null">
+				#{province},
+			</if>
+			<if test="city != null">
+				#{city},
+			</if>
+			<if test="area != null">
+				#{area},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更新用户-->
+	<update id="updateByPrimaryKey" parameterType="SysUser">
+		update sys_user
+		<set>
+			<if test="userStatus != null">
+				user_status=#{userStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="userName != null">
+				user_name=#{userName},
+			</if>
+			<if test="password != null">
+				password=#{password},
+			</if>
+			<if test="salt != null">
+				salt=#{salt},
+			</if>
+			<if test="realName != null">
+				real_name=#{realName},
+			</if>
+			<if test="nickName != null">
+				nick_name=#{nickName},
+			</if>
+			<if test="type != null">
+				type=#{type},
+			</if>
+			<if test="email != null">
+				email=#{email},
+			</if>
+			<if test="emailActive != null">
+				email_active=#{emailActive},
+			</if>
+			<if test="phone != null">
+				phone=#{phone},
+			</if>
+			<if test="phoneActive != null">
+				phone_active=#{phoneActive},
+			</if>
+			<if test="avator != null">
+				avator=#{avator},
+			</if>
+			<if test="sex != null">
+				sex=#{sex},
+			</if>
+			<if test="birthday != null">
+				birthday=#{birthday},
+			</if>
+			<if test="detailArea != null">
+				detail_area=#{detailArea},
+			</if>
+			<if test="province != null">
+				province=#{province},
+			</if>
+			<if test="city != null">
+				city=#{city},
+			</if>
+			<if test="area != null">
+				area=#{area},
+			</if>
+		</set>
+		where user_id = #{userId}
+	</update>
+
+	<!-- 删除用户 -->
+	<delete id="deleteByPrimaryKey" parameterType="map">
+		delete from
+		sys_user where user_id=#{userId}
+	</delete>
+	
+	<!-- 获取用户组下的用户集合 -->
+	<select id="querySysUserByGroupId" resultMap="SysUserResultMap" parameterType="map">
+		select u.*,ug.privilage,ug.user_group_id
+		from sys_user_group ug left join sys_user u on(ug.user_id=u.user_id and u.user_status=#{userStatus})
+		where ug.group_id=#{groupId}
+		order by create_time desc
+	</select>
+</mapper>

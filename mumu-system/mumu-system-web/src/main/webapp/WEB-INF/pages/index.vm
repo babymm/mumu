@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
+    <meta name="description" content="">
+    <meta name="author" content="ganliang">
+    <link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+    <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+    <link href="$request.getContextPath()/resources/css/style-responsive.css" rel="stylesheet">
+    <title>baby慕慕权限管理系统</title>
+    <script type="text/javascript">
+        function changeFrameHeight(){
+            var ifm= document.getElementById("iframepage");
+            if(ifm){
+                ifm.height=document.documentElement.clientHeight;
+                //ifm.height=document.body.clientHeight;
+            }
+        }
+    </script>
+</head>
+<body class="sticky-header">
+<section>
+    <div id="header-content" class="left-side sticky-left-side">
+        <div class="logo">
+            <a href="#"><img src="$request.getContextPath()/resources/images/logo.png" alt=""></a>
+        </div>
+        <div class="logo-icon text-center">
+            <a href="#"><img src="$request.getContextPath()/resources/images/logo_icon.png" alt=""></a>
+        </div>
+        <div class="left-side-inner">
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                    #if($!{SYS_USER.avator})
+                        <img alt="" src="$!{SYS_USER.avator}" class="media-object">
+                    #end
+                    <div class="media-body">
+                        <h4><a href="#">baby慕慕</a></h4>
+                        <span>欢迎来到baby慕慕权限管理系统</span>
+                    </div>
+                </div>
+                <h5 class="left-nav-title">账户信息</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav unmenubar">
+                    <li key="userInfo" title="manager/personal/userInfo"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                    <li key="changePassword" title="manager/personal/changePassword"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                    <li><a href="$request.getContextPath()/personal/logout"><i class="fa fa-sign-out"></i><span>退出登录</span></a></li>
+                </ul>
+            </div>
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active" id="main" title="system/main"><a href="/system/index"><i class="fa fa-home"></i> <span>主页</span></a></li>
+                #foreach($!topMenu in $!menuTree)
+                    <li class="menu-list"><a href=""><i class="$!topMenu.menuIcon"></i> <span>$!topMenu.menuName</span></a>
+                        <ul id="$!topMenu.menuCode" class="sub-menu-list">
+                            #foreach($!childrenMenu in $!topMenu.childrens)
+                                <li id="$!childrenMenu.menuCode" title="$!childrenMenu.menuUrl"><a href="javascript:void(0)"><i class="$!childrenMenu.menuIcon"></i>$!childrenMenu.menuName</a></li>
+                            #end
+                        </ul>
+                    </li>
+                #end
+            </ul>
+        </div>
+    </div>
+    <div class="main-content" >
+        <div class="header-section">
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-tasks"></i>
+                            <span class="badge">8</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">工作任务计划</h5>
+                            <ul class="dropdown-list user-list">
+                                <li class="new">
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div>Database update</div>
+                                        </div>
+                                        <div class="progress progress-striped">
+                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="40" role="progressbar"
+                                                 class="progress-bar progress-bar-warning">
+                                                <span class="">40%</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">See All Pending Task</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-head pull-right">
+                            <h5 class="title">网站留言消息</h5>
+                            <ul class="dropdown-list normal-list">
+                                <li class="new">
+                                    <a href="">
+                                            <span class="thumb"><img
+                                                    src="$request.getContextPath()/resources/images/photos/user1.png"
+                                                    alt=""/></span>
+                                        <span class="desc">
+                                          <span class="name">John Doe <span
+                                                  class="badge badge-success">new</span></span>
+                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="new"><a href="">查看所有邮件</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="$!{SYS_USER.avator}" alt="" />
+                            $!{SYS_USER.userName}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right unmenubar">
+                            <li key="userInfo" title="manager/personal/userInfo"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                            <li key="changePassword" title="manager/personal/changePassword"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                            <li><a href="$request.getContextPath()/system/logout"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <iframe name="iframepage" id="iframepage" scrolling="no" frameborder="0" onload="changeFrameHeight()" style="width: 100%;"></iframe>
+    </div>
+</section>
+<script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //改变iframe高度
+    window.onresize=function(){
+        changeFrameHeight();
+    }
+    $(function () {
+        var href=window.location.href,redirectLocation=null,modular="main",withUrl=false;
+        if(href.indexOf("#")>0){
+            var splits=href.split("#"), modular=splits[1];
+            if(!modular){
+                modular="main";
+            }
+            var modularEle=$("#"+modular);
+            if(splits.length>2){
+                redirectLocation=splits[2];
+                withUrl=true;
+            }
+            if(redirectLocation==null||redirectLocation==''){
+                var title= modularEle.attr("title");
+                if(title!=null){
+                    redirectLocation=title;
+                }
+            }
+            //修改菜单功能按钮高亮显示
+            $("#main").removeClass("active");
+            $(".menu-list").removeClass("nav-active");
+            modularEle.parent().parent().addClass("nav-active");
+            modularEle.addClass("active");
+        }
+        if(redirectLocation==null||redirectLocation==''){
+            redirectLocation=$("#main").attr("title");
+        }
+        changeFrameSrc("$request.getContextPath()/"+redirectLocation,modular,withUrl);
+
+        //li点击事件
+        $(".sub-menu-list li").click(function () {
+            var that=$(this);
+            $("#main").removeClass("active");
+            $(".sub-menu-list li").removeClass("active");
+            that.addClass("active");
+            changeFrameSrc("$request.getContextPath()/"+that.attr("title"),that.attr("id"));
+        });
+        $("#main").click(function () {
+            var that=$(this);
+            $(".menu-list").removeClass("nav-active");
+            $(".sub-menu-list li").removeClass("active");
+            that.addClass("active");
+            changeFrameSrc("$request.getContextPath()/"+that.attr("title"),that.attr("id"));
+        });
+        //个人信息下拉框
+        $(".unmenubar li").click(function () {
+            var id=$(this).attr("key");
+            var that=$(".sub-menu-list #"+id);
+            console.log(that);
+            $("#main").removeClass("active");
+            $(".menu-list").removeClass("nav-active");
+            $(".sub-menu-list li").removeClass("active");
+            that.parent().parent().addClass("nav-active");
+            that.parent().css("display","block");
+            that.addClass("active");
+            changeFrameSrc("$request.getContextPath()/"+$(this).attr("title"),that.attr("id"));
+        });
+    });
+</script>
+</body>
+</html>

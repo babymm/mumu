@@ -1,0 +1,111 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<style type="text/css">
+    .wrapper .layui-form-label{
+        width: 120px;
+    }
+    .wrapper .layui-input-block{
+        margin-left: 120px;
+    }
+    #groupHonors {
+        width: 880px;
+        height: auto;
+        transition: all 0.3s;
+        display: none;
+        margin-left: 120px;
+    }
+    .groupHonorImage{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid aliceblue;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>用户组详情</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/group/index','groups')">用户群组</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/group/view/$!group.groupId','groups',true)">用户组详情</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <input type="hidden" name="groupId" value="$!group.groupId">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户组名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="groupName" value="$!group.groupName" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入用户组名称*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">组织机构</label>
+                            <div class="layui-input-inline">
+                                <select name="orgId" required lay-verify="required">
+                                    #foreach($organize in $!organizes)
+                                        #if($!group.orgId==$!organize.orgId)
+                                            <option value="$organize.orgId" selected="selected">$organize.orgName</option>
+                                        #else
+                                            <option value="$organize.orgId">$organize.orgName</option>
+                                        #end
+                                    #end
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请选择组织机构*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">团队座右铭</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="groupMotto" value="$!group.groupMotto" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入团队座右铭*</div>
+                        </div>
+                        <div class="layui-form-item site-demo-upload">
+                            <label class="layui-form-label">荣誉证书</label>
+                            <div class="layui-form-item layui-form-text">
+                                <div id="groupHonors">
+                                </div>
+                                <input type="hidden" name="groupHonors" value="$!group.groupHonors">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">用户组描述</label>
+                            <div class="layui-input-block">
+                                <textarea id="orgDesc" name="remark" placeholder="请输入用户组描述" class="layui-textarea">$!group.remark</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        layui.use(['form', 'layedit'], function(){
+            var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+            var groupDescIndex = layedit.build('orgDesc', {tool: ['strong', 'italic' , 'underline' , '|', 'left' , 'center' , 'right' ]});
+            var groupHonors=$("input[name='groupHonors']").val();
+            if(groupHonors){
+                $("#groupHonors").css("display", "block");
+                var groupHonorArr=groupHonors.split(",");
+                console.log(groupHonorArr);
+                for(var i=0;i<groupHonorArr.length;i++){
+                    $("#groupHonors").append('<img width="200" class="groupHonorImage" height="200" src="'+groupHonorArr[i]+'">');
+                }
+            }
+        });
+    });
+</script>

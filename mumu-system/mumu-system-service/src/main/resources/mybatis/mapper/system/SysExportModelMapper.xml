@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysExportModelDaoImpl">
+	<resultMap id="SysExportModelResultMap" type="com.lovecws.mumu.system.entity.SysExportModel">
+		<id column="model_id" property="modelId" jdbcType="INTEGER" />
+		<result column="model_status" property="modelStatus" jdbcType="INTEGER" />
+		<result column="creator" property="creator" jdbcType="INTEGER" />
+
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+
+		<result column="model_name" property="modelName" jdbcType="VARCHAR" />
+		<result column="c_names" property="cnames" jdbcType="VARCHAR" />
+		<result column="e_names" property="enames" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="SysExportModelColumn">
+		model_id,model_status,creator,create_time,editor,edit_time,remark,
+		model_name,c_names,e_names
+	</sql>
+
+ 	<!-- 查询导出模型数量 -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(model_id) from sys_export_model
+    	<where>
+    	    <if test="modelName!=null and modelName!=''">
+				and model_name=#{modelName}
+			</if>
+			<if test="modelStatus!=null and modelStatus!=''">
+				and model_status=#{modelStatus}
+			</if>
+		</where>
+    </select>
+    
+	<!-- 获取分页导出模型列表 -->
+	<select id="listPage" resultMap="SysExportModelResultMap"
+		parameterType="map">
+		select
+		<include refid="SysExportModelColumn"></include>
+		from sys_export_model
+		<where>
+			<if test="modelName!=null and modelName!=''">  
+			    and model_name=#{modelName}
+			</if>
+			<if test="modelStatus!=null and modelStatus!=''">
+				and model_status=#{modelStatus}
+			</if>
+		</where>
+		order by create_time desc
+		limit #{pageFirst},#{pageSize}
+	</select>
+    
+	<!-- 获取导出模型列表 -->
+	<select id="listByColumn" resultMap="SysExportModelResultMap"
+		parameterType="map">
+		select
+		<include refid="SysExportModelColumn"></include>
+		from sys_export_model
+		<where>
+			<if test="modelName!=null and modelName!=''">  
+			    and model_name=#{modelName}
+			</if>
+			<if test="modelStatus!=null and modelStatus!=''">
+				and model_status=#{modelStatus}
+			</if>
+		</where>
+		order by create_time desc
+	</select>
+    
+	<!-- 插入模型-->
+	<insert id="insert" parameterType="SysDDL" useGeneratedKeys="true"
+		keyProperty="com.lovecws.shop.system.entity.SysExportModel">
+		insert into sys_export_model
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="modelStatus != null">
+				model_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="modelName != null">
+				model_name,
+			</if>
+			<if test="cnames != null">
+				c_names,
+			</if>
+			<if test="enames != null">
+				e_names,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="modelStatus != null">
+				#{modelStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="modelName != null">
+				#{modelName},
+			</if>
+			<if test="cnames != null">
+				#{cnames},
+			</if>
+			<if test="enames != null">
+				#{enames},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改数据字典信息 -->
+	<update id="updateByPrimaryKey" parameterType="SysExportModel">
+		update sys_export_model
+		<set>
+			<if test="modelStatus != null">
+				model_status=#{modelStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="modelName != null">
+				model_name=#{modelName},
+			</if>
+			<if test="cnames != null">
+				c_names=#{cnames},
+			</if>
+			<if test="enames != null">
+				e_names=#{enames},
+			</if>
+		</set>
+		where model_id = #{modelId}
+	</update>
+
+    <!-- 删除导出模型 -->
+    <delete id="deleteByPrimaryKey" parameterType="map">
+       delete from sys_export_model where model_id=#{modelId}
+    </delete>
+    
+    <!-- 获取模型详情 -->
+    <select id="selectByPrimaryKey" resultMap="SysExportModelResultMap">
+       select 
+       <include refid="SysExportModelColumn"></include>
+       from sys_export_model where model_id=#{modelId}
+    </select>
+</mapper>

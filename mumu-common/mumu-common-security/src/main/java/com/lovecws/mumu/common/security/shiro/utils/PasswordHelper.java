@@ -54,7 +54,7 @@ public class PasswordHelper {
 		realm.setUserName("admin");
 		realm.setPassword("123");
 		encryptPassword(realm);*/
-		System.out.println(getPwd("123456","lgan","17a1abee4985653f6ca2c3e99bd943c8"));
+		System.out.println(getPwd("123456","lgan","7d0f67616088c7d89eab290a712e5ff3"));
 	}
 
 }

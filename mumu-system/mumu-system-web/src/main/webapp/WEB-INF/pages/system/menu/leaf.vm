@@ -1,0 +1,76 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>叶子菜单</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/menu/index','menus')">菜单管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/menu/leaf/$!menuId','menus',true)">叶子菜单</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="orgId"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/menu/leafData"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="menuId" data-visible="false">菜单ID</th>
+                            <th data-field="menuCode">菜单内码</th>
+                            <th data-field="menuName">菜单名称</th>
+                            <th data-field="menuUrl">菜单地址</th>
+                            <th data-field="menuNum">菜单编号</th>
+                            <th data-field="createTime">创建时间</th>
+                            <th data-field="remark">菜单描述</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            parentMenuId:'$!menuId',
+            beginIndex: params.offset,
+            pageSize: params.limit
+        };
+    }
+</script>

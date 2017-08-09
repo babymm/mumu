@@ -14,5 +14,10 @@
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-template" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-oa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-system" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-system-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-system/mumu-system-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-system/mumu-system-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-system/mumu-system-web" charset="UTF-8" />
   </component>
 </project>

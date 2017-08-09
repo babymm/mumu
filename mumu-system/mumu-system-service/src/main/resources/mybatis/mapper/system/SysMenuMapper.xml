@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysMenuDaoImpl">
+	<resultMap id="SysMenuResultMap" type="com.lovecws.mumu.system.entity.SysMenu">
+		<id column="menu_id" property="menuId" jdbcType="INTEGER" />
+		<result column="menu_status" property="menuStatus" jdbcType="INTEGER" />
+		<result column="creator" property="creator" jdbcType="INTEGER" />
+
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+
+		<result column="menu_code" property="menuCode" jdbcType="VARCHAR" />
+		<result column="menu_name" property="menuName" jdbcType="VARCHAR" />
+		<result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
+		
+		<result column="menu_num" property="menuNum" jdbcType="VARCHAR" />
+		<result column="is_leaf" property="isLeaf"/>
+		<result column="menu_icon" property="menuIcon" jdbcType="VARCHAR"/>
+		
+		<result column="menu_visible" property="menuVisible" jdbcType="VARCHAR" />
+		<result column="level" property="level" jdbcType="INTEGER"/>
+		<result column="parent_menu_id" property="parentMenuId" jdbcType="INTEGER"/>
+		<result column="parentMenuName" property="parentMenuName" jdbcType="VARCHAR"/>
+	</resultMap>
+	<sql id="SysMenuColumn">
+		menu_id,menu_status,creator,create_time,editor,edit_time,remark,
+		menu_code,menu_name,menu_url,menu_num,is_leaf,menu_icon,menu_visible,level,parent_menu_id
+	</sql>
+
+	<!-- 分页查询菜单列表 -->
+	<select id="listPage" resultMap="SysMenuResultMap"
+		parameterType="map">
+		select
+		<include refid="SysMenuColumn"></include>
+		from sys_menu
+		<where>
+			<if test="parentMenuId!=null and parentMenuId!=''">
+				and parent_menu_id=#{parentMenuId}
+			</if>
+			<if test="menuCode!=null and menuCode!=''">
+				and menu_code=#{menuCode}
+			</if>
+			<if test="menuName!=null and menuName!=''">
+				and menu_name=#{menuName}
+			</if>
+			<if test="menuStatus!=null and menuStatus!=''">
+				and menu_status=#{menuStatus}
+			</if>
+		</where>
+		order by menu_num desc
+		limit #{pageFirst},#{pageSize}
+	</select>
+	
+    <!-- 分页获取菜单数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(menu_id) from sys_menu
+    	<where>
+    	    <if test="parentMenuId!=null and parentMenuId!=''">
+				and parent_menu_id=#{parentMenuId}
+			</if>
+    	    <if test="menuCode!=null and menuCode!=''">
+				and menu_code=#{menuCode}
+			</if>
+			<if test="menuName!=null and menuName!=''">
+				and menu_name=#{menuName}
+			</if>
+			<if test="menuStatus!=null and menuStatus!=''">
+				and menu_status=#{menuStatus}
+			</if>
+		</where>
+    </select>
+    
+    <!-- 查询菜单列表 -->
+	<select id="listByColumn" resultMap="SysMenuResultMap"
+		parameterType="map">
+		select
+		<include refid="SysMenuColumn"></include>
+		from sys_menu
+		<where>
+		    <if test="parentMenuId!=null and parentMenuId!=''">
+				and parent_menu_id=#{parentMenuId}
+			</if>
+			<if test="menuCode!=null and menuCode!=''">
+				or menu_code=#{menuCode}
+			</if>
+			<if test="menuName!=null and menuName!=''">
+				or menu_name=#{menuName}
+			</if>
+			<if test="menuStatus!=null and menuStatus!=''">
+				and menu_status=#{menuStatus}
+			</if>
+		</where>
+		order by menu_num desc
+	</select>
+	
+	<!-- 获取菜单详情 -->
+	<select id="selectByPrimaryKey" resultType="SysMenu"
+		parameterType="map">
+		select m1.*,m2.menu_name parentMenuName
+		from sys_menu m1 left join sys_menu m2 on(m1.parent_menu_id=m2.menu_id)
+		where m1.menu_id = #{menuId}
+	</select>
+	
+    <!-- 根据角色id 获取菜单列表 -->
+    <select id="getTopSysMenu" parameterType="map" resultMap="SysMenuResultMap">
+       select menu_id,menu_code,menu_name,menu_url,parent_menu_id
+		from sys_menu
+		<where>
+		    <if test="1==1">
+				and (parent_menu_id=0 or (parent_menu_id is null))
+			</if>
+			<if test="menuStatus!=null and menuStatus!=''">
+				and menu_status=#{menuStatus}
+			</if>
+		</where>
+		order by menu_num desc
+    </select>
+	
+    <!-- 获取子菜单 -->
+    <select id="getSubSysMenu" parameterType="map" resultMap="SysMenuResultMap">
+       select 
+       <include refid="SysMenuColumn"></include>
+		from sys_menu
+		<where>
+		    <if test="1==1">
+				and (parent_menu_id!=0 and (parent_menu_id is not null))
+			</if>
+			<if test="menuStatus!=null and menuStatus!=''">
+				and menu_status=#{menuStatus}
+			</if>
+		</where>
+		order by menu_num desc
+    </select>
+    
+    <!-- 删除菜单 -->
+    <delete id="deleteByPrimaryKey" parameterType="map">
+       delete from sys_menu where menu_id=#{menuId} or parent_menu_id=#{menuId}
+    </delete>
+    
+    <!-- 根据角色id 获取菜单列表 -->
+    <select id="getSysMenuByRoleId" parameterType="map" resultMap="SysMenuResultMap">
+        select m.menu_id,m.menu_code,m.menu_name,m.menu_url,m.parent_menu_id
+		from sys_role_menu rm inner join sys_menu m on(rm.menu_id=m.menu_id) where rm.role_id=#{roleId} and m.menu_status=#{menuStatus}
+    </select>
+    
+    <!-- 根据用户id 获取菜单列表 -->
+    <select id="getSysMenuByUserId" parameterType="map" resultMap="SysMenuResultMap">
+        select m.*
+		from sys_user_role ur inner 
+		join sys_role_menu rm on(rm.role_id=ur.role_id) 
+		inner join sys_menu m on(m.menu_id=rm.menu_id)
+		where ur.user_id=#{userId} 
+		order by m.menu_num desc
+    </select>
+
+	<!-- 插入菜单-->
+	<insert id="insert" parameterType="SysMenu" useGeneratedKeys="true"
+		keyProperty="menuId">
+		insert into sys_menu
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="menuStatus != null">
+				menu_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="menuCode != null">
+				menu_code,
+			</if>
+			<if test="menuName != null">
+				menu_name,
+			</if>
+			<if test="menuUrl != null">
+				menu_url,
+			</if>
+			<if test="menuNum != null">
+				menu_num,
+			</if>
+			<if test="isLeaf != null">
+				is_leaf,
+			</if>
+			<if test="menuIcon != null">
+				menu_icon,
+			</if>
+			<if test="menuVisible != null">
+				menu_visible,
+			</if>
+			<if test="level != null">
+				level,
+			</if>
+			<if test="parentMenuId != null">
+				parent_menu_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="menuStatus != null">
+				#{menuStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="menuCode != null">
+				#{menuCode},
+			</if>
+			<if test="menuName != null">
+				#{menuName},
+			</if>
+			<if test="menuUrl != null">
+				#{menuUrl},
+			</if>
+			<if test="menuNum != null">
+				#{menuNum},
+			</if>
+			<if test="isLeaf != null">
+				#{isLeaf},
+			</if>
+			<if test="menuIcon != null">
+				#{menuIcon},
+			</if>
+			<if test="menuVisible != null">
+				#{menuVisible},
+			</if>
+			<if test="level != null">
+				#{level},
+			</if>
+			<if test="parentMenuId != null">
+				#{parentMenuId},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改菜单 -->
+	<update id="updateByPrimaryKey" parameterType="Sysmenu">
+		update sys_menu
+		<set>
+			<if test="menuStatus != null">
+				menu_status=#{menuStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="menuCode != null">
+				menu_code=#{menuCode},
+			</if>
+			<if test="menuName != null">
+				menu_name=#{menuName},
+			</if>
+			<if test="menuUrl != null">
+				menu_url=#{menuUrl},
+			</if>
+			<if test="menuNum != null">
+				menu_num=#{menuNum},
+			</if>
+			<if test="isLeaf != null">
+				is_leaf=#{isLeaf},
+			</if>
+			<if test="menuIcon != null">
+				menu_icon=#{menuIcon},
+			</if>
+			<if test="menuVisible != null">
+				menu_visible=#{menuVisible},
+			</if>
+			<if test="level != null">
+				level=#{level},
+			</if>
+			<if test="parentMenuId != null">
+				parent_menu_id=#{parentMenuId},
+			</if>
+		</set>
+		where menu_id = #{menuId}
+	</update>
+
+</mapper>

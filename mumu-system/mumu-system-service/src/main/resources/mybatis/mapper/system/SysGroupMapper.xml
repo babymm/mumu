@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysGroupDaoImpl">
+	<resultMap id="SysGroupResultMap" type="com.lovecws.mumu.system.entity.SysGroup">
+		<id column="group_id" property="groupId" jdbcType="INTEGER" />
+		<result column="group_status" property="groupStatus" jdbcType="VARCHAR" />
+		<result column="creator" property="creator" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" />
+		
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime"/>
+		<result column="remark" property="remark" jdbcType="VARCHAR"/>
+		
+		<result column="group_name" property="groupName" jdbcType="VARCHAR"/>
+		<result column="org_id" property="orgId" jdbcType="INTEGER"/>
+		<result column="org_name" property="orgName" jdbcType="VARCHAR"/>
+	</resultMap>
+	<sql id="SysGroupColumn">
+		group_id,group_status,creator,create_time,editor,edit_time,remark,group_name,org_id
+  	</sql>
+
+	<!-- 分页查询用户组列表 -->
+	<select id="listPage" resultMap="SysGroupResultMap"
+		parameterType="map">
+		select
+		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.org_id,
+		(select org_name from sys_organize where org_id=g.org_id) org_name
+		from sys_group g
+		<where>
+			<if test="orgId!=null and orgId!=''">
+				and g.org_id=#{orgId}
+			</if>
+			<if test="groupName!=null and groupName!=''">
+				and g.group_name=#{groupName}
+			</if>
+			<if test="groupStatus!=null and groupStatus!=''">
+				and g.group_status=#{groupStatus}
+			</if>
+		</where>
+		order by g.create_time desc
+		limit #{pageFirst},#{pageSize}
+	</select>
+	
+    <!-- 分页获取用户组数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(group_id) from sys_group
+    	<where>
+			<if test="orgId!=null and orgId!=''">
+				and org_id=#{orgId}
+			</if>
+			<if test="groupName!=null and groupName!=''">
+				and group_name=#{groupName}
+			</if>
+			<if test="groupStatus!=null and groupStatus!=''">
+				and group_status=#{groupStatus}
+			</if>
+		</where>
+    </select>
+    
+    <!-- 查询用户组列表 -->
+	<select id="listByColumn" resultMap="SysGroupResultMap"
+		parameterType="map">
+		select
+		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.org_id,
+		(select org_name from sys_organize where org_id=g.org_id) org_name
+		from sys_group g
+		<where>
+			<if test="orgId!=null and orgId!=''">
+				and g.org_id=#{orgId}
+			</if>
+			<if test="groupName!=null and groupName!=''">
+				and g.group_name=#{groupName}
+			</if>
+			<if test="groupStatus!=null and groupStatus!=''">
+				and g.group_status=#{groupStatus}
+			</if>
+		</where>
+		order by g.create_time asc
+	</select>
+	
+    
+	<!-- 插入用户组-->
+	<insert id="insert" parameterType="SysGroup" useGeneratedKeys="true"
+		keyProperty="groupId">
+		insert into sys_group
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="groupStatus != null">
+				group_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="groupName != null">
+				group_name,
+			</if>
+			<if test="orgId != null">
+				org_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="groupStatus != null">
+				#{groupStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="groupName != null">
+				#{groupName},
+			</if>
+			<if test="orgId != null">
+				#{orgId},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改用户组 -->
+	<update id="updateByPrimaryKey" parameterType="SysGroup">
+		update sys_group
+		<set>
+			<if test="groupStatus != null">
+				group_status=#{groupStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="groupName != null">
+				group_name=#{groupName},
+			</if>
+			<if test="orgId != null">
+				org_id=#{orgId},
+			</if>
+		</set>
+		where group_id = #{groupId}
+	</update>
+
+	<!-- 获取用户组详情 -->
+	<select id="selectByPrimaryKey" resultType="SysGroup" parameterType="map">
+		select
+		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.org_id,
+		(select org_name from sys_organize where org_id=g.org_id) org_name
+		from sys_group g
+		where g.group_id = #{groupId}
+	</select>
+	
+	<!-- 删除用户组-->
+	<delete id="deleteByPrimaryKey" parameterType="map">
+		delete from
+		sys_group where group_id=#{groupId}
+	</delete>
+</mapper>

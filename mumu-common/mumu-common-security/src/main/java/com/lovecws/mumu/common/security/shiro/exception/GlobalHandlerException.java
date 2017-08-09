@@ -28,6 +28,7 @@ public class GlobalHandlerException extends SimpleMappingExceptionResolver{
 			}
 		}*/
 		log.error(ex);
+		ex.printStackTrace();
 		return super.resolveException(request, response, handler, ex);
 	}
 

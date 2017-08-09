@@ -1,0 +1,318 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<link href="$request.getContextPath()/resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<style type="text/css">
+    .layui-form .layui-form-item .layui-form-label {
+        padding: 8px;
+    }
+
+    .layui-form .layui-form-item .layui-input-inline {
+        margin-left: 27px;
+        width: 400px;
+    }
+
+    .layui-form .area .layui-input-inline {
+        margin-left: 27px;
+        width: 180px;
+    }
+
+    .layui-form .layui-form-item .layui-input-block textarea {  margin-left: 14px;
+    }
+
+    #userHeader {
+        width: 780px;
+        height: 300px;
+        transition: all 0.3s;
+        display: none;
+        margin-left: 120px;
+    }
+
+    .show {
+        display: block;
+        visibility: visible;
+    }
+
+    .layui-form .layui-form-item .layui-upload-button {
+        margin-left: 27px;
+    }
+
+    #datepicker {
+        padding-left: 27px;
+    }
+    #userHonors {
+        width: 880px;
+        height: auto;
+        transition: all 0.3s;
+        display: none;
+        margin-left: 105px;
+    }
+    .userHonorImage{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid aliceblue;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>添加用户</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/user/index','users')">用户管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/user/add','users',true)">添加用户</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="userName" required lay-verify="userName" placeholder="请输入用户名称"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">用户名称不可重复</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">真实名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="realName" required lay-verify="required"
+                                       placeholder="请输入用户真实名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户类型</label>
+                            <div class="layui-input-inline">
+                                <select name="type" required lay-verify="required">
+                                    <option value="user">普通用户</option>
+                                    <option value="operator">接待员</option>
+                                    <option value="admin">管理员</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">手机号码</label>
+                            <div class="layui-input-inline">
+                                <input type="tel" name="phone" lay-verify="phone" placeholder="请输入用户手机号码"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户邮箱</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" lay-verify="email" placeholder="请输入用户邮箱"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户密码</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="password" required lay-verify="password"
+                                       placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">密码6~18位</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">再次密码</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="repassword" required lay-verify="repassword"
+                                       placeholder="请再次输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">密码6~18位</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户爱好</label>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="userlikes" title="阅读" checked>
+                                <input type="checkbox" name="userlikes" title="写作">
+                                <input type="checkbox" name="userlikes" title="发呆">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户性别</label>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="sex" value="man" title="男" checked>
+                                <input type="radio" name="sex" value="femal" title="女">
+                                <input type="radio" name="sex" value="unknow" title="未知">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户生日</label>
+                            <div class="layui-input-inline">
+                                <div class='input-group date datepicker' id='datepicker' style="padding-left: 0px;">
+                                    <input type='text' class="form-control" name="birthday"/>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"/></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text site-demo-upload">
+                            <label class="layui-form-label">用户头像</label>
+                            <div class="site-demo-upbar">
+                                <input type="file" name="file" class="layui-upload-file">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <img id="userHeader" src="">
+                        </div>
+                        <input type="hidden" name="avator" value="">
+                        <div class="layui-form-item site-demo-upload">
+                            <label class="layui-form-label">荣誉证书</label>
+                            <div class="site-demo-upbar">
+                                <input type="file" name="file" class="layui-upload-file2">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <div id="userHonors">
+                            </div>
+                            <input type="hidden" name="userHonors" value="">
+                        </div>
+
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">个人描述</label>
+                            <div class="layui-input-block">
+                                <textarea name="remark" id="userDesc" placeholder="请输入内容"
+                                          class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block submit-btn">
+                                <button class="layui-btn" lay-submit lay-filter="userForm">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/lay/modules/element.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+
+<script src="$request.getContextPath()/resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.datepicker').datepicker({
+            viewMode: 'years',
+            language: 'zh',
+            autoclose: 1,
+            language: 'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayHighlight: 1
+        });
+        //头像上传
+        layui.use('upload', function () {
+            layui.upload({
+                url: '$request.getContextPath()/common/upload/img',
+                type: 'images',
+                method: 'post',
+                elem:'.layui-upload-file',
+                success: function (res) {
+                    if (res.code == 200) {
+                        $("#userHeader").addClass("show");
+                        $("#userHeader").css("display", "block");
+                        $("#userHeader").attr("src",res.data);
+                        $("input[name='avator']").val(res.data);
+                    }
+                    layer.msg(res.msg, {
+                        icon: 1,
+                        skin: 'demo-class',
+                        title: '信息',
+                        area: ['300px', '160px'],
+                        offset: 'rb'
+                    });
+                }
+            });
+
+            layui.upload({
+                url: '$request.getContextPath()/common/upload/img',
+                type: 'images',
+                method: 'post',
+                elem:'.layui-upload-file2',
+                success: function (res) {
+                    if (res.code == 200) {
+                        $("#userHonors").addClass("show");
+                        $("#userHonors").css("display", "block");
+                        $("#userHonors").append('<img width="200" class="userHonorImage" height="200" src="'+res.data+'">');
+
+                        var userHonors=$("input[name='userHonors']").val();
+                        if(userHonors){
+                            userHonors=userHonors+","+res.data;
+                        }else{
+                            userHonors=res.data;
+                        }
+                        $("input[name='userHonors']").val(userHonors);
+                    }
+                    layer.msg(res.msg, {
+                        icon: 1,
+                        skin: 'demo-class',
+                        title: '信息',
+                        area: ['300px', '160px'],
+                        offset: 'rb'
+                    });
+                }
+            });
+        });
+        //表单验证
+        layui.use(['form', 'layedit', 'laydate'], function () {
+            var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+            var userDescIndex = layedit.build('userDesc', {
+                tool: [
+                    'strong' //加粗
+                    , 'italic' //斜体
+                    , 'underline' //下划线
+                    , '|' //分割线
+                    , 'left' //左对齐
+                    , 'center' //居中对齐
+                    , 'right' //右对齐
+                ]
+            });
+            //自定义验证规则
+            form.verify({
+                password: [/(.+){6,12}$/, '密码必须6到12位'],
+                repassword: function (repassword) {
+                    if (repassword == null || repassword == '') {
+                        return "请再次输入密码";
+                    }
+                    var password = $("input[name='password']").val();
+                    if (password != repassword) {
+                        return "两次输入密码不一致";
+                    }
+                }
+            });
+            //监听提交
+            form.on('submit(userForm)', function (data) {
+                var remark = layedit.getText(userDescIndex);
+                data.field.remark = remark;
+                $.post("$request.getContextPath()/system/user/add", data.field, function (data) {
+                    if (data.code == 200) {
+                        //保存成功 关闭当前页
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 500,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                changeFrameSrc('$request.getContextPath()/system/user/index', 'users')
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+                return false;
+            });
+        });
+    });
+</script>

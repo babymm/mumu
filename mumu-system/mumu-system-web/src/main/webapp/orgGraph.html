@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>ECOTree Simple Tree 4</title>
+	<link type="text/css" rel="stylesheet" href="./resources/ECOTree/ECOTree.css"/>
+	<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+	<style>
+		v\: * {
+			behavior: url(#default#VML);
+		}
+	</style>
+	<style>
+		body {
+			padding: 0px;
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.copy {
+			font-family: "Verdana";
+			font-size: 10px;
+			color: #CCCCCC;
+		}
+		#organizeECOTree{
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+<div id="organizeECOTree" align="center"></div>
+</body>
+<script type="text/javascript" src="./resources/ECOTree/ECOTree.js"></script>
+<script type="text/javascript" src="./resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	var t = null;
+	$(function () {
+		//获取组织机构数据
+		$.get("/system/organize/graph", function (data) {
+			t = new ECOTree('t', 'organizeECOTree');
+			t.config.iRootOrientation = ECOTree.RO_LEFT;
+			t.config.defaultNodeWidth = 160;
+			t.config.defaultNodeHeight = 20;
+			t.config.iSubtreeSeparation = 20;
+			t.config.iSiblingSeparation = 10;
+			t.config.linkType = 'B';
+			t.config.useTarget = false;
+			t.config.nodeFill = ECOTree.NF_GRADIENT;
+			t.config.colorStyle = ECOTree.CS_LEVEL;
+			t.config.levelColors = ["#966E00", "#BC9400", "#D9B100", "#FFD700"];
+			t.config.levelBorderColors = ["#FFD700", "#D9B100", "#BC9400",
+				"#966E00"];
+			t.config.nodeColor = "#FFD700";
+			t.config.nodeBorderColor = "#FFD700";
+			t.config.linkColor = "#FFD700";
+
+			for (var i = 0, len = data.length; i < len; i++) {
+				var org = data[i];
+				if (org.parentOrgId == 0) {
+					t.add(org.orgId, -1, org.orgName, null, null, "#F08080");
+				} else {
+					t.add(org.orgId, org.parentOrgId, org.orgName);
+				}
+			}
+			t.UpdateTree();
+		});
+	});
+</script>
+</html>

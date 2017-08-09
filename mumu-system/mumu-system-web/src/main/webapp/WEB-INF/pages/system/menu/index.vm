@@ -1,0 +1,146 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>菜单管理</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/menu/index','menus')">菜单管理</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        <button type="button" class="btn btn-default btn-sm"
+                                onclick="changeFrameSrc('$request.getContextPath()/system/menu/add','menus',true)">
+                            <span class="fa fa-plus-square"></span>添加
+                        </button>
+                    </div>
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="orgId"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/menu/page"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="menuId" data-visible="false">菜单ID</th>
+                            <th data-field="menuCode" data-valign="middle">菜单内码</th>
+                            <th data-field="menuName" data-valign="middle">菜单名称</th>
+                            <th data-field="parentMenuName" data-valign="middle">父菜单名称</th>
+                            <th data-field="menuUrl" data-valign="middle">菜单地址</th>
+                            <th data-field="menuNum" data-valign="middle">菜单编号</th>
+                            <th data-field="menuIcon" data-valign="middle" data-formatter="menuIconFormatter" data-valign="middle" data-align="center">菜单ICON</th>
+                            <th data-field="createTime" data-valign="middle">创建时间</th>
+                            <th data-field="remark" data-valign="middle">菜单描述</th>
+                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            beginIndex: params.offset,
+            pageSize: params.limit
+        };
+    }
+    //查询菜单
+    function queryMenus() {
+        var $table =$('#table');
+        $table.bootstrapTable("refresh");
+    }
+    function menuIconFormatter(value, row, index) {
+        return "<span class='"+ row.menuIcon+"'></span>";
+    }
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons = [];
+        buttons.push('<button type="button" class="btn btn-default btn-sm MenusDetail"><span class="fa fa-eye"></span>详情</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm MenusEdit"><span class="fa fa-edit"></span>编辑</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm MenusDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        if (row.parentMenuId != 0) {
+            buttons.push('<button type="button" class="btn btn-default btn-sm menuPermission"><span class="glyphicon glyphicon-leaf"></span>权限</button>');
+        } else {
+            buttons.push('<button type="button" class="btn btn-default btn-sm menuLeaf"><span class="glyphicon glyphicon-th-large"></span>菜单</button>');
+        }
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //菜单详情
+        'click .MenusDetail': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/menu/view/" + row.menuId, "menus", true)
+        },
+        //编辑菜单
+        'click .MenusEdit': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/menu/edit/" + row.menuId, "menus", true)
+        },
+        //菜单下的权限列表
+        'click .menuPermission': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/menu/permission/" + row.menuId, "menus", true)
+        },
+        //菜单下的子菜单
+        'click .menuLeaf': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/menu/leaf/" + row.menuId, "menus", true)
+        },
+        //删除菜单
+        'click .MenusDelete': function (e, value, row, index) {
+            layer.confirm('你确定要删除菜单【' + row.menuName + '】吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/menu/delete/" + row.menuId ,{_method: 'delete'}, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                queryMenus();
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        }
+    };
+</script>

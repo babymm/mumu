@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>分配角色</title>
+    <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+    <style type="text/css">
+        body .container-fluid {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            min-height: 300px;
+        }
+
+        body .saveButton {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <input type="hidden" name="userId" value="$!userId">
+    <div align="center" class="tree">
+        <ul id="userAllowRoleTree" class="ztree" style="-moz-user-select: none;"></ul>
+    </div>
+</div>
+<div align="center" class="saveButton">
+    <button type="button" onclick="saveUserRole('$!userId')" class="btn btn-lg btn-info">保存</button>
+</div>
+</body>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.core.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript">
+    //ztree基本配置
+    var zTreeObj;
+    var setting = {
+        view: {
+            showLine: false,
+            dblClickExpand: true
+        },
+        callback: {},
+        check: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: 0
+            }
+        }
+    };
+    var ztree = $.fn.zTree;
+    //保存用户角色
+    function saveUserRole(userId) {
+        var roleIds = [];
+        var nodes = zTreeObj.getCheckedNodes();
+        for (var i = 0; i < nodes.length; i++) {
+            var roleId = nodes[i].id;
+            if (roleId != 'topRole') {
+                roleIds.push(nodes[i].id);
+            }
+        }
+        console.log(roleIds.join(','));
+        //保存用户分配的角色
+        $.post('$request.getContextPath()/system/user/allowRole', {
+            userId: userId,
+            roleIds: roleIds.join(',')
+        }, function (data) {
+            if (data.code == 200) {
+                layer.msg(data.msg, {
+                    icon: 1,
+                    skin: 'demo-class',
+                    title: '信息',
+                    time: 2000,
+                    end: function () {
+                        parent.layer.closeAll();
+                    }
+                });
+            } else {
+                layer.alert(data.msg);
+            }
+        });
+    }
+    $(function () {
+        var userId = $("input[name='userId']").val();
+        $.get("$request.getContextPath()/system/user/allowRole/" + userId, function (data) {
+            zTreeObj = ztree.init($("#userAllowRoleTree"), setting, data);
+        });
+    });
+</script>
+</html>

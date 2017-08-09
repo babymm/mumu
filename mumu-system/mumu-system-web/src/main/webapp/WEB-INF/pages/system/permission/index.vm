@@ -1,0 +1,128 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>权限管理</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/permission/index','permissions')">权限管理</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        <button type="button" class="btn btn-default btn-sm"
+                                onclick="changeFrameSrc('$request.getContextPath()/system/permission/add','permissions',true)">
+                            <span class="fa fa-plus-square"></span>添加
+                        </button>
+                    </div>
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="permissionId"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/permission/page"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="permissionId" data-visible="false">权限ID</th>
+                            <th data-field="permissionCode" data-valign="middle">权限内码</th>
+                            <th data-field="permissionName" data-valign="middle">权限名称</th>
+                            <th data-field="permission" data-valign="middle">权限值</th>
+                            <th data-field="permissionPath" data-valign="middle">权限路径</th>
+                            <th data-field="createTime" data-valign="middle">创建时间</th>
+                            <th data-field="remark" data-valign="middle">权限描述</th>
+                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            beginIndex: params.offset,
+            pageSize: params.limit
+        };
+    }
+    //查询权限
+    function querypermissions() {
+        var $table =$('#table');
+        $table.bootstrapTable("refresh");
+    }
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons = [];
+        buttons.push('<button type="button" class="btn btn-default btn-sm permissionsDetail"><span class="fa fa-eye"></span>详情</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm permissionsEdit"><span class="fa fa-edit"></span>编辑</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm permissionsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //权限详情
+        'click .permissionsDetail': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/permission/view/" + row.permissionId, "permissions", true)
+        },
+        //编辑权限
+        'click .permissionsEdit': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/permission/edit/" + row.permissionId, "permissions", true)
+        },
+        //删除权限
+        'click .permissionsDelete': function (e, value, row, index) {
+            layer.confirm('你确定要删除权限【' + row.permissionName + '】吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/permission/delete/" + row.permissionId ,{_method: 'delete'}, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                querypermissions();
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        }
+    };
+</script>

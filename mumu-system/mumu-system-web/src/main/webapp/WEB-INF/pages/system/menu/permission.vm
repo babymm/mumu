@@ -1,0 +1,171 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<style type="text/css">
+    a{
+        color: black;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>菜单权限</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/menu/index','menus')">菜单管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/menu/permission/$!menuId','menus',true)">菜单权限</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        #if($shiro.hasPermission('system:menu:permissionAdd'))
+                            <button type="button" class="btn btn-default btn-sm"
+                                    onclick="addMenuPermission('$!menuId')">
+                                <span class="glyphicon glyphicon-plus"></span>添加
+                            </button>
+                        #end
+                    </div>
+                    <table id="menuPermissionTable"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="id"
+                           data-show-export="false"
+                           data-pagination="false"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="true"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/menu/permissionData/$!menuId"
+                           data-side-pagination="server"
+                           data-show-pagination-switch="false"
+                           data-id-field="menuId"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-editable.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //添加权限
+    function addMenuPermission(menuId) {
+        var $table =
+        $('#menuPermissionTable');
+            $table.bootstrapTable("insertRow",{
+                index:0,
+                row:{
+                    state:false,
+                    permissionId:0,
+                    permissionCode:'',
+                    permissionName:'',
+                    permission:'',
+                    menuId:menuId,
+                    operate:''
+                }
+            });
+    }
+    //初始化表格
+    function initTable() {
+        var $table =$('#menuPermissionTable');
+            $table.bootstrapTable({
+                columns: [{
+                    title: '权限ID',
+                    field: 'permissionId',
+                    visible:false
+                }, {
+                    title: '权限内码',
+                    field:'permissionCode',
+                    editable:true
+                },{
+                    title: '权限名称',
+                    field: 'permissionName',
+                    editable:true
+                },{
+                    title: '权限值',
+                    field:'permission',
+                    editable:true
+                },{
+                    title: '菜单ID',
+                    field:'menuId',
+                    visible:false
+                },{
+                    title: '操作',
+                    field: 'operate',
+                    events: operateEvents,
+                    formatter: operateFormatter
+                }]
+            });
+    }
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons = [];
+        buttons.push('<button type="button" class="btn btn-default btn-sm deleteMenuPermission"><span class="glyphicon glyphicon-trash"></span>删除</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm saveMenuPermission"><span class="glyphicon glyphicon-ok"></span>保存</button>');
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //删除菜单权限
+        'click .deleteMenuPermission': function (e, value, row, index) {
+            layer.confirm('你确定要菜单权限【' + row.permission + '】吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/menu/permission/"+ row.permissionId, {
+                    _method: 'delete'
+                }, function (data) {
+                    if (data.code == 200) {
+                        var $table =
+                        $('#menuPermissionTable');
+                            $table.bootstrapTable("refresh");
+                        layer.close(index);
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        },
+        //保存菜单权限
+        'click .saveMenuPermission': function (e, value, row, index) {
+            var rowData={
+                permission: row.permission,
+                permissionCode: row.permissionCode,
+                permissionId: row.permissionId,
+                menuId: row.menuId,
+                permissionName: row.permissionName
+            };
+            $.post('$request.getContextPath()/system/menu/permission', rowData, function (data) {
+                if (data.code == 200) {
+                    var $table =
+                    $('#menuPermissionTable');
+                        $table.bootstrapTable("refresh");
+                } else {
+                    layer.alert(data.msg);
+                }
+            });
+        }
+    };
+    $(function () {
+        initTable();
+    });
+</script>

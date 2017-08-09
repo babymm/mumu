@@ -146,6 +146,12 @@
             <artifactId>mumu-common-redis</artifactId>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-system-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysRolePermissionDaoImpl">
+	<resultMap id="SysRolePermissionResultMap" type="com.lovecws.mumu.system.entity.SysRolePermission">
+		<id column="role_permission_id" property="rolePermissionId" />
+		<result column="role_permission_status" property="rolePermissionStatus" />
+
+		<result column="creator" property="creator" />
+		<result column="create_time" property="createTime" />
+
+		<result column="role_id" property="roleId" jdbcType="INTEGER" />
+		<result column="permission_id" property="permissionId"
+			jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="SysRolePermissionColumn">
+		role_permission_id,role_permission_status,creator,create_time,role_id,permission_id
+	</sql>
+
+	<!-- 批量添加 -->
+	<insert id="batchInsert" parameterType="SysRolePermission"
+		useGeneratedKeys="true" keyProperty="rolePermissionId">
+		insert into sys_role_permission
+		(role_permission_status,creator,create_time,role_id,permission_id)
+		values
+		<foreach collection="list" item="item" index="index"
+			separator=",">
+			(
+			#{item.rolePermissionStatus},
+			#{item.creator},
+			#{item.createTime},
+			#{item.roleId},
+			#{item.permissionId}
+			)
+		</foreach>
+	</insert>
+
+	<!-- 删除权限 -->
+	<delete id="batchDeleteByColumn" parameterType="map">
+		delete from sys_role_permission
+		<where>
+			<if test="roleId!=null">
+				and role_id=#{roleId}
+			</if>
+			<if test="permissionId!=null">
+				and permission_id=#{permissionId}
+			</if>
+			<if test="menuId!=null">
+				and permission_id in(SELECT permission_id FROM sys_permission where menu_id=#{menuId})
+			</if>
+		</where>
+	</delete>
+</mapper>

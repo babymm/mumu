@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysPermissionDaoImpl">
+	<resultMap id="SysPermissionResultMap" type="com.lovecws.mumu.system.entity.SysPermission">
+		<id column="permission_id" property="permissionId" />
+		<result column="permission_status" property="permissionStatus"/>
+		<result column="creator" property="creator"/>
+
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+
+		<result column="permission_code" property="permissionCode" jdbcType="VARCHAR" />
+		<result column="permission_name" property="permissionName" jdbcType="VARCHAR" />
+		<result column="permission" property="permission" jdbcType="VARCHAR" />
+		
+		<result column="menu_id" property="menuId" jdbcType="VARCHAR" />
+		<result column="permission_path" property="permissionPath"/>
+	</resultMap>
+	<sql id="SysPermissionColumn">
+		permission_id,permission_status,creator,create_time,editor,edit_time,remark,
+		permission_code,permission_name,permission,menu_id,permission_path
+	</sql>
+
+	<!-- 查询权限列表 -->
+	<select id="listByColumn" resultMap="SysPermissionResultMap"
+		parameterType="map">
+		select
+		<include refid="SysPermissionColumn"></include>
+		from sys_permission
+		<where>
+			<if test="menuId!=null and menuId!=''">
+				and menu_id=#{menuId}
+			</if>
+			<if test="permissionCode!=null and permissionCode!=''">
+				or permission_code=#{permissionCode}
+			</if>
+			<if test="permissionName!=null and permissionName!=''">
+				or permission_name=#{permissionName}
+			</if>
+			<if test="permissionStatus!=null and permissionStatus!=''">
+				and permission_status=#{permissionStatus}
+			</if>
+		</where>
+	</select>
+
+	<!-- 分页查询权限列表 -->
+	<select id="listPage" resultMap="SysPermissionResultMap"
+		parameterType="map">
+		select
+		<include refid="SysPermissionColumn"></include>
+		from sys_permission
+		<where>
+			<if test="menuId!=null and menuId!=''">
+				and menu_id=#{menuId}
+			</if>
+			<if test="permissionCode!=null and permissionCode!=''">
+				and permission_code=#{permissionCode}
+			</if>
+			<if test="permissionName!=null and permissionName!=''">
+				and permission_name=#{permissionName}
+			</if>
+			<if test="permissionStatus!=null and permissionStatus!=''">
+				and permission_status=#{permissionStatus}
+			</if>
+		</where>
+		limit #{pageFirst},#{pageSize}
+	</select>
+    
+    <!-- 获取权限数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(permission_id) from sys_permission
+    	<where>
+    	    <if test="menuId!=null and menuId!=''">
+				and menu_id=#{menuId}
+			</if>
+			<if test="permissionCode!=null and permissionCode!=''">
+				and permission_code=#{permissionCode}
+			</if>
+			<if test="permissionName!=null and permissionName!=''">
+				and permission_name=#{permissionName}
+			</if>
+			<if test="permissionStatus!=null and permissionStatus!=''">
+				and permission_status=#{permissionStatus}
+			</if>
+		</where>
+    </select>
+    
+	<!-- 获取权限详情 -->
+	<select id="selectByPrimaryKey" resultType="SysPermission"
+		parameterType="map">
+		select
+		<include refid="SysPermissionColumn"></include>
+		from sys_permission
+		where permission_id = #{permissionId}
+	</select>
+	
+    <!-- 删除权限 -->
+    <delete id="deleteByPrimaryKey" parameterType="map">
+       delete from sys_permission where permission_id=#{permissionId}
+    </delete>
+	
+    <!-- 删除菜单下的所有权限 -->
+    <delete id="batchDeleteByColumn" parameterType="map">
+       delete from sys_permission 
+       <where>
+          <if test="menuId!=null">
+              and menu_id=#{menuId}
+          </if>
+       </where>
+    </delete>
+    
+    <!-- 根据角色id 获取权限列表 -->
+    <select id="getSysPermissionByRoleId" parameterType="map" resultMap="SysPermissionResultMap">
+        select p.permission_id,p.permission_code,p.permission_name,p.permission,p.menu_id,p.permission_path
+		from sys_role_permission rp inner join sys_permission p on(rp.permission_id=p.permission_id) where rp.role_id=#{roleId} and p.permission_status=#{permissionStatus}
+    </select>
+    
+    <!-- 根据用户id 获取权限列表 -->
+    <select id="getSysPermissionByUserId" parameterType="map" resultMap="SysPermissionResultMap">
+        select p.*
+		from sys_user_role ur inner 
+		join sys_role_permission rp on(rp.role_id=ur.role_id) 
+		inner join sys_permission p on(p.permission_id=rp.permission_id)
+		where ur.user_id=#{userId}
+    </select>
+
+	<!-- 插入权限-->
+	<insert id="insert" parameterType="SysPermission" useGeneratedKeys="true"
+		keyProperty="permissionId">
+		insert into sys_permission
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="permissionStatus != null">
+				permission_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="permissionCode != null">
+				permission_code,
+			</if>
+			<if test="permissionName != null">
+				permission_name,
+			</if>
+			<if test="permission != null">
+				permission,
+			</if>
+			<if test="menuId != null">
+				menu_id,
+			</if>
+			<if test="permissionPath != null">
+				permission_path,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="permissionStatus != null">
+				#{permissionStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="permissionCode != null">
+				#{permissionCode},
+			</if>
+			<if test="permissionName != null">
+				#{permissionName},
+			</if>
+			<if test="permission != null">
+				#{permission},
+			</if>
+			<if test="menuId != null">
+				#{menuId},
+			</if>
+			<if test="permissionPath != null">
+				#{permissionPath},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改权限信息 -->
+	<update id="updateByPrimaryKey" parameterType="Syspermission">
+		update sys_permission
+		<set>
+			<if test="permissionStatus != null">
+				permission_status=#{permissionStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="permissionCode != null">
+				permission_code=#{permissionCode},
+			</if>
+			<if test="permissionName != null">
+				permission_name=#{permissionName},
+			</if>
+			<if test="permission != null">
+				permission=#{permission},
+			</if>
+			<if test="menuId != null">
+				menu_id=#{menuId},
+			</if>
+			<if test="permissionPath != null">
+				permission_path=#{permissionPath},
+			</if>
+		</set>
+		where permission_id = #{permissionId}
+	</update>
+
+</mapper>

@@ -1,0 +1,116 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link href="$request.getContextPath()/resources/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>添加导出模型</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/export/index','exports')">导出设置</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/export/add','exports',true)">添加导出模型</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label">选择模型</label>
+                            <div class="col-sm-4">
+                                <select id="tablesSelect" class="form-control selectpicker">
+                                    #foreach($table in $tables)
+                                        <option value="$!table.tableName">$!table.tableName</option>
+                                    #end
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <table id="table" data-toggle="table" data-click-to-select="true" data-url="$request.getContextPath()/system/export/select" data-query-params="queryParams">
+                        <thead>
+                        <tr>
+                            <th data-field="state" data-checkbox="true" data-formatter="stateFormatter"></th>
+                            <th data-field="fieldName">字段</th>
+                            <th data-field="remarks" data-editable="true">注释</th>
+                            <th data-field="fieldType">类型</th>
+                            <th data-field="fieldSize">长度</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div align="center" class="saveButton">
+                        <button type="button" onclick="saveExportModel()" class="btn btn-lg btn-danger">保存</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-editable.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#tablesSelect').change(function () {
+            var $table =
+            $('#table');
+                $table.bootstrapTable("refresh");
+        });
+    });
+    function stateFormatter(value, row, index) {
+        if (value == true || value == 'true') {
+            return {checked: true}
+        }
+        return null;
+    }
+    function saveExportModel() {
+        var cnames = [], enames = [];
+        var selections = $('#table').bootstrapTable('getAllSelections');
+        for (var i = 0, len = selections.length; i < len; i++) {
+            var selection = selections[i];
+            enames.push(selection.fieldName);
+            if (!selection.remarks) {
+                selection.remarks = " ";
+            }
+            cnames.push(selection.remarks);
+        }
+        var tableName = $('#tablesSelect').children('option:selected').val();
+        if (enames.length == 0) {
+            layer.alert("请选择导出字段");
+            return false;
+        }
+        //保存
+        $.post('$request.getContextPath()/system/export/add', {
+            modelName: tableName,
+            cnames: cnames.join(','),
+            enames: enames.join(',')
+        }, function (data) {
+            //保存成功 关闭当前页
+            layer.msg(data.msg, {
+                icon: 1,
+                skin: 'demo-class',
+                title: '信息',
+                time: 2000,
+                area: ['300px', '200px'],
+                offset: 'rb',
+                end: function () {
+                    if (data.code == 200) {
+                        changeFrameSrc('$request.getContextPath()/system/export/index', 'exports')
+                    }
+                }
+            });
+        });
+        return true;
+    }
+</script>

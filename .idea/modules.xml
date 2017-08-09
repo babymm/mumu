@@ -15,6 +15,10 @@
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-oa/mumu-oa.iml" filepath="$PROJECT_DIR$/mumu-oa/mumu-oa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-system/mumu-system.iml" filepath="$PROJECT_DIR$/mumu-system/mumu-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml" filepath="$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" filepath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" filepath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" />
     </modules>
   </component>
 </project>

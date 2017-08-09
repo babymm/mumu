@@ -1,0 +1,117 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<style type="text/css">
+    .wrapper .layui-form-label{
+        width: 120px;
+    }
+    .wrapper .layui-input-block{
+        margin-left: 120px;
+    }
+</style>
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>添加权限</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/permission/index','permissions')">权限管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/permission/add','permissions',true)">添加权限</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">权限内码</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="permissionCode" required lay-verify="required"
+                                       placeholder="请输入权限内码" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">权限内码不可重复</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">权限名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="permissionName" required lay-verify="required"
+                                       placeholder="请输入权限名称" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">权限名称不可重复</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">菜单</label>
+                            <div class="layui-input-inline">
+                                <select name="menuId" required lay-verify="required">
+                                    <option value="">请选择</option>
+                                    #foreach($subMenu in $subMenus)
+                                        <option value="$subMenu.menuId">$subMenu.menuName</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">指定菜单</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">权限值</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="permission" required lay-verify="required" placeholder="请输入权限值"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">权限描述</label>
+                            <div class="layui-input-block">
+                                <textarea id="permissionDesc" name="remark" placeholder="请输入权限描述"
+                                          class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block submit-btn">
+                                <button class="layui-btn" lay-submit lay-filter="addPermissionForm">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        layui.use(['form', 'layedit'], function(){
+            var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+            var permissionDescIndex = layedit.build('permissionDesc', {tool: ['strong', 'italic' , 'underline' , '|', 'left' , 'center' , 'right' ]});
+            //监听提交
+            form.on('submit(addPermissionForm)', function(data){
+                var remark = layedit.getContent(permissionDescIndex);
+                data.field.remark = remark;
+                $.post("$request.getContextPath()/system/permission/add",data.field,function(responseData){
+                    //保存成功 关闭当前页
+                    layer.msg(responseData.msg,{
+                        icon: 1,
+                        skin: 'demo-class',
+                        title :'信息',
+                        time:2000,
+                        area: ['300px', '200px'],
+                        offset: 'rb',
+                        end :function(){
+                            if(responseData.code==200){
+                                changeFrameSrc("$request.getContextPath()/system/permission/index", 'permissions')
+                            }
+                        }
+                    });
+                });
+                return false;
+            });
+        });
+    });
+</script>

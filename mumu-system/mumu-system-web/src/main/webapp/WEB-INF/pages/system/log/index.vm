@@ -1,0 +1,168 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link href="$request.getContextPath()/resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<style type="text/css">
+    .searchform .form-horizontal .form-group {
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+    .searchform .form-horizontal .form-group label {
+        padding-left: 0px;
+        width: 90px;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>日志管理</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/log/index','logs')">日志管理</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div class="searchform">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="roleType" class="col-sm-1 control-label">开始时间</label>
+                                <div class="col-sm-2">
+                                    <div class='input-group date datepicker' id='datepicker'>
+                                        <input type='text' class="form-control" name="startDate" style="margin: 0px;"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label for="roleName" class="col-sm-1 control-label">结束时间</label>
+                                <div class="col-sm-2">
+                                    <div class='input-group date datepicker' id='datepicker2'>
+                                        <input type='text' class="form-control" name="endDate" style="margin: 0px;"/>
+                                        <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" onclick="queryLog()" class="btn btn-default">查询</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="orgId"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/log/page"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="userLogId" data-visible="false">日志ID</th>
+                            <th data-field="userName" data-valign="middle">用户名称</th>
+                            <th data-field="ip" data-valign="middle">访问IP</th>
+                            <th data-field="content" data-valign="middle">操作名称</th>
+                            #*<th data-field="method" data-valign="middle">访问方法</th>*#
+                            <th data-field="parameter" data-valign="middle">访问参数</th>
+                            <th data-field="result" data-valign="middle">返回结果</th>
+                            <th data-field="usetime" data-valign="middle">花费时间</th>
+                            <th data-field="createTime" data-valign="middle">记录时间</th>
+                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+
+<script src="$request.getContextPath()/resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.datepicker').datepicker({
+            viewMode: 'years',
+            language: 'zh',
+            autoclose: 1,
+            language: 'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayHighlight: 1
+        });
+    });
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            startDate: $("input[name='startDate']").val(),
+            endDate: $("input[name='endDate']").val(),
+            beginIndex: params.offset,
+            pageSize: params.limit
+        };
+    }
+    //查询用户日志
+    function queryLog() {
+        var $table =$('#table');
+        $table.bootstrapTable("refresh");
+    }
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons = [];
+        buttons.push('<button type="button" class="btn btn-default btn-sm LogsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //删除日志
+        'click .LogsDelete': function (e, value, row, index) {
+            layer.confirm('你确定要删除日志吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/log/delete/" + row.userLogId ,{_method: 'delete'}, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                queryLog();
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        }
+    };
+</script>

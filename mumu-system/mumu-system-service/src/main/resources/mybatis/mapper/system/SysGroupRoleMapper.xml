@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysGroupRoleDaoImpl">
+	<resultMap id="SysGroupRoleResultMap" type="com.lovecws.mumu.system.entity.SysGroupRole">
+		<id column="group_role_id" property="groupRoleId" jdbcType="INTEGER" />
+		<result column="group_role_status" property="groupRoleStatus" jdbcType="VARCHAR" />
+		<result column="creator" property="creator" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" />
+		
+		<result column="group_id" property="groupId" jdbcType="INTEGER"/>
+		<result column="role_id" property="roleId" jdbcType="INTEGER"/>
+	</resultMap>
+	<sql id="SysGroupRoleColumn">
+		group_role_id,group_role_status,creator,create_time,groupId,roleId
+  	</sql>
+    
+	<!-- 批量添加 插入用户组角色中间关系-->
+	<insert id="batchInsert" parameterType="SysGroupRole" useGeneratedKeys="true" keyProperty="groupRoleId">
+		insert into sys_group_role
+		(group_role_status,creator,create_time,group_id,role_id)
+		values
+		<foreach collection="list" item="item" index="index"
+			separator=",">
+			(
+			#{item.groupRoleStatus},
+			#{item.creator},
+			#{item.createTime},
+			#{item.groupId},
+			#{item.roleId}
+			)
+		</foreach>
+	</insert>
+	
+	<!-- 根据用户组id、角色id 删除用户角色-->
+	<delete id="batchDeleteByColumn" parameterType="map">
+		delete from sys_group_role
+		<where>
+			<if test="groupId!=null">
+				and group_id=#{groupId}
+			</if>
+			<if test="roleId!=null">
+				and role_id=#{roleId}
+			</if>
+		</where>
+	</delete>
+</mapper>

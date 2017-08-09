@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysDDLDaoImpl">
+	<resultMap id="SystemDDLResultMap" type="com.lovecws.mumu.system.entity.SysDDL">
+		<id column="ddl_id" property="id" jdbcType="INTEGER"/>
+		<result column="ddl_status" property="status" jdbcType="VARCHAR"/>
+		<result column="creator" property="creator" jdbcType="VARCHAR"/>
+		<result column="create_time" property="createTime"/>
+		<result column="editor" property="editor" jdbcType="VARCHAR"/>
+		<result column="edit_time" property="editTime"/>
+		<result column="remark" property="remark" jdbcType="VARCHAR"/>
+
+		<result column="ddl_code" property="ddlCode" jdbcType="VARCHAR"/>
+		<result column="ddl_value" property="ddlValue" jdbcType="VARCHAR"/>
+		<result column="parent_code" property="parentCode" jdbcType="VARCHAR"/>
+		<result column="ddl_number" property="ddlNumber" jdbcType="VARCHAR"/>
+	</resultMap>
+	<sql id="SystemDDLColumn">
+		ddl_id,ddl_status,creator,create_time,editor,edit_time,remark,
+		ddl_code,ddl_value,parent_code,ddl_number
+	</sql>
+	<!-- 获取产品分类数量 -->
+	<select id="listPageCount" resultType="LONG">
+		select count(distinct ddl_id)
+		from sys_ddl
+		<where>
+			<if test="status != null">
+				and ddl_status=#{status}
+			</if>
+			<if test="parentCode != null">
+				and parent_code=#{parentCode}
+			</if>
+			<if test="withDDLTables != null">
+				and (parent_code IS NULL or parent_code='')
+			</if>
+		</where>
+	</select>
+
+	<!-- 分页获取新闻分类-->
+	<select id="listPage" resultMap="SystemDDLResultMap" parameterType="map">
+		select
+		<include refid="SystemDDLColumn"/>
+		from sys_ddl
+		<where>
+			<if test="status != null">
+				and ddl_status=#{status}
+			</if>
+			<if test="parentCode != null">
+				and parent_code=#{parentCode}
+			</if>
+			<if test="withDDLTables != null">
+				and (parent_code IS NULL or parent_code='')
+			</if>
+		</where>
+		order by ddl_number
+		limit #{pageFirst},#{pageSize}
+	</select>
+
+	<!-- 获取所有的产品类型 -->
+	<select id="listByColumn" resultMap="SystemDDLResultMap" parameterType="map">
+		select ddl_code,ddl_value,parent_code
+		from sys_ddl
+		<where>
+			<if test="status != null">
+				and ddl_status=#{status}
+			</if>
+			<if test="parentCode != null">
+				and parent_code=#{parentCode}
+			</if>
+		</where>
+		order by ddl_number
+	</select>
+
+	<!-- 根据传入的parentCode，查询字典内码列表 -->
+	<select id="getSystemDDLByParentCode" resultMap="SystemDDLResultMap" parameterType="map">
+		select ddl_code,ddl_value,parent_code
+		from sys_ddl
+		<where>
+			<if test="status != null">
+				and ddl_status=#{status}
+			</if>
+			<if test="list!=null">
+				and parent_code IN
+				<foreach item="item" index="index" collection="list" open="("
+						 separator="," close=")">
+					#{item}
+				</foreach>
+			</if>
+		</where>
+		order by ddl_number
+	</select>
+
+	<!-- 根据id查询数据字典 -->
+	<select id="selectByPrimaryKey" resultMap="SystemDDLResultMap" parameterType="java.lang.String">
+		select
+		<include refid="SystemDDLColumn"/>
+		from sys_ddl
+		where ddl_id=#{id}
+	</select>
+
+	<!-- 添加数据字典 -->
+	<insert id="insert" parameterType="SysDDL" useGeneratedKeys="true" keyProperty="id">
+		insert into sys_ddl
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				ddl_id,
+			</if>
+			<if test="status!=null">
+				ddl_status,
+			</if>
+			<if test="creator!=null">
+				creator,
+			</if>
+			<if test="createTime!=null">
+				create_time,
+			</if>
+			<if test="editor!=null">
+				editor,
+			</if>
+			<if test="editTime!=null">
+				edit_time,
+			</if>
+			<if test="remark!=null">
+				remark,
+			</if>
+			<if test="ddlCode!=null">
+				ddl_code,
+			</if>
+			<if test="ddlValue!=null">
+				ddl_value,
+			</if>
+			<if test="parentCode!=null">
+				parent_code,
+			</if>
+			<if test="ddlNumber!=null">
+				ddl_number,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				#{id},
+			</if>
+			<if test="status!=null">
+				#{status},
+			</if>
+			<if test="creator!=null">
+				#{creator},
+			</if>
+			<if test="createTime!=null">
+				#{createTime},
+			</if>
+			<if test="editor!=null">
+				#{editor},
+			</if>
+			<if test="editTime!=null">
+				#{editTime},
+			</if>
+			<if test="remark!=null">
+				#{remark},
+			</if>
+			<if test="ddlCode!=null">
+				#{ddlCode},
+			</if>
+			<if test="ddlValue!=null">
+				#{ddlValue},
+			</if>
+			<if test="parentCode!=null">
+				#{parentCode},
+			</if>
+			<if test="ddlNumber!=null">
+				#{ddlNumber},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 修改数据字典 -->
+	<update id="updateByPrimaryKey" parameterType="SysDDL">
+		update sys_ddl
+		<set>
+			<if test="status!=null">
+				ddl_status=#{status},
+			</if>
+			<if test="creator!=null">
+				creator=#{creator},
+			</if>
+			<if test="createTime!=null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor!=null">
+				editor=#{editor},
+			</if>
+			<if test="editTime!=null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark!=null">
+				remark=#{remark},
+			</if>
+			<if test="ddlCode!=null">
+				ddl_code=#{ddlCode},
+			</if>
+			<if test="ddlValue!=null">
+				ddl_value=#{ddlValue},
+			</if>
+			<if test="parentCode!=null">
+				parent_code=#{parentCode},
+			</if>
+			<if test="ddlNumber!=null">
+				ddl_number=#{ddlNumber},
+			</if>
+		</set>
+		<where>
+			<if test="id!=null">
+				ddl_id=#{id}
+			</if>
+		</where>
+	</update>
+
+	<!-- 删除数据字典 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete
+		from sys_ddl
+		where ddl_id=#{id}
+	</delete>
+</mapper>

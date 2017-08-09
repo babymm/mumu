@@ -10,17 +10,17 @@ public enum PublicEnum {
 	/**
 	 * 禁用 forbit
 	 */
-	FORBIDDEN("forbit"),
+	FORBIDDEN("0"),
 
 	/**
 	 * 正常 normal
 	 */
-	NORMAL("normal"),
+	NORMAL("1"),
 
 	/**
 	 * 删除 delete
 	 */
-	DELETE("delete");
+	DELETE("2");
 
 	/** 描述 */
 	private String status;

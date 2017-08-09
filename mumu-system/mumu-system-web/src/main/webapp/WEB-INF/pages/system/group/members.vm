@@ -1,0 +1,122 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>用户组成员</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/group/index','groups')">用户群组</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/group/members/$!groupId','groups',true)">用户组成员</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        <button type="button" class="btn btn-default btn-sm"
+                                onclick="changeFrameSrc('$request.getContextPath()/system/group/memberAdd/$!groupId','groups',true)">
+                            <span class="fa fa-plus-square"></span>添加
+                        </button>
+                    </div>
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="orgId"
+                           data-pagination="false"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/group/memberPage/$!groupId"
+                           data-side-pagination="server"
+                           #*data-page-list="[15, 30, 50, 100, ALL]"*#
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="userGroupId" data-visible="false">ID</th>
+                            <th data-field="userId" data-visible="false">用户ID</th>
+                            <th data-field="userName" data-align="center" data-valign="middle">用户名称</th>
+                            <th data-field="privilage" data-align="center" data-valign="middle" data-formatter="operatePrivilageFormatter">用户权限</th>
+                            <th data-field="createTime" data-align="center" data-valign="middle">创建时间</th>
+                            <th data-field="operate" data-align="center" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //查询用户组
+    function queryGroupUser() {
+        var $table =
+        $('#table');
+            $table.bootstrapTable("refresh");
+    }
+    //显示用户身份
+    function operatePrivilageFormatter(value, row, index) {
+        if (value == 1) {
+            return "普通员工";
+        } else if (value == 2) {
+            return "副组长";
+        } else if (value == 3) {
+            return "组长";
+        }
+    }
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons = [];
+        buttons.push('<button type="button" class="btn btn-default btn-sm groupDetail"><span class="glyphicon glyphicon-eye-open"></span>查看</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm editGroup"><span class="glyphicon glyphicon-edit"></span>编辑</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm deleteGroup"><span class="glyphicon glyphicon-trash"></span>删除</button>');
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //机构组织详情
+        'click .groupDetail': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/group/memberView/" + row.userGroupId, "groups", true)
+        },
+        //编辑机构组织
+        'click .editGroup': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/group/memberEdit/" + row.userGroupId, "groups", true)
+        },
+        //删除机构组织
+        'click .deleteGroup': function (e, value, row, index) {
+            layer.confirm('你确定从用户组中移除用户【' + row.userName + '】吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/group/memberDelete/" + row.userGroupId, {_method: 'delete'}, function (data) {
+                    if (data.code == 200) {
+                        queryGroupUser();
+                        layer.close(index);
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        }
+    };
+</script>

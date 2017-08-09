@@ -1,0 +1,271 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>用户管理</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/user/index','users')">用户管理</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/user/add','users',true)"><span class="fa fa-plus-square"></span>添加</button>
+                    </div>
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="orgId"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/system/user/page"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="userId" data-visible="false">用户ID</th>
+                            <th data-field="avator" data-valign="middle" data-class="headerImg" data-valign="middle" data-formatter="headerImgFormatter" data-events="headerImgEvents">用户头像</th>
+                            <th data-field="userName" data-valign="middle">用户名称</th>
+                            <th data-field="phone" data-valign="middle">用户手机号码</th>
+                            <th data-field="email" data-valign="middle">用户邮箱</th>
+                            <th data-field="type" data-valign="middle" data-formatter="userTypeFormatter">用户类型</th>
+                            <th data-field="sex" data-valign="middle" data-formatter="sexFormatter">用户性别</th>
+                            <th data-field="birthday" data-valign="middle" data-formatter="birthdayFormatter">用户生日</th>
+                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            beginIndex: params.offset,
+            pageSize: params.limit,
+            userName: $("input[name='userName']").val(),
+            userPhone: $("input[name='userPhone']").val(),
+            userEmail: $("input[name='userEmail']").val()
+        };
+    }
+    //表单查询
+    function queryUser() {
+        var $table =$('#table');
+        $table.bootstrapTable("refresh");
+    }
+    //用户头像展示
+    function headerImgFormatter(value, row, index) {
+        return '<img src="' + row.avator + '" width="100px" height="40px" style="" class="userHeader"/>';
+    }
+    //日期转换
+    function birthdayFormatter(value, row, index) {
+        if (value == null) {
+            return null;
+        }
+        if (value.length >= 10) {
+            return value.substring(0, 10);
+        }
+        return value;
+    }
+    function sexFormatter(value, row, index) {
+        if (value == 'man') {
+            return "男";
+        }else if(value=='femal'){
+            return "女";
+        }
+        return value;
+    }
+    function userTypeFormatter(value, row, index) {
+        if (value == 'user') {
+            return "普通用户";
+        } else if (value == 'operator') {
+            return "接待员";
+        }else if(value=='admin'){
+            return "管理员";
+        }
+        return value;
+    }
+    //头像点击事件
+    var headerImgEvents = {
+        'click .userHeader': function (e, value, row, index) {
+            var repeatNum = 1;
+            //点击头像 放大图像
+            $(".headerImg").click(function () {
+                if (repeatNum == 0) {
+                    return;
+                }
+                repeatNum--;
+                window.layer.open({
+                    type: 2,
+                    title: '用户头像',
+                    maxmin: true,
+                    content: ['$request.getContextPath()/common/image/show?url='+row.avator, 'yes'],
+                    area: ['800px', '600px']
+                });
+            });
+        }
+    };
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons = [];
+        buttons.push('<button type="button" class="btn btn-default btn-sm UsersDetail"><span class="fa fa-eye"></span>详情</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm UsersEdit"><span class="fa fa-edit"></span>编辑</button>');
+        if(row.userStatus=="0"){
+            buttons.push('<button type="button" class="btn btn-default btn-sm enableUser"><span class="fa fa-edit"></span>解锁账号</button>');
+        }else{
+            buttons.push('<button type="button" class="btn btn-default btn-sm disableUser"><span class="fa fa-edit"></span>锁定账号</button>');
+        }
+        buttons.push('<button type="button" class="btn btn-default btn-sm UsersDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm resetPassword"><span class="glyphicon glyphicon-wrench"></span>重置密码</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm allowRole"><span class="glyphicon glyphicon-tree-deciduous"></span>分配角色</button>');
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //用户信息详情
+        'click .UsersDetail': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/user/view/" + row.userId, "users", true)
+        },
+        //重置用户密码
+        'click .resetPassword': function (e, value, row, index) {
+            layer.confirm('你确定要重置这个用户的密码吗?(重置密码为123456)', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/user/resetPwd", {
+                    userId: row.userId,
+                    userName: row.userName,
+                    password: '123456',
+                    _method: 'put'
+                }, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb'
+                        });
+                        layer.close(index);
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        },
+        //编辑用户信息
+        'click .UsersEdit': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/user/edit/" + row.userId, "users", true)
+        },
+        //解锁用户
+        'click .enableUser': function (e, value, row, index) {
+            layer.confirm('你确定要解锁用户【' + row.userName + '】吗?(用户解锁之后可以正常登陆)', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/user/editStatus", {_method: 'put',userId: row.userId,userStatus:"1"}, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                queryUser();
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        },
+        //锁定用户
+        'click .disableUser': function (e, value, row, index) {
+            layer.confirm('你确定要锁定用户【' + row.userName + '】吗?(用户锁定之后无法登陆)', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/user/editStatus", {
+                    _method: 'put',
+                    userId: row.userId,
+                    userStatus: "0"
+                }, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                queryUser();
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        },
+        //用户分配角色
+        'click .allowRole': function (e, value, row, index) {
+            window.layer.open({
+                type: 2,
+                title: '用户分配角色(组角色不可编辑)',
+                maxmin: true,
+                content: ['$request.getContextPath()/system/user/allowRole?userId=' + row.userId, 'yes'],
+                area: ['600px', '400px']
+            });
+        },
+        //删除用户信息
+        'click .UsersDelete': function (e, value, row, index) {
+            layer.confirm('你确定要删除用户信息【' + row.userName + '】吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/user/delete/" + row.userId ,{_method: 'delete'}, function (data) {
+                    if (data.code == 200) {
+                        layer.msg(data.msg, {
+                            icon: 1,
+                            skin: 'demo-class',
+                            title: '信息',
+                            time: 2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end: function () {
+                                queryUser();
+                            }
+                        });
+                    } else {
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        }
+    };
+</script>

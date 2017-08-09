@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysRoleDaoImpl">
+	<resultMap id="SysRoleResultMap" type="com.lovecws.mumu.system.entity.SysRole">
+		<id column="role_id" property="roleId" />
+		<result column="role_status" property="roleStatus"/>
+		<result column="creator" property="creator"/>
+
+		<result column="create_time" property="createTime" />
+		<result column="editor" property="editor" jdbcType="VARCHAR" />
+		<result column="edit_time" property="editTime" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+
+		<result column="role_code" property="roleCode" jdbcType="VARCHAR" />
+		<result column="role_name" property="roleName" jdbcType="VARCHAR" />
+		<result column="role_type" property="roleType" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="SysRoleColumn">
+		role_id,role_status,creator,create_time,editor,edit_time,remark,
+		role_code,role_name,role_type
+	</sql>
+
+	<!-- 查询角色列表 -->
+	<select id="listByColumn" resultMap="SysRoleResultMap"
+		parameterType="map">
+		select
+		<include refid="SysRoleColumn"></include>
+		from sys_role
+		<where>
+			<if test="roleType!=null and roleType!=''">
+				and role_type=#{roleType}
+			</if>
+			<if test="roleCode!=null and roleCode!=''">
+				or role_code=#{roleCode}
+			</if>
+			<if test="roleName!=null and roleName!=''">
+				or role_name=#{roleName}
+			</if>
+			<if test="roleStatus!=null and roleStatus!=''">
+				and role_status=#{roleStatus}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 查询角色列表 -->
+	<select id="listPage" resultMap="SysRoleResultMap"
+		parameterType="map">
+		select
+		<include refid="SysRoleColumn"></include>
+		from sys_role
+		<where>
+			<if test="roleType!=null and roleType!=''">
+				and role_type=#{roleType}
+			</if>
+			<if test="roleName!=null and roleName!=''">
+				and role_name=#{roleName}
+			</if>
+			<if test="roleStatus!=null and roleStatus!=''">
+				and role_status=#{roleStatus}
+			</if>
+		</where>
+		limit #{pageFirst},#{pageSize}
+	</select>
+    
+    <!-- 查询角色数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(role_id) from sys_role
+    	<where>
+			<if test="roleType!=null and roleType!=''">
+				and role_type=#{roleType}
+			</if>
+			<if test="roleName!=null and roleName!=''">
+				and role_name=#{roleName}
+			</if>
+			<if test="roleStatus!=null and roleStatus!=''">
+				and role_status=#{roleStatus}
+			</if>
+		</where>
+    </select>
+    
+	<!-- 获取角色详情 -->
+	<select id="selectByPrimaryKey" resultType="SysRole"
+		parameterType="map">
+		select
+		<include refid="SysRoleColumn"></include>
+		from sys_role
+		where role_id = #{roleId}
+	</select>
+	
+    <!-- 删除角色 -->
+    <delete id="deleteByPrimaryKey" parameterType="map">
+       delete from sys_role where role_id=#{roleId}
+    </delete>
+
+	<!-- 插入角色-->
+	<insert id="insert" parameterType="SysRole" useGeneratedKeys="true"
+		keyProperty="roleId">
+		insert into sys_role
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="roleStatus != null">
+				role_status,
+			</if>
+			<if test="creator != null">
+				creator,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="editor != null">
+				editor,
+			</if>
+			<if test="editTime != null">
+				edit_time,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="roleCode != null">
+				role_code,
+			</if>
+			<if test="roleName != null">
+				role_name,
+			</if>
+			<if test="roleType != null">
+				role_type,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="roleStatus != null">
+				#{roleStatus},
+			</if>
+			<if test="creator != null">
+				#{creator},
+			</if>
+			<if test="createTime != null">
+				#{createTime},
+			</if>
+			<if test="editor != null">
+				#{editor},
+			</if>
+			<if test="editTime != null">
+				#{editTime},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="roleCode != null">
+				#{roleCode},
+			</if>
+			<if test="roleName != null">
+				#{roleName},
+			</if>
+			<if test="roleType != null">
+				#{roleType},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改角色信息 -->
+	<update id="updateByPrimaryKey" parameterType="Sysrole">
+		update sys_role
+		<set>
+			<if test="roleStatus != null">
+				role_status=#{roleStatus},
+			</if>
+			<if test="creator != null">
+				creator=#{creator},
+			</if>
+			<if test="createTime != null">
+				create_time=#{createTime},
+			</if>
+			<if test="editor != null">
+				editor=#{editor},
+			</if>
+			<if test="editTime != null">
+				edit_time=#{editTime},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="roleCode != null">
+				role_code=#{roleCode},
+			</if>
+			<if test="roleName != null">
+				role_name=#{roleName},
+			</if>
+			<if test="roleType != null">
+				role_type=#{roleType},
+			</if>
+		</set>
+		where role_id = #{roleId}
+	</update>
+	
+	<!-- 获取用户已经被分配的角色 -->
+	<select id="getSysRoleByUserId" resultMap="SysRoleResultMap"
+		parameterType="map">
+		select r.* from sys_user_role ur 
+		inner join sys_role r on(ur.role_id=r.role_id) 
+		where ur.user_id=#{userId}
+	</select>
+	
+	<!-- 获取用户组被分配的角色 -->
+	<select id="getSysRoleByGroupId" resultMap="SysRoleResultMap"
+		parameterType="map">
+		select r.* from sys_group_role gr 
+		inner join sys_role r on(gr.role_id=r.role_id) 
+		where gr.group_id=#{groupId}
+	</select>
+</mapper>
