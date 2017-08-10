@@ -50,4 +50,8 @@ public interface SysGroupService {
 	 */
 	public void deleteSysGroupById(String groupId);
 
+	/**
+	 * 群组分布统计图
+	 */
+	public List<SysGroup> queryGroupStatistics();
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>组织机构成员</title>
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+<style type="text/css">
+body .container-fluid{
+   padding:0px;
+   margin: 0px;
+   width: 100%;
+   min-height: 300px;
+}
+</style>
+</head>
+<body>
+   <div class="container-fluid">
+       <input type="hidden" name="orgId" value="$!orgId">
+       <div align="center" class="tree">
+     	   <ul id="organizeMembersTree" class="ztree" style="-moz-user-select: none;"></ul>
+       </div>
+   </div>
+</body>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.core.min.js"></script>
+
+<script type="text/javascript">
+//ztree基本配置
+var zTreeObj;
+var setting = {
+    view: {  
+           showLine: false,  
+           dblClickExpand: true  
+          },  
+    callback:{  
+               
+             },  
+	check: {
+			enable: true
+		   },
+	data: {
+		simpleData: {
+			enable: true,
+			idKey: "id",  
+            pIdKey: "pId",  
+            rootPId: 0
+		}
+	}
+};   
+var ztree=$.fn.zTree;
+$(function(){
+	var orgId=$("input[name='orgId']").val();
+    $.get("$request.getContextPath()/system/organize/members/"+orgId,function(data){
+          zTreeObj = ztree.init($("#organizeMembersTree"), setting, data);
+    });
+});
+</script>
+</html>

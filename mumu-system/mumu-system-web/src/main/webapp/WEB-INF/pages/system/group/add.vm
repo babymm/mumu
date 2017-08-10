@@ -1,13 +1,7 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <style type="text/css">
-    .wrapper .layui-form-label{
-        width: 120px;
-    }
-    .wrapper .layui-input-block{
-        margin-left: 120px;
-    }
     #groupHonors {
         width: 880px;
         height: auto;

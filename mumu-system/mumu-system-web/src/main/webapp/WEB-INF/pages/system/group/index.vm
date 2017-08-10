@@ -14,10 +14,8 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/group/add','groups',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
+                        <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/group/add','groups',true)"> <span class="fa fa-plus-square"></span>添加</button>
+                        <button type="button" class="btn btn-default btn-sm" onclick="groupStatistics()"><span class="fa fa-plus-square"></span>分布统计</button>
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -70,13 +68,13 @@
 <script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
 <script src="$request.getContextPath()/resources/js/scripts.js"></script>
 <script type="text/javascript">
-    //用户组图
-    function rganizeGraph() {
+    //用户组用户分布统计图
+    function groupStatistics() {
         window.layer.open({
             type: 2,
             title: '用户组图',
             maxmin: true,
-            content: ['$request.getContextPath()/orgGraph.html', 'yes'],
+            content: ['$request.getContextPath()/system/group/statistics', 'yes'],
             area: ['800px', '600px']
         });
     }
@@ -98,8 +96,8 @@
         buttons.push('<button type="button" class="btn btn-default btn-sm GroupsDetail"><span class="fa fa-eye"></span>详情</button>');
         buttons.push('<button type="button" class="btn btn-default btn-sm GroupsEdit"><span class="fa fa-edit"></span>编辑</button>');
         buttons.push('<button type="button" class="btn btn-default btn-sm GroupsDelete"><span class="fa fa-trash-o"></span>删除</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupMembers"><span class="glyphicon glyphicon-trash"></span>组员</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupAlloRole"><span class="glyphicon glyphicon-trash"></span>分配角色</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm GroupMembers"><span class="fa fa-user-circle-o"></span>组员</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm GroupAlloRole"><span class="fa fa-th-list"></span>分配角色</button>');
         return buttons.join('');
     }
     //表格点击事件

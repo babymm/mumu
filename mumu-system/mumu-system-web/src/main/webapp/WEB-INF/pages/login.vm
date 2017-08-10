@@ -51,6 +51,9 @@
 <script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
 <script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+    if(self.window!=top.window){
+        top.window.location.href=self.window.location.href;
+    }
     function changeRcCaptchaImg() {
         $("#rcCaptchaImg").attr("src","$request.getContextPath()/rcCaptcha?t="+new Date().getTime());
     }

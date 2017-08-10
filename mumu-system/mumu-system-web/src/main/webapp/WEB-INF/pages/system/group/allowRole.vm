@@ -38,7 +38,7 @@ body .saveButton{
 <script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.core.min.js"></script>
-<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.excheck.min.js"></script>
 <script type="text/javascript">
 //ztree基本配置
 var zTreeObj;

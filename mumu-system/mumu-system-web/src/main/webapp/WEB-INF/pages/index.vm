@@ -6,7 +6,6 @@
     <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
     <meta name="description" content="">
     <meta name="author" content="ganliang">
-    <link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
     <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
     <link href="$request.getContextPath()/resources/css/style-responsive.css" rel="stylesheet">
@@ -25,10 +24,10 @@
 <section>
     <div id="header-content" class="left-side sticky-left-side">
         <div class="logo">
-            <a href="#"><img src="$request.getContextPath()/resources/images/logo.png" alt=""></a>
+            <a href="/system/index" style="width: 100%;margin: 0px;"><h2 style="margin-top: 5px;margin-left: 20px;">baby慕慕</h2></a>
         </div>
         <div class="logo-icon text-center">
-            <a href="#"><img src="$request.getContextPath()/resources/images/logo_icon.png" alt=""></a>
+            <a href="#"><gog src="$request.getContextPath()/resources/images/icon.png" alt=""></a>
         </div>
         <div class="left-side-inner">
             <div class="visible-xs hidden-sm hidden-md hidden-lg">
@@ -43,8 +42,9 @@
                 </div>
                 <h5 class="left-nav-title">账户信息</h5>
                 <ul class="nav nav-pills nav-stacked custom-nav unmenubar">
-                    <li key="userInfo" title="manager/personal/userInfo"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
-                    <li key="changePassword" title="manager/personal/changePassword"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                    <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                    <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                    <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
                     <li><a href="$request.getContextPath()/personal/logout"><i class="fa fa-sign-out"></i><span>退出登录</span></a></li>
                 </ul>
             </div>
@@ -124,15 +124,16 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right unmenubar">
-                            <li key="userInfo" title="manager/personal/userInfo"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
-                            <li key="changePassword" title="manager/personal/changePassword"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                            <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                            <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                            <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
                             <li><a href="$request.getContextPath()/system/logout"><i class="fa fa-sign-out"></i> 退出登录</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        <iframe name="iframepage" id="iframepage" scrolling="no" frameborder="0" onload="changeFrameHeight()" style="width: 100%;"></iframe>
+        <iframe name="iframepage" id="iframepage" scrolling="yes" frameborder="0" onload="changeFrameHeight()" style="width: 100%;"></iframe>
     </div>
 </section>
 <script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>

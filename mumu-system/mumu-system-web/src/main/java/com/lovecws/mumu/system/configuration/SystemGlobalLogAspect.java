@@ -21,7 +21,7 @@ public class SystemGlobalLogAspect {
     private static final Logger log = Logger.getLogger(SystemGlobalLogAspect.class);
     private static final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
-    @Pointcut("execution(* com.lovecws.mumu.system.controller.*.*Controller.*(..))")
+    @Pointcut("execution(* com.lovecws.mumu.system.controller.*.*.*Controller.*(..))")
     public void globalPointcut(){
 
     }

@@ -4717,7 +4717,8 @@ ol.comment-list {
 
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-    background-color: chartreuse;
+   /* background-color:#a8c8d8;*/
+    background-color:#eff0f4;
     /*background-color: #eff0f4;*/
 }
 
@@ -4736,4 +4737,13 @@ ol.comment-list {
 
 .highlight{
     background-color: #00c0ef;
+}
+.layui-form-item .layui-input-inline{
+    width: 400px;
+}
+.wrapper .layui-form-label{
+    width: 120px;
+}
+.wrapper .layui-input-block{
+    margin-left: 120px;
 }

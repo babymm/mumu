@@ -1,0 +1,162 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<style type="text/css">
+    .wrapper .layui-form-label{
+        width: 120px;
+    }
+    .wrapper .layui-input-block{
+        margin-left: 120px;
+    }
+    .wrapper #avator{
+        display: none;
+        margin-left: 120px;
+        width: 100px;
+        height: 100px;
+        transition:all 0.3s;
+        margin-left: 120px;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>个人信息</h3>
+        <ul class="breadcrumb">
+            <li>个人中心</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/personal/user/info','personals')">个人信息</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <input type="hidden" name="avator" value="$!SYS_USER">
+                        <input type="hidden" name="userId" value="$!SYS_USER.userId">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">登录名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="userName" disabled="disabled" value="$!SYS_USER.userName" required lay-verify="required" placeholder="请输入登录名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">真实姓名</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="realName" value="$!{SYS_USER.realName}" required lay-verify="required" placeholder="请输入用户真实姓名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">手机号码</label>
+                            <div class="layui-input-inline">
+                                <input type="tel" name="phone" value="$!{SYS_USER.phone}" required lay-verify="required" placeholder="请输入手机号码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text site-demo-upload">
+                            <label class="layui-form-label">用户头像</label>
+                            <p id="swfContainer">
+                                本组件需要安装Flash Player后才可使用，请从<a
+                                    href="http://www.adobe.com/go/getflashplayer">这里</a>下载安装。
+                            </p>
+                            <div class="layui-form-item layui-form-text">
+                                <img id="avator" src="$!SYS_USER.avator" width="100px" height="100px">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">个人描述</label>
+                            <div class="layui-input-block">
+                                <textarea id="productCategoryDesc" name="remark" placeholder="请输入用户个人描述" class="layui-textarea">$!{SYS_USER.remark}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block submit-btn">
+                                <button class="layui-btn" lay-submit lay-filter="productCategoryForm">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+
+<script type="text/javascript" src="$request.getContextPath()/resources/fullAvatarEditor/scripts/fullswfobject.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/fullAvatarEditor/scripts/fullAvatar.js"></script>
+
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        swfobject.addDomLoadEvent(function () {
+            var swf = new fullAvatarEditor("$request.getContextPath()/resources/fullAvatarEditor/fullAvatarEditor.swf", "$request.getContextPath()/resources/fullAvatarEditor/expressInstall.swf", "swfContainer", {
+                        id: 'swf',
+                        upload_url: '$request.getContextPath()/common/upload/fullAvatarEditor',	//上传接口
+                        method: 'post',	//传递到上传接口中的查询参数的提交方式。更改该值时，请注意更改上传接口中的查询参数的接收方式
+                        src_upload: 0,		//是否上传原图片的选项，有以下值：0-不上传；1-上传；2-显示复选框由用户选择
+                        avatar_box_border_width: 0,
+                        avatar_sizes: '100*100',
+                        avatar_sizes_desc: '100*100像素'
+                    }, function (msg) {
+                        console.log(msg);
+                        switch (msg.code) {
+                            case 1 :
+                                break;
+                            case 2 :
+                                //document.getElementById("upload").style.display = "inline";
+                                break;
+                            case 3 :
+                                if (msg.type == 0) {
+                                }
+                                else if (msg.type == 1) {
+                                    layer.alert("摄像头已准备就绪但用户未允许使用！");
+                                }
+                                else {
+                                    layer.alert("摄像头被占用！");
+                                }
+                                break;
+                            case 5 :
+                                layer.msg("图片上传成功");
+                                var imageUrl=msg.content.avatarUrls[0];
+                                $("#swf").hide();
+                                $("#avator").css("display", "block");
+                                $("#avator").attr("src",imageUrl);
+                                $("input[name='avator']").val(imageUrl);
+                                break;
+                        }
+                    }
+            );
+        });
+        layui.use(['form', 'layedit'], function(){
+            var form = layui.form(),layedit = layui.layedit;
+            //建立编辑器
+            var productCategoryDescIndex=layedit.build('productCategoryDesc',{tool: ['strong' ,'italic','underline','|','left','center','right']});
+            //监听提交
+            form.on('submit(productCategoryForm)', function(data){
+                var remark=layedit.getContent(productCategoryDescIndex);
+                data.field.remark=remark;
+                data.field._method="put";
+                $.post("$request.getContextPath()/personal/user/info",data.field,function(responseData){
+                    //保存成功 关闭当前页
+                    layer.msg(responseData.msg,{
+                        icon: 1,
+                        skin: 'demo-class',
+                        title :'信息',
+                        time:2000,
+                        area: ['300px', '200px'],
+                        offset: 'rb',
+                        end :function(){
+                            if(responseData.code==200){
+                                changeFrameSrc("$request.getContextPath()/personal/info",'userInfo')
+                            }
+                        }
+                    });
+                });
+                return false;
+            });
+        });
+    });
+</script>

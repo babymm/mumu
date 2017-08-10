@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>群组用户统计</title>
+    <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="$request.getContextPath()/resources/highcharts/highcharts.js"></script>
+    <style type="text/css">
+        body,.container-fluid,.container-fluid #logContainer{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            padding:0px;
+            margin:0px;
+        }
+        .highcharts-credits{
+            visibility: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        var chart = null;
+        $(function () {
+            $('#groupContainer').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    spacing : [100, 0 , 40, 0]
+                },
+                title: {
+                    floating:true,
+                    text: '群组用户统计'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        },
+                        point: {
+                            events: {
+                                mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+                                    chart.setTitle({
+                                        text: e.target.name+ '\t'+ e.target.y + ' %'
+                                    });
+                                }
+                            }
+                        },
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    innerSize: '80%',
+                    name: '群组占比',
+                    data: ${groupData}
+                }]
+            }, function(c) {
+                // 环形图圆心
+                var centerY = c.series[0].center[1],
+                        titleHeight = parseInt(c.title.styles.fontSize);
+                c.setTitle({
+                    y:centerY + titleHeight/2
+                });
+                chart = c;
+            });
+        });
+        console.log(${groupData});
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="groupContainer"></div>
+</div>
+</body>
+</html>

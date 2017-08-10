@@ -78,4 +78,8 @@ public class SysGroupServiceImpl implements SysGroupService {
 		groupDao.delete(groupId);
 	}
 
+	@Override
+	public List<SysGroup> queryGroupStatistics() {
+		return groupDao.selectList("queryGroupStatistics",new HashMap<String,Object>());
+	}
 }

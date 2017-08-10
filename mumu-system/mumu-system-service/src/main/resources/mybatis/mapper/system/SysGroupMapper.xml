@@ -12,18 +12,22 @@
 		<result column="remark" property="remark" jdbcType="VARCHAR"/>
 		
 		<result column="group_name" property="groupName" jdbcType="VARCHAR"/>
+		<result column="group_motto" property="groupMotto" jdbcType="VARCHAR"/>
+		<result column="group_honors" property="groupHonors" jdbcType="VARCHAR"/>
 		<result column="org_id" property="orgId" jdbcType="INTEGER"/>
 		<result column="org_name" property="orgName" jdbcType="VARCHAR"/>
+
+		<result column="user_count" property="userCount" jdbcType="VARCHAR"/>
 	</resultMap>
 	<sql id="SysGroupColumn">
-		group_id,group_status,creator,create_time,editor,edit_time,remark,group_name,org_id
+		group_id,group_status,creator,create_time,editor,edit_time,remark,group_name,group_motto,group_honors,org_id
   	</sql>
 
 	<!-- 分页查询用户组列表 -->
 	<select id="listPage" resultMap="SysGroupResultMap"
 		parameterType="map">
 		select
-		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.org_id,
+		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.group_motto,g.group_honors,g.org_id,
 		(select org_name from sys_organize where org_id=g.org_id) org_name
 		from sys_group g
 		<where>
@@ -61,7 +65,7 @@
 	<select id="listByColumn" resultMap="SysGroupResultMap"
 		parameterType="map">
 		select
-		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.org_id,
+		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.group_motto,g.group_honors,g.org_id,
 		(select org_name from sys_organize where org_id=g.org_id) org_name
 		from sys_group g
 		<where>
@@ -105,6 +109,12 @@
 			<if test="groupName != null">
 				group_name,
 			</if>
+			<if test="groupMotto != null">
+				group_motto,
+			</if>
+			<if test="groupHonors != null">
+				group_honors,
+			</if>
 			<if test="orgId != null">
 				org_id,
 			</if>
@@ -130,6 +140,12 @@
 			</if>
 			<if test="groupName != null">
 				#{groupName},
+			</if>
+			<if test="groupMotto != null">
+				#{groupMotto},
+			</if>
+			<if test="groupHonors != null">
+				#{groupHonors},
 			</if>
 			<if test="orgId != null">
 				#{orgId},
@@ -162,6 +178,12 @@
 			<if test="groupName != null">
 				group_name=#{groupName},
 			</if>
+			<if test="groupMotto != null">
+				group_motto=#{groupMotto},
+			</if>
+			<if test="groupHonors != null">
+				group_honors=#{groupHonors},
+			</if>
 			<if test="orgId != null">
 				org_id=#{orgId},
 			</if>
@@ -172,7 +194,7 @@
 	<!-- 获取用户组详情 -->
 	<select id="selectByPrimaryKey" resultType="SysGroup" parameterType="map">
 		select
-		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.org_id,
+		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.group_motto,g.group_honors,g.org_id,
 		(select org_name from sys_organize where org_id=g.org_id) org_name
 		from sys_group g
 		where g.group_id = #{groupId}
@@ -183,4 +205,8 @@
 		delete from
 		sys_group where group_id=#{groupId}
 	</delete>
+
+	<select id="queryGroupStatistics" resultType="SysGroup" parameterType="map">
+		 select count(ug.user_id) user_count,ug.group_id,g.group_name from sys_user_group ug LEFT JOIN sys_group g on(g.group_id=ug.group_id) group by ug.group_id
+	</select>
 </mapper>

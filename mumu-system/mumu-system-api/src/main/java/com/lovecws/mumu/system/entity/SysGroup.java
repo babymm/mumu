@@ -21,6 +21,8 @@ public class SysGroup implements Serializable {
 	private String remark;// 描述
 
 	private String groupName;// 菜单名称
+	private String groupMotto;// 团队座右铭
+	private String groupHonors;// 团队荣誉图片(多个以逗号分割)
 	private Integer orgId;// 组织结构id
 	private String orgName;//组织机构名称
 
@@ -102,5 +104,40 @@ public class SysGroup implements Serializable {
 
 	public void setOrgName(String orgName) {
 		this.orgName = orgName;
+	}
+
+	public String getGroupMotto() {
+		return groupMotto;
+	}
+
+	public void setGroupMotto(String groupMotto) {
+		this.groupMotto = groupMotto;
+	}
+
+	public String getGroupHonors() {
+		return groupHonors;
+	}
+
+	public void setGroupHonors(String groupHonors) {
+		this.groupHonors = groupHonors;
+	}
+
+	private int userCount;
+	private float userRate;
+
+	public int getUserCount() {
+		return userCount;
+	}
+
+	public void setUserCount(int userCount) {
+		this.userCount = userCount;
+	}
+
+	public float getUserRate() {
+		return userRate;
+	}
+
+	public void setUserRate(float userRate) {
+		this.userRate = userRate;
 	}
 }

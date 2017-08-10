@@ -1,7 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
-<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
         <h3>组织机构</h3>
@@ -54,7 +53,6 @@
                             <th data-field="parentOrgName" data-valign="middle">上级机构名称</th>
                             <th data-field="parentOrgId" data-visible="false">上级机构ID</th>
                             <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="remark" data-valign="middle">组织描述</th>
                             <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
                             </th>
                         </tr>
@@ -103,6 +101,7 @@
         buttons.push('<button type="button" class="btn btn-default btn-sm OrgsDetail"><span class="fa fa-eye"></span>详情</button>');
         buttons.push('<button type="button" class="btn btn-default btn-sm OrgsEdit"><span class="fa fa-edit"></span>编辑</button>');
         buttons.push('<button type="button" class="btn btn-default btn-sm OrgsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        buttons.push('<button type="button" class="btn btn-default btn-sm OrgsMembers"><span class="fa fa-users"></span>成员</button>');
         return buttons.join('');
     }
     //表格点击事件
@@ -136,6 +135,16 @@
                     }
                 });
             });
-        }
+        },
+        //组织机构下的成员
+        'click .OrgsMembers': function (e, value, row, index) {
+            window.layer.open({
+                type: 2,
+                title: '组织机构成员',
+                maxmin: true,
+                content: ["$request.getContextPath()/system/organize/members?orgId=" + row.orgId, 'yes'],
+                area: ['600px', '400px']
+            });
+        },
     };
 </script>

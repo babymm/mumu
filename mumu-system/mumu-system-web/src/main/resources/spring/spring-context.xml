@@ -18,14 +18,16 @@
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
 	<!-- 配置要扫描的包 -->
-	<context:component-scan base-package="com.lovecws.mumu.system"></context:component-scan>
+	<context:component-scan base-package="com.lovecws.mumu.system"/>
 
 	<!---加载配置文件-->
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations">
 			<list>
+				<value>classpath:properties/cache.properties</value>
+				<value>classpath:properties/ddl.properties</value>
+				<value>classpath:properties/fdfs.properties</value>
 				<value>classpath:properties/jdbc.properties</value>
-				<value>classpath:properties/email.properties</value>
 				<value>classpath:properties/jedis.properties</value>
 			</list>
 		</property>
@@ -34,10 +36,8 @@
 		<property name="properties" ref="configProperties"/>
 	</bean>
 
-	<!-- 配置要扫描的包 -->
-	<context:component-scan base-package="com.lovecws.mumu.system" />
-
 	<import resource="classpath*:spring/spring-system-service.xml" />
-	<import resource="classpath:spring/spring-cache-redis.xml" />
+	<import resource="classpath:spring/spring-common-redis.xml" />
+	<import resource="classpath:spring/spring-common-fdfs.xml" />
 	<import resource="classpath:spring/spring-shiro.xml" />
 </beans>

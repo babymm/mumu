@@ -39,7 +39,7 @@
 <script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.core.min.js"></script>
-<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/ztree/js/jquery.ztree.excheck.min.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
 <script type="text/javascript">
     //ztree基本配置

@@ -278,6 +278,11 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-common-redis</artifactId>
         </dependency>
+        <!--fafs分布式文件上传-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-fdfs</artifactId>
+        </dependency>
         <!--shiro安全组件-->
         <dependency>
             <groupId>com.lovecws.mumu</groupId>
