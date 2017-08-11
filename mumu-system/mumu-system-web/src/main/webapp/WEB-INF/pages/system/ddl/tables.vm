@@ -1,7 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css" >
-<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
         <h3>数据字典集合</h3>
@@ -99,7 +98,7 @@
         //删除数据字典
         'click .DDLSDelete': function (e, value, row, index) {
             layer.confirm('你确定要删除数据字典【'+row.ddlCode+'】吗?', {icon: 3, title:'提示'}, function(index){
-                $.post("$request.getContextPath()/system/ddl/ddelete/"+row.id+"/"+row.ddlCode,{_method:'delete'},function(data){
+                $.post("$request.getContextPath()/system/ddl/delete/"+row.id+"/"+row.ddlCode,{_method:'delete'},function(data){
                     if(data.code==200){
                         layer.msg(data.msg,{
                             icon: 1,

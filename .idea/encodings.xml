@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-blog" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-cms" charset="UTF-8" />
@@ -15,9 +15,9 @@
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-template" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-oa" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-system" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mumu-system-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-system/mumu-system-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-system/mumu-system-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-system/mumu-system-web" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

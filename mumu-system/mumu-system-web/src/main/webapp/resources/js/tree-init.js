@@ -1,7 +1,7 @@
 var TreeView = function () {
 
     return {
-        //main function to initiate the module
+        //index function to initiate the module
         init: function () {
 
             var DataSourceTree = function (options) {

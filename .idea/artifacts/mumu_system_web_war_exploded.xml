@@ -102,6 +102,9 @@
           <element id="archive" name="mumu-common-security-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-common-security" />
           </element>
+          <element id="archive" name="mumu-common-template-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-common-template" />
+          </element>
           <element id="archive" name="mumu-system-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-system-api" />
           </element>

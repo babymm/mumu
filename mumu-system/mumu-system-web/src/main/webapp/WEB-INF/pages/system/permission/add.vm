@@ -1,15 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
-<style type="text/css">
-    .wrapper .layui-form-label{
-        width: 120px;
-    }
-    .wrapper .layui-input-block{
-        margin-left: 120px;
-    }
-</style>
-<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
         <h3>添加权限</h3>
@@ -35,8 +26,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">权限名称</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="permissionName" required lay-verify="required"
-                                       placeholder="请输入权限名称" autocomplete="off" class="layui-input">
+                                <input type="text" name="permissionName" required lay-verify="required" placeholder="请输入权限名称" autocomplete="off" class="layui-input">
                             </div>
                             <div class="layui-form-mid layui-word-aux">权限名称不可重复</div>
                         </div>
@@ -46,7 +36,11 @@
                                 <select name="menuId" required lay-verify="required">
                                     <option value="">请选择</option>
                                     #foreach($subMenu in $subMenus)
-                                        <option value="$subMenu.menuId">$subMenu.menuName</option>
+                                        #if($!subMenu.parentMenuId==0)
+                                            <option value="$subMenu.menuId" disabled="disabled">$subMenu.menuName</option>
+                                        #else
+                                            <option value="$subMenu.menuId">$subMenu.menuName</option>
+                                        #end
                                     #end
                                 </select>
                             </div>

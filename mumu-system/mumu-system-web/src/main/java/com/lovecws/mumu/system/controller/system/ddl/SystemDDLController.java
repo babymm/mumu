@@ -1,5 +1,6 @@
 package com.lovecws.mumu.system.controller.system.ddl;
 
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.page.PageParam;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
@@ -80,6 +81,7 @@ public class SystemDDLController {
      * @return
      */
     @ResponseBody
+    @MumuLog(name = "添加数据字典",operater = "PUT")
     @RequestMapping(value="/add",method = RequestMethod.PUT)
     public ResponseEntity saveSystemDDL(SysDDL systemDDLEntity){
         List<SysDDL> systemDDLs = systemDDLService.getSystemDDLByCondition(systemDDLEntity.getDdlCode());
@@ -140,6 +142,7 @@ public class SystemDDLController {
      * @return
      */
     @ResponseBody
+    @MumuLog(name = "更新数据字典",operater = "POST")
     @RequestMapping(value="/edit",method = RequestMethod.POST)
     public ResponseEntity updateSystemDDL(SysDDL systemDDLEntity){
         List<SysDDL> systemDDLs = systemDDLService.getSystemDDLByCondition(systemDDLEntity.getDdlCode());
@@ -157,6 +160,7 @@ public class SystemDDLController {
      * @return
      */
     @ResponseBody
+    @MumuLog(name = "删除数据字典",operater = "DELETE")
     @RequestMapping(value="/delete/{ddlId}/{ddlCode}",method = RequestMethod.DELETE)
     public ResponseEntity ddlDelete(@PathVariable int ddlId,@PathVariable String ddlCode){
         List<SysDDL> systemDDLs=systemDDLService.getSystemDDLByCondition(ddlCode);

@@ -1,6 +1,7 @@
  package com.lovecws.mumu.system.controller.system.menu;
 
  import com.lovecws.mumu.common.core.enums.PublicEnum;
+ import com.lovecws.mumu.common.core.log.MumuLog;
  import com.lovecws.mumu.common.core.page.PageBean;
  import com.lovecws.mumu.common.core.response.ResponseEntity;
  import com.lovecws.mumu.system.entity.SysMenu;
@@ -83,6 +84,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加菜单",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity saveMenu(SysMenu menu){
 		try {
@@ -107,6 +109,9 @@ public class SystemMenuController {
 	public String menuView(@PathVariable String menuId, HttpServletRequest request){
 		SysMenu menu = menuService.getSysMenuById(menuId);
 		request.setAttribute("menu", menu);
+
+		List<SysMenu> topMenus = menuService.getTopSysMenu(PublicEnum.NORMAL.value());
+		request.setAttribute("topMenus", topMenus);
 		return "system/menu/view";
 	}
 	
@@ -137,6 +142,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "编辑菜单",operater = "PUT")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity updateMenu(SysMenu menu){
 		try {
@@ -154,11 +160,12 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除菜单",operater = "DELETE")
 	@RequestMapping(value="/delete/{menuId}",method=RequestMethod.DELETE)
 	public ResponseEntity menuDelete(@PathVariable String menuId){
 		try {
 			menuService.deleteMenuById(menuId);
-			String loginName = SecurityUtils.getSubject().getPrincipal().toString();
+			//String loginName = SecurityUtils.getSubject().getPrincipal().toString();
 			return new ResponseEntity(200, "菜单删除成功", null);
 		} catch (Exception e) {
 			log.error(e);
@@ -221,6 +228,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除菜单下的权限",operater = "DELETE")
 	@RequestMapping(value = "/permission/{permissionId}", method = RequestMethod.DELETE)
 	public ResponseEntity deleteMenuPermission(@PathVariable String permissionId) {
 		try {
@@ -238,6 +246,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加或者更新菜单下的权限",operater = "POST")
 	@RequestMapping(value = "/permission", method = RequestMethod.POST)
 	public ResponseEntity saveMenuPermission(SysPermission permission) {
 		//获取权限内码和权限名称下面的权限列表

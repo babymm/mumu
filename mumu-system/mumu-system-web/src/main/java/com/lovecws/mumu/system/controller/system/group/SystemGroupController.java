@@ -2,6 +2,7 @@ package com.lovecws.mumu.system.controller.system.group;
 
 import com.alibaba.fastjson.JSON;
 import com.lovecws.mumu.common.core.enums.PublicEnum;
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.common.core.tree.ZTreeBean;
@@ -95,6 +96,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加用户群组",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity saveSysGroup(int orgId,String groupName,String remark,String groupMotto,String groupHonors){
 		List<SysGroup> groups=groupService.querySysGroupByCondition(null,groupName);
@@ -166,6 +168,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "编辑用户群组",operater = "PUT")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity updateSysGroup(int groupId,int orgId,String groupName,String remark,String groupMotto,String groupHonors){
 		List<SysGroup> groups=groupService.querySysGroupByCondition(null,groupName);
@@ -190,6 +193,7 @@ public class SystemGroupController {
 	}
 	
 	@ResponseBody
+	@MumuLog(name = "删除用户群组",operater = "DELETE")
 	@RequestMapping(value="/delete/{groupId}",method=RequestMethod.DELETE)
 	public ResponseEntity groupDelete(@PathVariable String groupId){
 		try {
@@ -247,6 +251,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "用户群组分配角色",operater = "POST")
 	@RequestMapping(value = {"/allowRole"}, method = RequestMethod.POST)
 	public ResponseEntity saveGroupRole(String groupId, String roleIds) {
 		String loginName = SecurityUtils.getSubject().getPrincipal().toString();
@@ -293,9 +298,9 @@ public class SystemGroupController {
 	@RequestMapping(value = {"/memberAdd/{groupId}"}, method = RequestMethod.GET)
 	public String memberAdd(@PathVariable String groupId, HttpServletRequest request) {
 		//获取该分组下的用户列表
-		List<SysUser> users = userService.querySysUserByGroupId(groupId, null);
+		List<SysUser> users = userService.querySysUserByGroupId(groupId, PublicEnum.NORMAL.value());
 		//获取所有的用户列表
-		List<SysUser> allUsers = userService.querySysUserByCondition(null, null, null, null,null);
+		List<SysUser> allUsers = userService.querySysUserByCondition(null, null, null, null,PublicEnum.NORMAL.value());
 
 		List<SysUser> noSelectedUsers = new ArrayList<SysUser>();
 		for (SysUser sysUser : allUsers) {
@@ -325,6 +330,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "用户群组添加成员",operater = "POST")
 	@RequestMapping(value = {"/memberAdd"}, method = RequestMethod.POST)
 	public ResponseEntity savemember(int groupId, int userId, String remark, String privilage, HttpServletRequest request) {
 		try {
@@ -350,6 +356,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "用户群组移除成员",operater = "DELETE")
 	@RequestMapping(value = {"/memberDelete/{userGroupId}"}, method = RequestMethod.DELETE)
 	public ResponseEntity memberDelete(@PathVariable String userGroupId) {
 		try {
@@ -398,6 +405,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "用户群组更新成员信息",operater = "PUT")
 	@RequestMapping(value = {"/memberEdit"}, method = RequestMethod.PUT)
 	public ResponseEntity updateMember(int userGroupId, String privilage, String remark, HttpServletRequest request) {
 		try {

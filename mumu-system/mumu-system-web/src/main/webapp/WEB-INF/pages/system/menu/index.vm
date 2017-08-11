@@ -1,7 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
-<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
         <h3>菜单管理</h3>

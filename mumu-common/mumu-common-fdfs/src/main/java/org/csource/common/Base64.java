@@ -514,7 +514,7 @@ public static void show (byte[] b)
          show((b64.encode(h)).getBytes());
 */
          }
-   }// end main
+   }// end index
 
    public static void test()
    {

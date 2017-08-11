@@ -1,5 +1,6 @@
 package com.lovecws.mumu.system.controller.system.log;
 
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.system.entity.SysUserLog;
@@ -59,6 +60,7 @@ public class SystemLogController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除用户操作日志",operater = "DELETE")
 	@RequestMapping(value="/delete/{userLogId}",method=RequestMethod.DELETE)
 	public ResponseEntity logDelete(@PathVariable String userLogId){
 		try {

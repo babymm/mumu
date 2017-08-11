@@ -6,4 +6,11 @@
 		<scope>application</scope>
 		<class>org.apache.velocity.tools.generic.DateTool</class>
 	</tool>
+
+	<!--基本字符串工具类-->
+	<tool>
+		<key>mumu</key>
+		<scope>application</scope>
+		<class>com.lovecws.mumu.common.template.velocity.MumuUtilTag</class>
+	</tool>
 </toolbox>

@@ -1,6 +1,7 @@
 package com.lovecws.mumu.system.controller.system.organize;
 
 import com.lovecws.mumu.common.core.enums.PublicEnum;
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.common.core.tree.ZTreeBean;
@@ -91,6 +92,7 @@ public class SysOrganizeController {
      * @return
      */
     @ResponseBody
+    @MumuLog(name = "添加组织机构",operater = "POST")
     @RequestMapping(value="/add",method=RequestMethod.POST)
     public ResponseEntity saveOrganize(String orgName, String parentOrgId, String remark){
         List<SysOrganize> organizes=organizeService.querySysOrganizeByCondition(orgName);
@@ -154,6 +156,7 @@ public class SysOrganizeController {
      * @return
      */
     @ResponseBody
+    @MumuLog(name = "编辑组织机构",operater = "PUT")
     @RequestMapping(value="/edit",method=RequestMethod.PUT)
     public ResponseEntity updateOrganize(int orgId,String orgName,String parentOrgId,String remark){
         List<SysOrganize> organizes=organizeService.querySysOrganizeByCondition(orgName);
@@ -176,11 +179,12 @@ public class SysOrganizeController {
     }
 
     /**
-     * 保存组织机构
+     * 删除组织机构
      * @param orgId 组织机构id
      * @return
      */
     @ResponseBody
+    @MumuLog(name = "删除组织机构",operater = "DELETE")
     @RequestMapping(value="/delete/{orgId}",method=RequestMethod.DELETE)
     public ResponseEntity deleteOrganize(@PathVariable String orgId){
         try {

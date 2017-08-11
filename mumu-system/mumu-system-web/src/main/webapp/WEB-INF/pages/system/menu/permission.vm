@@ -1,7 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
-<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
 <style type="text/css">
     a{
         color: black;
@@ -21,12 +20,7 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        #if($shiro.hasPermission('system:menu:permissionAdd'))
-                            <button type="button" class="btn btn-default btn-sm"
-                                    onclick="addMenuPermission('$!menuId')">
-                                <span class="glyphicon glyphicon-plus"></span>添加
-                            </button>
-                        #end
+                        <button type="button" class="btn btn-default btn-sm" onclick="addMenuPermission('$!menuId')"><span class="glyphicon glyphicon-plus"></span>添加</button>
                     </div>
                     <table id="menuPermissionTable"
                            data-toolbar="#toolbar"

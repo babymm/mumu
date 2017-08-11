@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50632
 File Encoding         : 65001
 
-Date: 2017-08-10 17:08:13
+Date: 2017-08-11 16:27:17
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,13 +32,26 @@ CREATE TABLE `sys_ddl` (
   `ddl_value` varchar(100) DEFAULT NULL COMMENT '数据字典值',
   `ddl_number` int(11) DEFAULT NULL COMMENT '数据字典排序',
   PRIMARY KEY (`ddl_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_ddl
 -- ----------------------------
-INSERT INTO `sys_ddl` VALUES ('111', '1', null, '2017-08-09 16:18:01', null, null, null, 'roleType', '', 'roleType', '1');
-INSERT INTO `sys_ddl` VALUES ('112', '1', null, '2017-08-09 16:20:18', null, null, null, '123', 'roleType', '123', '1');
+INSERT INTO `sys_ddl` VALUES ('113', '1', null, '2017-08-11 14:06:45', null, null, null, 'roleType', '', '角色类型', '1');
+INSERT INTO `sys_ddl` VALUES ('114', '1', null, '2017-08-11 14:07:26', null, null, null, 'adminRole', 'roleType', '管理员角色', '2');
+INSERT INTO `sys_ddl` VALUES ('115', '1', null, '2017-08-11 14:07:41', null, null, null, 'commonRole', 'roleType', '普通角色', '3');
+INSERT INTO `sys_ddl` VALUES ('116', '1', null, '2017-08-11 14:10:41', null, null, null, 'sexType', '', '性别类型', '10');
+INSERT INTO `sys_ddl` VALUES ('117', '1', null, '2017-08-11 14:11:00', null, null, null, 'm', 'sexType', '男性', '11');
+INSERT INTO `sys_ddl` VALUES ('118', '1', null, '2017-08-11 14:11:14', null, null, null, 'f', 'sexType', '女性', '12');
+INSERT INTO `sys_ddl` VALUES ('119', '1', null, '2017-08-11 14:11:38', null, null, null, 'u', 'sexType', '未知', '13');
+INSERT INTO `sys_ddl` VALUES ('120', '1', null, '2017-08-11 14:15:01', null, null, null, 'userType', '', '用户类型', '20');
+INSERT INTO `sys_ddl` VALUES ('121', '1', null, '2017-08-11 14:15:19', null, null, null, 'commonUser', 'userType', '普通用户', '21');
+INSERT INTO `sys_ddl` VALUES ('122', '1', null, '2017-08-11 14:15:37', null, null, null, 'adminUser', 'userType', '管理员用户', '22');
+INSERT INTO `sys_ddl` VALUES ('123', '1', null, '2017-08-11 14:15:53', null, null, null, 'operatorUser', 'userType', '操作员', '23');
+INSERT INTO `sys_ddl` VALUES ('124', '1', null, '2017-08-11 14:18:16', null, null, null, 'userLike', '', '用户爱好', '30');
+INSERT INTO `sys_ddl` VALUES ('125', '1', null, '2017-08-11 14:18:39', null, null, null, 'reading', 'userLike', '阅读', '31');
+INSERT INTO `sys_ddl` VALUES ('126', '1', null, '2017-08-11 14:18:54', null, null, null, 'writing', 'userLike', '写作', '32');
+INSERT INTO `sys_ddl` VALUES ('127', '1', null, '2017-08-11 14:19:07', null, null, null, 'lazying', 'userLike', '发呆', '33');
 
 -- ----------------------------
 -- Table structure for `sys_export_model`
@@ -61,12 +74,9 @@ CREATE TABLE `sys_export_model` (
 -- ----------------------------
 -- Records of sys_export_model
 -- ----------------------------
-INSERT INTO `sys_export_model` VALUES ('6', '1', null, '2016-11-02 10:35:37', null, '2016-11-02 10:35:49', null, 'sys_ddl', '主键,创建人.,创建时间.,修改人.,修改时间.,描述,数据字典内码,数据字典名称,数据字典key,数据字典值,数据字典排序', 'ddl_id,creator,create_time,editor,edit_time,remark,ddl_code,ddl_name,ddl_key,ddl_value,ddl_number');
-INSERT INTO `sys_export_model` VALUES ('7', '1', null, '2016-11-02 11:31:00', null, null, null, 'sys_export_model', '模型主键,状态 PublicStatusEnum,创建人.,创建时间.,修改人.,修改时间.,描述,所属模块，如用户管理为：system-user,导出字段的中文名,未导出字段的中文名', 'model_id,model_status,creator,create_time,editor,edit_time,remark,model_name,c_names,e_names');
 INSERT INTO `sys_export_model` VALUES ('8', '1', null, '2016-11-02 13:21:19', null, null, null, 'sys_user_log', '日志id,状态 PublicStatusEnum,创建人.,创建时间.,修改人.,修改时间.,描述,用户ID,用户名,操作类型（参与枚举:OperatorLogTypeEnum,1:增加,2:修改,3:删除,4:查询,5:登录）,IP地址,操作内容, , , , ', 'user_log_id,user_log_status,creator,create_time,editor,edit_time,remark,user_id,user_name,operate_type,ip,content,method,parameter,result,usetime');
 INSERT INTO `sys_export_model` VALUES ('9', '1', null, '2016-11-02 20:07:43', null, null, null, 'sys_menu', '逐渐,状态 PublicStatusEnum,创建人.,创建时间., 修改人.,修改时间.,描述,菜单内码,菜单名称,菜单地址,菜单编号（用于显示时排序）,是否为叶子节点,菜单图标,菜单可见 show,hidden,菜单层级,父节点:一级菜单为0', 'menu_id,menu_status,creator,create_time,editor,edit_time,remark,menu_code,menu_name,menu_url,menu_num,is_leaf,menu_icon,menu_visible,level,parent_menu_id');
 INSERT INTO `sys_export_model` VALUES ('10', '1', null, '2017-03-12 10:57:37', null, null, null, 'sys_organize', '组织id,组织状态,创建者,创建时间,编辑人,编辑时间,描述,组名,组织id', 'org_id,org_status,creator,create_time,editor,edit_time,remark,org_name,parent_org_id');
-INSERT INTO `sys_export_model` VALUES ('11', '1', null, '2017-03-12 12:08:12', null, null, null, 'sys_group', ' , , , , , ,描述,组名,组织id', 'group_id,group_status,creator,create_time,editor,edit_time,remark,group_name,org_id');
 INSERT INTO `sys_export_model` VALUES ('12', '1', null, '2017-03-12 19:39:29', null, null, null, 'sys_user', ' ,状态 PublicStatusEnum,创建人.,创建时间.,修改人,修改时间.,描述,登录名,登录密码,盐,真实姓名,昵称,用户类型（admin:超级管理员，common:普通操作员），超级管理员由系统初始化时添加，不能删除),邮件号码,激活yes；未激活no,手机号,激活yes；未激活no,头像地址（缩略图,unknow未知；male 男；female 女,生日,用户详细地址,省,市,区', 'user_id,user_status,creator,create_time,editor,edit_time,remark,user_name,password,salt,real_name,nick_name,type,email,email_active,phone,phone_active,avator,sex,birthday,detail_area,province,city,area');
 
 -- ----------------------------
@@ -138,9 +148,9 @@ CREATE TABLE `sys_menu` (
   `menu_icon` varchar(45) DEFAULT NULL COMMENT '菜单图标',
   `menu_visible` varchar(10) DEFAULT NULL COMMENT '菜单可见 show,hidden',
   `level` int(11) DEFAULT NULL COMMENT '菜单层级',
-  `parent_menu_id` int(11) DEFAULT NULL COMMENT '父节点:一级菜单为0',
+  `parent_menu_id` int(11) DEFAULT '0' COMMENT '父节点:一级菜单为0',
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8 COMMENT='系统菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COMMENT='系统菜单表';
 
 -- ----------------------------
 -- Records of sys_menu
@@ -211,7 +221,7 @@ CREATE TABLE `sys_permission` (
   `menu_id` int(11) DEFAULT NULL COMMENT '菜单id（权限是从菜单项中派发出来的）',
   `permission_path` varchar(45) DEFAULT NULL COMMENT '权限路径',
   PRIMARY KEY (`permission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8 COMMENT='系统权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=utf8 COMMENT='系统权限表';
 
 -- ----------------------------
 -- Records of sys_permission
@@ -310,7 +320,6 @@ INSERT INTO `sys_permission` VALUES ('152', '1', 'lgan', '2017-03-17 09:32:12', 
 INSERT INTO `sys_permission` VALUES ('153', '1', 'lgan', '2017-03-17 09:32:27', null, null, null, 'official:news:categoryView', '官网管理:新闻管理:分类详情', 'official:news:categoryView', '68', 'official:news:categoryView');
 INSERT INTO `sys_permission` VALUES ('154', '1', 'lgan', '2017-03-17 09:32:47', null, null, null, 'official:news:categoryEdit', '官网管理:新闻管理:分类编辑', 'official:news:categoryEdit', '68', 'official:news:categoryEdit');
 INSERT INTO `sys_permission` VALUES ('155', '1', 'lgan', '2017-03-17 09:33:05', null, null, null, 'official:news:categoryDelete', '官网管理:新闻管理:分类删除', 'official:news:categoryDelete', '68', 'official:news:categoryDelete');
-INSERT INTO `sys_permission` VALUES ('156', '1', 'lgan', '2017-03-17 09:33:00', 'lgan', '2017-03-17 09:34:19', null, 'official:feedback:view', '官网管理:反馈管理:详情', 'official:feedback:view', '69', '官网管理:反馈管理:详情');
 
 -- ----------------------------
 -- Table structure for `sys_role`
@@ -333,8 +342,8 @@ CREATE TABLE `sys_role` (
 -- ----------------------------
 -- Records of sys_role
 -- ----------------------------
-INSERT INTO `sys_role` VALUES ('19', '1', null, '2016-11-07 12:53:30', null, null, '管理员角色 ', 'admin', '管理员', 'admin');
-INSERT INTO `sys_role` VALUES ('20', '1', null, '2016-11-07 12:53:45', null, null, '测试用户角色', 'test', '测试用户角色', 'user');
+INSERT INTO `sys_role` VALUES ('19', '1', null, '2017-08-11 14:29:08', 'lgan', '2017-08-11 14:29:08', '管理员角色&nbsp;', 'admin', '管理员', 'adminRole');
+INSERT INTO `sys_role` VALUES ('20', '1', null, '2017-08-11 14:29:15', 'lgan', '2017-08-11 14:29:15', '测试用户角色', 'test', '测试用户角色', 'commonRole');
 
 -- ----------------------------
 -- Table structure for `sys_role_menu`
@@ -348,26 +357,11 @@ CREATE TABLE `sys_role_menu` (
   `role_id` int(11) DEFAULT NULL COMMENT '角色id',
   `menu_id` int(11) DEFAULT NULL COMMENT '菜单id',
   PRIMARY KEY (`role_menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=283 DEFAULT CHARSET=utf8 COMMENT='系统角色菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=302 DEFAULT CHARSET=utf8 COMMENT='系统角色菜单表';
 
 -- ----------------------------
 -- Records of sys_role_menu
 -- ----------------------------
-INSERT INTO `sys_role_menu` VALUES ('256', '1', 'lgan', '2017-08-10 13:34:46', '19', '44');
-INSERT INTO `sys_role_menu` VALUES ('257', '1', 'lgan', '2017-08-10 13:34:46', '19', '61');
-INSERT INTO `sys_role_menu` VALUES ('258', '1', 'lgan', '2017-08-10 13:34:46', '19', '62');
-INSERT INTO `sys_role_menu` VALUES ('259', '1', 'lgan', '2017-08-10 13:34:46', '19', '46');
-INSERT INTO `sys_role_menu` VALUES ('260', '1', 'lgan', '2017-08-10 13:34:46', '19', '47');
-INSERT INTO `sys_role_menu` VALUES ('261', '1', 'lgan', '2017-08-10 13:34:46', '19', '48');
-INSERT INTO `sys_role_menu` VALUES ('262', '1', 'lgan', '2017-08-10 13:34:46', '19', '49');
-INSERT INTO `sys_role_menu` VALUES ('263', '1', 'lgan', '2017-08-10 13:34:46', '19', '50');
-INSERT INTO `sys_role_menu` VALUES ('264', '1', 'lgan', '2017-08-10 13:34:46', '19', '51');
-INSERT INTO `sys_role_menu` VALUES ('265', '1', 'lgan', '2017-08-10 13:34:46', '19', '52');
-INSERT INTO `sys_role_menu` VALUES ('266', '1', 'lgan', '2017-08-10 13:34:46', '19', '63');
-INSERT INTO `sys_role_menu` VALUES ('267', '1', 'lgan', '2017-08-10 13:34:46', '19', '71');
-INSERT INTO `sys_role_menu` VALUES ('268', '1', 'lgan', '2017-08-10 13:34:46', '19', '72');
-INSERT INTO `sys_role_menu` VALUES ('269', '1', 'lgan', '2017-08-10 13:34:46', '19', '73');
-INSERT INTO `sys_role_menu` VALUES ('270', '1', 'lgan', '2017-08-10 13:34:46', '19', '74');
 INSERT INTO `sys_role_menu` VALUES ('271', '1', 'lgan', '2017-08-10 13:34:51', '20', '44');
 INSERT INTO `sys_role_menu` VALUES ('272', '1', 'lgan', '2017-08-10 13:34:51', '20', '46');
 INSERT INTO `sys_role_menu` VALUES ('273', '1', 'lgan', '2017-08-10 13:34:51', '20', '47');
@@ -380,6 +374,21 @@ INSERT INTO `sys_role_menu` VALUES ('279', '1', 'lgan', '2017-08-10 13:34:51', '
 INSERT INTO `sys_role_menu` VALUES ('280', '1', 'lgan', '2017-08-10 13:34:51', '20', '72');
 INSERT INTO `sys_role_menu` VALUES ('281', '1', 'lgan', '2017-08-10 13:34:51', '20', '73');
 INSERT INTO `sys_role_menu` VALUES ('282', '1', 'lgan', '2017-08-10 13:34:51', '20', '74');
+INSERT INTO `sys_role_menu` VALUES ('283', '1', 'lgan', '2017-08-11 10:18:33', '19', '44');
+INSERT INTO `sys_role_menu` VALUES ('284', '1', 'lgan', '2017-08-11 10:18:33', '19', '61');
+INSERT INTO `sys_role_menu` VALUES ('285', '1', 'lgan', '2017-08-11 10:18:33', '19', '62');
+INSERT INTO `sys_role_menu` VALUES ('286', '1', 'lgan', '2017-08-11 10:18:33', '19', '46');
+INSERT INTO `sys_role_menu` VALUES ('287', '1', 'lgan', '2017-08-11 10:18:33', '19', '47');
+INSERT INTO `sys_role_menu` VALUES ('288', '1', 'lgan', '2017-08-11 10:18:33', '19', '48');
+INSERT INTO `sys_role_menu` VALUES ('289', '1', 'lgan', '2017-08-11 10:18:33', '19', '49');
+INSERT INTO `sys_role_menu` VALUES ('290', '1', 'lgan', '2017-08-11 10:18:33', '19', '50');
+INSERT INTO `sys_role_menu` VALUES ('291', '1', 'lgan', '2017-08-11 10:18:33', '19', '51');
+INSERT INTO `sys_role_menu` VALUES ('292', '1', 'lgan', '2017-08-11 10:18:33', '19', '52');
+INSERT INTO `sys_role_menu` VALUES ('293', '1', 'lgan', '2017-08-11 10:18:33', '19', '63');
+INSERT INTO `sys_role_menu` VALUES ('298', '1', 'lgan', '2017-08-11 10:18:33', '19', '71');
+INSERT INTO `sys_role_menu` VALUES ('299', '1', 'lgan', '2017-08-11 10:18:33', '19', '72');
+INSERT INTO `sys_role_menu` VALUES ('300', '1', 'lgan', '2017-08-11 10:18:33', '19', '73');
+INSERT INTO `sys_role_menu` VALUES ('301', '1', 'lgan', '2017-08-11 10:18:33', '19', '74');
 
 -- ----------------------------
 -- Table structure for `sys_role_permission`
@@ -533,7 +542,6 @@ INSERT INTO `sys_role_permission` VALUES ('1007', '1', 'lgan', '2017-03-17 09:54
 INSERT INTO `sys_role_permission` VALUES ('1008', '1', 'lgan', '2017-03-17 09:54:04', '19', '153');
 INSERT INTO `sys_role_permission` VALUES ('1009', '1', 'lgan', '2017-03-17 09:54:04', '19', '154');
 INSERT INTO `sys_role_permission` VALUES ('1010', '1', 'lgan', '2017-03-17 09:54:04', '19', '155');
-INSERT INTO `sys_role_permission` VALUES ('1011', '1', 'lgan', '2017-03-17 09:54:04', '19', '156');
 
 -- ----------------------------
 -- Table structure for `sys_user`
@@ -553,6 +561,7 @@ CREATE TABLE `sys_user` (
   `real_name` varchar(45) DEFAULT NULL COMMENT '真实姓名',
   `nick_name` varchar(45) DEFAULT NULL COMMENT '昵称',
   `type` varchar(10) DEFAULT NULL COMMENT '用户类型（admin:超级管理员，common:普通操作员），超级管理员由系统初始化时添加，不能删除)',
+  `user_like` varchar(50) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL COMMENT '邮件号码',
   `email_active` varchar(10) DEFAULT NULL COMMENT '激活yes；未激活no',
   `phone` varchar(20) DEFAULT NULL COMMENT '手机号',
@@ -566,13 +575,13 @@ CREATE TABLE `sys_user` (
   `area` varchar(20) DEFAULT NULL COMMENT '区',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `userName_UNIQUE` (`user_name`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='系统用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='系统用户表';
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('3', '1', null, '2016-11-04 13:45:57', 'lgan', '2017-03-06 21:22:47', '测试用户 测试编辑', 'lgan', 'e60e585fe4debcd19d7ac02e2921f16b', '7d0f67616088c7d89eab290a712e5ff3', '甘亮', null, 'admin', 'lovercws@gmail.com', null, '15330061450', null, 'fa1fa56e9196dc97c90795281c6506f0', 'man', '2016-11-10 00:00:00', '浙江杭州西湖区', '浙江', '杭州', '西湖区');
-INSERT INTO `sys_user` VALUES ('5', '1', null, '2016-11-04 16:37:16', 'lgan', '2017-03-09 21:37:26', '测试用户', 'lgan2', '688fec3f56947c2bc6d4f4e35ef9b38c', '8e9b2ec3e6514e59a8ee0fd593e71228', '甘亮', null, 'admin', 'lovercws2@gmail.com', null, '15330061452', null, 'e8edef2c2af7ba0ad47a8dd8bce9f055', 'man', '2016-11-02 00:00:00', 'nullnullnull', '浙江', '杭州', '西湖区');
+INSERT INTO `sys_user` VALUES ('3', '1', null, '2016-11-04 13:45:57', 'lgan', '2017-08-11 15:49:35', '测试用户 测试编辑', 'lgan', 'e60e585fe4debcd19d7ac02e2921f16b', '7d0f67616088c7d89eab290a712e5ff3', '甘亮', null, 'adminUser', 'reading,lazying', 'lovercws@gmail.com', null, '15330061450', null, 'http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png', 'm', '2016-11-10 00:00:00', 'nullnullnull', '浙江', '杭州', '西湖区');
+INSERT INTO `sys_user` VALUES ('6', '1', 'lgan', '2017-08-11 14:49:55', 'lgan', '2017-08-11 15:47:09', '我家宝宝最可爱了！', 'admin', '3942d195da9c3f8e5f7d1f1738e7bca4', 'da46e48c11662a5ea1fc86e637d1eda9', '甘亮', null, 'adminUser', 'reading,writing,lazying', 'babymm@aliyun.com', '0', '18971336061', '0', 'http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmNUuCAYAERABS4Fco06rc080.jpg', 'm', '2017-01-24 00:00:00', 'nullnullnull', null, null, null);
 
 -- ----------------------------
 -- Table structure for `sys_user_group`
@@ -590,14 +599,12 @@ CREATE TABLE `sys_user_group` (
   `group_id` int(11) DEFAULT NULL COMMENT '组织id',
   `privilage` varchar(50) DEFAULT NULL COMMENT '权限(基本用户1，副组长2；组长3）',
   PRIMARY KEY (`user_group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user_group
 -- ----------------------------
 INSERT INTO `sys_user_group` VALUES ('6', '1', 'lgan', '2016-11-11 15:56:48', null, null, '管理員；分配系統功能職能；', '3', '3', '3');
-INSERT INTO `sys_user_group` VALUES ('7', '1', 'lgan', '2016-11-11 15:57:13', null, null, '測試用戶組長；監督測試；', '5', '4', '3');
-INSERT INTO `sys_user_group` VALUES ('8', '1', 'lgan', '2017-03-12 11:26:52', null, null, '副组长', '5', '5', '2');
 
 -- ----------------------------
 -- Table structure for `sys_user_log`
@@ -618,14 +625,56 @@ CREATE TABLE `sys_user_log` (
   `content` varchar(500) DEFAULT NULL COMMENT '操作内容',
   `method` varchar(100) DEFAULT NULL,
   `parameter` varchar(1000) DEFAULT NULL,
-  `result` blob,
+  `result` text,
   `usetime` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`user_log_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8 COMMENT='系统日志表';
 
 -- ----------------------------
 -- Records of sys_user_log
 -- ----------------------------
+INSERT INTO `sys_user_log` VALUES ('2', '1', 'lgan', '2017-08-11 11:11:19', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除导出模型', 'com.lovecws.mumu.system.controller.system.export.SystemExportModelController deleteExportModel', '\"6\"', '{\"code\":200,\"msg\":\"导出模型删除成功\"}', '46ms');
+INSERT INTO `sys_user_log` VALUES ('3', '1', 'lgan', '2017-08-11 11:19:26', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除导出模型', 'com.lovecws.mumu.system.controller.system.export.SystemExportModelController deleteExportModel', '\"7\"', '{\"code\":200,\"msg\":\"导出模型删除成功\"}', '101ms');
+INSERT INTO `sys_user_log` VALUES ('4', '1', 'lgan', '2017-08-11 11:52:54', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除权限', 'com.lovecws.mumu.system.controller.system.permission.SystemPermissionController permissionDelete', '\"156\"', '{\"code\":200,\"msg\":\"删除菜单权限操作成功\"}', '70ms');
+INSERT INTO `sys_user_log` VALUES ('5', '1', 'lgan', '2017-08-11 12:08:08', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除用户操作日志', 'com.lovecws.mumu.system.controller.system.log.SystemLogController logDelete', '\"1\"', '{\"code\":200,\"msg\":\"success\",\"data\":{}}', '99ms');
+INSERT INTO `sys_user_log` VALUES ('6', '1', null, '2017-08-11 13:35:34', null, null, null, null, null, 'POST', '0:0:0:0:0:0:0:1', '用户登录', 'com.lovecws.mumu.system.controller.system.index.SysLoginController logining', 'null,null', '{\"view\":\"login\",\"model\":{\"msg\":\"failure\",\"code\":\"500\",\"data\":\"错误提示：用户未登录\"},\"cleared\":false}', '24ms');
+INSERT INTO `sys_user_log` VALUES ('7', '1', 'lgan', '2017-08-11 13:36:50', null, null, null, '3', 'lgan', 'POST', '0:0:0:0:0:0:0:1', '用户群组添加成员', 'com.lovecws.mumu.system.controller.system.group.SystemGroupController savemember', '3,3,\"123\",\"1\"', '{\"code\":200,\"msg\":\"添加组成员成功\"}', '61ms');
+INSERT INTO `sys_user_log` VALUES ('8', '1', 'lgan', '2017-08-11 13:36:57', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '用户群组移除成员', 'com.lovecws.mumu.system.controller.system.group.SystemGroupController memberDelete', '\"9\"', '{\"code\":200,\"msg\":\"删除组成员成功\"}', '89ms');
+INSERT INTO `sys_user_log` VALUES ('9', '1', 'lgan', '2017-08-11 13:55:52', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '用户群组移除成员', 'com.lovecws.mumu.system.controller.system.group.SystemGroupController memberDelete', '\"8\"', '{\"code\":200,\"msg\":\"删除组成员成功\"}', '58ms');
+INSERT INTO `sys_user_log` VALUES ('10', '1', 'lgan', '2017-08-11 13:55:57', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '用户群组移除成员', 'com.lovecws.mumu.system.controller.system.group.SystemGroupController memberDelete', '\"7\"', '{\"code\":200,\"msg\":\"删除组成员成功\"}', '98ms');
+INSERT INTO `sys_user_log` VALUES ('11', '1', 'lgan', '2017-08-11 14:03:59', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController ddlDelete', '111,\"roleType\"', '{\"code\":400,\"msg\":\"数据字典删除失败,该数据字典存在子数据字典，请先删除子数据字典!\"}', '7ms');
+INSERT INTO `sys_user_log` VALUES ('12', '1', 'lgan', '2017-08-11 14:04:08', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController ddlDelete', '111,\"roleType\"', '{\"code\":400,\"msg\":\"数据字典删除失败,该数据字典存在子数据字典，请先删除子数据字典!\"}', '6ms');
+INSERT INTO `sys_user_log` VALUES ('13', '1', 'lgan', '2017-08-11 14:06:13', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController ddlDelete', '112,\"123\"', '{\"code\":200,\"msg\":\"数据字典删除成功\"}', '61ms');
+INSERT INTO `sys_user_log` VALUES ('14', '1', 'lgan', '2017-08-11 14:06:20', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController ddlDelete', '111,\"roleType\"', '{\"code\":200,\"msg\":\"数据字典删除成功\"}', '99ms');
+INSERT INTO `sys_user_log` VALUES ('15', '1', 'lgan', '2017-08-11 14:06:45', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"roleType\",\"ddlValue\":\"角色类型\",\"parentCode\":\"\",\"ddlNumber\":\"1\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '55ms');
+INSERT INTO `sys_user_log` VALUES ('16', '1', 'lgan', '2017-08-11 14:07:26', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"adminRole\",\"ddlValue\":\"管理员角色\",\"parentCode\":\"roleType\",\"ddlNumber\":\"2\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '90ms');
+INSERT INTO `sys_user_log` VALUES ('17', '1', 'lgan', '2017-08-11 14:07:41', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"commonRole\",\"ddlValue\":\"普通角色\",\"parentCode\":\"roleType\",\"ddlNumber\":\"3\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '59ms');
+INSERT INTO `sys_user_log` VALUES ('18', '1', 'lgan', '2017-08-11 14:10:41', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"sexType\",\"ddlValue\":\"性别类型\",\"parentCode\":\"\",\"ddlNumber\":\"10\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '112ms');
+INSERT INTO `sys_user_log` VALUES ('19', '1', 'lgan', '2017-08-11 14:11:00', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"m\",\"ddlValue\":\"男性\",\"parentCode\":\"sexType\",\"ddlNumber\":\"11\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '52ms');
+INSERT INTO `sys_user_log` VALUES ('20', '1', 'lgan', '2017-08-11 14:11:14', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"f\",\"ddlValue\":\"女性\",\"parentCode\":\"sexType\",\"ddlNumber\":\"12\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '81ms');
+INSERT INTO `sys_user_log` VALUES ('21', '1', 'lgan', '2017-08-11 14:11:38', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"u\",\"ddlValue\":\"未知\",\"parentCode\":\"sexType\",\"ddlNumber\":\"13\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '59ms');
+INSERT INTO `sys_user_log` VALUES ('22', '1', 'lgan', '2017-08-11 14:15:01', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"userType\",\"ddlValue\":\"用户类型\",\"parentCode\":\"\",\"ddlNumber\":\"20\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '104ms');
+INSERT INTO `sys_user_log` VALUES ('23', '1', 'lgan', '2017-08-11 14:15:19', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"commonUser\",\"ddlValue\":\"普通用户\",\"parentCode\":\"userType\",\"ddlNumber\":\"21\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '64ms');
+INSERT INTO `sys_user_log` VALUES ('24', '1', 'lgan', '2017-08-11 14:15:37', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"adminUser\",\"ddlValue\":\"管理员用户\",\"parentCode\":\"userType\",\"ddlNumber\":\"22\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '70ms');
+INSERT INTO `sys_user_log` VALUES ('25', '1', 'lgan', '2017-08-11 14:15:53', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"operatorUser\",\"ddlValue\":\"操作员\",\"parentCode\":\"userType\",\"ddlNumber\":\"23\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '107ms');
+INSERT INTO `sys_user_log` VALUES ('26', '1', 'lgan', '2017-08-11 14:18:16', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"userLikes\",\"ddlValue\":\"用户爱好\",\"parentCode\":\"\",\"ddlNumber\":\"30\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '61ms');
+INSERT INTO `sys_user_log` VALUES ('27', '1', 'lgan', '2017-08-11 14:18:39', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"reading\",\"ddlValue\":\"阅读\",\"parentCode\":\"userLikes\",\"ddlNumber\":\"31\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '56ms');
+INSERT INTO `sys_user_log` VALUES ('28', '1', 'lgan', '2017-08-11 14:18:54', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"writing\",\"ddlValue\":\"写作\",\"parentCode\":\"userLikes\",\"ddlNumber\":\"32\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '85ms');
+INSERT INTO `sys_user_log` VALUES ('29', '1', 'lgan', '2017-08-11 14:19:07', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '添加数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController saveSystemDDL', '{\"ddlCode\":\"lazying\",\"ddlValue\":\"发呆\",\"parentCode\":\"userLikes\",\"ddlNumber\":\"33\",\"id\":0}', '{\"code\":200,\"msg\":\"数据字典保存成功\"}', '57ms');
+INSERT INTO `sys_user_log` VALUES ('30', '1', 'lgan', '2017-08-11 14:29:08', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '编辑角色', 'com.lovecws.mumu.system.controller.system.role.SystemRoleController updateRole', '{\"roleId\":19,\"createTime\":\"2017-08-11 14:29:07\",\"remark\":\"管理员角色\\u0026nbsp;\",\"roleCode\":\"admin\",\"roleName\":\"管理员\",\"roleType\":\"adminRole\"}', '{\"code\":200,\"msg\":\"更新角色成功\"}', '64ms');
+INSERT INTO `sys_user_log` VALUES ('31', '1', 'lgan', '2017-08-11 14:29:15', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '编辑角色', 'com.lovecws.mumu.system.controller.system.role.SystemRoleController updateRole', '{\"roleId\":20,\"createTime\":\"2017-08-11 14:29:14\",\"remark\":\"测试用户角色\",\"roleCode\":\"test\",\"roleName\":\"测试用户角色\",\"roleType\":\"commonRole\"}', '{\"code\":200,\"msg\":\"更新角色成功\"}', '47ms');
+INSERT INTO `sys_user_log` VALUES ('32', '1', 'lgan', '2017-08-11 14:39:29', null, null, null, '3', 'lgan', 'POST', '0:0:0:0:0:0:0:1', '更新数据字典', 'com.lovecws.mumu.system.controller.system.ddl.SystemDDLController updateSystemDDL', '{\"ddlCode\":\"userLike\",\"ddlValue\":\"用户爱好\",\"parentCode\":\"\",\"ddlNumber\":\"30\",\"id\":124}', '{\"code\":200,\"msg\":\"数据字典更新成功\"}', '63ms');
+INSERT INTO `sys_user_log` VALUES ('33', '1', 'lgan', '2017-08-11 14:49:55', null, null, null, '3', 'lgan', 'POST', '0:0:0:0:0:0:0:1', '添加用户', 'com.lovecws.mumu.system.controller.system.user.SystemUserController saveUser', '{\"remark\":\"我家宝宝最可爱了！\",\"userName\":\"admin\",\"password\":\"123456\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"email\":\"babymm@aliyun.com\",\"phone\":\"18971336061\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmNUuCAYAERABS4Fco06rc080.jpg\",\"sex\":\"m\",\"birthday\":\"2017-01-24 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"添加用户操作成功\"}', '484ms');
+INSERT INTO `sys_user_log` VALUES ('34', '1', 'lgan', '2017-08-11 15:28:16', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '67ms');
+INSERT INTO `sys_user_log` VALUES ('35', '1', 'lgan', '2017-08-11 15:32:04', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '77ms');
+INSERT INTO `sys_user_log` VALUES ('36', '1', 'lgan', '2017-08-11 15:33:41', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '73ms');
+INSERT INTO `sys_user_log` VALUES ('37', '1', 'lgan', '2017-08-11 15:34:49', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '69ms');
+INSERT INTO `sys_user_log` VALUES ('38', '1', 'lgan', '2017-08-11 15:35:47', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '65ms');
+INSERT INTO `sys_user_log` VALUES ('39', '1', 'lgan', '2017-08-11 15:37:30', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"userLike\":\"reading,writing,lazying\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '64ms');
+INSERT INTO `sys_user_log` VALUES ('40', '1', 'lgan', '2017-08-11 15:47:09', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":6,\"remark\":\"我家宝宝最可爱了！\",\"userName\":\"admin\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"userLike\":\"reading,writing,lazying\",\"email\":\"babymm@aliyun.com\",\"phone\":\"18971336061\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmNUuCAYAERABS4Fco06rc080.jpg\",\"sex\":\"m\",\"birthday\":\"2017-01-24 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '74ms');
+INSERT INTO `sys_user_log` VALUES ('41', '1', 'lgan', '2017-08-11 15:49:35', null, null, null, '3', 'lgan', 'PUT', '0:0:0:0:0:0:0:1', '更新用户信息', 'com.lovecws.mumu.system.controller.system.user.SystemUserController updateUser', '{\"userId\":3,\"remark\":\"测试用户 测试编辑\",\"userName\":\"lgan\",\"realName\":\"甘亮\",\"type\":\"adminUser\",\"userLike\":\"reading,lazying\",\"email\":\"lovercws@gmail.com\",\"phone\":\"15330061450\",\"avator\":\"http://www.xiaomoc.top/group1/M00/00/08/eE0NXVmMJsKAL_0lAABfCaR9Ey4204.png\",\"sex\":\"m\",\"birthday\":\"2016-11-10 00:00:00\",\"userGroupId\":0}', '{\"code\":200,\"msg\":\"更新用户操作成功\"}', '71ms');
+INSERT INTO `sys_user_log` VALUES ('42', '1', 'lgan', '2017-08-11 16:08:27', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除菜单下的权限', 'com.lovecws.mumu.system.controller.system.menu.SystemMenuController deleteMenuPermission', '\"0\"', '{\"code\":200,\"msg\":\"删除菜单权限操作成功\"}', '16ms');
+INSERT INTO `sys_user_log` VALUES ('43', '1', 'lgan', '2017-08-11 16:24:31', null, null, null, '3', 'lgan', 'DELETE', '0:0:0:0:0:0:0:1', '删除导出模型', 'com.lovecws.mumu.system.controller.system.export.SystemExportModelController deleteExportModel', '\"11\"', '{\"code\":200,\"msg\":\"导出模型删除成功\"}', '52ms');
 
 -- ----------------------------
 -- Table structure for `sys_user_role`
@@ -644,5 +693,4 @@ CREATE TABLE `sys_user_role` (
 -- ----------------------------
 -- Records of sys_user_role
 -- ----------------------------
-INSERT INTO `sys_user_role` VALUES ('14', '1', 'admin', '2016-11-07 13:36:44', '20', '5');
 INSERT INTO `sys_user_role` VALUES ('16', '1', 'lgan', '2017-08-09 14:45:14', '19', '3');

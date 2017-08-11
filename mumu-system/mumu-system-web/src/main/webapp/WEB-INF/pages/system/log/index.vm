@@ -1,8 +1,8 @@
+<meta charset="UTF-8">
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
 <link href="$request.getContextPath()/resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
-<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
 <style type="text/css">
     .searchform .form-horizontal .form-group {
         margin-bottom: 0px;
@@ -53,11 +53,12 @@
                         </form>
                     </div>
                     <table id="table"
+                           class="table table-hover table-bordered table-striped table-responsive fixed-table"
                            data-toggle="table"
                            data-toolbar="#toolbar"
                            data-show-refresh="false"
                            data-search="false"
-                           data-show-toggle="false"
+                           data-show-toggle="true"
                            data-show-columns="false"
                            data-show-export="false"
                            data-id-field="orgId"
@@ -137,11 +138,15 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
+        /*buttons.push('<button type="button" class="btn btn-default btn-sm LogsDetail"><span class="fa fa-trash-o"></span>详情</button>');*/
         buttons.push('<button type="button" class="btn btn-default btn-sm LogsDelete"><span class="fa fa-trash-o"></span>删除</button>');
         return buttons.join('');
     }
     //表格点击事件
     var operateEvents = {
+        'click .LogsDetail':function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/log/view/" + row.userLogId, "logs", true)
+        },
         //删除日志
         'click .LogsDelete': function (e, value, row, index) {
             layer.confirm('你确定要删除日志吗?', {icon: 3, title: '提示'}, function (index) {

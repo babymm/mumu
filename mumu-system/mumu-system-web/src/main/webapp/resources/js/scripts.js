@@ -26,7 +26,7 @@
          if(sub.is(':visible')) {
             sub.slideUp(200, function(){
                parent.removeClass('nav-active');
-               jQuery('.main-content').css({height: ''});
+               jQuery('.index-content').css({height: ''});
                mainContentHeightAdjust();
             });
          } else {
@@ -52,10 +52,10 @@
    }
 
    function mainContentHeightAdjust() {
-      // Adjust main content height
+      // Adjust index content height
       var docHeight = jQuery(document).height();
-      if(docHeight > jQuery('.main-content').height())
-         jQuery('.main-content').height(docHeight);
+      if(docHeight > jQuery('.index-content').height())
+         jQuery('.index-content').height(docHeight);
    }
 
    //  class add mouse hover

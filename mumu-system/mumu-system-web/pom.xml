@@ -288,6 +288,11 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-common-security</artifactId>
         </dependency>
+        <!--shiro安全组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-template</artifactId>
+        </dependency>
         <!--system接口层-->
         <dependency>
             <groupId>com.lovecws.mumu</groupId>

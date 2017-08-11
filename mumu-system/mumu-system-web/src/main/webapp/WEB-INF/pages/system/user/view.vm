@@ -1,6 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <style type="text/css">
     .layui-form .layui-form-item .layui-form-label {
         padding: 8px;
@@ -87,18 +87,12 @@
                             <label class="layui-form-label">用户类型</label>
                             <div class="layui-input-inline">
                                 <select name="type" required lay-verify="required">
-                                    #if($!user.type=='user')
-                                        <option value="user" selected>普通用户</option>
-                                        <option value="operator">接待员</option>
-                                        <option value="admin">管理员</option>
-                                    #elseif($!user.type=='operator')
-                                        <option value="user">普通用户</option>
-                                        <option value="operator" selected>接待员</option>
-                                        <option value="admin">管理员</option>
-                                    #elseif($!user.type=='admin')
-                                        <option value="user">普通用户</option>
-                                        <option value="operator">接待员</option>
-                                        <option value="admin" selected>管理员</option>
+                                    #foreach($!ddl in $!userTypes)
+                                        #if($!ddl.ddlCode==$!user.type)
+                                            <option value="$!ddl.ddlCode" selected>$!ddl.ddlValue</option>
+                                        #else
+                                            <option value="$!ddl.ddlCode">$!ddl.ddlValue</option>
+                                        #end
                                     #end
                                 </select>
                             </div>
@@ -118,17 +112,25 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户爱好</label>
                             <div class="layui-input-inline">
-                                <input type="checkbox" name="userlikes" title="阅读" checked>
-                                <input type="checkbox" name="userlikes" title="写作">
-                                <input type="checkbox" name="userlikes" title="发呆">
+                                #foreach($!ddl in $!userLikes)
+                                    #if($mumu.contains($!user.userLike,$!ddl.ddlCode))
+                                        <input type="checkbox" name="userlike" title="$!ddl.ddlValue" value="$!ddl.ddlCode" checked>
+                                    #else
+                                        <input type="checkbox" name="userlike" title="$!ddl.ddlValue" value="$!ddl.ddlCode">
+                                    #end
+                                #end
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户性别</label>
                             <div class="layui-input-inline">
-                                <input type="radio" name="sex" value="man" title="男" checked>
-                                <input type="radio" name="sex" value="femal" title="女">
-                                <input type="radio" name="sex" value="unknow" title="未知">
+                                #foreach($!ddl in $!sexTypes)
+                                    #if($!ddl.ddlCode==$!user.sex)
+                                        <input type="radio" name="sex" title="$!ddl.ddlValue" value="$!ddl.ddlCode" checked>
+                                    #else
+                                        <input type="radio" name="sex" title="$!ddl.ddlValue" value="$!ddl.ddlCode">
+                                    #end
+                                #end
                             </div>
                         </div>
                         <div class="layui-form-item">

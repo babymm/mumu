@@ -64,7 +64,7 @@
         .layui-tab-title li cite{ font-style: normal; padding-left:5px; }
         .clildFrame.layui-tab-content{ padding-right: 0; }
         .clildFrame.layui-tab-content iframe{ width: 100%; height: 100%; border:none; min-width: 320px; }
-        /*main.html*/
+        /*index.html*/
         .row,.col,.panel_word,.panel_icon{ box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box;}
         .row{ margin-left:-10px; overflow:hidden;}
         .col{ padding-left:10px;}
@@ -141,16 +141,6 @@
         baby慕慕后台管理系统,采用SpringMVC+Spring+Mybatis构建整个项目框架,apache-shiro权限验证，mybatis+druid数据持久化动作。
         前端框架采用<a class="layui-btn layui-btn-mini" target="_blank" href="http://www.layui.com">layui</a>展示，
         整个项目全部通过注解方式进行配置,具体大家可以下载代码自行查看.
-    </p>
-    <p><span style="color:#1E9FFF;">友情提示：</span>
-        由于本人比较懒，所以想要让自己手头有些事情可依做，所以编写这个权限后台管理系统，也就是为了激励自己编写代码，只有通过动手才能够学习到东西，而不能通过只动脑。
-    </p>
-    <p><span style="color:#1E9FFF;">关于作者:</span>
-        本人魔都纯后端Java程序员,前端技术确实比较弱，无意间看到layui社区的模板确实比较好看，但大多数都是静态的,于是就想做一套前后端交互的完整一点的项目，供大家一起交流和学习。
-        <span style="color:#f00;">郑重声明：</span>
-        本项目前端框架，借鉴layui社区,此模板 <a class="layui-btn layui-btn-mini" target="_blank" href="http://demo.larrycms.com/backstage/">点此跳转</a>，部分布局风格，如果有任何问题，
-        请原作者联系我:联系方式  <span style="color:#f00;">QQ:915827225 微信:lovecws</span>
-
     </p>
 </blockquote>
 <div class="row">

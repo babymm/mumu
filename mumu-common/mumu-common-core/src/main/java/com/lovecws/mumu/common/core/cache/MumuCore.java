@@ -1,4 +1,4 @@
-package com.lovecws.mumu.common.core.cache.annotation;
+package com.lovecws.mumu.common.core.cache;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

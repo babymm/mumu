@@ -54,4 +54,5 @@ public interface SysGroupService {
 	 * 群组分布统计图
 	 */
 	public List<SysGroup> queryGroupStatistics();
+
 }

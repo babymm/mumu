@@ -1,4 +1,4 @@
-package com.lovecws.mumu.system.controller;
+package com.lovecws.mumu.system.controller.system.index;
 
 import com.lovecws.mumu.system.entity.SysMenu;
 import com.lovecws.mumu.system.entity.SysUser;

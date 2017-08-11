@@ -1,6 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 <style type="text/css">
     .layui-form .layui-form-item .layui-form-label {
@@ -86,9 +86,10 @@
                             <label class="layui-form-label">用户类型</label>
                             <div class="layui-input-inline">
                                 <select name="type" required lay-verify="required">
-                                    <option value="user">普通用户</option>
-                                    <option value="operator">接待员</option>
-                                    <option value="admin">管理员</option>
+                                    <option value="">请选择</option>
+                                    #foreach($!ddl in $!userTypes)
+                                        <option value="$!ddl.ddlCode">$!ddl.ddlValue</option>
+                                    #end
                                 </select>
                             </div>
                         </div>
@@ -125,17 +126,17 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户爱好</label>
                             <div class="layui-input-inline">
-                                <input type="checkbox" name="userlikes" title="阅读" checked>
-                                <input type="checkbox" name="userlikes" title="写作">
-                                <input type="checkbox" name="userlikes" title="发呆">
+                                #foreach($!ddl in $!userLikes)
+                                    <input type="checkbox" class="userlike" name="userlike" title="$!ddl.ddlValue" value="$!ddl.ddlCode">
+                                #end
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户性别</label>
                             <div class="layui-input-inline">
-                                <input type="radio" name="sex" value="man" title="男" checked>
-                                <input type="radio" name="sex" value="femal" title="女">
-                                <input type="radio" name="sex" value="unknow" title="未知">
+                                #foreach($!ddl in $!sexTypes)
+                                    <input type="radio" name="sex" title="$!ddl.ddlValue" value="$!ddl.ddlCode">
+                                #end
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -293,6 +294,15 @@
             form.on('submit(userForm)', function (data) {
                 var remark = layedit.getText(userDescIndex);
                 data.field.remark = remark;
+
+                var userlikes=new Array();
+                var userlikesEles=$("input[class='userlike']");
+                for(var i=0;i<userlikesEles.length;i++){
+                    if(userlikesEles[i].checked){
+                        userlikes.push($(userlikesEles[i]).val());
+                    }
+                }
+                data.field.userLike = userlikes.join(",");
                 $.post("$request.getContextPath()/system/user/add", data.field, function (data) {
                     if (data.code == 200) {
                         //保存成功 关闭当前页

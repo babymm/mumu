@@ -5,6 +5,8 @@ import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.page.PageParam;
 import com.lovecws.mumu.system.dao.SysUserDao;
 import com.lovecws.mumu.system.entity.SysUser;
+import com.lovecws.mumu.system.service.SysGroupService;
+import com.lovecws.mumu.system.service.SysUserGroupService;
 import com.lovecws.mumu.system.service.SysUserRoleService;
 import com.lovecws.mumu.system.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +26,10 @@ public class SysUserServiceImpl implements SysUserService {
 
 	@Autowired
 	private SysUserDao userDao;
-	
 	@Autowired
 	private SysUserRoleService userRoleService;
+	@Autowired
+	private SysUserGroupService userGroupService;
 
 	@Override
 	public List<SysUser> querySysUserByCondition(String quserName, String qnickName, String qemail, String qphone, String userStatus) {
@@ -72,7 +75,8 @@ public class SysUserServiceImpl implements SysUserService {
 		paramMap.put("userId", userId);
 		//删除用户角色中间表数据
 		userRoleService.deleteUserRoleByUserId(userId);
-		
+		//删除用户群组中间表数据
+		userGroupService.deleteSysUserGroupByUserIdOrGroupId(userId,null);
 		//删除用户表数据
 		userDao.delete(userId);
 	}

@@ -193,4 +193,14 @@ public class SysUserLog implements Serializable {
 	public void setLogTime(Date logTime) {
 		this.logTime = logTime;
 	}
+
+	private Object proceed;
+
+	public Object getProceed() {
+		return proceed;
+	}
+
+	public void setProceed(Object proceed) {
+		this.proceed = proceed;
+	}
 }

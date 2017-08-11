@@ -106,7 +106,7 @@
        delete from sys_permission 
        <where>
           <if test="menuId!=null">
-              and menu_id=#{menuId}
+              and menu_id IN (SELECT menu_id from sys_menu where menu_id=#{menuId} or parent_menu_id=#{menuId})
           </if>
        </where>
     </delete>

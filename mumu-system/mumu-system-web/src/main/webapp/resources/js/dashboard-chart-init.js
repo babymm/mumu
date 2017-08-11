@@ -94,7 +94,7 @@ $(function() {
         },
         legend: {
             labelBoxBorderColor: "#000000",
-            container: $("#main-chart-legend"), //remove to show in the chart
+            container: $("#index-chart-legend"), //remove to show in the chart
             noColumns: 0
         },
         series: {
@@ -114,5 +114,5 @@ $(function() {
         },
         colors: ["#5abcdf", "#ff8673"]
     };
-    var plot = $.plot($("#main-chart #main-chart-container"), data, options);
+    var plot = $.plot($("#index-chart #index-chart-container"), data, options);
 });

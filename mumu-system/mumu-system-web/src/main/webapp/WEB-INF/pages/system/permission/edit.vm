@@ -1,14 +1,6 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
-<style type="text/css">
-    .wrapper .layui-form-label{
-        width: 120px;
-    }
-    .wrapper .layui-input-block{
-        margin-left: 120px;
-    }
-</style>
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
         <h3>编辑权限</h3>
@@ -45,13 +37,12 @@
                             <div class="layui-input-inline">
                                 <select name="menuId" required lay-verify="required">
                                     <option value="">请选择</option>
-                                    #foreach($subMenu in $!subMenus)
-                                        #if($!permission.menuId==$!subMenu.menuId)
-                                            <option selected="selected" value="$subMenu.menuId">$subMenu.menuName</option>
+                                    #foreach($subMenu in $subMenus)
+                                        #if($!subMenu.parentMenuId==0)
+                                            <option value="$subMenu.menuId" disabled="disabled">$subMenu.menuName</option>
                                         #else
                                             <option value="$subMenu.menuId">$subMenu.menuName</option>
                                         #end
-
                                     #end
                                 </select>
                             </div>

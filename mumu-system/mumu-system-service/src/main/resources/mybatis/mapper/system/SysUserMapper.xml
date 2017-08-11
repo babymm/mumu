@@ -18,6 +18,7 @@
 		<result column="real_name" property="realName" jdbcType="VARCHAR" />
 		<result column="nick_name" property="nickName" jdbcType="VARCHAR" />
 		<result column="type" property="type" jdbcType="VARCHAR" />
+		<result column="user_like" property="userLike" jdbcType="VARCHAR" />
 
 		<result column="email" property="email" jdbcType="VARCHAR" />
 		<result column="email_active" property="emailActive" jdbcType="VARCHAR" />
@@ -38,7 +39,7 @@
 	</resultMap>
 	<sql id="SysUserColumn">
 		user_id,user_status,creator,create_time,editor,edit_time,remark,
-		user_name,password,salt,real_name,nick_name,type,email,email_active,
+		user_name,password,salt,real_name,nick_name,type,user_like,email,email_active,
 		phone,phone_active,avator,sex,birthday,detail_area,province,city,area
 	</sql>
 
@@ -167,6 +168,9 @@
 			<if test="type != null">
 				type,
 			</if>
+			<if test="userLike != null">
+				user_like,
+			</if>
 			<if test="email != null">
 				email,
 			</if>
@@ -237,6 +241,9 @@
 			</if>
 			<if test="type != null">
 				#{type},
+			</if>
+			<if test="userLike != null">
+				#{userLike},
 			</if>
 			<if test="email != null">
 				#{email},
@@ -313,6 +320,9 @@
 			</if>
 			<if test="type != null">
 				type=#{type},
+			</if>
+			<if test="userLike != null">
+				user_like=#{userLike},
 			</if>
 			<if test="email != null">
 				email=#{email},

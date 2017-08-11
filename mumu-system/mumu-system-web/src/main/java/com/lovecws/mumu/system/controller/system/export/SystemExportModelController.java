@@ -1,5 +1,6 @@
 package com.lovecws.mumu.system.controller.system.export;
 
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.system.entity.SysDBField;
@@ -115,6 +116,7 @@ public class SystemExportModelController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加导出模型",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity saveExportModel(String modelName, String cnames, String enames){
 		SysExportModel exportModel=new SysExportModel();
@@ -229,6 +231,7 @@ public class SystemExportModelController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "编辑导出模型",operater = "POST")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity updateExportModel(int modelId,String cnames,String enames,HttpServletRequest request){
 		SysExportModel exportModel=new SysExportModel();
@@ -250,6 +253,7 @@ public class SystemExportModelController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除导出模型",operater = "DELETE")
 	@RequestMapping(value="/delete/{modelId}",method=RequestMethod.DELETE)
 	public ResponseEntity deleteExportModel(@PathVariable String modelId){
 		try {

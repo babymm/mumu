@@ -131,6 +131,7 @@
     <orderEntry type="module" module-name="mumu-common-redis" />
     <orderEntry type="module" module-name="mumu-common-fdfs" />
     <orderEntry type="module" module-name="mumu-common-security" />
+    <orderEntry type="module" module-name="mumu-common-template" />
     <orderEntry type="module" module-name="mumu-system-api" />
     <orderEntry type="module" module-name="mumu-system-service" />
   </component>

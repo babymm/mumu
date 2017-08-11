@@ -1,6 +1,7 @@
 package com.lovecws.mumu.system.controller.system.role;
 
 import com.lovecws.mumu.common.core.enums.PublicEnum;
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.common.core.tree.ZTreeBean;
@@ -13,6 +14,7 @@ import com.lovecws.mumu.system.service.*;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,6 +46,9 @@ public class SystemRoleController {
 	private SysPermissionService permissionService;
 	@Autowired
 	private SysMenuService menuService;
+
+	@Value("#{configProperties['ddl.roleType']}")
+	private String roleType;
 	
 	/**
 	 * 角色列表
@@ -75,7 +80,7 @@ public class SystemRoleController {
 	@RequestMapping(value={"/add"},method=RequestMethod.GET)
 	public String roleAdd(HttpServletRequest request){
 		//获取角色类型数据字典
-		List<SysDDL> roleTypes = ddlService.getSystemDDLByCondition("roleType");
+		List<SysDDL> roleTypes = ddlService.getSystemDDLByCondition(roleType);
 		request.setAttribute("roleTypes", roleTypes);
 		return "system/role/add";
 	}
@@ -85,6 +90,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加角色",operater = "POST")
 	@RequestMapping(value={"/add"},method=RequestMethod.POST)
 	public ResponseEntity save(SysRole role){
 		List<SysRole> roles = roleService.querySysRoleByCondition(null,role.getRoleCode(), role.getRoleName(), null);
@@ -109,7 +115,7 @@ public class SystemRoleController {
 	@RequestMapping(value={"/view/{roleId}"},method=RequestMethod.GET)
 	public String roleView(@PathVariable  String roleId,HttpServletRequest request){
 		//获取角色类型数据字典
-		List<SysDDL> roleTypes = ddlService.getSystemDDLByCondition("roleType");
+		List<SysDDL> roleTypes = ddlService.getSystemDDLByCondition(roleType);
 		request.setAttribute("roleTypes", roleTypes);
 
 		SysRole role = roleService.getSysRoleById(roleId);
@@ -125,7 +131,7 @@ public class SystemRoleController {
 	@RequestMapping(value={"/edit/{roleId}"},method=RequestMethod.GET)
 	public String roleEdit(@PathVariable  String roleId, HttpServletRequest request){
 		//获取角色类型数据字典
-		List<SysDDL> roleTypes = ddlService.getSystemDDLByCondition("roleType");
+		List<SysDDL> roleTypes = ddlService.getSystemDDLByCondition(roleType);
 		request.setAttribute("roleTypes", roleTypes);
 
 		SysRole role = roleService.getSysRoleById(roleId);
@@ -138,6 +144,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "编辑角色",operater = "PUT")
 	@RequestMapping(value={"/edit"},method=RequestMethod.PUT)
 	public ResponseEntity updateRole(SysRole role){
 		List<SysRole> roles = roleService.querySysRoleByCondition(null,role.getRoleCode(), role.getRoleName(), null);
@@ -159,6 +166,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除角色",operater = "DELETE")
 	@RequestMapping(value={"/delete/{roleId}"},method=RequestMethod.DELETE)
 	public ResponseEntity roleDelete(@PathVariable String roleId){
 		try {
@@ -220,6 +228,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "角色分配菜单",operater = "POST")
 	@RequestMapping(value = {"/allowMenu"}, method = RequestMethod.POST)
 	public ResponseEntity roleAllowMenu(String roleId, String menuIds) {
 		String loginName= SecurityUtils.getSubject().getPrincipal().toString();
@@ -293,6 +302,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "角色分配权限",operater = "POST")
 	@RequestMapping(value = {"/allowPermission"}, method = RequestMethod.POST)
 	public ResponseEntity roleAllowPermission(String roleId, String permissionIds) {
 		String loginName = SecurityUtils.getSubject().getPrincipal().toString();

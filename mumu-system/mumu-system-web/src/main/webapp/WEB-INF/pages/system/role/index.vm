@@ -45,12 +45,10 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="roleId" data-valign="middle">角色ID</th>
                             <th data-field="roleCode" data-valign="middle">角色内码</th>
                             <th data-field="roleName" data-valign="middle">角色名称</th>
                             <th data-field="roleType" data-valign="middle" data-visible="true">角色类型</th>
                             <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="remark" data-valign="middle">组织描述</th>
                             <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
                             </th>
                         </tr>

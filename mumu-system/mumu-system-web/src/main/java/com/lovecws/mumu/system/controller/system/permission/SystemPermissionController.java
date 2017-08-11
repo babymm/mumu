@@ -1,13 +1,17 @@
 package com.lovecws.mumu.system.controller.system.permission;
 
 import com.lovecws.mumu.common.core.enums.PublicEnum;
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
+import com.lovecws.mumu.system.entity.SysDDL;
 import com.lovecws.mumu.system.entity.SysMenu;
 import com.lovecws.mumu.system.entity.SysPermission;
 import com.lovecws.mumu.system.service.SysMenuService;
 import com.lovecws.mumu.system.service.SysPermissionService;
+import com.lovecws.mumu.system.util.NodeUtil;
 import org.apache.log4j.Logger;
+import org.apache.poi.ss.formula.functions.T;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -64,8 +69,13 @@ public class SystemPermissionController {
 	 */
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String permissionAdd(HttpServletRequest request){
-		List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
-		request.setAttribute("subMenus", subMenus);
+        List<SysMenu> sysMenus = menuService.querySysMenuByCondition(null, null, null);
+        List<NodeUtil.NodeBean> nodeBeans = new ArrayList<NodeUtil.NodeBean>();
+        for (SysMenu sysMenu : sysMenus) {
+            nodeBeans.add(new NodeUtil.NodeBean(String.valueOf(sysMenu.getMenuId()), String.valueOf(sysMenu.getParentMenuId()), sysMenu));
+        }
+        List<T> list = NodeUtil.iterator(nodeBeans, "﹎﹎", "menuName");
+		request.setAttribute("subMenus", list);
 		return "system/permission/add";
 	}
 	
@@ -74,6 +84,7 @@ public class SystemPermissionController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加权限",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity savePermission(SysPermission permission, HttpServletRequest request){
 		//获取权限内码和权限名称下面的权限列表
@@ -99,8 +110,15 @@ public class SystemPermissionController {
 	 */
 	@RequestMapping(value="/view/{permissionId}",method=RequestMethod.GET)
 	public String permissionView(@PathVariable String permissionId, HttpServletRequest request){
-		List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
-		request.setAttribute("subMenus", subMenus);
+	    /*List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
+		request.setAttribute("subMenus", subMenus);*/
+        List<SysMenu> sysMenus = menuService.querySysMenuByCondition(null, null, null);
+        List<NodeUtil.NodeBean> nodeBeans = new ArrayList<NodeUtil.NodeBean>();
+        for (SysMenu sysMenu : sysMenus) {
+            nodeBeans.add(new NodeUtil.NodeBean(String.valueOf(sysMenu.getMenuId()), String.valueOf(sysMenu.getParentMenuId()), sysMenu));
+        }
+        List<T> list = NodeUtil.iterator(nodeBeans, "﹎﹎", "menuName");
+        request.setAttribute("subMenus", list);
 
 		SysPermission permission = permissionService.getSysPermissionById(permissionId);
 		request.setAttribute("permission",permission);
@@ -115,8 +133,15 @@ public class SystemPermissionController {
 	 */
 	@RequestMapping(value="/edit/{permissionId}",method=RequestMethod.GET)
 	public String editPermission(@PathVariable String permissionId,HttpServletRequest request){
-		List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
-		request.setAttribute("subMenus", subMenus);
+		/*List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
+		request.setAttribute("subMenus", subMenus);*/
+        List<SysMenu> sysMenus = menuService.querySysMenuByCondition(null, null, null);
+        List<NodeUtil.NodeBean> nodeBeans = new ArrayList<NodeUtil.NodeBean>();
+        for (SysMenu sysMenu : sysMenus) {
+            nodeBeans.add(new NodeUtil.NodeBean(String.valueOf(sysMenu.getMenuId()), String.valueOf(sysMenu.getParentMenuId()), sysMenu));
+        }
+        List<T> list = NodeUtil.iterator(nodeBeans, "﹎﹎", "menuName");
+        request.setAttribute("subMenus", list);
 		
 		SysPermission permission = permissionService.getSysPermissionById(permissionId);
 		request.setAttribute("permission",permission);
@@ -130,6 +155,7 @@ public class SystemPermissionController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "编辑权限",operater = "PUT")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity udatePermission(SysPermission permission,HttpServletRequest request){
 		//获取权限内码和权限名称下面的权限列表
@@ -159,6 +185,7 @@ public class SystemPermissionController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除权限",operater = "DELETE")
 	@RequestMapping(value="/delete/{permissionId}",method=RequestMethod.DELETE)
 	public ResponseEntity permissionDelete(@PathVariable String permissionId){
 		try {

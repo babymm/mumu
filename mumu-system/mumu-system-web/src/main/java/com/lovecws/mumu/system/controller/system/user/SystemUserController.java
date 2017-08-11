@@ -1,23 +1,31 @@
 package com.lovecws.mumu.system.controller.system.user;
 
 import com.lovecws.mumu.common.core.enums.PublicEnum;
+import com.lovecws.mumu.common.core.log.MumuLog;
 import com.lovecws.mumu.common.core.page.PageBean;
 import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.common.core.tree.ZTreeBean;
 import com.lovecws.mumu.common.security.shiro.entity.BaseRealm;
 import com.lovecws.mumu.common.security.shiro.utils.PasswordHelper;
+import com.lovecws.mumu.system.entity.SysDDL;
 import com.lovecws.mumu.system.entity.SysRole;
 import com.lovecws.mumu.system.entity.SysUser;
+import com.lovecws.mumu.system.service.SysDDLService;
 import com.lovecws.mumu.system.service.SysRoleService;
 import com.lovecws.mumu.system.service.SysUserRoleService;
 import com.lovecws.mumu.system.service.SysUserService;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Controller
@@ -31,6 +39,18 @@ public class SystemUserController {
 	private SysUserRoleService userRoleService;
 	@Autowired
 	private SysRoleService roleService;
+	@Autowired
+	private SysDDLService ddlService;
+
+	//用户类型
+	@Value("#{configProperties['ddl.userType']}")
+	private String userType;
+	//用户性别
+	@Value("#{configProperties['ddl.sexType']}")
+	private String sexType;
+	//用户爱好
+	@Value("#{configProperties['ddl.userLike']}")
+	private String userLike;
 	
 	/**
 	 * 用户列表
@@ -60,7 +80,15 @@ public class SystemUserController {
 	 * @return
 	 */
 	@RequestMapping(value={"/add"},method=RequestMethod.GET)
-	public String addUser(){
+	public String addUser(HttpServletRequest request){
+		List<SysDDL> userTypes = ddlService.getSystemDDLByCondition(userType);
+		request.setAttribute("userTypes", userTypes);
+
+		List<SysDDL> sexTypes = ddlService.getSystemDDLByCondition(sexType);
+		request.setAttribute("sexTypes", sexTypes);
+
+		List<SysDDL> userLikes = ddlService.getSystemDDLByCondition(userLike);
+		request.setAttribute("userLikes", userLikes);
 		return "system/user/add";
 	}
 	
@@ -70,6 +98,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "添加用户",operater = "POST")
 	@RequestMapping(value={"/add"},method=RequestMethod.POST)
 	public ResponseEntity saveUser(SysUser user){
 		List<SysUser> users = userService.querySysUserByCondition(user.getUserName(), null, user.getEmail(), user.getPhone(), null);
@@ -111,6 +140,15 @@ public class SystemUserController {
 	public String userView(@PathVariable String userId,HttpServletRequest request){
 		SysUser user = userService.getSysUserById(userId);
 		request.setAttribute("user", user);
+
+		List<SysDDL> userTypes = ddlService.getSystemDDLByCondition(userType);
+		request.setAttribute("userTypes", userTypes);
+
+		List<SysDDL> sexTypes = ddlService.getSystemDDLByCondition(sexType);
+		request.setAttribute("sexTypes", sexTypes);
+
+		List<SysDDL> userLikes = ddlService.getSystemDDLByCondition(userLike);
+		request.setAttribute("userLikes", userLikes);
 		return "system/user/view";
 	}
 	
@@ -122,6 +160,15 @@ public class SystemUserController {
 	public String userEdit(@PathVariable String userId,HttpServletRequest request){
 		SysUser user = userService.getSysUserById(userId);
 		request.setAttribute("user", user);
+
+		List<SysDDL> userTypes = ddlService.getSystemDDLByCondition(userType);
+		request.setAttribute("userTypes", userTypes);
+
+		List<SysDDL> sexTypes = ddlService.getSystemDDLByCondition(sexType);
+		request.setAttribute("sexTypes", sexTypes);
+
+		List<SysDDL> userLikes = ddlService.getSystemDDLByCondition(userLike);
+		request.setAttribute("userLikes", userLikes);
 		return "system/user/edit";
 	}
 	
@@ -130,6 +177,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "更新用户信息",operater = "PUT")
 	@RequestMapping(value={"/edit"},method=RequestMethod.PUT)
 	public ResponseEntity updateUser(SysUser user){
 		List<SysUser> users = userService.querySysUserByCondition(user.getUserName(), null, user.getEmail(), user.getPhone(), null);
@@ -169,6 +217,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "更新用户状态信息",operater = "PUT")
 	@RequestMapping(value = {"/editStatus"}, method = RequestMethod.PUT)
 	public ResponseEntity updateUserStatus(SysUser user) {
 		try {
@@ -182,10 +231,11 @@ public class SystemUserController {
 	}
 	
 	/**
-	 * 跳转到编辑用户页面
+	 * 删除用户
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "删除用户",operater = "DELETE")
 	@RequestMapping(value={"/delete/{userId}"},method=RequestMethod.DELETE)
 	public ResponseEntity userDelete(@PathVariable String userId){
 		try {
@@ -205,6 +255,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "用户重置密码",operater = "PUT")
 	@RequestMapping(value={"/resetPwd"},method=RequestMethod.PUT)
 	public ResponseEntity userResetPwd(String userId,String userName,String password){
 		try {
@@ -266,6 +317,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@MumuLog(name = "用户分配角色",operater = "POST")
 	@RequestMapping(value = {"/allowRole"}, method = RequestMethod.POST)
 	public ResponseEntity saveUserRole(String userId, String roleIds) {
 		try {
@@ -276,5 +328,12 @@ public class SystemUserController {
 			return new ResponseEntity(200, "用户角色保存出现异常", null);
 		}
 		return new ResponseEntity(200, "用户角色保存成功", null);
+	}
+
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		dateFormat.setLenient(true);
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
 	}
 }

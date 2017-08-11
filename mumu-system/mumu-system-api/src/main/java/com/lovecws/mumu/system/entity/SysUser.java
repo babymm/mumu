@@ -15,6 +15,8 @@
  */
 package com.lovecws.mumu.system.entity;
 
+import com.lovecws.mumu.common.core.entity.PersistentEntity;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,7 +25,7 @@ import java.util.Date;
  * @author ganliang
  * @version 2016年9月10日 下午9:45:15
  */
-public class SysUser implements Serializable {
+public class SysUser extends PersistentEntity {
 
 	private static final long serialVersionUID = 1L;
 
@@ -43,6 +45,7 @@ public class SysUser implements Serializable {
 	private String realName; // 真实姓名
 	private String nickName; // 昵称
 	private String type; // 用户类型（admin:超级管理员，common:普通操作员），超级管理员由系统初始化时添加，不能删除)
+	private String userLike;//用户爱好
 
 	private String email; // 邮件号码
 	private String emailActive;// 激活yes；未激活no
@@ -157,6 +160,14 @@ public class SysUser implements Serializable {
 		this.nickName = nickName;
 	}
 
+	public String getUserLike() {
+		return userLike;
+	}
+
+	public void setUserLike(String userLike) {
+		this.userLike = userLike;
+	}
+
 	public String getType() {
 		return type;
 	}
@@ -251,16 +262,6 @@ public class SysUser implements Serializable {
 
 	public void setArea(String area) {
 		this.area = area;
-	}
-
-	@Override
-	public String toString() {
-		return "SysUser [userId=" + userId + ", userStatus=" + userStatus + ", creator=" + creator + ", createTime="
-				+ createTime + ", editor=" + editor + ", editTime=" + editTime + ", remark=" + remark + ", userName="
-				+ userName + ", password=" + password + ", salt=" + salt + ", realName=" + realName + ", nickName="
-				+ nickName + ", type=" + type + ", email=" + email + ", emailActive=" + emailActive + ", phone=" + phone
-				+ ", phoneActive=" + phoneActive + ", avator=" + avator + ", sex=" + sex + ", birthday=" + birthday
-				+ ", detailArea=" + detailArea + ", province=" + province + ", city=" + city + ", area=" + area + "]";
 	}
 
 	private int userGroupId;
