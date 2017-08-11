@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/mumu-cms/mumu-cms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/mumu-common/mumu-common-oauth" />
     <file type="web" url="file://$PROJECT_DIR$/mumu-system/mumu-system-web" />
   </component>
   <component name="MavenProjectsManager">

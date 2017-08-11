@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    " default-lazy-init="false">
+    <description>Shiro安全配置</description>
+
+    <!-- 缓存管理器 -->
+    <bean id="cacheManager" class="com.whty.framework.base.common.cache.SpringCacheManagerWrapper">
+        <property name="cacheManager" ref="springCacheManager"/>
+    </bean>
+
+    <!-- Realm实现 -->
+    <bean id="casRealm" class="com.whty.oim.base.shiro.MyCasRealm">
+        <property name="cachingEnabled" value="true"/>
+        <property name="authenticationCachingEnabled" value="true"/>
+        <property name="authenticationCacheName" value="authenticationCache"/>
+        <property name="authorizationCachingEnabled" value="true"/>
+        <property name="authorizationCacheName" value="authorizationCache"/>
+        <!-- CAS Server -->
+        <property name="casServerUrlPrefix" value="${cas.server}"/>
+        <!-- 客户端的回调地址设置，必须和下面的shiro-cas过滤器拦截的地址一致 -->
+        <property name="casService" value="${cas.client}/login"/>
+    </bean>
+
+    <bean id="casSubjectFactory" class="org.apache.shiro.cas.CasSubjectFactory"/>
+    <!-- 安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="casRealm"/>
+        <!-- <property name="sessionManager" ref="sessionManager"/> -->
+        <property name="cacheManager" ref="cacheManager"/>
+        <!-- sessionMode参数设置为native时，那么shrio就将用户的基本认证信息保存到缺省名称为shiro-activeSessionCache 的Cache中 -->
+        <!--<property name="sessionMode" value="native" />-->
+        <property name="subjectFactory" ref="casSubjectFactory"/>
+    </bean>
+
+    <!-- 相当于调用SecurityUtils.setSecurityManager(securityManager) -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod" value="org.apache.shiro.SecurityUtils.setSecurityManager"/>
+        <property name="arguments" ref="securityManager"/>
+    </bean>
+
+    <bean id="casFilter" class="org.apache.shiro.cas.CasFilter">
+        <!-- 配置验证错误时的失败页面  -->
+        <property name="failureUrl" value="${cas.client}"/>
+    </bean>
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager" />
+        <!-- 设定角色的登录链接，这里为cas登录页面的链接可配置回调地址  -->
+        <property name="loginUrl" value="${cas.server}?service=${cas.client}/login" />
+        <property name="successUrl" value="/index" />
+        <property name="unauthorizedUrl" value="/"/>
+        <property name="filters">
+            <util:map>
+                <!-- <entry key="authc" value-ref="authcFilter"/>
+                <entry key="captchaFilter" value-ref="captchaFilter"/> -->
+                <!-- 添加casFilter到shiroFilter -->
+                <entry key="cas" value-ref="casFilter"/>
+            </util:map>
+        </property>
+        <property name="filterChainDefinitions">
+            <value>
+                /logout = logout
+                /login = cas
+                /** = user
+            </value>
+        </property>
+    </bean>
+
+
+    <!--保证实现了Shiro内部lifecycle函数的bean执行 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+</beans>

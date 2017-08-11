@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-fdfs/mumu-common-fdfs.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/mumu-common-fdfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-oauth/mumu-common-oauth.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-oauth/mumu-common-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-redis/mumu-common-redis.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-redis/mumu-common-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
