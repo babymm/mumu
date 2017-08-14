@@ -7,11 +7,12 @@
         mumu管理系统是集成多个功能模块的系统。包括个人博客（开发中...）、新闻管理（开发中...）、cms内容管理系统（开发中...）、oa办公自动化管理系统（开发中...）、权限管理系统（测试中）。项目想的比较大，所以需要时间来慢慢完成。
     
 # 权限管理系统
-        无论什么系统都会存在权限安全问题，所以我先把权限管理系统完成，然后再将权限管理系统通过maven  overlay集成到各个子系统中。权限管理系统主要包括组织机构的管理、用户群组管理、用户管理、角色管理、菜单管理、权限管理、导出设置管理、日志管理、数据字典管理、数据字典管理。
-    框架：spring4+springMVC+mybatis（ssm）
-    模板：velocity
-    权限：apache-shiro
-    ui：bootstrap3、layui
+     无论什么系统都会存在权限安全问题，所以我先把权限管理系统完成，然后再将权限管理系统通过maven  overlay集成到各个子系统中。权限管理系统主要包括组织机构的管理、用户群组管理、用户管理、角色管理、菜单管理、权限管理、导出设置管理、日志管理、数据字典管理、数据字典管理。<br/>
+    框架：spring4+springMVC+mybatis <br/>
+    模板：<a href="http://velocity.apache.org/">velocity</a> <br/>
+    权限：<a href="http://shiro.apache.org/">apache-shiro</a> <br/>
+    ui：bootstrap3、layui <br/>
+    
         
     
      
