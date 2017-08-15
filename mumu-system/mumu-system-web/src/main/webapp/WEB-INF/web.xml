@@ -104,6 +104,15 @@
 		<url-pattern>/rcCaptcha</url-pattern>
 	</filter-mapping>
 
+	<error-page>
+		<error-code>404</error-code>
+		<location>/common/error/404</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/common/error/500</location>
+	</error-page>
+
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>

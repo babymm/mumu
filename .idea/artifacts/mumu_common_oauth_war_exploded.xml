@@ -81,6 +81,17 @@
           <element id="library" level="project" name="Maven: xerces:xercesImpl:2.8.1" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.2" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="archive" name="mumu-common-security-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-common-security" />
+          </element>
+          <element id="archive" name="mumu-common-redis-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-common-redis" />
+          </element>
+          <element id="library" level="project" name="Maven: redis.clients:jedis:2.8.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
+          <element id="archive" name="mumu-system-api-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-system-api" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

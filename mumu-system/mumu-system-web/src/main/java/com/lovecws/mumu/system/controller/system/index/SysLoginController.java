@@ -36,8 +36,8 @@ public class SysLoginController {
      * @return
      */
     @MumuLog(name = "用户登录",operater = "POST")
-    @RequestMapping(value = "/logining",method = {RequestMethod.GET,RequestMethod.POST})
-    public ModelAndView logining(String username,String password,HttpServletRequest request){
+    @RequestMapping(value = "/login",method = {RequestMethod.POST})
+    public ModelAndView logining(HttpServletRequest request){
         String exceptionClassName = (String) request.getAttribute("shiroLoginFailure");
         String error = null;
         if (UnknownAccountException.class.getName().equals(exceptionClassName)) {

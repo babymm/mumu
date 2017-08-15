@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>baby慕慕开发平台--注册</title>
+    <title>baby慕慕开发平台--忘记密码</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="$request.getContextPath()/resources/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -18,35 +18,50 @@
             color: #9B9EA0;
             text-decoration: none;
         }
+        .iforget-page{
+            background-color: silver;
+            background-image: url('$request.getContextPath()/resources/images/bg.jpg');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            z-index: 999px;
+            min-height: 800px;
+        }
         #main-content{
             border: 1px solid #fff;
             margin: 0 auto;
             width: 1000px;
         }
-        .register-box-body{
-            padding-top: 0px;width: 1000px;
+        #main-content .login-logo{
+            margin-top: 15px;
         }
-        .register-box-body .list-group li{
+        .iforget-box-body{
+            padding-top: 0px;
+            width: 1000px;
+            min-height: 300px;
+        }
+        .iforget-box-body .list-group li{
             width: 980px;
             border: 1px solid #b3b3b3;
             margin-bottom: 10px;
             height: 100px;
         }
-        .register-box-body .list-group .list-group-item div{
+        .iforget-box-body .list-group .list-group-item div{
             float: left;
         }
-        .register-box-body .list-group .list-group-item div .title{
+        .iforget-box-body .list-group .list-group-item div .title{
             line-height: 28px;
             height: 28px;
             font-size: 16px;
             font-weight: 700;
         }
-        .register-box-body .list-group .list-group-item div .notice{
+        .iforget-box-body .list-group .list-group-item div .notice{
             display: block;
             font-size: 12px;
             color: #888;
         }
-        .register-box-body .list-group .list-group-item a{
+        .iforget-box-body .list-group .list-group-item a{
             float: right;
             margin-top: 30px;
             line-height: 26px;
@@ -68,31 +83,40 @@
         }
     </style>
 </head>
-<div class="hold-transition login-page" style="height: auto;background-color: silver;background-image: url('$request.getContextPath()/resources/images/bg.jpg');background-repeat: no-repeat;width: 100%;height: 100%;background-size: 100% 100%;z-index: 999px">
+<div class="hold-transition iforget-page">
     #parse("header.vm")
     <div id="main-content">
-        <div class="login-logo" style="margin-top: 15px;">
-            <b>注&nbsp;册<br></b>
+        <div class="login-logo">
+            <b>找回密码<br></b>
         </div>
-        <div class="register-box-body">
+        <div class="iforget-box-body">
             <ul class="list-group">
                 <li class="list-group-item">
                     <div>
                         <h3 class="title">
-                            <span class="text">通过 手机号码注册</span>
+                            <span class="text">通过 手机号码</span>
                         </h3>
-                        <p class="notice">使用你的手机号码来注册</p>
+                        <p class="notice">使用你的手机号码来找回密码</p>
                     </div>
-                    <a href="/system/register/phone">立即注册</a>
+                    <a href="/system/iforget/phone">找回密码</a>
                 </li>
                 <li class="list-group-item">
                     <div>
                         <h3 class="title">
-                            <span class="text">通过 邮箱注册</span>
+                            <span class="text">通过 邮箱账号</span>
                         </h3>
-                        <p class="notice">使用你的邮箱来注册</p>
+                        <p class="notice">使用你的邮箱来找回密码</p>
                     </div>
-                    <a href="/system/register/email">立即注册</a>
+                    <a href="/system/iforget/email">找回密码</a>
+                </li>
+                <li class="list-group-item">
+                    <div>
+                        <h3 class="title">
+                            <span class="text">通过 人工服务</span>
+                        </h3>
+                        <p class="notice">使用人工服务来找回密码</p>
+                    </div>
+                    <a href="/system/iforget/service">找回密码</a>
                 </li>
             </ul>
         </div>
@@ -102,9 +126,9 @@
 <script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
 <script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    $(".register-box-body li").click(function () {
+    $(".iforget-box-body li").click(function () {
         var that=this;
-        $(".register-box-body li").css("border-color","#b3b3b3");
+        $(".iforget-box-body li").css("border-color","#b3b3b3");
         $(that).css("border-color","red");
     });
 </script>

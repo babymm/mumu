@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher {
 
-	@Autowired
+	@Autowired(required = false)
 	private SysUserService userService;
 	@Autowired
 	private JedisClient jedisClient;

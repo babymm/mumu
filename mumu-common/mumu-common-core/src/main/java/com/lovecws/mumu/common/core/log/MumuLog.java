@@ -26,5 +26,5 @@ public @interface MumuLog {
      * 日志请求方式
      * @return
      */
-    public String operater() default "GET";
+    public String operater() default "POST";
 }

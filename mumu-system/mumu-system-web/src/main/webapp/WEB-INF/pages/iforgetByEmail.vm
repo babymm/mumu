@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>baby慕慕开发平台--邮箱找回密码</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/css/AdminLTE.min.css">
+    <style type="text/css">
+        a, a:hover,a:visited {
+            text-decoration: none;
+        }
+        a:link, a:visited {
+            color: #9B9EA0;
+        }
+        a:visited {
+            color: #9B9EA0;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body>
-$END$
-</body>
-</html>
+<div class="hold-transition login-page" style="height: auto;background-color: silver;background-image: url('$request.getContextPath()/resources/images/bg.jpg');background-repeat: no-repeat;width: 100%;height: 100%;background-size: 100% 100%;z-index: 999px">
+    #parse("header.vm")
+    <div id="main-content"  class="login-box" style="border: 1px solid #fff;">
+        <div class="login-logo" style="margin-top: 15px;">
+            <b>邮箱找回密码<br></b>
+        </div>
+        <div class="login-box-body" style="padding-top: 0px;width: 400px;min-width: 400px;">
+            <form id="login-form" action="/system/iforget/email" method="post" enctype="application/x-www-form-urlencoded">
+                #if($!shiroLoginFailure)
+                    <div class="alert alert-danger alert-dismissible" style="padding-top: 15px;">
+                        <h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i>$!shiroLoginFailure</h4>
+                    </div>
+                #end
+                <div class="form-group has-feedback">
+                    <input type="text" name="username" class="form-control" placeholder="邮箱地址">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="code" class="form-control" style="width: 275px;padding-right: 0px;margin-right: 3px;" placeholder="邮箱验证码">
+                    <input type="button" value="发送" onclick="sendPhoneMessage()" style="float: left;left: 265px;top: 0px;width: 80px;height:34px;position: absolute;margin-left: 15px;background-color: #00C1DE;padding: 0px;border: 0px;">
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="password" class="form-control" placeholder="输入新密码">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="password" class="form-control" placeholder="重复新密码">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="submit" style="margin: 0 auto;background: #00C1DE;border-color: #00C1DE" class="btn btn-primary btn-block btn-flat">找回密码</button>
+                    </div>
+                </div>
+                <div class="form-group has-feedback" style="float: right;margin-top: 10px;">
+                    <a href="/system/login">登录</a>
+                    <a href="/system/iforget">找回密码</a>
+                    <a href="/system/register">注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    #parse("footer.vm")
+</div>
+<script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function sendPhoneMessage() {
+        alert("未实现");
+    }
+</script>

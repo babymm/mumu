@@ -18,7 +18,6 @@
         <module>mumu-common-fdfs</module>
         <module>mumu-common-security</module>
         <module>mumu-common-template</module>
-        <module>mumu-common-oauth</module>
     </modules>
 
     <properties>

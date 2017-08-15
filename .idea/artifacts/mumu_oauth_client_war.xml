@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="mumu-oauth-client:war">
     <output-path>$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/target</output-path>
-    <root id="archive" name="mumu-oauth-client.war">
+    <root id="archive" name="oauth-client.war">
       <element id="artifact" artifact-name="mumu-oauth-client:war exploded" />
     </root>
   </artifact>

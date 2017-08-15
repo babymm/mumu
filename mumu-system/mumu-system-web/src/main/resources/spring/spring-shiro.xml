@@ -42,6 +42,9 @@
 		<property name="path" value="${cache.shiro.session.path}" />
 		<property name="httpOnly" value="${cache.shiro.session.httpOnly}" />
 	</bean>
+
+	<!-- 会话ID生成器 -->
+	<bean id="sessionIdGenerator" class="org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator"/>
 	<!-- session会话存储的实现类 -->
 	<bean id="redisShiroSessionDAO" class="com.lovecws.mumu.common.security.shiro.session.RedisSessionDAO">
 		<property name="jedisClient" ref="jedisClient" />
@@ -49,6 +52,7 @@
 		<property name="keyPrefix" value="${cache.shiro.session.keyPrefix}"/>
 		<!---session缓存时间（单位秒）-->
 		<property name="expire" value="${cache.shiro.session.expire}"/>
+		<property name="sessionIdGenerator" ref="sessionIdGenerator"/>
 	</bean>
 
 	<!-- session管理器 -->

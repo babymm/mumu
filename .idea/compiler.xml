@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AjcSettings">
+    <option name="ajcPath" value="$MAVEN_REPOSITORY$/org/aspectj/aspectjtools/1.6.11/aspectjtools-1.6.11.jar" />
+    <option name="delegateToJavac" value="true" />
+  </component>
   <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="ajc" />
     <excludeFromCompile>
       <directory url="file://D:/Program Files/Java/jdk1.8.0_91" includeSubdirectories="true" />
     </excludeFromCompile>
@@ -15,11 +20,12 @@
         <module name="mumu-cms-web" />
         <module name="mumu-common-core" />
         <module name="mumu-common-fdfs" />
-        <module name="mumu-common-oauth" />
         <module name="mumu-common-redis" />
         <module name="mumu-common-security" />
         <module name="mumu-common-template" />
         <module name="mumu-oa" />
+        <module name="mumu-oauth-client" />
+        <module name="mumu-oauth-server" />
         <module name="mumu-system-api" />
         <module name="mumu-system-service" />
         <module name="mumu-system-web" />
@@ -35,11 +41,13 @@
       <module name="mumu-common" target="1.8" />
       <module name="mumu-common-core" target="1.8" />
       <module name="mumu-common-fdfs" target="1.8" />
-      <module name="mumu-common-oauth" target="1.8" />
       <module name="mumu-common-redis" target="1.8" />
       <module name="mumu-common-security" target="1.8" />
       <module name="mumu-common-template" target="1.8" />
       <module name="mumu-oa" target="1.8" />
+      <module name="mumu-oauth" target="1.8" />
+      <module name="mumu-oauth-client" target="1.8" />
+      <module name="mumu-oauth-server" target="1.6" />
       <module name="mumu-system" target="1.8" />
       <module name="mumu-system-api" target="1.8" />
       <module name="mumu-system-service" target="1.8" />

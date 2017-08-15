@@ -28,11 +28,11 @@ import java.util.List;
  */
 public class UserRealm extends AuthorizingRealm {
 
-	@Autowired
+	@Autowired(required = false)
 	private SysUserService userService;
-	@Autowired
+	@Autowired(required = false)
 	private SysRoleService roleService;
-	@Autowired
+	@Autowired(required = false)
 	private SysPermissionService permissionService;
 
 	/**

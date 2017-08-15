@@ -11,6 +11,7 @@
     <module>mumu-oa</module>
     <module>mumu-blog</module>
       <module>mumu-system</module>
+      <module>mumu-oauth</module>
   </modules>
   <packaging>pom</packaging>
 

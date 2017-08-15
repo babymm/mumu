@@ -14,14 +14,14 @@
        default-autowire="byName" default-lazy-init="false">
 
     <!-- 凭证匹配器，做登录次数验证，和密码匹配验证 -->
-    <bean id="credentialsMatcher"
+    <!--<bean id="credentialsMatcher"
           class="com.lovecws.mumu.common.security.shiro.credentials.RetryLimitHashedCredentialsMatcher">
-        <!-- 登录次数放入缓存 -->
+        &lt;!&ndash; 登录次数放入缓存 &ndash;&gt;
         <property name="hashAlgorithmName" value="${cache.shiro.credentialsMatcher.hashAlgorithmName}" />
         <property name="hashIterations" value="${cache.shiro.credentialsMatcher.hashIterations}" />
         <property name="storedCredentialsHexEncoded" value="${cache.shiro.credentialsMatcher.storedCredentialsHexEncoded}" />
         <property name="keyPrefix" value="${cache.shiro.credentialsMatcher.keyPrefix}"/>
-    </bean>
+    </bean>-->
 
     <!-- 自定义的user cas Realm实现 -->
     <bean id="casRealm" class="com.lovecws.mumu.common.security.shiro.realm.UserCasRealm">
@@ -30,8 +30,9 @@
         <property name="authenticationCacheName" value="authenticationCache"/>
         <property name="authorizationCachingEnabled" value="true"/>
         <property name="authorizationCacheName" value="authorizationCache"/>
-        <property name="casServerUrlPrefix" value="http://localhost:8080/oauth-server"/>
-        <property name="casService" value="http://localhost:8080/oauth/cas"/>
+
+        <property name="casServerUrlPrefix" value="${cache.shiro.releam.casServerUrlPrefix}"/>
+        <property name="casService" value="${cache.shiro.releam.casService}"/>
     </bean>
 
     <!-- 自定义redisManager-redis -->
@@ -46,6 +47,9 @@
         <property name="path" value="${cache.shiro.session.path}" />
         <property name="httpOnly" value="${cache.shiro.session.httpOnly}" />
     </bean>
+
+    <!-- 会话ID生成器 -->
+    <bean id="sessionIdGenerator" class="org.apache.shiro.session.mgt.eis.JavaUuidSessionIdGenerator"/>
     <!-- session会话存储的实现类 -->
     <bean id="redisShiroSessionDAO" class="com.lovecws.mumu.common.security.shiro.session.RedisSessionDAO">
         <property name="jedisClient" ref="jedisClient" />
@@ -53,6 +57,13 @@
         <property name="keyPrefix" value="${cache.shiro.session.keyPrefix}"/>
         <!---session缓存时间（单位秒）-->
         <property name="expire" value="${cache.shiro.session.expire}"/>
+        <property name="sessionIdGenerator" ref="sessionIdGenerator"/>
+     </bean>
+
+    <!-- 会话验证调度器 -->
+    <bean id="sessionValidationScheduler" class="org.apache.shiro.session.mgt.ExecutorServiceSessionValidationScheduler">
+        <property name="interval" value="${cache.shiro.session.sessionValidationInterval}"/>
+        <property name="sessionManager" ref="sessionManager"/>
     </bean>
 
     <!-- session管理器 -->
@@ -70,6 +81,7 @@
         <property name="sessionIdCookie" ref="sharesession" />
         <!-- 定时检查失效的session -->
         <property name="sessionValidationSchedulerEnabled" value="${cache.shiro.session.sessionValidationSchedulerEnabled}" />
+        <property name="sessionValidationScheduler" ref="sessionValidationScheduler"/>
     </bean>
 
     <!-- rememberMeManager管理器，写cookie，取出cookie生成用户信息 -->
@@ -84,6 +96,7 @@
         <property name="maxAge" value="${cache.shiro.cookie.maxAge}" />
     </bean>
 
+    <bean id="casSubjectFactory" class="org.apache.shiro.cas.CasSubjectFactory"/>
     <!-- 安全管理器 -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="casRealm" />
@@ -93,36 +106,12 @@
         <property name="sessionManager" ref="sessionManager" />
         <!--rememberMeManager -->
         <property name="rememberMeManager" ref="rememberMeManager" />
+        <property name="subjectFactory" ref="casSubjectFactory"/>
     </bean>
 
-    <!-- cas单点登录过滤器 -->
+    <!-- OAuth2身份验证过滤器 -->
     <bean id="casFilter" class="com.lovecws.mumu.common.security.shiro.filter.UserCasFilter">
         <property name="failureUrl" value="/casFailure.html"/>
-    </bean>
-
-    <!-- 记住我拦截器 -->
-    <bean id="RememberAuthenticationFilter" class="com.lovecws.mumu.common.security.shiro.filter.RememberAuthenticationFilter" />
-    <!-- 用户权限拦截器 -->
-    <bean id="UserPermissionsAuthorizationFilter"
-          class="com.lovecws.mumu.common.security.shiro.filter.UserPermissionsAuthorizationFilter" />
-    <!-- 注销拦截器 -->
-    <bean id="logout" class="org.apache.shiro.web.filter.authc.LogoutFilter">
-        <property name="redirectUrl" value="${cache.shiro.filter.logout.redirectUrl}" />
-    </bean>
-    <!-- 基于Form表单的身份验证过滤器，为了控制验证码 -->
-    <bean id="authcFilter" class="com.lovecws.mumu.common.security.shiro.filter.RcFormAuthenticationFilter">
-        <!-- from表达提交参数的属性命名 -->
-        <property name="usernameParam" value="${cache.shiro.filter.authc.usernameParam}" />
-        <property name="passwordParam" value="${cache.shiro.filter.authc.passwordParam}" />
-        <property name="rememberMeParam" value="${cache.shiro.filter.authc.rememberMeParam}" />
-        <property name="loginUrl" value="${cache.shiro.filter.authc.loginUrl}" />
-        <property name="failureKeyAttribute" value="${cache.shiro.filter.authc.failureKeyAttribute}" />
-    </bean>
-    <!-- 验证码验证过滤器 -->
-    <bean id="rcCaptchaValidateFilter" class="com.lovecws.mumu.common.security.shiro.filter.RcCaptchaValidateFilter">
-        <property name="captchaEbabled" value="${cache.shiro.filter.rcCaptcha.captchaEbabled}" />
-        <property name="captchaParam" value="${cache.shiro.filter.rcCaptcha.captchaParam}" />
-        <property name="failureKeyAttribute" value="${cache.shiro.filter.rcCaptcha.failureKeyAttribute}" />
     </bean>
 
     <!-- Shiro主过滤器本身功能十分强大,其强大之处就在于它支持任何基于URL路径表达式的、自定义的过滤器的执行 -->
@@ -135,10 +124,7 @@
         <property name="unauthorizedUrl" value="${cache.shiro.filter.shiro.unauthorizedUrl}" />
         <property name="filters">
             <util:map>
-                <entry key="authc" value-ref="authcFilter" />
-                <entry key="rcCaptchaValidate" value-ref="rcCaptchaValidateFilter" />
-                <entry key="perms" value-ref="UserPermissionsAuthorizationFilter" />
-                <entry key="logout" value-ref="logout" />
+                <entry key="cas" value-ref="casFilter" />
             </util:map>
         </property>
         <property name="filterChainDefinitions" value="${cache.shiro.filter.shiro.chain}"/>

@@ -1,10 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>baby慕慕开发平台--注册</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="$request.getContextPath()/resources/css/AdminLTE.min.css">
+    <style type="text/css">
+        a, a:hover,a:visited {
+            text-decoration: none;
+        }
+        a:link, a:visited {
+            color: #9B9EA0;
+        }
+        a:visited {
+            color: #9B9EA0;
+            text-decoration: none;
+        }
+        .register-page{
+            background-color: silver;
+            background-image: url('$request.getContextPath()/resources/images/bg.jpg');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            z-index: -9999px;
+            min-height: 800px;
+        }
+        #main-content{
+            border: 1px solid #fff;
+            margin: 0 auto;
+            width: 1000px;
+        }
+        .register-box-body{
+            padding-top: 0px;
+            width: 1000px;
+            min-height: 200px;
+            z-index: -999;
+        }
+        .register-box-body .list-group li{
+            width: 980px;
+            border: 1px solid #b3b3b3;
+            margin-bottom: 10px;
+            height: 100px;
+        }
+        .register-box-body .list-group .list-group-item div{
+            float: left;
+        }
+        .register-box-body .list-group .list-group-item div .title{
+            line-height: 28px;
+            height: 28px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .register-box-body .list-group .list-group-item div .notice{
+            display: block;
+            font-size: 12px;
+            color: #888;
+        }
+        .register-box-body .list-group .list-group-item a{
+            float: right;
+            margin-top: 30px;
+            line-height: 26px;
+            height: 26px;
+            width: 120px;
+            background-color: #f40;
+            border: 1px solid #f40;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 2px;
+            padding: 0 20px;
+            background-image: none;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-$END$
-</body>
-</html>
+<div class="hold-transition register-page">
+    #parse("header.vm")
+    <div id="main-content">
+        <div class="login-logo" style="margin-top: 15px;">
+            <b>注&nbsp;册<br></b>
+        </div>
+        <div class="register-box-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div>
+                        <h3 class="title">
+                            <span class="text">通过 手机号码</span>
+                        </h3>
+                        <p class="notice">使用你的手机号码来注册</p>
+                    </div>
+                    <a href="/system/register/phone">立即注册</a>
+                </li>
+                <li class="list-group-item">
+                    <div>
+                        <h3 class="title">
+                            <span class="text">通过 邮箱账号</span>
+                        </h3>
+                        <p class="notice">使用你的邮箱来注册</p>
+                    </div>
+                    <a href="/system/register/email">立即注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    #parse("footer.vm")
+</div>
+<script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(".register-box-body li").click(function () {
+        var that=this;
+        $(".register-box-body li").css("border-color","#b3b3b3");
+        $(that).css("border-color","red");
+    });
+</script>

@@ -2,7 +2,9 @@
     <style type="text/css">
         .foot-wrap{
             background-color: #373f48;
-            margin-top:80px;
+            /*background-color: rgb(243,243,244);*/
+            margin-top:0px;
+            height: 75px;
         }
         .container-fluid .container .row .row-content h3{
             text-align: center;
@@ -15,13 +17,10 @@
         }
     </style>
 </head>
-<body>
 <!--采用container-fluid，使得整个页尾的宽度为100%，并设置它的背景色-->
 <footer class="container-fluid foot-wrap navbar-fixed-bottom">
-<!--<footer class="container-fluid foot-wrap">-->
-    <!--采用container，使得页尾内容居中 -->
     <div class="container">
-        <div class="row">
+        #*<div class="row">
             <div class="row-content col-lg-2 col-sm-4 col-xs-6">
                 <h3>联系方式</h3>
                 <ul>
@@ -73,12 +72,11 @@
                     <li><a href="#">文章归档</a></li>
                 </ul>
             </div>
-
-        </div><!--/.row -->
-    </div><!--/.container-->
+        </div>
+    </div>*#
 
     <!-- 社交图标列表，其中图标采用的是Font Awesome图标字体库-->
-    <ul class="social">
+    #*<ul class="social">
         <li>
             <a href="#" title="Twitter Profile">
                 <span class="icon fa fa-twitter"></span>
@@ -104,10 +102,12 @@
                 <span class="icon fa fa-github"></span>
             </a>
         </li>
-    </ul>
+    </ul>*#
     <p align="center" style="margin-top: 20px;color:#878B91;">
-        Copyright &copy;2017 慕慕 官网
+        Copyright © 2007-2017. baby慕慕科技有限公司 版权所有 Power by Mereca
+    </p>
+    <p align="center" style="margin-top: -7px;color:#878B91;">
+        鄂ICP备14007080号-1
     </p>
 </footer>
-</body>
 
