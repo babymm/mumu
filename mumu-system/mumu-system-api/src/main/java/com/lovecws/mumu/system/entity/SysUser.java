@@ -30,7 +30,13 @@ public class SysUser extends PersistentEntity {
 	private static final long serialVersionUID = 1L;
 
 	private Integer userId;// 主键ID.
+
+	public static final String USER_STATUS_UNACTIVE="unactive";//未激活
+	public static final String USER_STATUS_ACTIVE="active";//已激活
+	public static final String USER_STATUS_FORBIT="forbit";//被禁止登录
+	public static final String USER_STATUS_DELETE="delete";//删除
 	private String userStatus;// 状态 PublicStatusEnum
+
 	private String creator;// 创建人.
 	private Date createTime = null;// 创建时间.
 
@@ -44,6 +50,10 @@ public class SysUser extends PersistentEntity {
 
 	private String realName; // 真实姓名
 	private String nickName; // 昵称
+
+	public static final String USER_TYPE_ADMIN="admin";//未激活
+	public static final String USER_TYPE_COMMON="common";//已激活
+	public static final String USER_TYPE_OPERATOR="operator";//被禁止登录
 	private String type; // 用户类型（admin:超级管理员，common:普通操作员），超级管理员由系统初始化时添加，不能删除)
 	private String userLike;//用户爱好
 

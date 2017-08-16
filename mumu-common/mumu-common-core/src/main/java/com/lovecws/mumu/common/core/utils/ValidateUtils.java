@@ -120,7 +120,7 @@ public class ValidateUtils {
 
 	/**
 	 * 判断输入的字符串是否符合Email样式.
-	 * @param str传入的字符串
+	 * @param str 传入的字符串
 	 * @return 是Email样式返回true,否则返回false
 	 */
 	public static boolean isEmail(String str) {
@@ -202,6 +202,9 @@ public class ValidateUtils {
 	 * @return
 	 */
 	public static boolean isMobile(String mobile) {
+		if(mobile==null){
+			return false;
+		}
 		Pattern pattern = Pattern.compile("^1[3|4|5|7|8][0-9]{9}$");
 		//Pattern pattern = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
 		return pattern.matcher(mobile).matches();
@@ -232,7 +235,7 @@ public class ValidateUtils {
 	/**
 	 * 是否为邮编
 	 * 
-	 * @param phone
+	 * @param post
 	 * @return
 	 */
 	public static boolean isPostCode(String post) {
@@ -243,7 +246,7 @@ public class ValidateUtils {
 	/**
 	 * 是否为日期格式：yyyy-MM-dd
 	 * 
-	 * @param date
+	 * @param dateStr
 	 * @return
 	 */
 	public static boolean isDate(String dateStr) {
@@ -461,7 +464,7 @@ public class ValidateUtils {
 	 * 
 	 * @param str
 	 *            待检查的字符串
-	 * @param minLength
+	 * @param maxLength
 	 *            最小长度
 	 */
 	public static boolean checkStrMaxLengthByBytes(String str, Integer maxLength) {
@@ -534,7 +537,6 @@ public class ValidateUtils {
 	 * 判断参数否非空
 	 * 
 	 * @param obj
-	 * @param message
 	 * @return
 	 */
 	public static boolean isNull(Object obj) {

@@ -1,453 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72a99e8e-7558-4ef5-8287-0667ef603dd4" name="Default" comment="系统中添加mumu-common-oauth单点登录系统">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ECOTree/img/less.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ECOTree/img/plus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ECOTree/img/search.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ECOTree/img/trans.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap3-editable/img/clear.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap3-editable/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/fullAvatarEditor/expressInstall.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/fullAvatarEditor/fullAvatarEditor.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/404-error.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/500-error.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/alert.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/avatar-mini.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/bg2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-avatar-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-avatar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-sm-img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-thumb-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-thumb-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-thumb-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/blog-wide-img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/blog/image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/details_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/details_open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/error.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/image4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/image5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/sm-img-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/sm-img-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/gallery/sm-img-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/graph.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/input-spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/invoice-logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/lockscreen-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/login-bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/login-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/loginBg2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/logo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/logo.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/logo_babymm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/logo_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/minus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/user-avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/user1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/user2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/user3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/user4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/user5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/photos/userprofile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/plus-white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/qq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/weibo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/images/weixin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/img/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/default/icon-ext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/default/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/default/loading-0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/default/loading-1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/default/loading-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/moon/default.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/laydate/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/layer/default/icon-ext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/layer/default/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/layer/default/loading-0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/layer/default/loading-1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/layer/default/loading-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/font/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/font/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/font/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/10.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/11.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/12.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/13.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/14.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/15.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/16.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/17.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/18.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/19.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/20.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/21.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/22.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/23.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/24.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/25.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/26.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/27.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/28.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/29.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/3.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/30.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/31.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/32.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/33.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/34.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/35.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/36.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/37.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/38.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/39.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/4.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/40.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/41.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/42.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/43.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/44.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/45.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/46.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/47.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/48.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/49.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/5.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/50.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/51.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/52.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/53.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/54.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/55.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/56.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/57.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/58.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/59.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/6.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/60.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/61.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/62.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/63.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/64.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/65.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/66.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/67.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/68.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/69.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/7.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/70.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/71.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/8.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/images/face/9.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/1_close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/1_open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/diy/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/line_conn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/zTreeStandard.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/img/zTreeStandard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/client.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/http.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/mime.types" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/mod_fastdfs.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/nginx.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/storage.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/storage_ids.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs/conf/tracker.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/fdfs_client.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/target/test-classes/spring-storage-fdfs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/cluster" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/cluster.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/jedis-cluster.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/jedis-sentinel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/jedis-shard.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/jedis-single.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/jedis-twemproxy.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/sentinel" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/sentinel.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/sentinel_master.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/sentinel_slave.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/sharding" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/docs/twemproxy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/geo/geo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/jedis.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-redis/target/test-classes/spring-jedis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysDDLMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysExportModelMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysGroupMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysGroupRoleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysMenuMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysOrganizeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysPermissionMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysRoleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysRoleMenuMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysRolePermissionMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysUserGroupMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysUserLogMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysUserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mapper/system/SysUserRoleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/mybatis/mybatis-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/spring/spring-system-dao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/spring/spring-system-service.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/target/classes/spring/spring-system-tx.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/config/fdfs.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/doc/mumu.system.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/properties/cache.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/properties/ddl.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/properties/fdfs.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/properties/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/properties/jedis.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/properties/velocity.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/spring/spring-common-fdfs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/spring/spring-common-redis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/spring/spring-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/spring/spring-shiro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/classes/spring/springmvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/config/fdfs.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/doc/mumu.system.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/properties/cache.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/properties/ddl.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/properties/fdfs.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/properties/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/properties/jedis.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/properties/velocity.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/spring/spring-common-fdfs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/spring/spring-common-redis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/spring/spring-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/spring/spring-shiro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/classes/spring/springmvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/error/404.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/error/500.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/error/unauth.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/image/avator.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/image/icon.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/image/show.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/layout/layout.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/common/select/tree.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/footer.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/header.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/iforget.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/iforgetByEmail.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/iforgetByPhone.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/iforgetByService.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/iforgetSuccess.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/login.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/main.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/personal/message/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/personal/user/info.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/personal/user/password.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/register.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/registerByEmail.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/registerByPhone.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/registerSuccess.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/ddl/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/ddl/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/ddl/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/ddl/tables.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/ddl/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/export/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/export/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/export/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/export/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/footer.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/allowRole.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/memberAdd.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/memberEdit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/memberView.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/members.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/statistics.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/group/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/log/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/menu/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/menu/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/menu/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/menu/leaf.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/menu/permission.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/menu/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/organize/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/organize/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/organize/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/organize/members.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/organize/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/permission/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/permission/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/permission/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/permission/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/role/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/role/allowMenu.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/role/allowPermission.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/role/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/role/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/role/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/user/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/user/allowRole.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/user/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/user/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/pages/system/user/view.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/velocityToolBox.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/orgGraph.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ECOTree/ECOTree.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ECOTree/ECOTree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker3.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/js/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-table/css/bootstrap-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-table/css/bootstrap-table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-table/js/bootstrap-table-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-table/js/bootstrap-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap-table/js/bootstrap-table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap3-editable/css/bootstrap-editable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap3-editable/js/bootstrap-editable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/bootstrap3-editable/js/bootstrap-editable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/AdminLTE.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/bootstrap-fileupload.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/bootstrap-reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/clndr.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/jquery-ui-1.10.3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/jquery.stepy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/style-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/css/table-responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/fullAvatarEditor/scripts/fullAvatar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/fullAvatarEditor/scripts/fullswfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/highcharts/css/highcharts.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/highcharts/highcharts-3d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/highcharts/highcharts-more.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/highcharts/highcharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/jquery/jquery-2.1.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/jquery/jquery-3.1.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/jquery/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/bootstrap-fileupload.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/dashboard-chart-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/dynamic_table_init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/editable-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/external-dragging-calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/flot.chart.init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/icheck-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery-migrate-1.2.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery-ui-1.10.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery-ui-1.9.2.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery.cookies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery.isotope.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery.nicescroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery.stepy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/jquery.validate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/multi-select-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/nestable-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/pickers-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/spinner-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/tagsinput-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/tree-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/js/validation-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/mobile/layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/mobile/need/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/default/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layer/skin/moon/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/layui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/layui.mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/code.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/laydate/laydate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/css/modules/layer/default/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/font/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/dest/layui.all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/code.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/element.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/laydate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/layedit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/laypage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/laytpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/mobile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/upload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/lay/modules/util.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/layui/layui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/js/jquery.ztree.all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/js/jquery.ztree.core.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/js/jquery.ztree.excheck.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/js/jquery.ztree.exedit.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/js/jquery.ztree.exhide.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/target/system/resources/ztree/zTreeStyle/zTreeStyle.css" />
+    <list default="true" id="72a99e8e-7558-4ef5-8287-0667ef603dd4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/img/icon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_5_0_b01.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/mumu-common-email.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/bean/EmailAuthenticator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/bean/SimpleEmail.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/exception/EmailException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/listeners/EmailMessageCountListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/receiver/SimpleEmailReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/sender/SimpleEmailSender.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/service/EmailReceiveService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/service/EmailSendService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/service/SimpleEmailService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/utils/AddressUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/test/java/com/lovecws/mumu/common/email/service/SimpleEmailServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/test/resources/email.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/test/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-email/src/test/resources/spring-common-email.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/exception/AccountUnActiveException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/email.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-common-email.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/regEmail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/verifyCodeEmail.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/SerializeUtil.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/favicon.ico" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_system_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_system_web_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/ValidateUtils.java" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/ValidateUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/pom.xml" afterPath="$PROJECT_DIR$/mumu-common/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/README.md" afterPath="$PROJECT_DIR$/mumu-system/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysUserServiceImpl.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysUserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/pom.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIforgetController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIforgetController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-context.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/common/layout/layout.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/common/layout/layout.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmail.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmail.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerSuccess.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerSuccess.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/mumu-cms/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -469,6 +79,7 @@
     <ignored path="$PROJECT_DIR$/mumu-system/mumu-system-web/target/" />
     <ignored path="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/target/" />
     <ignored path="$PROJECT_DIR$/mumu-cms/mumu-cms-web/target/" />
+    <ignored path="$PROJECT_DIR$/mumu-common/mumu-common-email/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -479,92 +90,40 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PropertiesUtil.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/texen/util/PropertiesUtil.class">
+      <file leaf-file-name="SysRegisterController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="66">
+              <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2108#2109#0" expanded="true" />
+                <element signature="e#9709#9724#0" expanded="true" />
+                <element signature="e#9903#9918#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generator.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/texen/Generator.class">
+      <file leaf-file-name="registerByPhone.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringUtils.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/StringUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimplePool.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/SimplePool.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExceptionUtils.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/ExceptionUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassUtils.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/ClassUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayListWrapper.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/ArrayListWrapper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.vm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="352">
+              <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -574,8 +133,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -591,6 +150,9 @@
       <find>register</find>
       <find>login-page</find>
       <find>modificationCheckInterval</find>
+      <find>mail</find>
+      <find>email</find>
+      <find>username</find>
     </findStrings>
     <replaceStrings>
       <replace>login</replace>
@@ -608,57 +170,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring/spring-context.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring/springmvc.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-context.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring/spring-shiro.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/properties/cache.properties" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/controller/AuthorizeController.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/entity/User.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDao.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDaoImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/ClientService.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/ClientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/controller/AccessTokenController.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Token.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/properties/cache.properties" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/pom.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-shiro.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/pom.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/deployerConfigContext.xml" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/filter/RcCaptchaFilter.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-shiro.xml" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/log/MumuLog.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/filter/RcFormAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/footer.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/header.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerEmail.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/register.html" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmailSuccess.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhoneSuccess.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/cache.properties" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByPhone.html" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.html" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/register.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforget.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByPhone.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmail.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIforgetController.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerSuccess.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByService.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetSuccess.vm" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/mumu-system/README.md" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-email/pom.xml" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/service/EmailSendService.java" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-email/src/main/java/com/lovecws/mumu/common/email/sender/SimpleEmailSender.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/pom.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-context.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-common-email.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/common/layout/layout.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/verifyCodeEmail.html" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/SerializeUtils.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/regEmail.html" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/regEmail.html" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/verifyCodeEmail.html" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIforgetController.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmail.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerSuccess.vm" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/exception/AccountUnActiveException.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/ValidateUtils.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java" />
       </list>
     </option>
   </component>
@@ -728,6 +290,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -744,7 +307,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -755,14 +317,18 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\resources\tpl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages" />
-      <recent name="E:\EclipseWorkspace\mumu\mumu-oauth\mumu-oauth-client\src\main\resources\properties" />
+      <recent name="E:\EclipseWorkspace\mumu\mumu-common\mumu-common-core\src\main\java\com\lovecws\mumu\common\core\utils" />
+      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\resources\tpl" />
+      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\webapp" />
+      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\webapp\resources\img" />
       <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\webapp\resources\images" />
-      <recent name="E:\EclipseWorkspace\mumu\mumu-oauth\mumu-oauth-server\src\main\webapp" />
-      <recent name="E:\EclipseWorkspace\mumu\mumu-oauth\mumu-oauth-server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -777,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.clean">
+  <component name="RunManager" selected="Tomcat Server.system">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -1465,19 +1031,21 @@
       <workItem from="1502678374093" duration="10607000" />
       <workItem from="1502691543046" duration="5399000" />
       <workItem from="1502757948107" duration="28931000" />
-      <workItem from="1502788915369" duration="131000" />
+      <workItem from="1502788915369" duration="663000" />
+      <workItem from="1502844171105" duration="7164000" />
+      <workItem from="1502851592774" duration="18440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45079000" />
+    <option name="totallyTimeSpent" value="71215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35255712" sideWeight="0.50319827" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35255712" sideWeight="0.5053305" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1489,26 +1057,26 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.265506" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35255712" sideWeight="0.4968017" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35255712" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2771855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2835821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36140725" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1516,6 +1084,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加注册逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加注册逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1528,380 +1100,425 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/filter/RcFormAuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/pwdEmail.html" />
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/pwdEmail.html" />
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/img/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/response/HttpCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="196">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/SerializeUtil.java" />
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/SerializeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="144" column="4" lean-forward="true" selection-start-line="144" selection-start-column="4" selection-end-line="147" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/css/AdminLTE.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="6" column="58908" lean-forward="false" selection-start-line="6" selection-start-column="58898" selection-end-line="6" selection-end-column="58908" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="113" column="17" lean-forward="false" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+        <state relative-caret-position="855">
+          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/img/icon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysUnauthorizController.java" />
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/common/error/ErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="28" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/common/export/ExportController.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/common/error/unauth.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/common/error/500.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-342">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/common/error/404.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-412">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/header.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="34" column="111" lean-forward="false" selection-start-line="34" selection-start-column="111" selection-end-line="34" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmailSuccess.vm" />
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhoneSuccess.vm" />
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/footer.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/cache.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/register.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="296">
+          <caret line="564" column="11" lean-forward="false" selection-start-line="564" selection-start-column="11" selection-end-line="564" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#20727#20728#0" expanded="false" />
+            <element signature="e#20771#20772#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforget.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/regEmail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="152">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmail.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/regEmail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="171">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="56" />
+        <state relative-caret-position="196">
+          <caret line="130" column="13" lean-forward="false" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/email.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/org/apache/commons/lang/time/DateUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="44" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="88" column="50" lean-forward="true" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/tpl/verifyCodeEmail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#tr#3;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#tr#4;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#tr#5;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#0;n#tr#6;n#table#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerSuccess.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/user/add.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state relative-caret-position="380">
+          <caret line="305" column="16" lean-forward="true" selection-start-line="305" selection-start-column="16" selection-end-line="322" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetSuccess.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/response/ResponseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+        <state relative-caret-position="415">
+          <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIforgetController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="54" />
+        <state relative-caret-position="57">
+          <caret line="3" column="60" lean-forward="true" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3057#3072#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByPhone.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="22" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="50" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByService.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="136" column="23" lean-forward="true" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/velocity.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.2.RELEASE/spring-webmvc-3.2.2.RELEASE.jar!/org/springframework/web/servlet/view/velocity/VelocityLayoutViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="84" column="78" lean-forward="true" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/view/velocity/VelocityLayoutViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="11" column="59" lean-forward="false" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/view/velocity/VelocityViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/view/UrlBasedViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/view/AbstractCachingViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="78" lean-forward="false" selection-start-line="18" selection-start-column="78" selection-end-line="18" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE-sources.jar!/org/springframework/web/context/support/WebApplicationObjectSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.4.RELEASE/spring-context-4.3.4.RELEASE-sources.jar!/org/springframework/context/support/ApplicationObjectSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="46" column="68" lean-forward="false" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.4.RELEASE/spring-context-4.3.4.RELEASE-sources.jar!/org/springframework/context/ApplicationContextAware.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/view/AbstractTemplateViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="7" column="61" lean-forward="false" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/servlet/VelocityServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/texen/util/PropertiesUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/texen/Generator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/SimplePool.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/ExceptionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/ClassUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar!/org/apache/velocity/util/ArrayListWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        <state relative-caret-position="45">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        <state relative-caret-position="437">
+          <caret line="41" column="53" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/layer/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1" column="1385" lean-forward="false" selection-start-line="1" selection-start-column="1385" selection-end-line="1" selection-end-column="1385" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="1178" column="0" lean-forward="false" selection-start-line="1178" selection-start-column="0" selection-end-line="1178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/DataUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1104">
+          <caret line="99" column="47" lean-forward="false" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/PhoneNumberUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/WebApplicationContextUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/WebUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="116" column="35" lean-forward="false" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/SecurityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="149" column="59" lean-forward="false" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/RMBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/register.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1539">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/user/SystemUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1757">
+          <caret line="220" column="41" lean-forward="false" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/entity/BaseRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#301#302#0" expanded="false" />
+            <element signature="e#315#316#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/utils/PasswordHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="30" column="68" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding>
+            <marker date="1502861050874" expanded="true" signature="2439:3076" ph="select from sys_user" />
+            <marker date="1502861050874" expanded="true" signature="3177:3737" ph="select from sys_user" />
+            <marker date="1502861050874" expanded="true" signature="4406:4500" ph="select from sys_user" />
+            <marker date="1502861050874" expanded="true" signature="7496:9108" ph="update sys_u... " />
+            <marker date="1502861050874" expanded="true" signature="9192:9238" ph="delete from " />
+            <marker date="1502861050874" expanded="true" signature="9362:9564" ph="select u.*,u... sys_user_group" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerSuccess.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/filter/RcFormAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/exception/AccountUnActiveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/authc/DisabledAccountException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="63" column="101" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/iforgetByEmail.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="79" column="11" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="79" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByEmail.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="106" column="4" lean-forward="false" selection-start-line="106" selection-start-column="4" selection-end-line="110" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/ValidateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="207" column="65" lean-forward="true" selection-start-line="207" selection-start-column="43" selection-end-line="207" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/registerByPhone.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="44" column="47" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
+            <element signature="e#9709#9724#0" expanded="true" />
+            <element signature="e#9903#9918#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

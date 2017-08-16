@@ -9,6 +9,7 @@
     <file url="file://$PROJECT_DIR$/mumu-cms/mumu-cms-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-email" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-fdfs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-security" charset="UTF-8" />

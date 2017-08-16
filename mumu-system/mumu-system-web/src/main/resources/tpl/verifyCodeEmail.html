@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>baby慕慕开放平台-验证码找回密码</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style type="text/css">
+        #left-align-on-reply{
+            width: 800px;
+            margin: 0 auto;
+        }
+        td{
+            font: 300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-serif, Arial, Helvetica, Verdana, sans-serif;
+            padding:0 5% 18px;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+<div id="left-align-on-reply" dir="ltr">
+    <div id="main">
+        <div id="logo-row-box" style="width:95%;text-align: right;padding-top:2px;padding-bottom:2px;">
+            <img id="apple-logo-in-row-box" src="${LOGOIMG}" style="display:inline-block;height:60px;width:120px;right:0px;"  />
+        </div>
+        <table id="message-body-wrapper" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td id="message-body-left-margin" width="0"></td><td id="message-body">
+                <table id="paragraphs" border="0" cellpadding="0" cellspacing="0" width="800px">
+                    <tr><td class="paragraph">尊敬的用户 <span style="color: #000;">${USERNAME}</span>：</td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;">您好！您最近提出了重设密码的请求，验证码是：</td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;"><h2>${VERIFYCODE}</h2></td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;">如果您未做过此更改并认为有人未经授权访问了您的帐户，您应尽快前往 <a href="${IFORGOTURL}" role="link">${IFORGOTURL}</a> 重设您的密码。</td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;">前往 <a href="${LOGINURL}" role="link">${LOGINURL}</a> 登录您的 baby慕慕开放平台帐户页面，查看并更新您的安全设置。<br><br><br></td></tr>
+
+                    <tr><td class="paragraph" style="padding-left: 66px;">此致</td></tr>
+                    <tr><td id="signature" style="padding-left: 66px;">baby慕慕 支持</td></tr>
+                </table>
+            </td>
+            </tr>
+        </table>
+    </div>
+    <footer style="width:100%;">
+        <div class="footer-radial-gradient" style="display:none;"></div>
+        <table id="footer-paragraphs" border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+            <tr><td id="footer-hr-cell"><div class="footer-hr" style="height:1px;" height="1"></div></td></tr>
+            <tr><td id="footer-gradient-img-cell" style="width:100%"><img id="footer-gradient" src="https://statici.icloud.com/emailimages/v4/common/footer_gradient_web.png" style="display:block;width:100%;" height="16"  /></td></tr>
+            <tr><td id="footer-links" style="padding:0;text-align:center;font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-serif;color:#888;"><a href="${OFFICIALURL}" role="link">官网</a> | <a href="${OFFICIALURL}" role="link">反馈</a> | <a href="${OFFICIALURL}" role="link">&#x9690;私&#x653F;策</a></td></tr>
+            <tr><td id="copyright-cell" style="padding:0;margin-bottom:0;text-align:center;font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-serif;color:#888;">Copyright &#xA9; 2017 <span id="apple-address" dir="ltr" class="unlink  display-block" style="display:block;">baby慕慕 Distribution International, Hollyhill Industrial Estate, Hollyhill, Cork, Ireland.&#x200f;</span> <span id="all-rights-reserved">保留所有权利。</span></td></tr>
+        </table>
+    </footer>
+</div>
+</body>
+</html>

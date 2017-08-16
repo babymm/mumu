@@ -1,6 +1,7 @@
 package com.lovecws.mumu.system.controller.system.index;
 
 import com.lovecws.mumu.common.core.log.MumuLog;
+import com.lovecws.mumu.common.security.shiro.exception.AccountUnActiveException;
 import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.ExcessiveAttemptsException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -48,6 +49,8 @@ public class SysLoginController {
             error = "输入错误次数太过，请稍后重试";
         } else if(DisabledAccountException.class.getName().equals(exceptionClassName)){
             error="账户被锁定，请联系管理员";
+        }else if(AccountUnActiveException.class.getName().equals(exceptionClassName)){
+            error="账户未激活，请登录邮箱激活账号！";
         }else if (exceptionClassName != null) {
             error = "错误提示：" + exceptionClassName;
         }

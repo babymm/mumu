@@ -32,14 +32,19 @@
         <div class="register-box-body">
             <input type="hidden" name="registerType" value="$!registerType">
             <input type="hidden" name="contact" value="$!contact">
-           #* #set($registerType='email')*#
             #if($!registerType=='phone')
                 <div style="width: 600px;margin: 0 auto;">
                     <h2>手机号码注册成功，请<a href="/system/login">登录</a></h2>
                 </div>
             #elseif($!registerType=='email')
                 <div style="width: 600px;margin: 0 auto;">
-                    <h2>邮件发送成功，请<a href="" id="emailActive" target="_blank">激活邮件</a>之后，再<a href="/system/login">登录</a>。</h2>
+                    #if($code==200)
+                        <h2>邮箱激活成功,请<a href="/system/login">登录</a>。</h2>
+                    #elseif($code==500)
+                        <h2>$!msg</h2>
+                    #else
+                        <h2>邮件发送成功，请<a href="" id="emailActive" target="_blank">激活邮件</a>之后，再<a href="/system/login">登录</a>。</h2>
+                    #end
                 </div>
             #else
                 <div style="width: 600px;margin: 0 auto;">

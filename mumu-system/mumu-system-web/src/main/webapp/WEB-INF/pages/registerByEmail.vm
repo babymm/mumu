@@ -18,43 +18,79 @@
             color: #9B9EA0;
             text-decoration: none;
         }
+        .login-page{
+            height: auto;
+            background-color: silver;
+            background-image: url('$request.getContextPath()/resources/images/bg.jpg');
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            z-index: 999px
+        }
+        .login-page .login-box{
+            border: 1px solid #fff;
+        }
+        .login-page .login-box .login-logo{
+            margin-top: 15px;
+        }
+        .login-page .login-box .login-box-body{
+            padding-top: 0px;
+            width: 400px;
+            min-width: 400px;
+        }
+        .login-page .login-box .login-box-body .alert-dismissible{
+            padding-top: 15px;
+        }
+        .login-page .login-box .login-box-body .alert-dismissible h4{
+            margin-bottom: 0px;
+        }
+        .login-page .login-box .login-box-body .btn-submit{
+            margin: 0 auto;
+            background: #00C1DE;
+            border-color: #00C1DE
+        }
+        .login-page .login-box .login-box-body .thirpartlogin{
+            float: right;
+            margin-top: 10px;
+        }
     </style>
 </head>
-<div class="hold-transition login-page" style="height: auto;background-color: silver;background-image: url('$request.getContextPath()/resources/images/bg.jpg');background-repeat: no-repeat;width: 100%;height: 100%;background-size: 100% 100%;z-index: 999px">
+<div class="hold-transition login-page">
     #parse("header.vm")
-    <div id="main-content"  class="login-box" style="border: 1px solid #fff;">
-      <div class="login-logo" style="margin-top: 15px;">
+    <div id="main-content"  class="login-box">
+      <div class="login-logo">
         <b>邮箱注册<br></b>
       </div>
-      <div class="login-box-body" style="padding-top: 0px;width: 400px;min-width: 400px;">
+      <div class="login-box-body">
           <form id="login-form" action="/system/register/email" method="post" enctype="application/x-www-form-urlencoded">
               #if($!shiroLoginFailure)
-                  <div class="alert alert-danger alert-dismissible" style="padding-top: 15px;">
-                      <h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i>$!shiroLoginFailure</h4>
+                  <div class="alert alert-danger alert-dismissible">
+                      <h4><i class="fa fa-exclamation-triangle"></i>$!shiroLoginFailure</h4>
                   </div>
               #end
               <div class="form-group has-feedback">
-                  <input type="text" name="username" class="form-control" placeholder="会员名称">
+                  <input type="text" name="username" class="form-control" placeholder="会员名称（长度不小于6）">
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
-                <input type="text" name="username" class="form-control" placeholder="邮箱地址">
+                <input type="text" name="email" class="form-control" placeholder="邮箱地址">
                 <span class="glyphicon glyphicon-phone form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="注册密码">
+                <input type="password" name="password" class="form-control" placeholder="注册密码（长度不小于6）">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
-                  <input type="password" name="password" class="form-control" placeholder="重复密码">
+                  <input type="password" name="repassword" class="form-control" placeholder="重复密码">
                   <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <button type="submit" style="margin: 0 auto;background: #00C1DE;border-color: #00C1DE" class="btn btn-primary btn-block btn-flat">立即注册</button>
+                  <button type="submit" class="btn btn-primary btn-block btn-flat btn-submit" onclick="return checkEmailRegister()">立即注册</button>
                 </div>
               </div>
-              <div class="form-group has-feedback" style="float: right;margin-top: 10px;">
+              <div class="form-group has-feedback thirpartlogin">
                    <a href="/system/login">登录</a>
                    <a href="/system/iforget">忘记密码</a>
                    <a href="/system/register/phone">手机注册</a>
@@ -66,9 +102,36 @@
 </div>
 <script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
 <script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="$request.getContextPath()/resources/layer/layer.js"></script>
 <script type="text/javascript">
-    function sendPhoneMessage() {
-        alert("未实现");
+    //正则表达式检测是否是邮箱
+    function isEmail(str){
+        var reg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+        return reg.test(str);
+    }
+    //邮箱注册 检测参数
+    function checkEmailRegister() {
+        var username=$("input[name='username']").val();
+        if(username==null||username.trim().length<6){
+            layer.msg("会员名称格式错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var email=$("input[name='email']").val();
+        if(email==null||!isEmail(email)){
+            layer.msg("邮箱格式错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var password=$("input[name='password']").val();
+        if(password==null||password==''||password.length<6){
+            layer.msg("密码错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var repassword=$("input[name='repassword']").val();
+        if(repassword==null||repassword==''||password!=repassword){
+            layer.msg("输入密码不一致", {icon: 5,time :2000});
+            return false;
+        }
+        return true;
     }
 </script>
 

@@ -105,6 +105,10 @@
           <element id="archive" name="mumu-common-template-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-common-template" />
           </element>
+          <element id="archive" name="mumu-common-email-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-common-email" />
+          </element>
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.5.0-b01" />
           <element id="archive" name="mumu-system-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-system-api" />
           </element>

@@ -52,7 +52,7 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 			// clear retry count
 			jedisClient.del(cacheName);
 			//从数据库获取用户信息 将用户信息保存到session中
-			List<SysUser> users =null;
+			/*List<SysUser> users =null;
 			if(ValidateUtils.isEmail(loginName)){
 				users = userService.querySysUserByCondition(null, null, loginName, null, null);
 			}else if(ValidateUtils.isMobile(loginName)){
@@ -64,7 +64,7 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 				SecurityUtils.getSubject().getSession().setAttribute(SysUser.SYS_USER, users.get(0));
 			}else{
 				throw new IllegalArgumentException();
-			}
+			}*/
 		}else{
 			SysUser unloginUser=new SysUser();
 			unloginUser.setUserName(loginName);

@@ -63,7 +63,10 @@
 				or phone=#{phone}
 			</if>
 			<if test="userStatus!=null and userStatus!=''">
-				and user_status=#{userStatus}
+				and user_status IN
+				<foreach collection="userStatus" open="(" close=")" index="index" item="item" separator=",">
+					#{item}
+				</foreach>
 			</if>
 		</where>
 		order by create_time desc

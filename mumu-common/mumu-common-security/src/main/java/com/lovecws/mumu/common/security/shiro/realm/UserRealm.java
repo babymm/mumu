@@ -2,8 +2,10 @@ package com.lovecws.mumu.common.security.shiro.realm;
 
 import com.alibaba.fastjson.JSON;
 import com.lovecws.mumu.common.core.enums.PublicEnum;
+import com.lovecws.mumu.common.core.utils.DateUtils;
 import com.lovecws.mumu.common.core.utils.StringUtil;
 import com.lovecws.mumu.common.core.utils.ValidateUtils;
+import com.lovecws.mumu.common.security.shiro.exception.AccountUnActiveException;
 import com.lovecws.mumu.system.entity.SysPermission;
 import com.lovecws.mumu.system.entity.SysRole;
 import com.lovecws.mumu.system.entity.SysUser;
@@ -19,6 +21,9 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -78,21 +83,45 @@ public class UserRealm extends AuthorizingRealm {
 		}else{
 			users = userService.querySysUserByCondition(loginName, null, null, null, null);
 		}
-		if(users!=null&&users.size()==1){
-			SysUser user = users.get(0);
-			//账户被锁异常
-			if(!user.getUserStatus().equals(PublicEnum.NORMAL.value())){
-				throw new DisabledAccountException();
-			}
-			SecurityUtils.getSubject().getSession().setAttribute(SysUser.SYS_USER, user);
-			// 交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，如果觉得人家的不好可以自定义实现
-			SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user.getUserName(), // 登录名
-					user.getPassword(), // 密码
-					ByteSource.Util.bytes(user.getUserName()+user.getSalt()), // salt=username+salt
-					getName() // realm name
-			);
-			return authenticationInfo;
-		}
-		throw new UnknownAccountException();
+		//用户不存在
+		if(users==null||users.size()==0){
+            throw new UnknownAccountException();
+        }
+		//删除过期或者已经被标记删除的用户
+        Iterator<SysUser> iterator = users.iterator();
+		while (iterator.hasNext()){
+            SysUser sysUser = iterator.next();
+            //未激活 并且过期的账户
+            if(SysUser.USER_STATUS_UNACTIVE.equals(sysUser.getUserStatus())&& DateUtils.truncatedCompareTo(new Date(),sysUser.getCreateTime(), Calendar.HOUR)>48){
+                iterator.remove();
+            }
+            //被标记删除的用户
+            if(SysUser.USER_STATUS_DELETE.equals(sysUser.getUserStatus())){
+                iterator.remove();
+            }
+        }
+        //删除 过期和被标记删除的用户之后 还有多余的用户  那么系统异常了。
+        if(users.size()>1){
+            throw new UnknownAccountException();
+        }
+        //校验 账户密码信息
+        SysUser user = users.get(0);
+        //账户被锁异常
+        if(user.getUserStatus().equals(SysUser.USER_STATUS_FORBIT)){
+            throw new DisabledAccountException();
+        }
+        //账户未激活
+        if(SysUser.USER_STATUS_UNACTIVE.equals(user.getUserStatus())){
+            throw new AccountUnActiveException();
+        }
+        //将用户信息保存到session中
+        SecurityUtils.getSubject().getSession().setAttribute(SysUser.SYS_USER, user);
+        // 交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，如果觉得人家的不好可以自定义实现
+        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user.getUserName(), // 登录名
+                user.getPassword(), // 密码
+                ByteSource.Util.bytes(user.getUserName()+user.getSalt()), // salt=username+salt
+                getName() // realm name
+        );
+        return authenticationInfo;
 	}
 }

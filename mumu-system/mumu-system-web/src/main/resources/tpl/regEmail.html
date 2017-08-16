@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>baby慕慕开放平台--注册确认函</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style type="text/css">
+        #left-align-on-reply{
+            width: 800px;
+            margin: 0 auto;
+        }
+        td{
+            font: 300 14px/18px 'Lucida Grande', Lucida Sans, Lucida Sans Unicode, sans-serif, Arial, Helvetica, Verdana, sans-serif;
+            padding:0 5% 18px;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+<div id="left-align-on-reply" dir="ltr">
+    <div id="main">
+        <div id="logo-row-box" style="width:95%;text-align: right;padding-top:2px;padding-bottom:2px;">
+            <img id="apple-logo-in-row-box" src="${LOGOIMG}" style="display:inline-block;height:60px;width:120px;right:0px;"  />
+        </div>
+        <table id="message-body-wrapper" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td id="message-body-left-margin" width="0"></td><td id="message-body">
+                <table id="paragraphs" border="0" cellpadding="0" cellspacing="0" width="800px">
+                    <tr><td class="paragraph">尊敬的用户 <span style="color: #000;">${USERNAME}</span>：</td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;">您好！恭喜您注册成为baby慕慕开放平台的开发者。 <br><br></td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;">这是一封注册认证邮件，请点击以下链接确认：</td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;width: 600px;"><a href="${VERIFYURL}" style="width: 600px;display: block;word-wrap: break-word; word-break: normal;">${VERIFYURL}<br/><br/></a></td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;">如果链接不能点击，请复制地址到浏览器，然后直接打开。</td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;"> 上述链接48小时内有效。如果激活链接失效，请您登录网站 <a href="${LOGINURL}">${LOGINURL}</a> 重新申请认证。 </td></tr>
+                    <tr><td class="paragraph" style="padding-left: 66px;"> 感谢您注册baby慕慕开放平台！ <br><br><br></td></tr>
+
+                    <tr><td class="paragraph" style="padding-left: 66px;">此致</td></tr>
+                    <tr><td id="signature" style="padding-left: 66px;">baby慕慕 支持</td></tr>
+                </table>
+            </td>
+            </tr>
+        </table>
+    </div>
+    <footer style="width:100%;">
+        <div class="footer-radial-gradient" style="display:none;"></div>
+        <table id="footer-paragraphs" border="0" cellpadding="0" cellspacing="0" style="pxwidth:100%;">
+            <tr><td id="footer-hr-cell"><div class="footer-hr" style="height:1px;" height="1"></div></td></tr>
+            <tr><td id="footer-gradient-img-cell" style="width:100%"><img id="footer-gradient" src="https://statici.icloud.com/emailimages/v4/common/footer_gradient_web.png" style="display:block;width:100%;" height="16"  /></td></tr>
+            <tr><td id="footer-links" style="padding:0;text-align:center;font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-serif;color:#888;"><a href="${OFFICIALURL}" role="link">官网</a> | <a href="${OFFICIALURL}" role="link">反馈</a> | <a href="${OFFICIALURL}" role="link">&#x9690;私&#x653F;策</a></td></tr>
+            <tr><td id="copyright-cell" style="padding:0;margin-bottom:0;text-align:center;font:11px/15px Geneva, Verdana, Arial, Helvetica, sans-serif;color:#888;">Copyright &#xA9; 2017 <span id="apple-address" dir="ltr" class="unlink  display-block" style="display:block;">baby慕慕 Distribution International, Hollyhill Industrial Estate, Hollyhill, Cork, Ireland.&#x200f;</span> <span id="all-rights-reserved">保留所有权利。</span></td></tr>
+        </table>
+    </footer>
+</div>
+</body>
+</html>

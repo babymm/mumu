@@ -38,7 +38,9 @@ public class SysUserServiceImpl implements SysUserService {
 		paramMap.put("nickName", qnickName);
 		paramMap.put("email", qemail);
 		paramMap.put("phone", qphone);
-		paramMap.put("userStatus", userStatus);
+		if(userStatus!=null){
+			paramMap.put("userStatus", userStatus.split(","));
+		}
 		return userDao.listByColumn(paramMap);
 	}
 
@@ -60,9 +62,9 @@ public class SysUserServiceImpl implements SysUserService {
 	@Override
 	public SysUser addUser(SysUser user) {
 		user.setCreateTime(new Date());
-		user.setUserStatus(PublicEnum.NORMAL.value());
+		/*user.setUserStatus(PublicEnum.NORMAL.value());
 		user.setPhoneActive("0");
-		user.setEmailActive("0");
+		user.setEmailActive("0");*/
 		user.setDetailArea(user.getProvince()+user.getCity()+user.getArea());
 		user=userDao.insert(user);
 		return user;
@@ -126,7 +128,9 @@ public class SysUserServiceImpl implements SysUserService {
 	public List<SysUser> querySysUserByGroupId(String groupId, String userStatus) {
 		Map<String, Object> paramMap = new HashMap<String, Object>();
 		paramMap.put("groupId", groupId);
-		paramMap.put("userStatus", userStatus);
+		if(userStatus!=null){
+			paramMap.put("userStatus", userStatus.split(","));
+		}
 		return userDao.selectList("querySysUserByGroupId", paramMap);
 	}
 

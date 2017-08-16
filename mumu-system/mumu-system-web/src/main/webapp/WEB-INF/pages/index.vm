@@ -25,6 +25,7 @@
     <div id="header-content" class="left-side sticky-left-side">
         <div class="logo">
             <a href="/system/index" style="width: 100%;margin: 0px;"><h2 style="margin-top: 5px;margin-left: 20px;">baby慕慕</h2></a>
+            #* <a href="/system/index" style="width: 100%;margin: 0px;"><img src="$request.getContextPath()/resources/img/logo.png" width="200px" height="57px;"></a>*#
         </div>
         <div class="logo-icon text-center">
             <a href="#"><gog src="$request.getContextPath()/resources/images/icon.png" alt=""></a>

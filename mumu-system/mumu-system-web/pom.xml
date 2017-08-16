@@ -293,6 +293,11 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-common-template</artifactId>
         </dependency>
+        <!--email邮件发送协议-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-email</artifactId>
+        </dependency>
         <!--system接口层-->
         <dependency>
             <groupId>com.lovecws.mumu</groupId>

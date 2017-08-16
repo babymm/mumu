@@ -38,7 +38,7 @@
                   <span class="glyphicon glyphicon-user form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
-                <input type="text" name="username" class="form-control" placeholder="手机号码">
+                <input type="text" name="phone" class="form-control" placeholder="手机号码">
                 <span class="glyphicon glyphicon-phone form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
@@ -50,12 +50,12 @@
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
               <div class="form-group has-feedback">
-                  <input type="password" name="password" class="form-control" placeholder="重复密码">
+                  <input type="password" name="repassword" class="form-control" placeholder="重复密码">
                   <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <button type="submit" style="margin: 0 auto;background: #00C1DE;border-color: #00C1DE" class="btn btn-primary btn-block btn-flat">立即注册</button>
+                  <button type="submit" style="margin: 0 auto;background: #00C1DE;border-color: #00C1DE" class="btn btn-primary btn-block btn-flat" onclick="return checkRegisterPhone()">立即注册</button>
                 </div>
               </div>
               <div class="form-group has-feedback" style="float: right;margin-top: 10px;">
@@ -70,9 +70,51 @@
 </div>
 <script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
 <script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="$request.getContextPath()/resources/layer/layer.js"></script>
 <script type="text/javascript">
+    //正则表达式检测是否是手机号码
+    function isPhone(str){
+        var reg=/^1[3|4|5|7|8][0-9]{9}$/
+        return reg.test(str);
+    }
+    //发送短信验证码
     function sendPhoneMessage() {
-        alert("未实现");
+        var phone=$("input[name='phone']").val();
+        if(phone==null||!isPhone(phone)){
+            layer.alert("手机号码格式不正确!");
+        }else{
+            $.post("$request.getContextPath()/system/register/sendMessage", {phone:phone}, function (respData) {
+                if (respData.code == 200) {
+                    layer.alert(respData.data);
+                } else {
+                    layer.alert(respData.data);
+                }
+            });
+        }
+    }
+    //检验手机号码注册参数
+    function checkRegisterPhone() {
+        var username=$("input[name='username']").val();
+        if(username==null||username.trim().length<6){
+            layer.msg("会员名称格式错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var phone=$("input[name='phone']").val();
+        if(phone==null||!isPhone(phone)){
+            layer.msg("手机号码格式错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var password=$("input[name='password']").val();
+        if(password==null||password==''||password.length<6){
+            layer.msg("密码错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var repassword=$("input[name='repassword']").val();
+        if(repassword==null||repassword==''||password!=repassword){
+            layer.msg("输入密码不一致", {icon: 5,time :2000});
+            return false;
+        }
+        return true;
     }
 </script>
 
