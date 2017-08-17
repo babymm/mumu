@@ -13,6 +13,7 @@ import com.lovecws.mumu.system.util.NodeUtil;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,6 +42,7 @@ public class SystemPermissionController {
 	 * 权限列表
 	 * @return
 	 */
+	@RequiresPermissions("system:permission:view")
 	@RequestMapping(value="/index",method=RequestMethod.GET)
 	public String permissions(HttpServletRequest request){
 		List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
@@ -67,6 +69,7 @@ public class SystemPermissionController {
 	 * 添加权限
 	 * @return
 	 */
+	@RequiresPermissions("system:permission:add")
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String permissionAdd(HttpServletRequest request){
         List<SysMenu> sysMenus = menuService.querySysMenuByCondition(null, null, null);
@@ -84,6 +87,7 @@ public class SystemPermissionController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:permission:add")
 	@MumuLog(name = "添加权限",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity savePermission(SysPermission permission, HttpServletRequest request){
@@ -108,6 +112,7 @@ public class SystemPermissionController {
 	 * @param request
 	 * @return
 	 */
+	@RequiresPermissions("system:permission:view")
 	@RequestMapping(value="/view/{permissionId}",method=RequestMethod.GET)
 	public String permissionView(@PathVariable String permissionId, HttpServletRequest request){
 	    /*List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
@@ -131,6 +136,7 @@ public class SystemPermissionController {
 	 * @param request
 	 * @return
 	 */
+	@RequiresPermissions("system:permission:edit")
 	@RequestMapping(value="/edit/{permissionId}",method=RequestMethod.GET)
 	public String editPermission(@PathVariable String permissionId,HttpServletRequest request){
 		/*List<SysMenu> subMenus = menuService.getSubSysMenu(PublicEnum.NORMAL.value());
@@ -155,6 +161,7 @@ public class SystemPermissionController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:permission:edit")
 	@MumuLog(name = "编辑权限",operater = "PUT")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity udatePermission(SysPermission permission,HttpServletRequest request){
@@ -185,6 +192,7 @@ public class SystemPermissionController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:permission:delete")
 	@MumuLog(name = "删除权限",operater = "DELETE")
 	@RequestMapping(value="/delete/{permissionId}",method=RequestMethod.DELETE)
 	public ResponseEntity permissionDelete(@PathVariable String permissionId){

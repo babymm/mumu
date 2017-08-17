@@ -134,6 +134,7 @@
     <orderEntry type="module" module-name="mumu-common-template" />
     <orderEntry type="module" module-name="mumu-common-email" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.5.0-b01" level="project" />
+    <orderEntry type="module" module-name="mumu-common-sms" />
     <orderEntry type="module" module-name="mumu-system-api" />
     <orderEntry type="module" module-name="mumu-system-service" />
   </component>

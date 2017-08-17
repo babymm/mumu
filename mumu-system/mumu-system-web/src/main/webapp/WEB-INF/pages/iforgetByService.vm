@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="$request.getContextPath()/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="$request.getContextPath()/resources/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
     <link rel="stylesheet" href="$request.getContextPath()/resources/css/AdminLTE.min.css">
     <style type="text/css">
         a, a:hover,a:visited {
@@ -38,28 +39,31 @@
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="text" name="username" class="form-control" placeholder="手机号码（填写绑定的手机号码）">
+                    <select  class="form-control" name="regType" title="注册方式">
+                        <option value="qq">手机号码注册</option>
+                        <option value="weixin">邮箱号码注册</option>
+                    </select>
                     <span class="glyphicon glyphicon-phone form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="text" name="username" class="form-control" placeholder="邮箱地址（填写绑定的邮箱地址）">
+                    <input type="text" name="contact" class="form-control" placeholder="注册手机号码/邮箱">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
-                <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="最后一次设置的密码">
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div class='form-group has-feedback input-group date datepicker' id='datepicker' style="padding-left: 0px;">
+                    <input type='text' name="regDate" class="form-control" placeholder="注册时间"/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar form-control-feedback"/></span>
                 </div>
                 <div class="form-group has-feedback">
                     <input type="password" name="password" class="form-control" placeholder="输入新密码">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="重复新密码">
+                    <input type="password" name="repassword" class="form-control" placeholder="重复新密码">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button type="submit" style="margin: 0 auto;background: #00C1DE;border-color: #00C1DE" class="btn btn-primary btn-block btn-flat">找回密码</button>
+                        <button type="submit" onclick="return checkIforgetService()" style="margin: 0 auto;background: #00C1DE;border-color: #00C1DE" class="btn btn-primary btn-block btn-flat">找回密码</button>
                     </div>
                 </div>
                 <div class="form-group has-feedback" style="float: right;margin-top: 10px;">
@@ -67,9 +71,6 @@
                     <a href="/system/iforget">找回密码</a>
                     <a href="/system/register">注册</a>
                 </div>
-                #*<div class="form-group has-feedback" style="margin-top: 40px;">
-                    <span style="width: 42px;">人工服务找回密码需要根据用户设置的一些关键信息来找回密码。</span>
-                </div>*#
             </form>
         </div>
     </div>
@@ -77,8 +78,49 @@
 </div>
 <script src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
 <script src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="$request.getContextPath()/resources/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
 <script type="text/javascript">
-    function sendPhoneMessage() {
-        alert("未实现");
+    //检测人工服务找回密码参数
+    function checkIforgetService() {
+        var username=$("input[name='username']").val();
+        if(username==null||username.trim().length<6){
+            layer.msg("会员名称格式错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var contact=$("input[name='contact']").val();
+        if(contact==null){
+            layer.msg("联系方式不能为空!", {icon: 5,time :2000});
+            return false;
+        }
+        var regDate=$("input[name='regDate']").val();
+        if(regDate==null||regDate==''){
+            layer.msg("注册时间不能为空!", {icon: 5,time :2000});
+            return false;
+        }
+        var password=$("input[name='password']").val();
+        if(password==null||password==''||password.length<6){
+            layer.msg("密码错误!", {icon: 5,time :2000});
+            return false;
+        }
+        var repassword=$("input[name='repassword']").val();
+        if(repassword==null||repassword==''||password!=repassword){
+            layer.msg("输入密码不一致", {icon: 5,time :2000});
+            return false;
+        }
+        //layer.alert("人工服务找回密码暂未实现",{icon:5});
+        return true;
     }
+    //datepicker 组件初始化
+    $(function () {
+        $('.datepicker').datepicker({
+            viewMode: 'years',
+            language: 'zh',
+            autoclose: 1,
+            language: 'zh-CN',
+            format: 'yyyy-mm-dd',
+            todayHighlight: 1
+        });
+    });
 </script>

@@ -23,6 +23,7 @@
         <module name="mumu-common-fdfs" />
         <module name="mumu-common-redis" />
         <module name="mumu-common-security" />
+        <module name="mumu-common-sms" />
         <module name="mumu-common-template" />
         <module name="mumu-oa" />
         <module name="mumu-oauth-client" />
@@ -45,11 +46,12 @@
       <module name="mumu-common-fdfs" target="1.8" />
       <module name="mumu-common-redis" target="1.8" />
       <module name="mumu-common-security" target="1.8" />
+      <module name="mumu-common-sms" target="1.8" />
       <module name="mumu-common-template" target="1.8" />
       <module name="mumu-oa" target="1.8" />
       <module name="mumu-oauth" target="1.8" />
       <module name="mumu-oauth-client" target="1.8" />
-      <module name="mumu-oauth-server" target="1.6" />
+      <module name="mumu-oauth-server" target="1.8" />
       <module name="mumu-system" target="1.8" />
       <module name="mumu-system-api" target="1.8" />
       <module name="mumu-system-service" target="1.8" />

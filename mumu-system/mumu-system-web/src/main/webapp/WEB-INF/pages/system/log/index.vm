@@ -139,7 +139,10 @@
     function operateFormatter(value, row, index) {
         var buttons = [];
         /*buttons.push('<button type="button" class="btn btn-default btn-sm LogsDetail"><span class="fa fa-trash-o"></span>详情</button>');*/
-        buttons.push('<button type="button" class="btn btn-default btn-sm LogsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        var deletePermission = "$shiro.hasPermission('system:log:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm LogsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

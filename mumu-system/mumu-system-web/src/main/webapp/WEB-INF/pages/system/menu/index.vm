@@ -14,10 +14,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/menu/add','menus',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
+                        #if($shiro.hasPermission('system:menu:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/menu/add','menus',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -91,13 +90,28 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm MenusDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm MenusEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm MenusDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        var viewPermission = "$shiro.hasPermission('system:permission:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm MenusDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:permission:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm MenusEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:permission:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm MenusDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
         if (row.parentMenuId != 0) {
-            buttons.push('<button type="button" class="btn btn-default btn-sm menuPermission"><span class="glyphicon glyphicon-leaf"></span>权限</button>');
+            var menuPermission = "$shiro.hasPermission('system:menu:permissionView')";
+            if (menuPermission && menuPermission == "true") {
+                buttons.push('<button type="button" class="btn btn-default btn-sm menuPermission"><span class="glyphicon glyphicon-leaf"></span>权限</button>');
+            }
         } else {
-            buttons.push('<button type="button" class="btn btn-default btn-sm menuLeaf"><span class="glyphicon glyphicon-th-large"></span>菜单</button>');
+            var menuLeaf = "$shiro.hasPermission('system:menu:leaf')";
+            if (menuLeaf && menuLeaf == "true") {
+                buttons.push('<button type="button" class="btn btn-default btn-sm menuLeaf"><span class="glyphicon glyphicon-th-large"></span>菜单</button>');
+            }
         }
         return buttons.join('');
     }

@@ -16,6 +16,7 @@ import com.lovecws.mumu.system.service.SysUserRoleService;
 import com.lovecws.mumu.system.service.SysUserService;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -56,6 +57,7 @@ public class SystemUserController {
 	 * 用户列表
 	 * @return
 	 */
+	@RequiresPermissions("system:user:view")
 	@RequestMapping(value={"/index"},method=RequestMethod.GET)
 	public String users(){
 		return "system/user/index";
@@ -79,6 +81,7 @@ public class SystemUserController {
 	 * 跳转到添加用户页面
 	 * @return
 	 */
+	@RequiresPermissions("system:user:add")
 	@RequestMapping(value={"/add"},method=RequestMethod.GET)
 	public String addUser(HttpServletRequest request){
 		List<SysDDL> userTypes = ddlService.getSystemDDLByCondition(userType);
@@ -98,6 +101,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:user:add")
 	@MumuLog(name = "添加用户",operater = "POST")
 	@RequestMapping(value={"/add"},method=RequestMethod.POST)
 	public ResponseEntity saveUser(SysUser user){
@@ -136,6 +140,7 @@ public class SystemUserController {
 	 * 跳转到查看用户详情页面
 	 * @return
 	 */
+	@RequiresPermissions("system:user:view")
 	@RequestMapping(value={"/view/{userId}"},method=RequestMethod.GET)
 	public String userView(@PathVariable String userId,HttpServletRequest request){
 		SysUser user = userService.getSysUserById(userId);
@@ -156,6 +161,7 @@ public class SystemUserController {
 	 * 跳转到编辑用户页面
 	 * @return
 	 */
+	@RequiresPermissions("system:user:edit")
 	@RequestMapping(value={"/edit/{userId}"},method=RequestMethod.GET)
 	public String userEdit(@PathVariable String userId,HttpServletRequest request){
 		SysUser user = userService.getSysUserById(userId);
@@ -177,6 +183,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:user:edit")
 	@MumuLog(name = "更新用户信息",operater = "PUT")
 	@RequestMapping(value={"/edit"},method=RequestMethod.PUT)
 	public ResponseEntity updateUser(SysUser user){
@@ -217,6 +224,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:user:editStatus")
 	@MumuLog(name = "更新用户状态信息",operater = "PUT")
 	@RequestMapping(value = {"/editStatus"}, method = RequestMethod.PUT)
 	public ResponseEntity updateUserStatus(SysUser user) {
@@ -235,6 +243,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:user:delete")
 	@MumuLog(name = "删除用户",operater = "DELETE")
 	@RequestMapping(value={"/delete/{userId}"},method=RequestMethod.DELETE)
 	public ResponseEntity userDelete(@PathVariable String userId){
@@ -255,6 +264,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:user:resetPassword")
 	@MumuLog(name = "用户重置密码",operater = "PUT")
 	@RequestMapping(value={"/resetPwd"},method=RequestMethod.PUT)
 	public ResponseEntity userResetPwd(String userId,String userName,String password){
@@ -280,6 +290,7 @@ public class SystemUserController {
 	 * 用户分配角色
 	 * @return
 	 */
+	@RequiresPermissions("system:user:allowRole")
 	@RequestMapping(value = {"/allowRole"}, method = RequestMethod.GET)
 	public String allowRole(String userId, HttpServletRequest request) {
 		request.setAttribute("userId", userId);
@@ -317,6 +328,7 @@ public class SystemUserController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:user:allowRole")
 	@MumuLog(name = "用户分配角色",operater = "POST")
 	@RequestMapping(value = {"/allowRole"}, method = RequestMethod.POST)
 	public ResponseEntity saveUserRole(String userId, String roleIds) {

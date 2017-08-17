@@ -298,6 +298,11 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-common-email</artifactId>
         </dependency>
+        <!--短信发送组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-sms</artifactId>
+        </dependency>
         <!--system接口层-->
         <dependency>
             <groupId>com.lovecws.mumu</groupId>

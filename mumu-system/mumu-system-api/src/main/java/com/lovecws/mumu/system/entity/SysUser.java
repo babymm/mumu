@@ -71,7 +71,17 @@ public class SysUser extends PersistentEntity {
 	private String province;// 省
 	private String city;// 市
 	private String area;// 区
-	
+
+	public static final String USER_REGTYPE_PHONE="phone";
+	public static final String USER_REGTYPE_EMAIL="email";
+	public static final String USER_REGTYPE_QQ="qq";
+	public static final String USER_REGTYPE_WEIXIN="weixin";
+	public static final String USER_REGTYPE_WEIBO="weibo";
+	private String regType;//注册方式（phone、email、qq、weixin、weibo）
+
+	private String thirdpartyToken;//第三方登录令牌
+	private String thirdpartyData;//第三方登录返回数据
+
 	public static final String SYS_USER="SYS_USER";
 
 	public Integer getUserId() {
@@ -272,6 +282,30 @@ public class SysUser extends PersistentEntity {
 
 	public void setArea(String area) {
 		this.area = area;
+	}
+
+	public String getRegType() {
+		return regType;
+	}
+
+	public void setRegType(String regType) {
+		this.regType = regType;
+	}
+
+	public String getThirdpartyToken() {
+		return thirdpartyToken;
+	}
+
+	public void setThirdpartyToken(String thirdpartyToken) {
+		this.thirdpartyToken = thirdpartyToken;
+	}
+
+	public String getThirdpartyData() {
+		return thirdpartyData;
+	}
+
+	public void setThirdpartyData(String thirdpartyData) {
+		this.thirdpartyData = thirdpartyData;
 	}
 
 	private int userGroupId;

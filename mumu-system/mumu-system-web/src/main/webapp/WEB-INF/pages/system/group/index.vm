@@ -14,8 +14,12 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/group/add','groups',true)"> <span class="fa fa-plus-square"></span>添加</button>
-                        <button type="button" class="btn btn-default btn-sm" onclick="groupStatistics()"><span class="fa fa-plus-square"></span>分布统计</button>
+                        #if($shiro.hasPermission('system:group:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/group/add','groups',true)"> <span class="fa fa-plus-square"></span>添加</button>
+                        #end
+                        #if($shiro.hasPermission('system:group:statistics'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="groupStatistics()"><span class="fa fa-plus-square"></span>分布统计</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -93,11 +97,26 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupsDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupsEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupsDelete"><span class="fa fa-trash-o"></span>删除</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupMembers"><span class="fa fa-user-circle-o"></span>组员</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm GroupAlloRole"><span class="fa fa-th-list"></span>分配角色</button>');
+        var viewPermission = "$shiro.hasPermission('system:group:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm GroupsDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:group:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm GroupsEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:group:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm GroupsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        var membersPermission = "$shiro.hasPermission('system:group:memberView')";
+        if (membersPermission && membersPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm GroupMembers"><span class="glyphicon glyphicon-trash"></span>组员</button>');
+        }
+        var allowRolePermission = "$shiro.hasPermission('system:group:allowRole')";
+        if (allowRolePermission && allowRolePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm GroupAlloRole"><span class="glyphicon glyphicon-trash"></span>分配角色</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

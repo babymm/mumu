@@ -13,6 +13,7 @@ import com.lovecws.mumu.system.util.NodeUtil;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -45,6 +46,7 @@ public class SysOrganizeController {
      * 跳转到组织结构页面
      * @return
      */
+    @RequiresPermissions("system:organize:view")
     @RequestMapping(value = {"/","/index"},method = RequestMethod.GET)
     public String index(){
         return "system/organize/index";
@@ -72,6 +74,7 @@ public class SysOrganizeController {
      * 组织机构列表
      * @return
      */
+    @RequiresPermissions("system:organize:add")
     @RequestMapping(value="/add",method=RequestMethod.GET)
     public String add(HttpServletRequest request){
         List<SysOrganize> organizes=organizeService.querySysOrganizeByCondition(null);
@@ -92,6 +95,7 @@ public class SysOrganizeController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("system:organize:add")
     @MumuLog(name = "添加组织机构",operater = "POST")
     @RequestMapping(value="/add",method=RequestMethod.POST)
     public ResponseEntity saveOrganize(String orgName, String parentOrgId, String remark){
@@ -119,6 +123,7 @@ public class SysOrganizeController {
      * @param request
      * @return
      */
+    @RequiresPermissions("system:organize:view")
     @RequestMapping(value="/view/{orgId}",method=RequestMethod.GET)
     public String view(@PathVariable String orgId,HttpServletRequest request){
         SysOrganize organize=organizeService.getSysOrganizeById(orgId);
@@ -133,6 +138,7 @@ public class SysOrganizeController {
      * @param request
      * @return
      */
+    @RequiresPermissions("system:organize:edit")
     @RequestMapping(value="/edit/{orgId}",method=RequestMethod.GET)
     public String edit(@PathVariable String orgId,HttpServletRequest request){
         SysOrganize organize=organizeService.getSysOrganizeById(orgId);
@@ -156,6 +162,7 @@ public class SysOrganizeController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("system:organize:edit")
     @MumuLog(name = "编辑组织机构",operater = "PUT")
     @RequestMapping(value="/edit",method=RequestMethod.PUT)
     public ResponseEntity updateOrganize(int orgId,String orgName,String parentOrgId,String remark){
@@ -184,6 +191,7 @@ public class SysOrganizeController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("system:organize:delete")
     @MumuLog(name = "删除组织机构",operater = "DELETE")
     @RequestMapping(value="/delete/{orgId}",method=RequestMethod.DELETE)
     public ResponseEntity deleteOrganize(@PathVariable String orgId){
@@ -200,6 +208,7 @@ public class SysOrganizeController {
      * ECOTree组织机构图
      * @return
      */
+    @RequiresPermissions("system:organize:graph")
     @RequestMapping(value="/ECOTree",method=RequestMethod.GET)
     public String ECOTree(){
         return "system/organize/ECOTree";
@@ -216,6 +225,7 @@ public class SysOrganizeController {
      * @param orgId 组织机构id
      * @return
      */
+    @RequiresPermissions("system:organize:members")
     @RequestMapping(value = {"/members"}, method = RequestMethod.GET)
     public String allowRole(String orgId, HttpServletRequest request) {
         request.setAttribute("orgId", orgId);

@@ -9,6 +9,8 @@ import com.lovecws.mumu.common.email.exception.EmailException;
 import com.lovecws.mumu.common.email.service.SimpleEmailService;
 import com.lovecws.mumu.common.security.shiro.entity.BaseRealm;
 import com.lovecws.mumu.common.security.shiro.utils.PasswordHelper;
+import com.lovecws.mumu.common.sms.exception.SMSException;
+import com.lovecws.mumu.common.sms.service.JPushSMSService;
 import com.lovecws.mumu.system.entity.SysUser;
 import com.lovecws.mumu.system.service.SysUserService;
 import org.apache.commons.lang3.RandomUtils;
@@ -40,6 +42,8 @@ public class SysRegisterController {
     private VelocityEngine velocityEngine;
     @Autowired
     private SysUserService userService;
+    @Autowired
+    private JPushSMSService smsService;
 
     /**
      * 跳转到注册页面
@@ -65,12 +69,13 @@ public class SysRegisterController {
      * @param phone 手机号码
      * @param password 密码
      * @param code 短信验证码
+     * @param smsId 短信消息id
      * @param model 重定向模型
      * @param request
      * @return
      */
     @RequestMapping(value = "/phone",method = RequestMethod.POST)
-    public String registerPhone(String username,String phone,String password,String code,RedirectAttributes model,HttpServletRequest request){
+    public String registerPhone(String username,String phone,String password,String code,String smsId,RedirectAttributes model,HttpServletRequest request){
         //检验参数
         if(username==null||username.length()<6){
             request.setAttribute("shiroLoginFailure","会员名称格式错误!");
@@ -84,10 +89,20 @@ public class SysRegisterController {
             request.setAttribute("shiroLoginFailure","密码格式错误!");
             return "registerByPhone";
         }
+        if(code==null||smsId==null){
+            request.setAttribute("shiroLoginFailure","短信验证码不能为空!");
+            return "registerByPhone";
+        }
         //验证短信验证码
-        String sessionRegisterCode = (String)request.getSession().getAttribute("registerCode");
-        if(code==null||!code.equals(sessionRegisterCode)){
-            request.setAttribute("shiroLoginFailure","短信验证码错误!");
+        try {
+            boolean validateMessage = smsService.validateMessage(smsId, code);
+            if(!validateMessage){
+                request.setAttribute("shiroLoginFailure","短信验证码错误!");
+                return "registerByPhone";
+            }
+        } catch (SMSException e) {
+            e.printStackTrace();
+            request.setAttribute("shiroLoginFailure","短信验证出现异常!");
             return "registerByPhone";
         }
         //检测用户名称和手机号码是否已经注册
@@ -131,7 +146,7 @@ public class SysRegisterController {
                 }else if(phoneExists){
                     request.setAttribute("shiroLoginFailure","手机号码已经被占用!");
                 }
-                return "registerByEmail";
+                return "registerByPhone";
             }
         }
         //注册用户
@@ -140,6 +155,7 @@ public class SysRegisterController {
         registerUser.setPhoneActive(SysUser.USER_STATUS_ACTIVE);
         registerUser.setPhone(phone);
         registerUser.setUserName(username);
+        registerUser.setRegType(SysUser.USER_REGTYPE_PHONE);
         registerUser.setType(SysUser.USER_TYPE_COMMON);
         BaseRealm baseRealm = PasswordHelper.encryptPassword(new BaseRealm(username,password));
         registerUser.setPassword(baseRealm.getPassword());
@@ -164,9 +180,13 @@ public class SysRegisterController {
         if(!ValidateUtils.isMobile(phone)){
             return new ResponseEntity(400,"fail","手机号码格式不正确");
         }
-        int code = RandomUtils.nextInt(100000, 999999);
-        request.getSession().setAttribute("registerCode",code);
-        return new ResponseEntity(200,"success",code);
+        try {
+            String smsId = smsService.sendSMS(phone);
+            return new ResponseEntity(200,"success",smsId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity(500,"server error","短信发送失败");
     }
 
     /**
@@ -271,6 +291,7 @@ public class SysRegisterController {
                 registerUser.setEmail(email);
                 registerUser.setUserName(username);
                 registerUser.setType(SysUser.USER_TYPE_COMMON);
+                registerUser.setRegType(SysUser.USER_REGTYPE_EMAIL);
                 BaseRealm baseRealm = PasswordHelper.encryptPassword(new BaseRealm(username,password));
                 registerUser.setPassword(baseRealm.getPassword());
                 registerUser.setSalt(baseRealm.getSalt());

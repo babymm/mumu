@@ -8,6 +8,7 @@ import com.lovecws.mumu.system.entity.SysDDL;
 import com.lovecws.mumu.system.service.SysDDLService;
 import com.lovecws.mumu.system.util.NodeUtil;
 import org.apache.poi.ss.formula.functions.T;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +33,7 @@ public class SystemDDLController {
      * 进入数据字典列表页面
      * @return
      */
+    @RequiresPermissions("system:ddl:view")
     @RequestMapping(value="/index",method = RequestMethod.GET)
     public String ddls(){
         return "system/ddl/index";
@@ -61,6 +63,7 @@ public class SystemDDLController {
      * 进入到添加数据字典页面
      * @return
      */
+    @RequiresPermissions("system:ddl:add")
     @RequestMapping(value="/add",method = RequestMethod.GET)
     public String ddlAdd(HttpServletRequest request){
         //获取所有的数据字典
@@ -81,6 +84,7 @@ public class SystemDDLController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("system:ddl:add")
     @MumuLog(name = "添加数据字典",operater = "PUT")
     @RequestMapping(value="/add",method = RequestMethod.PUT)
     public ResponseEntity saveSystemDDL(SysDDL systemDDLEntity){
@@ -98,6 +102,7 @@ public class SystemDDLController {
      * @param ddlId 数据字典id
      * @return
      */
+    @RequiresPermissions("system:ddl:view")
     @RequestMapping(value="/view/{ddlId}",method = RequestMethod.GET)
     public String ddlView(@PathVariable String ddlId,HttpServletRequest request){
         //获取所有的数据字典
@@ -120,6 +125,7 @@ public class SystemDDLController {
      * @param ddlId 数据字典id
      * @return
      */
+    @RequiresPermissions("system:ddl:edit")
     @RequestMapping(value="/edit/{ddlId}",method = RequestMethod.GET)
     public String ddlEdit(@PathVariable String ddlId,HttpServletRequest request){
         //获取所有的数据字典
@@ -142,6 +148,7 @@ public class SystemDDLController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("system:ddl:edit")
     @MumuLog(name = "更新数据字典",operater = "POST")
     @RequestMapping(value="/edit",method = RequestMethod.POST)
     public ResponseEntity updateSystemDDL(SysDDL systemDDLEntity){
@@ -160,6 +167,7 @@ public class SystemDDLController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("system:ddl:delete")
     @MumuLog(name = "删除数据字典",operater = "DELETE")
     @RequestMapping(value="/delete/{ddlId}/{ddlCode}",method = RequestMethod.DELETE)
     public ResponseEntity ddlDelete(@PathVariable int ddlId,@PathVariable String ddlCode){
@@ -176,6 +184,7 @@ public class SystemDDLController {
      * @param ddlCode 数据字典内码
      * @return
      */
+    @RequiresPermissions("system:ddl:view")
     @RequestMapping(value = "/tables/{ddlCode}",method = RequestMethod.GET)
     public String ddlTables(@PathVariable String ddlCode){
         return "system/ddl/tables";

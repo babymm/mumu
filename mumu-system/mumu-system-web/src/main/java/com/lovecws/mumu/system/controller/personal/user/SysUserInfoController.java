@@ -8,6 +8,7 @@ import com.lovecws.mumu.common.security.shiro.utils.PasswordHelper;
 import com.lovecws.mumu.system.entity.SysUser;
 import com.lovecws.mumu.system.service.SysUserService;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,11 +31,11 @@ public class SysUserInfoController {
      * 进入个人信息页面
      * @return
      */
+    @RequiresPermissions("personal:user:view")
     @RequestMapping(value = "/info",method = RequestMethod.GET)
     public String  info(HttpServletRequest request){
         SysUser user=(SysUser)SecurityUtils.getSubject().getSession().getAttribute(SysUser.SYS_USER);
         request.setAttribute(SysUser.SYS_USER,user);
-        System.out.println(user);
         return "personal/user/info";
     }
 
@@ -44,6 +45,7 @@ public class SysUserInfoController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("personal:user:edit")
     @RequestMapping(value = "/info",method = RequestMethod.PUT)
     public ResponseEntity updateUserInfo(SysUser user){
         userService.updateById(user);
@@ -56,6 +58,7 @@ public class SysUserInfoController {
      *进入到修改密码页面
      * @return
      */
+    @RequiresPermissions("personal:password:edit")
     @RequestMapping(value = "/password",method = RequestMethod.GET)
     public String password(){
         return "personal/user/password";
@@ -69,6 +72,7 @@ public class SysUserInfoController {
      * @return
      */
     @ResponseBody
+    @RequiresPermissions("personal:password:edit")
     @RequestMapping(value = "/password",method = RequestMethod.PUT)
     public ResponseEntity updateUserPassword(String oldPassword,String newPassword,String reNewPassword){
         if(StringUtil.isEmpty(oldPassword)||StringUtil.isEmpty(newPassword)||StringUtil.isEmpty(reNewPassword)){

@@ -43,7 +43,8 @@
               </div>
               <div class="form-group has-feedback">
                   <input type="text" name="code" class="form-control" style="width: 275px;padding-right: 0px;margin-right: 3px;" placeholder="短信验证码">
-                  <input type="button" value="发送" onclick="sendPhoneMessage()" style="float: left;left: 265px;top: 0px;width: 80px;height:34px;position: absolute;margin-left: 15px;background-color: #00C1DE;padding: 0px;border: 0px;">
+                  <input type="hidden" name="smsId" value="">
+                  <input id="sendMessageBtn"  type="button" value="发送" onclick="sendPhoneMessage()" style="float: left;left: 265px;top: 0px;width: 80px;height:34px;position: absolute;margin-left: 15px;background-color: #00C1DE;padding: 0px;border: 0px;">
               </div>
               <div class="form-group has-feedback">
                 <input type="password" name="password" class="form-control" placeholder="注册密码">
@@ -81,13 +82,26 @@
     function sendPhoneMessage() {
         var phone=$("input[name='phone']").val();
         if(phone==null||!isPhone(phone)){
-            layer.alert("手机号码格式不正确!");
+            layer.alert("手机号码格式不正确!", {icon: 5});
         }else{
             $.post("$request.getContextPath()/system/register/sendMessage", {phone:phone}, function (respData) {
                 if (respData.code == 200) {
-                    layer.alert(respData.data);
+                    $("input[name='smsId']").val(respData.data);
+                    layer.alert("短信验证码发送成功!",{icon: 1});
+                    $("#sendMessageBtn").attr("disabled",true);
+                    $("#sendMessageBtn").attr("value","60");
+                    var sendMessageInterval=setInterval(function () {
+                        var time=$("#sendMessageBtn").attr("value");
+                        if(time>0){
+                            $("#sendMessageBtn").attr("value",time-1);
+                        }else{
+                            $("#sendMessageBtn").attr("disabled",false);
+                            $("#sendMessageBtn").attr("value","发送");
+                            clearInterval(sendMessageInterval);
+                        }
+                    },1000);
                 } else {
-                    layer.alert(respData.data);
+                    layer.alert(respData.data, {icon: 5});
                 }
             });
         }

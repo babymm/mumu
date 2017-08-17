@@ -6,6 +6,7 @@ import com.lovecws.mumu.common.core.response.ResponseEntity;
 import com.lovecws.mumu.system.entity.SysUserLog;
 import com.lovecws.mumu.system.service.SysUserLogService;
 import org.apache.log4j.Logger;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,7 @@ public class SystemLogController {
 	 * 日志列表
 	 * @return
 	 */
+	@RequiresPermissions("system:log:view")
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String list() {
 		return "system/log/index";
@@ -60,6 +62,7 @@ public class SystemLogController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:log:delete")
 	@MumuLog(name = "删除用户操作日志",operater = "DELETE")
 	@RequestMapping(value="/delete/{userLogId}",method=RequestMethod.DELETE)
 	public ResponseEntity logDelete(@PathVariable String userLogId){
@@ -76,6 +79,7 @@ public class SystemLogController {
 	 * 日志统计
 	 * @return
 	 */
+	@RequiresPermissions("system:log:statistics")
 	@RequestMapping(value = "/statistics", method = RequestMethod.GET)
 	public String logStatistics(){
 		return "system/log/statistics";

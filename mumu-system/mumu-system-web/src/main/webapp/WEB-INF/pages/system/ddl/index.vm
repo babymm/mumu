@@ -14,7 +14,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/ddl/add','ddls',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #if($shiro.hasPermission('system:ddl:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/ddl/add','ddls',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -80,10 +82,22 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons=[];
-        buttons.push('<button type="button" class="btn btn-default btn-sm DDLSDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm DDLSEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm DDLSDelete"><span class="fa fa-trash-o"></span>删除</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm DDLTables"><span class="fa fa-trash-o"></span>集合</button>');
+        var viewPermission = "$shiro.hasPermission('system:ddl:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLSDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:ddl:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLSEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:ddl:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLSDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        var tablesPermission = "$shiro.hasPermission('system:ddl:view')";
+        if (tablesPermission && tablesPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLTables"><span class="fa fa-trash-o"></span>集合</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

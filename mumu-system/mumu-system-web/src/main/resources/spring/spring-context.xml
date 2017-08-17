@@ -30,6 +30,7 @@
 				<value>classpath:properties/jdbc.properties</value>
 				<value>classpath:properties/jedis.properties</value>
 				<value>classpath:properties/email.properties</value>
+				<value>classpath:properties/sms.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -41,5 +42,6 @@
 	<import resource="classpath:spring/spring-common-redis.xml" />
 	<import resource="classpath:spring/spring-common-fdfs.xml" />
 	<import resource="classpath:spring/spring-common-email.xml" />
+	<import resource="classpath:spring/spring-common-sms.xml" />
 	<import resource="classpath:spring/spring-shiro.xml" />
 </beans>

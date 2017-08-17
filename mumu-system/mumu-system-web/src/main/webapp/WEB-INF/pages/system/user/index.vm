@@ -15,7 +15,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/user/add','users',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #if($shiro.hasPermission("system:user:add"))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/user/add','users',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -140,16 +142,31 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm UsersDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm UsersEdit"><span class="fa fa-edit"></span>编辑</button>');
-        if(row.userStatus=="0"){
-            buttons.push('<button type="button" class="btn btn-default btn-sm enableUser"><span class="fa fa-edit"></span>解锁账号</button>');
-        }else{
-            buttons.push('<button type="button" class="btn btn-default btn-sm disableUser"><span class="fa fa-edit"></span>锁定账号</button>');
+        var viewPermission = "$shiro.hasPermission('system:user:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm UsersDetail"><span class="fa fa-eye"></span>详情</button>');
         }
-        buttons.push('<button type="button" class="btn btn-default btn-sm UsersDelete"><span class="fa fa-trash-o"></span>删除</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm resetPassword"><span class="glyphicon glyphicon-wrench"></span>重置密码</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm allowRole"><span class="glyphicon glyphicon-tree-deciduous"></span>分配角色</button>');
+        var editPermission = "$shiro.hasPermission('system:user:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm UsersEdit"><span class="fa fa-edit"></span>编辑</button>');
+            if(row.userStatus=="0"){
+                buttons.push('<button type="button" class="btn btn-default btn-sm enableUser"><span class="fa fa-edit"></span>解锁账号</button>');
+            }else{
+                buttons.push('<button type="button" class="btn btn-default btn-sm disableUser"><span class="fa fa-edit"></span>锁定账号</button>');
+            }
+        }
+        var deletePermission = "$shiro.hasPermission('system:user:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm UsersDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        var resetPasswordPermission = "$shiro.hasPermission('system:user:resetPassword')";
+        if (resetPasswordPermission && resetPasswordPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm resetPassword"><span class="glyphicon glyphicon-wrench"></span>重置密码</button>');
+        }
+        var allowRolePermission = "$shiro.hasPermission('system:user:allowRole')";
+        if (allowRolePermission && allowRolePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm allowRole"><span class="glyphicon glyphicon-tree-deciduous"></span>分配角色</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

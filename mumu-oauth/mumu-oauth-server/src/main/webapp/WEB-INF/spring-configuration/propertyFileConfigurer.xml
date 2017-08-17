@@ -31,6 +31,6 @@
 		of the Servlet context if you have options that are specific to a tier (i.e. test vs. production) so that the WAR file 
 		can be moved between tiers without modification.
 	</description>
-    
-    <context:property-placeholder location="/WEB-INF/cas.properties"/> 
+
+	<context:property-placeholder location="classpath*:cas.properties"/>
 </beans>

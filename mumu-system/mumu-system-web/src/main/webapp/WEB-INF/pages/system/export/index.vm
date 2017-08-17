@@ -14,10 +14,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/export/add','exports',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
+                        #if($shiro.hasPermission('system:export:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/export/add','exports',true)"> <span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            class="table table-hover table-bordered table-striped table-responsive fixed-table"
@@ -84,9 +83,18 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        var viewPermission = "$shiro.hasPermission('system:export:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:export:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:export:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

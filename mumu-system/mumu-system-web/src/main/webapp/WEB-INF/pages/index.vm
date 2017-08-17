@@ -43,9 +43,15 @@
                 </div>
                 <h5 class="left-nav-title">账户信息</h5>
                 <ul class="nav nav-pills nav-stacked custom-nav unmenubar">
-                    <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
-                    <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
-                    <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
+                    #if($shiro.hasPermission("personal:user:view"))
+                        <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                    #end
+                    #if($shiro.hasPermission("personal:password:edit"))
+                        <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                    #end
+                    #if($shiro.hasPermission("personal:message:view"))
+                        <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
+                    #end
                     <li><a href="$request.getContextPath()/personal/logout"><i class="fa fa-sign-out"></i><span>退出登录</span></a></li>
                 </ul>
             </div>
@@ -125,9 +131,15 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right unmenubar">
-                            <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
-                            <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
-                            <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
+                            #if($shiro.hasPermission("personal:user:view"))
+                                <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                            #end
+                            #if($shiro.hasPermission("personal:password:edit"))
+                                <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                            #end
+                            #if($shiro.hasPermission("personal:message:view"))
+                                <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
+                            #end
                             <li><a href="$request.getContextPath()/system/logout"><i class="fa fa-sign-out"></i> 退出登录</a></li>
                         </ul>
                     </li>

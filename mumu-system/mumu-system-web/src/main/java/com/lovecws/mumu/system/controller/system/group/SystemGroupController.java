@@ -12,6 +12,7 @@ import com.lovecws.mumu.system.util.NodeUtil;
 import org.apache.log4j.Logger;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.NumberUtils;
@@ -49,6 +50,7 @@ public class SystemGroupController {
 	 * 用户组列表
 	 * @return
 	 */
+	@RequiresPermissions("system:group:view")
 	@RequestMapping(value="/index",method=RequestMethod.GET)
 	public String groups(){
 		return "system/group/index";
@@ -76,6 +78,7 @@ public class SystemGroupController {
 	 * 添加用户组
 	 * @return
 	 */
+	@RequiresPermissions("system:group:add")
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String add(HttpServletRequest request){
 		List<SysOrganize> organizes = organizeService.querySysOrganizeByCondition(null);
@@ -96,6 +99,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:group:add")
 	@MumuLog(name = "添加用户群组",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity saveSysGroup(int orgId,String groupName,String remark,String groupMotto,String groupHonors){
@@ -124,6 +128,7 @@ public class SystemGroupController {
 	 * @param groupId 用户组id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:view")
 	@RequestMapping(value="/view/{groupId}",method=RequestMethod.GET)
 	public String groupView(@PathVariable String groupId,HttpServletRequest request){
 		SysGroup group=groupService.getSysGroupById(groupId);
@@ -144,6 +149,7 @@ public class SystemGroupController {
 	 * @param groupId 用户组id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:edit")
 	@RequestMapping(value="/edit/{groupId}",method=RequestMethod.GET)
 	public String groupEdit(@PathVariable String groupId,HttpServletRequest request){
 		SysGroup group=groupService.getSysGroupById(groupId);
@@ -168,6 +174,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:group:edit")
 	@MumuLog(name = "编辑用户群组",operater = "PUT")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity updateSysGroup(int groupId,int orgId,String groupName,String remark,String groupMotto,String groupHonors){
@@ -193,6 +200,7 @@ public class SystemGroupController {
 	}
 	
 	@ResponseBody
+	@RequiresPermissions("system:group:delete")
 	@MumuLog(name = "删除用户群组",operater = "DELETE")
 	@RequestMapping(value="/delete/{groupId}",method=RequestMethod.DELETE)
 	public ResponseEntity groupDelete(@PathVariable String groupId){
@@ -210,6 +218,7 @@ public class SystemGroupController {
 	 * @param groupId 用户组id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:allowRole")
 	@RequestMapping(value = {"/allowRole"}, method = RequestMethod.GET)
 	public String allowRole(String groupId, HttpServletRequest request) {
 		request.setAttribute("groupId", groupId);
@@ -218,7 +227,6 @@ public class SystemGroupController {
 
 	/**
 	 * 用户组分配角色
-	 *
 	 * @param groupId 用户组id
 	 * @return
 	 */
@@ -251,6 +259,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:group:allowRole")
 	@MumuLog(name = "用户群组分配角色",operater = "POST")
 	@RequestMapping(value = {"/allowRole"}, method = RequestMethod.POST)
 	public ResponseEntity saveGroupRole(String groupId, String roleIds) {
@@ -269,6 +278,7 @@ public class SystemGroupController {
 	 * @param groupId 用户组id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:memberView")
 	@RequestMapping(value = {"/members/{groupId}"}, method = RequestMethod.GET)
 	public String members(@PathVariable String groupId) {
 		return "system/group/members";
@@ -295,12 +305,13 @@ public class SystemGroupController {
 	 * @param groupId 用户组id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:memberAdd")
 	@RequestMapping(value = {"/memberAdd/{groupId}"}, method = RequestMethod.GET)
 	public String memberAdd(@PathVariable String groupId, HttpServletRequest request) {
 		//获取该分组下的用户列表
-		List<SysUser> users = userService.querySysUserByGroupId(groupId, PublicEnum.NORMAL.value());
+		List<SysUser> users = userService.querySysUserByGroupId(groupId, SysUser.USER_STATUS_ACTIVE);
 		//获取所有的用户列表
-		List<SysUser> allUsers = userService.querySysUserByCondition(null, null, null, null,PublicEnum.NORMAL.value());
+		List<SysUser> allUsers = userService.querySysUserByCondition(null, null, null, null,SysUser.USER_STATUS_ACTIVE);
 
 		List<SysUser> noSelectedUsers = new ArrayList<SysUser>();
 		for (SysUser sysUser : allUsers) {
@@ -330,6 +341,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:group:memberAdd")
 	@MumuLog(name = "用户群组添加成员",operater = "POST")
 	@RequestMapping(value = {"/memberAdd"}, method = RequestMethod.POST)
 	public ResponseEntity savemember(int groupId, int userId, String remark, String privilage, HttpServletRequest request) {
@@ -356,6 +368,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:group:memberDelete")
 	@MumuLog(name = "用户群组移除成员",operater = "DELETE")
 	@RequestMapping(value = {"/memberDelete/{userGroupId}"}, method = RequestMethod.DELETE)
 	public ResponseEntity memberDelete(@PathVariable String userGroupId) {
@@ -375,6 +388,7 @@ public class SystemGroupController {
 	 * @param userGroupId id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:memberView")
 	@RequestMapping(value = {"/memberView/{userGroupId}"}, method = RequestMethod.GET)
 	public String memberView(@PathVariable String userGroupId, HttpServletRequest request) {
 		SysUserGroup userGroup = userGroupService.getSysUserGroupById(userGroupId);
@@ -388,6 +402,7 @@ public class SystemGroupController {
 	 * @param userGroupId id
 	 * @return
 	 */
+	@RequiresPermissions("system:group:memberEdit")
 	@RequestMapping(value = {"/memberEdit/{userGroupId}"}, method = RequestMethod.GET)
 	public String memberEdit(@PathVariable String userGroupId, HttpServletRequest request) {
 		SysUserGroup userGroup = userGroupService.getSysUserGroupById(userGroupId);
@@ -405,6 +420,7 @@ public class SystemGroupController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:group:memberEdit")
 	@MumuLog(name = "用户群组更新成员信息",operater = "PUT")
 	@RequestMapping(value = {"/memberEdit"}, method = RequestMethod.PUT)
 	public ResponseEntity updateMember(int userGroupId, String privilage, String remark, HttpServletRequest request) {
@@ -426,6 +442,7 @@ public class SystemGroupController {
 	 * 查看组成员分布统计
 	 * @return
 	 */
+	@RequiresPermissions("system:group:statistics")
 	@RequestMapping(value = {"/statistics"}, method = RequestMethod.GET)
 	public String statistics(HttpServletRequest request) {
 		//群组分布统计

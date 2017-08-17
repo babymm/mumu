@@ -14,13 +14,12 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/organize/add','orgs',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
-                        <button type="button" class="btn btn-default btn-sm" onclick="rganizeGraph()"><span
-                                class="glyphicon glyphicon-picture"></span>组织结构图
-                        </button>
+                        #if($shiro.hasPermission('system:organize:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/organize/add','orgs',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
+                        #if($shiro.hasPermission('system:organize:graph'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="rganizeGraph()"><span class="glyphicon glyphicon-picture"></span>组织结构图</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -98,10 +97,22 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm OrgsDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm OrgsEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm OrgsDelete"><span class="fa fa-trash-o"></span>删除</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm OrgsMembers"><span class="fa fa-users"></span>成员</button>');
+        var viewPermission = "$shiro.hasPermission('system:organize:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm OrgsDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:organize:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm OrgsEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:organize:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm OrgsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        var membersPermission = "$shiro.hasPermission('system:organize:members')";
+        if (membersPermission && membersPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm OrgsMembers"><span class="fa fa-users"></span>成员</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

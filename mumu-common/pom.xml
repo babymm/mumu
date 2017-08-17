@@ -19,6 +19,7 @@
         <module>mumu-common-security</module>
         <module>mumu-common-template</module>
         <module>mumu-common-email</module>
+        <module>mumu-common-sms</module>
     </modules>
 
     <properties>

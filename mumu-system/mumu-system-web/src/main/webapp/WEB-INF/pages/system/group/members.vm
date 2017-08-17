@@ -16,10 +16,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/group/memberAdd/$!groupId','groups',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
+                        #if($shiro.hasPermission('system:group:memberAdd'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/group/memberAdd/$!groupId','groups',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -90,9 +89,18 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm groupDetail"><span class="glyphicon glyphicon-eye-open"></span>查看</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm editGroup"><span class="glyphicon glyphicon-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm deleteGroup"><span class="glyphicon glyphicon-trash"></span>删除</button>');
+        var viewPermission = "$shiro.hasPermission('system:group:memberView')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm groupDetail"><span class="glyphicon glyphicon-eye-open"></span>查看</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:group:memberEdit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm editGroup"><span class="glyphicon glyphicon-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:group:memberDelete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm deleteGroup"><span class="glyphicon glyphicon-trash"></span>删除</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

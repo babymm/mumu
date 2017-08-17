@@ -10,6 +10,7 @@
  import com.lovecws.mumu.system.service.SysPermissionService;
  import org.apache.log4j.Logger;
  import org.apache.shiro.SecurityUtils;
+ import org.apache.shiro.authz.annotation.RequiresPermissions;
  import org.springframework.beans.factory.annotation.Autowired;
  import org.springframework.stereotype.Controller;
  import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +39,7 @@ public class SystemMenuController {
 	 * 菜单列表
 	 * @return
 	 */
+	@RequiresPermissions("system:menu:view")
 	@RequestMapping(value="/index",method=RequestMethod.GET)
 	public String menus(HttpServletRequest request){
 		List<SysMenu> topMenus = menuService.getTopSysMenu(PublicEnum.NORMAL.value());
@@ -71,6 +73,7 @@ public class SystemMenuController {
 	 * 添加菜单
 	 * @return
 	 */
+	@RequiresPermissions("system:menu:add")
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String menuAdd(HttpServletRequest request){
 		List<SysMenu> topMenus = menuService.getTopSysMenu(PublicEnum.NORMAL.value());
@@ -84,6 +87,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:menu:add")
 	@MumuLog(name = "添加菜单",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity saveMenu(SysMenu menu){
@@ -105,6 +109,7 @@ public class SystemMenuController {
 	 * @param menuId 菜单id
 	 * @return
 	 */
+	@RequiresPermissions("system:menu:view")
 	@RequestMapping(value="/view/{menuId}",method=RequestMethod.GET)
 	public String menuView(@PathVariable String menuId, HttpServletRequest request){
 		SysMenu menu = menuService.getSysMenuById(menuId);
@@ -120,6 +125,7 @@ public class SystemMenuController {
 	 * @param menuId 菜单id
 	 * @return
 	 */
+	@RequiresPermissions("system:menu:edit")
 	@RequestMapping(value="/edit/{menuId}",method=RequestMethod.GET)
 	public String menuEdit(@PathVariable String menuId,HttpServletRequest request){
 		SysMenu menu = menuService.getSysMenuById(menuId);
@@ -142,6 +148,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:menu:edit")
 	@MumuLog(name = "编辑菜单",operater = "PUT")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity updateMenu(SysMenu menu){
@@ -160,6 +167,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:menu:delete")
 	@MumuLog(name = "删除菜单",operater = "DELETE")
 	@RequestMapping(value="/delete/{menuId}",method=RequestMethod.DELETE)
 	public ResponseEntity menuDelete(@PathVariable String menuId){
@@ -177,6 +185,7 @@ public class SystemMenuController {
 	 * 子菜单
 	 * @return
 	 */
+	@RequiresPermissions("system:menu:leaf")
 	@RequestMapping(value="/leaf/{menuId}",method=RequestMethod.GET)
 	public String menuLeaf(@PathVariable String menuId,HttpServletRequest request){
 		request.setAttribute("parentMenuId", menuId);
@@ -202,6 +211,7 @@ public class SystemMenuController {
 	 * @param menuId 菜单id
 	 * @return
 	 */
+	@RequiresPermissions("system:menu:permissionView")
 	@RequestMapping(value = "/permission/{menuId}", method = RequestMethod.GET)
 	public String menuPermission(@PathVariable String menuId, HttpServletRequest request) {
 		return "system/menu/permission";
@@ -228,6 +238,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:menu:permissionDelete")
 	@MumuLog(name = "删除菜单下的权限",operater = "DELETE")
 	@RequestMapping(value = "/permission/{permissionId}", method = RequestMethod.DELETE)
 	public ResponseEntity deleteMenuPermission(@PathVariable String permissionId) {
@@ -246,6 +257,7 @@ public class SystemMenuController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:menu:permissionEdit")
 	@MumuLog(name = "添加或者更新菜单下的权限",operater = "POST")
 	@RequestMapping(value = "/permission", method = RequestMethod.POST)
 	public ResponseEntity saveMenuPermission(SysPermission permission) {

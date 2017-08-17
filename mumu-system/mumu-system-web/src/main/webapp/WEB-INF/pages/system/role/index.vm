@@ -14,10 +14,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/role/add','roles',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
+                        #if($shiro.hasPermission('system:role:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/role/add','roles',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -84,11 +83,26 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm RolesDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm RolesEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm RolesDelete"><span class="fa fa-trash-o"></span>删除</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm RoleAllowMenu"><span class="glyphicon glyphicon-tree-deciduous"></span>分配菜单</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm RoleAllowPermission"><span class="glyphicon glyphicon-tree-deciduous"></span>分配权限</button>');
+        var viewPermission = "$shiro.hasPermission('system:role:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm RolesDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:role:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm RolesEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:role:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm RolesDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        var allowMenuPermission = "$shiro.hasPermission('system:role:allowMenu')";
+        if (allowMenuPermission && allowMenuPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm RoleAllowMenu"><span class="glyphicon glyphicon-tree-deciduous"></span>分配菜单</button>');
+        }
+        var allowPermissionPermission = "$shiro.hasPermission('system:role:allowPermission')";
+        if (allowPermissionPermission && allowPermissionPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm RoleAllowPermission"><span class="glyphicon glyphicon-tree-deciduous"></span>分配权限</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件

@@ -13,6 +13,7 @@ import com.lovecws.mumu.system.entity.SysRole;
 import com.lovecws.mumu.system.service.*;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -54,6 +55,7 @@ public class SystemRoleController {
 	 * 角色列表
 	 * @return
 	 */
+	@RequiresPermissions("system:role:view")
 	@RequestMapping(value={"/index"},method=RequestMethod.GET)
 	public String roles(){
 		return "system/role/index";
@@ -77,6 +79,7 @@ public class SystemRoleController {
 	 * 添加角色
 	 * @return
 	 */
+	@RequiresPermissions("system:role:add")
 	@RequestMapping(value={"/add"},method=RequestMethod.GET)
 	public String roleAdd(HttpServletRequest request){
 		//获取角色类型数据字典
@@ -90,6 +93,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:role:add")
 	@MumuLog(name = "添加角色",operater = "POST")
 	@RequestMapping(value={"/add"},method=RequestMethod.POST)
 	public ResponseEntity save(SysRole role){
@@ -112,6 +116,7 @@ public class SystemRoleController {
 	 * @param roleId 角色id
 	 * @return
 	 */
+	@RequiresPermissions("system:role:view")
 	@RequestMapping(value={"/view/{roleId}"},method=RequestMethod.GET)
 	public String roleView(@PathVariable  String roleId,HttpServletRequest request){
 		//获取角色类型数据字典
@@ -128,6 +133,7 @@ public class SystemRoleController {
 	 * @param roleId 角色id
 	 * @return
 	 */
+	@RequiresPermissions("system:role:edit")
 	@RequestMapping(value={"/edit/{roleId}"},method=RequestMethod.GET)
 	public String roleEdit(@PathVariable  String roleId, HttpServletRequest request){
 		//获取角色类型数据字典
@@ -144,6 +150,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:role:edit")
 	@MumuLog(name = "编辑角色",operater = "PUT")
 	@RequestMapping(value={"/edit"},method=RequestMethod.PUT)
 	public ResponseEntity updateRole(SysRole role){
@@ -166,6 +173,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:role:delete")
 	@MumuLog(name = "删除角色",operater = "DELETE")
 	@RequestMapping(value={"/delete/{roleId}"},method=RequestMethod.DELETE)
 	public ResponseEntity roleDelete(@PathVariable String roleId){
@@ -182,6 +190,7 @@ public class SystemRoleController {
 	 * 用户分配菜单
 	 * @return
 	 */
+	@RequiresPermissions("system:role:allowMenu")
 	@RequestMapping(value = {"/allowMenu"}, method = RequestMethod.GET)
 	public String roleAllowMenuPage(String roleId, HttpServletRequest request) {
 		request.setAttribute("roleId", roleId);
@@ -228,6 +237,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:role:allowMenu")
 	@MumuLog(name = "角色分配菜单",operater = "POST")
 	@RequestMapping(value = {"/allowMenu"}, method = RequestMethod.POST)
 	public ResponseEntity roleAllowMenu(String roleId, String menuIds) {
@@ -245,6 +255,7 @@ public class SystemRoleController {
 	 * 用户分配权限
 	 * @return
 	 */
+	@RequiresPermissions("system:role:allowPermission")
 	@RequestMapping(value = {"/allowPermission"}, method = RequestMethod.GET)
 	public String roleAllowPermissionPage(String roleId, HttpServletRequest request) {
 		request.setAttribute("roleId", roleId);
@@ -302,6 +313,7 @@ public class SystemRoleController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:role:allowPermission")
 	@MumuLog(name = "角色分配权限",operater = "POST")
 	@RequestMapping(value = {"/allowPermission"}, method = RequestMethod.POST)
 	public ResponseEntity roleAllowPermission(String roleId, String permissionIds) {

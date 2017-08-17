@@ -33,6 +33,10 @@
 		<result column="province" property="province" jdbcType="VARCHAR" />
 		<result column="city" property="city" />
 		<result column="area" property="area" jdbcType="VARCHAR" />
+
+		<result column="reg_type" property="regType" jdbcType="VARCHAR" />
+		<result column="thirdparty_token" property="thirdpartyToken" />
+		<result column="thirdparty_data" property="thirdpartyData" jdbcType="VARCHAR" />
 		
 		<result column="privilage" property="privilage" jdbcType="VARCHAR" />
 		<result column="user_group_id" property="userGroupId" jdbcType="VARCHAR" />
@@ -40,7 +44,7 @@
 	<sql id="SysUserColumn">
 		user_id,user_status,creator,create_time,editor,edit_time,remark,
 		user_name,password,salt,real_name,nick_name,type,user_like,email,email_active,
-		phone,phone_active,avator,sex,birthday,detail_area,province,city,area
+		phone,phone_active,avator,sex,birthday,detail_area,province,city,area,reg_type,thirdparty_token,thirdparty_data
 	</sql>
 
 	<!-- 查询用户列表 -->
@@ -207,6 +211,15 @@
 			<if test="area != null">
 				area,
 			</if>
+			<if test="regType != null">
+				reg_type,
+			</if>
+			<if test="thirdpartyToken != null">
+				thirdparty_token,
+			</if>
+			<if test="thirdpartyData != null">
+				thirdparty_data,
+			</if>
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
 			<if test="userStatus != null">
@@ -280,6 +293,15 @@
 			</if>
 			<if test="area != null">
 				#{area},
+			</if>
+			<if test="regType != null">
+				#{regType},
+			</if>
+			<if test="thirdpartyToken != null">
+				#{thirdpartyToken},
+			</if>
+			<if test="thirdpartyData != null">
+				#{thirdpartyData},
 			</if>
 		</trim>
 	</insert>
@@ -359,6 +381,15 @@
 			</if>
 			<if test="area != null">
 				area=#{area},
+			</if>
+			<if test="regType != null">
+				reg_type=#{regType},
+			</if>
+			<if test="thirdpartyToken != null">
+				thirdparty_token=#{thirdpartyToken},
+			</if>
+			<if test="thirdpartyData != null">
+				thirdparty_data=#{thirdpartyData},
 			</if>
 		</set>
 		where user_id = #{userId}

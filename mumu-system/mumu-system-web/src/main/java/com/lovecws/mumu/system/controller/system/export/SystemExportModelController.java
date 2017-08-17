@@ -9,6 +9,7 @@ import com.lovecws.mumu.system.entity.SysExportModel;
 import com.lovecws.mumu.system.service.SysCommonService;
 import com.lovecws.mumu.system.service.SysExportModelService;
 import org.apache.log4j.Logger;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +41,7 @@ public class SystemExportModelController {
 	 * 导出列表
 	 * @return
 	 */
+	@RequiresPermissions("system:export:view")
 	@RequestMapping(value="/index",method=RequestMethod.GET)
 	public String exports(){
 		return "system/export/index";
@@ -64,6 +66,7 @@ public class SystemExportModelController {
 	 * 添加导出模型
 	 * @return
 	 */
+	@RequiresPermissions("system:export:add")
 	@RequestMapping(value = "/add",method = RequestMethod.GET)
 	public String exportAdd(HttpServletRequest request){
 		//获取所有的表
@@ -116,6 +119,7 @@ public class SystemExportModelController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:export:add")
 	@MumuLog(name = "添加导出模型",operater = "POST")
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public ResponseEntity saveExportModel(String modelName, String cnames, String enames){
@@ -136,6 +140,7 @@ public class SystemExportModelController {
 	 * 编辑模型详情
 	 * @return
 	 */
+	@RequiresPermissions("system:export:view")
 	@RequestMapping(value="/view/{modelId}",method=RequestMethod.GET)
 	public String view(@PathVariable String modelId){
 		return "system/export/view";
@@ -177,6 +182,7 @@ public class SystemExportModelController {
 	 * 编辑导出模型
 	 * @return
 	 */
+	@RequiresPermissions("system:export:edit")
 	@RequestMapping(value="/edit/{modelId}",method=RequestMethod.GET)
 	public String exportEdit(@PathVariable String modelId){
 		return "system/export/edit";
@@ -231,6 +237,7 @@ public class SystemExportModelController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:export:edit")
 	@MumuLog(name = "编辑导出模型",operater = "POST")
 	@RequestMapping(value="/edit",method=RequestMethod.PUT)
 	public ResponseEntity updateExportModel(int modelId,String cnames,String enames,HttpServletRequest request){
@@ -253,6 +260,7 @@ public class SystemExportModelController {
 	 * @return
 	 */
 	@ResponseBody
+	@RequiresPermissions("system:export:delete")
 	@MumuLog(name = "删除导出模型",operater = "DELETE")
 	@RequestMapping(value="/delete/{modelId}",method=RequestMethod.DELETE)
 	public ResponseEntity deleteExportModel(@PathVariable String modelId){

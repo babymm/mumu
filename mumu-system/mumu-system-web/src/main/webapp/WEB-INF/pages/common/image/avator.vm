@@ -6,6 +6,7 @@
     </div>
 </body>
 <script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/fullAvatarEditor/scripts/fullswfobject.js"></script>
 <script type="text/javascript" src="$request.getContextPath()/resources/fullAvatarEditor/scripts/fullAvatar.js"></script>
 <script type="text/javascript">
@@ -43,7 +44,10 @@
                                 $("#swf").hide();
                                 $("#avator").css("display", "block");
                                 $("#avator").attr("src",imageUrl);
-                                $("input[name='avator']").val(imageUrl);
+                                //parent.$("#userAvator").val(imageUrl);
+                                parent.window.document.getElementById("userAvator").src=imageUrl;
+                                var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                                parent.layer.close(index); //再执行关闭
                                 break;
                         }
                     }

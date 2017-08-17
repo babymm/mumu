@@ -34,5 +34,12 @@
             </c:forEach>
 		  </cas:proxies>
         </c:if>
+        <c:if test="${fn:length(assertion.chainedAuthentications[fn:length(assertion.chainedAuthentications)-1].principal.attributes) > 0}">  
+		    <cas:attributes>
+		        <c:forEach var="attr" items="${assertion.chainedAuthentications[fn:length(assertion.chainedAuthentications)-1].principal.attributes}">  
+		            <cas:${fn:escapeXml(attr.key)}>${fn:escapeXml(attr.value)}</cas:${fn:escapeXml(attr.key)}>  
+		        </c:forEach>  
+		    </cas:attributes>  
+		</c:if>
 	</cas:authenticationSuccess>
 </cas:serviceResponse>

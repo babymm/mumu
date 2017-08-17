@@ -31,8 +31,8 @@
 
     </div> <!-- END #container -->
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jqueryui/1.10.2/jquery-ui.min.js"></script>
     
     <%-- 
         JavaScript Debug: A simple wrapper for console.log 

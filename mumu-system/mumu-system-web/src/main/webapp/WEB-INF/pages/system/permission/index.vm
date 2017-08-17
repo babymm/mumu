@@ -15,10 +15,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <button type="button" class="btn btn-default btn-sm"
-                                onclick="changeFrameSrc('$request.getContextPath()/system/permission/add','permissions',true)">
-                            <span class="fa fa-plus-square"></span>添加
-                        </button>
+                        #if($shiro.hasPermission('system:permission:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/permission/add','permissions',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -52,7 +51,6 @@
                             <th data-field="permission" data-valign="middle">权限值</th>
                             <th data-field="permissionPath" data-valign="middle">权限路径</th>
                             <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="remark" data-valign="middle">权限描述</th>
                             <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
@@ -87,9 +85,18 @@
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        buttons.push('<button type="button" class="btn btn-default btn-sm permissionsDetail"><span class="fa fa-eye"></span>详情</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm permissionsEdit"><span class="fa fa-edit"></span>编辑</button>');
-        buttons.push('<button type="button" class="btn btn-default btn-sm permissionsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        var viewPermission = "$shiro.hasPermission('system:permission:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm permissionsDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('system:permission:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm permissionsEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('system:permission:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm permissionsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
         return buttons.join('');
     }
     //表格点击事件
