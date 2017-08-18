@@ -18,6 +18,11 @@
                         #if($shiro.hasPermission('system:permission:add'))
                             <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/permission/add','permissions',true)"><span class="fa fa-plus-square"></span>添加</button>
                         #end
+                        #if($!model.has("sys_permission"))
+                            #if($shiro.hasPermission('system:permission:export'))
+                                <a href="/common/export/excel/sys_menu" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -45,13 +50,13 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="permissionId" data-visible="false">权限ID</th>
-                            <th data-field="permissionCode" data-valign="middle">权限内码</th>
-                            <th data-field="permissionName" data-valign="middle">权限名称</th>
-                            <th data-field="permission" data-valign="middle">权限值</th>
-                            <th data-field="permissionPath" data-valign="middle">权限路径</th>
-                            <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                            <th data-field="permissionId" data-visible="false" data-align="center">权限ID</th>
+                            <th data-field="permissionCode" data-valign="middle" data-align="center">权限内码</th>
+                            <th data-field="permissionName" data-valign="middle" data-align="center">权限名称</th>
+                            <th data-field="permission" data-valign="middle" data-align="center">权限值</th>
+                            <th data-field="permissionPath" data-valign="middle" data-align="center">权限路径</th>
+                            <th data-field="createTime" data-valign="middle" data-align="center">创建时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
                     </table>

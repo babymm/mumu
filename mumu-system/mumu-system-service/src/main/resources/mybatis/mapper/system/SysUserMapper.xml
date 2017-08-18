@@ -404,7 +404,10 @@
 	<!-- 获取用户组下的用户集合 -->
 	<select id="querySysUserByGroupId" resultMap="SysUserResultMap" parameterType="map">
 		select u.*,ug.privilage,ug.user_group_id
-		from sys_user_group ug left join sys_user u on(ug.user_id=u.user_id and u.user_status=#{userStatus})
+		from sys_user_group ug inner join sys_user u on(ug.user_id=u.user_id and u.user_status IN
+		<foreach collection="userStatus" open="(" close=")" index="index" item="item" separator=",">
+			#{item}
+		</foreach>)
 		where ug.group_id=#{groupId}
 		order by create_time desc
 	</select>

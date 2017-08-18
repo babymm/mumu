@@ -51,9 +51,9 @@ public class SysUser extends PersistentEntity {
 	private String realName; // 真实姓名
 	private String nickName; // 昵称
 
-	public static final String USER_TYPE_ADMIN="admin";//未激活
-	public static final String USER_TYPE_COMMON="common";//已激活
-	public static final String USER_TYPE_OPERATOR="operator";//被禁止登录
+	public static final String USER_TYPE_ADMIN="commonUser";//未激活
+	public static final String USER_TYPE_COMMON="adminUser";//已激活
+	public static final String USER_TYPE_OPERATOR="operatorUser";//被禁止登录
 	private String type; // 用户类型（admin:超级管理员，common:普通操作员），超级管理员由系统初始化时添加，不能删除)
 	private String userLike;//用户爱好
 

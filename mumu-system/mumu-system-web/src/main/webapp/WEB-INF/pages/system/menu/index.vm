@@ -17,6 +17,11 @@
                         #if($shiro.hasPermission('system:menu:add'))
                             <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/menu/add','menus',true)"><span class="fa fa-plus-square"></span>添加</button>
                         #end
+                        #if($!model.has("sys_menu"))
+                            #if($shiro.hasPermission('system:menu:export'))
+                                <a href="/common/export/excel/sys_menu" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -44,16 +49,15 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="menuId" data-visible="false">菜单ID</th>
-                            <th data-field="menuCode" data-valign="middle">菜单内码</th>
-                            <th data-field="menuName" data-valign="middle">菜单名称</th>
-                            <th data-field="parentMenuName" data-valign="middle">父菜单名称</th>
-                            <th data-field="menuUrl" data-valign="middle">菜单地址</th>
-                            <th data-field="menuNum" data-valign="middle">菜单编号</th>
+                            <th data-field="menuId" data-visible="true" data-valign="middle" data-align="center">菜单ID</th>
+                            <th data-field="menuCode" data-valign="middle" data-align="center">菜单内码</th>
+                            <th data-field="menuName" data-valign="middle" data-align="center">菜单名称</th>
+                            <th data-field="parentMenuId" data-valign="middle" data-align="center">父菜单ID</th>
+                            <th data-field="menuUrl" data-valign="middle" data-align="center">菜单地址</th>
+                            <th data-field="menuNum" data-valign="middle" data-align="center">菜单编号</th>
                             <th data-field="menuIcon" data-valign="middle" data-formatter="menuIconFormatter" data-valign="middle" data-align="center">菜单ICON</th>
-                            <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="remark" data-valign="middle">菜单描述</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                            <th data-field="createTime" data-valign="middle" data-align="center">创建时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
                     </table>

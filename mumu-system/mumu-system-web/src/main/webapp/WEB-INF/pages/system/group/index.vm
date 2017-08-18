@@ -20,6 +20,11 @@
                         #if($shiro.hasPermission('system:group:statistics'))
                             <button type="button" class="btn btn-default btn-sm" onclick="groupStatistics()"><span class="fa fa-plus-square"></span>分布统计</button>
                         #end
+                        #if($!model.has("sys_group"))
+                            #if($shiro.hasPermission('system:group:export'))
+                                <a href="/common/export/excel/sys_group" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -47,13 +52,13 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="groupId" data-visible="false">组ID</th>
-                            <th data-field="groupName" data-valign="middle">组名称</th>
-                            <th data-field="orgId" data-visible="false">机构ID</th>
-                            <th data-field="orgName" data-valign="middle">机构名称</th>
-                            <th data-field="groupMotto" data-valign="middle">组织座右铭</th>
-                            <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                            <th data-field="groupId" data-visible="false" data-align="center">组ID</th>
+                            <th data-field="groupName" data-valign="middle" data-align="center">组名称</th>
+                            <th data-field="orgId" data-visible="false" data-align="center">机构ID</th>
+                            <th data-field="orgName" data-valign="middle" data-align="center">机构名称</th>
+                            <th data-field="groupMotto" data-valign="middle" data-align="center">组织座右铭</th>
+                            <th data-field="createTime" data-valign="middle" data-align="center">创建时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
                     </table>
@@ -111,7 +116,7 @@
         }
         var membersPermission = "$shiro.hasPermission('system:group:memberView')";
         if (membersPermission && membersPermission == "true") {
-            buttons.push('<button type="button" class="btn btn-default btn-sm GroupMembers"><span class="glyphicon glyphicon-trash"></span>组员</button>');
+            buttons.push('<button type="button" class="btn btn-default btn-sm GroupMembers"><span class="glyphicon glyphicon-user"></span>组员</button>');
         }
         var allowRolePermission = "$shiro.hasPermission('system:group:allowRole')";
         if (allowRolePermission && allowRolePermission == "true") {

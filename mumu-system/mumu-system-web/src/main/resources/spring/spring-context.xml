@@ -18,7 +18,7 @@
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
 	<!-- 配置要扫描的包 -->
-	<context:component-scan base-package="com.lovecws.mumu.system"/>
+	<context:component-scan base-package="com.lovecws.mumu.system,com.lovecws.mumu.common.core"/>
 
 	<!---加载配置文件-->
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">

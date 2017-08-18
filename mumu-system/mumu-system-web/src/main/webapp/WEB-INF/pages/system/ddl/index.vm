@@ -17,6 +17,11 @@
                         #if($shiro.hasPermission('system:ddl:add'))
                             <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/ddl/add','ddls',true)"><span class="fa fa-plus-square"></span>添加</button>
                         #end
+                        #if($!model.has("sys_ddl"))
+                            #if($shiro.hasPermission('system:ddl:export'))
+                                <a href="/common/export/excel/sys_ddl" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -44,10 +49,10 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="ddlCode" data-valign="middle">字典内码</th>
-                            <th data-field="ddlValue" data-valign="middle">字典值</th>
-                            <th data-field="ddlNumber" data-valign="middle">字典排序</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                            <th data-field="ddlCode" data-valign="middle" data-align="center">字典内码</th>
+                            <th data-field="ddlValue" data-valign="middle" data-align="center">字典值</th>
+                            <th data-field="ddlNumber" data-valign="middle" data-align="center">字典排序</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
                     </table>
@@ -96,7 +101,7 @@
         }
         var tablesPermission = "$shiro.hasPermission('system:ddl:view')";
         if (tablesPermission && tablesPermission == "true") {
-            buttons.push('<button type="button" class="btn btn-default btn-sm DDLTables"><span class="fa fa-trash-o"></span>集合</button>');
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLTables"><span class="fa fa-users"></span>集合</button>');
         }
         return buttons.join('');
     }

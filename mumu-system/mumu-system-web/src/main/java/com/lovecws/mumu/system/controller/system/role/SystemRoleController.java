@@ -280,7 +280,7 @@ public class SystemRoleController {
 		List<ZTreeBean> ztree = new ArrayList<ZTreeBean>();
 		// ztree菜单树
 		for (SysMenu sysMenu : selectedMenus) {
-			if (sysMenu.getParentMenuId() == 0) {
+			if (sysMenu.getParentMenuId().intValue() == 0) {
 				ztree.add(new ZTreeBean(sysMenu.getMenuId().toString(), "topPermission", sysMenu.getMenuName(), true, sysMenu.getMenuIcon(), true));
 			} else {
 				ztree.add(new ZTreeBean(sysMenu.getMenuId().toString(), sysMenu.getParentMenuId().toString(), sysMenu.getMenuName(), true, sysMenu.getMenuIcon(), true));
@@ -288,12 +288,12 @@ public class SystemRoleController {
 
 			for (SysPermission sysPermission : allPermissions) {
 				// 找到菜单下的权限
-				if (sysPermission.getMenuId() == sysMenu.getMenuId()) {
+				if (sysPermission.getMenuId().intValue() == sysMenu.getMenuId().intValue()) {
 					// 在判断这个权限是否被选中
 					Integer permissionId = sysPermission.getPermissionId();
 					boolean flag = false;
 					for (SysPermission selectedPermission : selectedPermissions) {
-						if (selectedPermission.getPermissionId() == permissionId) {
+						if (selectedPermission.getPermissionId().intValue() == permissionId.intValue()) {
 							flag = true;
 							break;
 						}

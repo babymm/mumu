@@ -40,6 +40,8 @@
                                     #foreach($subMenu in $subMenus)
                                         #if($!subMenu.parentMenuId==0)
                                             <option value="$subMenu.menuId" disabled="disabled">$subMenu.menuName</option>
+                                        #elseif($!subMenu.menuId==$!permission.menuId)
+                                            <option value="$subMenu.menuId" selected="selected">$subMenu.menuName</option>
                                         #else
                                             <option value="$subMenu.menuId">$subMenu.menuName</option>
                                         #end

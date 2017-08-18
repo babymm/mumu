@@ -21,7 +21,7 @@
                             <label class="layui-form-label">选择用户</label>
                             <div class="layui-input-inline">
                                 <select name="userId" required lay-verify="required">
-                                    #if($!user.size>0)
+                                    #if($!users.size()>0)
                                         #foreach($user in $users)
                                             <option value="$user.userId">$user.userName</option>
                                         #end

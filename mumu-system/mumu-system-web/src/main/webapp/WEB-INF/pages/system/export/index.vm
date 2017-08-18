@@ -17,6 +17,11 @@
                         #if($shiro.hasPermission('system:export:add'))
                             <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/export/add','exports',true)"> <span class="fa fa-plus-square"></span>添加</button>
                         #end
+                        #if($!model.has("sys_export"))
+                            #if($shiro.hasPermission('system:export:export'))
+                                <a href="/common/export/excel/sys_export" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            class="table table-hover table-bordered table-striped table-responsive fixed-table"
@@ -45,10 +50,10 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="modelName" data-valign="middle">模型名称</th>
-                            <th data-field="cnames" data-valign="middle">中文字段集合</th>
-                            <th data-field="enames" data-valign="middle">英文字段集合</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
+                            <th data-field="modelName" data-valign="middle" data-align="center">模型名称</th>
+                            <th data-field="cnames" data-valign="middle" data-align="center">中文字段集合</th>
+                            <th data-field="enames" data-valign="middle" data-align="center">英文字段集合</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作
                             </th>
                         </tr>
                         </thead>

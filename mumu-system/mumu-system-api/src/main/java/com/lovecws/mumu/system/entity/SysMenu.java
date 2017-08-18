@@ -1,5 +1,7 @@
 package com.lovecws.mumu.system.entity;
 
+import com.lovecws.mumu.common.core.entity.PersistentEntity;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
  * @author ganliang
  * @version 2016年9月10日 下午10:16:53
  */
-public class SysMenu implements Serializable {
+public class SysMenu extends PersistentEntity {
 	private static final long serialVersionUID = 1L;
 
 	private Integer menuId;// 主键ID.
@@ -177,15 +179,6 @@ public class SysMenu implements Serializable {
 
 	public void setChildrens(List<SysMenu> childrens) {
 		this.childrens = childrens;
-	}
-
-	@Override
-	public String toString() {
-		return "SysMenu [menuId=" + menuId + ", menuStatus=" + menuStatus + ", creator=" + creator + ", createTime="
-				+ createTime + ", editor=" + editor + ", editTime=" + editTime + ", remark=" + remark + ", menuName="
-				+ menuName + ", menuCode=" + menuCode + ", menuUrl=" + menuUrl + ", menuNum=" + menuNum + ", isLeaf="
-				+ isLeaf + ", menuIcon=" + menuIcon + ", menuVisible=" + menuVisible + ", level=" + level
-				+ ", parentMenuId=" + parentMenuId + "]";
 	}
 
 	private String parentMenuName;//父菜单名称

@@ -18,6 +18,11 @@
                         #if($shiro.hasPermission("system:user:add"))
                             <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/user/add','users',true)"><span class="fa fa-plus-square"></span>添加</button>
                         #end
+                        #if($!model.has("sys_user"))
+                            #if($shiro.hasPermission('system:user:export'))
+                                <a href="/common/export/excel/sys_user" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -46,14 +51,14 @@
                         <thead>
                         <tr>
                             <th data-field="userId" data-visible="false">用户ID</th>
-                            <th data-field="avator" data-valign="middle" data-class="headerImg" data-valign="middle" data-formatter="headerImgFormatter" data-events="headerImgEvents">用户头像</th>
-                            <th data-field="userName" data-valign="middle">用户名称</th>
-                            <th data-field="phone" data-valign="middle">用户手机号码</th>
-                            <th data-field="email" data-valign="middle">用户邮箱</th>
-                            <th data-field="type" data-valign="middle" data-formatter="userTypeFormatter">用户类型</th>
-                            <th data-field="sex" data-valign="middle" data-formatter="sexFormatter">用户性别</th>
-                            <th data-field="birthday" data-valign="middle" data-formatter="birthdayFormatter">用户生日</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                            <th data-field="avator" data-valign="middle" data-align="center" data-class="headerImg" data-valign="middle" data-formatter="headerImgFormatter" data-events="headerImgEvents">用户头像</th>
+                            <th data-field="userName" data-valign="middle" data-align="center">用户名称</th>
+                            <th data-field="phone" data-valign="middle" data-align="center">用户手机号码</th>
+                            <th data-field="email" data-valign="middle" data-align="center">用户邮箱</th>
+                            <th data-field="type" data-valign="middle" data-align="center" data-formatter="userTypeFormatter">用户类型</th>
+                            <th data-field="sex" data-valign="middle" data-align="center" data-formatter="sexFormatter">用户性别</th>
+                            <th data-field="birthday" data-valign="middle" data-align="center" data-formatter="birthdayFormatter">用户生日</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
                     </table>
@@ -102,19 +107,21 @@
         return value;
     }
     function sexFormatter(value, row, index) {
-        if (value == 'man') {
+        if (value == 'm') {
             return "男";
-        }else if(value=='femal'){
+        }else if(value=='f'){
             return "女";
+        }else{
+            return "未知";
         }
         return value;
     }
     function userTypeFormatter(value, row, index) {
-        if (value == 'user') {
+        if (value == 'commonUser') {
             return "普通用户";
-        } else if (value == 'operator') {
+        } else if (value == 'operatorUser') {
             return "接待员";
-        }else if(value=='admin'){
+        }else if(value=='adminUser'){
             return "管理员";
         }
         return value;

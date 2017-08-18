@@ -293,7 +293,7 @@ public class SystemGroupController {
 	@RequestMapping(value = {"/memberPage/{groupId}"}, method = RequestMethod.GET)
 	public Map<String, Object> member(@PathVariable String groupId) {
 		// 分页查询
-		List<SysUser> users = userService.querySysUserByGroupId(groupId, PublicEnum.NORMAL.value());
+		List<SysUser> users = userService.querySysUserByGroupId(groupId, SysUser.USER_STATUS_ACTIVE);
 		Map<String, Object> page = new HashMap<String, Object>();
 		page.put("total", users.size());
 		page.put("rows", users);

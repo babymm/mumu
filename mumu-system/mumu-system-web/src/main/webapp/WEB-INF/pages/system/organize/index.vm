@@ -20,6 +20,11 @@
                         #if($shiro.hasPermission('system:organize:graph'))
                             <button type="button" class="btn btn-default btn-sm" onclick="rganizeGraph()"><span class="glyphicon glyphicon-picture"></span>组织结构图</button>
                         #end
+                        #if($!model.has("sys_organize"))
+                            #if($shiro.hasPermission('system:organize:export'))
+                                <a href="/common/export/excel/sys_organize" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -47,12 +52,12 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="orgId" data-visible="false">机构ID</th>
-                            <th data-field="orgName" data-valign="middle">机构名称</th>
-                            <th data-field="parentOrgName" data-valign="middle">上级机构名称</th>
-                            <th data-field="parentOrgId" data-visible="false">上级机构ID</th>
-                            <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
+                            <th data-field="orgId" data-visible="false" data-align="center">机构ID</th>
+                            <th data-field="orgName" data-valign="middle" data-align="center">机构名称</th>
+                            <th data-field="parentOrgName" data-valign="middle" data-align="center">上级机构名称</th>
+                            <th data-field="parentOrgId" data-visible="false" data-align="center">上级机构ID</th>
+                            <th data-field="createTime" data-valign="middle" data-align="center">创建时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作
                             </th>
                         </tr>
                         </thead>

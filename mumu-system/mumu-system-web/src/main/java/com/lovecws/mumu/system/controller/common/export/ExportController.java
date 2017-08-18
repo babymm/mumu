@@ -47,7 +47,7 @@ public class ExportController {
      * @throws IOException
      */
     @RequestMapping(value = { "/excel/{modelName}","/excel/{modelName}/{excelType}" }, method = RequestMethod.GET)
-    public void exportExcel(@PathVariable String modelName,@PathVariable String excelType, HttpServletResponse response) throws IOException {
+    public void exportExcel(@PathVariable String modelName,@PathVariable(required = false) String excelType, HttpServletResponse response) throws IOException {
         //默认导出xls格式excel
         if(excelType==null||"".equals(excelType)){
             excelType="XLS";

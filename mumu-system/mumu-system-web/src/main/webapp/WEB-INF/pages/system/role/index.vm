@@ -17,6 +17,11 @@
                         #if($shiro.hasPermission('system:role:add'))
                             <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/role/add','roles',true)"><span class="fa fa-plus-square"></span>添加</button>
                         #end
+                        #if($!model.has("sys_role"))
+                            #if($shiro.hasPermission('system:role:export'))
+                                <a href="/common/export/excel/sys_role" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
                     </div>
                     <table id="table"
                            data-toggle="table"
@@ -44,11 +49,11 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="roleCode" data-valign="middle">角色内码</th>
-                            <th data-field="roleName" data-valign="middle">角色名称</th>
-                            <th data-field="roleType" data-valign="middle" data-visible="true">角色类型</th>
-                            <th data-field="createTime" data-valign="middle">创建时间</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
+                            <th data-field="roleCode" data-valign="middle" data-align="center">角色内码</th>
+                            <th data-field="roleName" data-valign="middle" data-align="center">角色名称</th>
+                            <th data-field="roleType" data-valign="middle" data-align="center" data-visible="true" data-formatter="roleTypeFormatter">角色类型</th>
+                            <th data-field="createTime" data-valign="middle" data-align="center">创建时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作
                             </th>
                         </tr>
                         </thead>
@@ -79,6 +84,16 @@
     function queryRoles() {
         var $table =$('#table');
         $table.bootstrapTable("refresh");
+    }
+    function roleTypeFormatter(value, row, index) {
+        if (value == 'adminRole') {
+            return "管理员角色";
+        }else if(value=='commonRole'){
+            return "普通用户角色";
+        }else{
+            return "未知";
+        }
+        return value;
     }
     //操作按钮
     function operateFormatter(value, row, index) {

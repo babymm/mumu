@@ -62,7 +62,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">父菜单</label>
                             <div class="layui-input-inline">
-                                <select name="parentMenuId" required lay-verify="required">
+                                <select id="parentMenuIdSelect" name="parentMenuId" required lay-verify="required">
                                     <option value="0">顶级菜单</option>
                                     #foreach($menu in $topMenus)
                                         <option value="$!menu.menuId">$!menu.menuName</option>

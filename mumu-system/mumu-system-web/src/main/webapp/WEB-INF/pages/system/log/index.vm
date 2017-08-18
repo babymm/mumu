@@ -25,6 +25,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <section class="panel">
+                    <div id="toolbar">
+                        #if($!model.has("sys_log"))
+                            #if($shiro.hasPermission('system:log:export'))
+                                <a href="/common/export/excel/sys_log" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                            #end
+                        #end
+                    </div>
                     <div class="searchform">
                         <form class="form-horizontal" role="form">
                             <div class="form-group">
@@ -79,16 +86,16 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="userLogId" data-visible="false">日志ID</th>
-                            <th data-field="userName" data-valign="middle">用户名称</th>
-                            <th data-field="ip" data-valign="middle">访问IP</th>
-                            <th data-field="content" data-valign="middle">操作名称</th>
+                            <th data-field="userLogId" data-visible="false" data-align="center">日志ID</th>
+                            <th data-field="userName" data-valign="middle" data-align="center">用户名称</th>
+                            <th data-field="ip" data-valign="middle" data-align="center">访问IP</th>
+                            <th data-field="content" data-valign="middle" data-align="center">操作名称</th>
                             #*<th data-field="method" data-valign="middle">访问方法</th>*#
-                            <th data-field="parameter" data-valign="middle">访问参数</th>
-                            <th data-field="result" data-valign="middle">返回结果</th>
-                            <th data-field="usetime" data-valign="middle">花费时间</th>
-                            <th data-field="createTime" data-valign="middle">记录时间</th>
-                            <th data-field="operate" data-valign="middle" data-formatter="operateFormatter" data-events="operateEvents">操作
+                            <th data-field="parameter" data-valign="middle" data-align="center">访问参数</th>
+                            <th data-field="result" data-valign="middle" data-align="center">返回结果</th>
+                            <th data-field="usetime" data-valign="middle" data-align="center">花费时间</th>
+                            <th data-field="createTime" data-valign="middle" data-align="center">记录时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作
                             </th>
                         </tr>
                         </thead>

@@ -65,6 +65,7 @@
 				and permission_status=#{permissionStatus}
 			</if>
 		</where>
+		ORDER BY menu_id
 		limit #{pageFirst},#{pageSize}
 	</select>
     
@@ -114,7 +115,7 @@
     <!-- 根据角色id 获取权限列表 -->
     <select id="getSysPermissionByRoleId" parameterType="map" resultMap="SysPermissionResultMap">
         select p.permission_id,p.permission_code,p.permission_name,p.permission,p.menu_id,p.permission_path
-		from sys_role_permission rp inner join sys_permission p on(rp.permission_id=p.permission_id) where rp.role_id=#{roleId} and p.permission_status=#{permissionStatus}
+		from sys_role_permission rp left join sys_permission p on(rp.permission_id=p.permission_id) where rp.role_id=#{roleId} and p.permission_status=#{permissionStatus}
     </select>
     
     <!-- 根据用户id 获取权限列表 -->
