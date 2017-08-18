@@ -7,166 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72a99e8e-7558-4ef5-8287-0667ef603dd4" name="Default" comment="实现找回密码业务逻辑，将权限信息添加到页面和控制层。">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/doc/message/broadcast.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/doc/message/p2p.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_data_web_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_data_web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_03.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_jobs_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/dao/MapperScanApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/mumu-common-excel.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/beans/ExcelGeneraterBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/beans/ExcelParserBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/beans/ExcelTypeEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/generater/ExcelGenerater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/generater/Generater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/parser/ExcelParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/parser/Parser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/main/java/com/lovecws/mumu/common/excel/util/FileUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/test/java/com/lovecws/mumu/common/excel/XLSExcelGenerateDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/test/java/com/lovecws/mumu/common/excel/XLSExcelParserDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-excel/src/test/java/com/lovecws/mumu/common/excel/XLSXExcelGenerateDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/area/entity/DataAreaCity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/area/entity/DataAreaProvince.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/area/entity/DataAreaRegion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/area/service/DataAreaCityService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/area/service/DataAreaProvinceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/area/service/DataAreaRegionService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/entity/DataCarAttribute.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/entity/DataCarBrand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/entity/DataCarCars.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/entity/DataCarModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/entity/DataCarSizeType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/entity/DataCarSubBrand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/service/DataCarAttributeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/service/DataCarBrandService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/service/DataCarCarsService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/service/DataCarModelService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/service/DataCarSizetypeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/car/service/DataCarSubBrandService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/ip/entity/DataIPAddress.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/src/main/java/com/lovecws/mumu/data/ip/service/DataIPAddressService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/dao/DataAreaCityDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/dao/DataAreaProvinceDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/dao/DataAreaRegionDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/dao/impl/DataAreaCityDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/dao/impl/DataAreaProvinceDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/dao/impl/DataAreaRegionDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/service/impl/DataAreaCityServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/service/impl/DataAreaProvinceServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/area/service/impl/DataAreaRegionServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/DataCarAttributeDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/DataCarBrandDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/DataCarCarsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/DataCarModelDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/DataCarSizeTypeDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/DataCarSubBrandDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/impl/DataCarAttributeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/impl/DataCarBrandDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/impl/DataCarCarsDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/impl/DataCarModelDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/impl/DataCarSizetypeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/dao/impl/SystemCarSubBrandDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/service/impl/DataCarAttributeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/service/impl/DataCarBrandServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/service/impl/DataCarCarsServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/service/impl/DataCarModelServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/service/impl/DataCarSizeTypeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/car/service/impl/DataCarSubBrandServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/ip/dao/DataIPAddressDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/ip/dao/impl/DataIPAddressDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/java/com/lovecws/mumu/data/ip/service/impl/DataIPAddressServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/area/DataAreaCityMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/area/DataAreaProvinceMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/area/DataAreaRegionMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/car/DataCarAttributeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/car/DataCarBrandMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/car/DataCarCarsMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/car/DataCarModelMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/car/DataCarSizeTypeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/car/DataCarSubBrandMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mapper/ip/DataIPAddressMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/mybatis/mybatis-data-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/spring/spring-data-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/src/main/resources/spring/spring-data-service.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-web/mumu-data-web.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-web/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-web/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-web/src/main/webapp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/mumu-data.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-data/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/doc/sql/mumu.system.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/doc/sql/mumu.system_20170818.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/doc/sql/settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/demo_fontclass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/demo_symbol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/demo_unicode.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/iconfont.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/iconfont/iconfont.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/doc/mumu.system.sql" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/images/weixin.png" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/images/weixin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_system_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_system_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/pom.xml" afterPath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-cms/mumu-cms.iml" afterPath="$PROJECT_DIR$/mumu-cms/mumu-cms.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-core/pom.xml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-core/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-template/pom.xml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-template/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-template/src/main/java/com/lovecws/mumu/common/template/velocity/ExportModelTag.java" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-template/src/main/java/com/lovecws/mumu/common/template/velocity/ExportModelTag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/pom.xml" afterPath="$PROJECT_DIR$/mumu-common/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/pom.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketRegistry.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketRegistry.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/README.md" afterPath="$PROJECT_DIR$/mumu-system/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/pom.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/pom.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/common/export/ExportController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/common/export/ExportController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/fdfs.properties" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/fdfs.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/velocityToolBox.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/velocityToolBox.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu.iml" afterPath="$PROJECT_DIR$/mumu.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/mumu-cms/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -462,24 +303,6 @@
             <path>
               <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
               <item name="mumu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1288,7 +1111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502962107596</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加数据中心管理系统，权限管理系统中添加站内信。">
+      <created>1503051350685</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1503051350685</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1306,7 +1136,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129053000" />
+    <option name="totallyTimeSpent" value="129187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -1392,7 +1222,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加注册逻辑" />
     <MESSAGE value="实现找回密码业务逻辑，将权限信息添加到页面和控制层。" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现找回密码业务逻辑，将权限信息添加到页面和控制层。" />
+    <MESSAGE value="添加数据中心管理系统，权限管理系统中添加站内信。" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加数据中心管理系统，权限管理系统中添加站内信。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1687,6 +1518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1703,7 +1535,7 @@
         <state relative-caret-position="151">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1726,7 +1558,7 @@
         <state relative-caret-position="494">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
