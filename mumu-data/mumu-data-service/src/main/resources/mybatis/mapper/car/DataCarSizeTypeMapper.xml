@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.data.car.dao.impl.DataCarSizetypeDaoImpl">
+
+	<resultMap id="DataCarSizeTypeResultMap" type="com.lovecws.mumu.data.car.entity.DataCarSizeType">
+		<id column="c_size_id" property="sizetypeId" jdbcType="INTEGER" />
+		<result column="c_size_name" property="sizetypeName" jdbcType="VARCHAR" />
+		<result column="c_size_status" property="sizetypeStatus" jdbcType="INTEGER" />
+		<result column="c_size_recomm" property="sizetypeRecomm" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="DataCarSizeTypeColumn">
+		c_size_id, c_size_name, c_size_status, c_size_recomm
+	</sql>
+
+	<!-- 根据推荐的状态，获取汽车型号列表（1、推荐；2、不推荐） -->
+	<select id="listByColumn" resultMap="DataCarSizeTypeResultMap"
+		parameterType="map">
+		select
+		<include refid="DataCarSizeTypeColumn" />
+		from data_car_sizetype
+		<where>
+			<if test="sizetypeStatus!=null and sizetypeStatus!=''">
+				and c_size_status=#{sizetypeStatus}
+			</if>
+			<if test="sizetypeRecomm!=null and sizetypeRecomm!=''">
+				and c_size_recomm=#{sizetypeRecomm}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 获取所有的汽车型号 -->
+	<select id="listBy" resultMap="DataCarSizeTypeResultMap"
+		parameterType="map">
+		select c_size_id, c_size_name
+		from data_car_sizetype
+	</select>
+</mapper>

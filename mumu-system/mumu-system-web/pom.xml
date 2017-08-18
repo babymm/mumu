@@ -303,6 +303,11 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-common-sms</artifactId>
         </dependency>
+        <!--解析、生成excel组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-excel</artifactId>
+        </dependency>
         <!--system接口层-->
         <dependency>
             <groupId>com.lovecws.mumu</groupId>

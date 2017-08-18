@@ -11,11 +11,16 @@
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-email/mumu-common-email.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-email/mumu-common-email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-excel/mumu-common-excel.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-excel/mumu-common-excel.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-fdfs/mumu-common-fdfs.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-fdfs/mumu-common-fdfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-redis/mumu-common-redis.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-redis/mumu-common-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-sms/mumu-common-sms.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-sms/mumu-common-sms.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" filepath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-data/mumu-data.iml" filepath="$PROJECT_DIR$/mumu-data/mumu-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" filepath="$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" filepath="$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mumu-data/mumu-data-web/mumu-data-web.iml" filepath="$PROJECT_DIR$/mumu-data/mumu-data-web/mumu-data-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-oa/mumu-oa.iml" filepath="$PROJECT_DIR$/mumu-oa/mumu-oa.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth.iml" filepath="$PROJECT_DIR$/mumu-oauth/mumu-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml" filepath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml" />

@@ -18,4 +18,10 @@
 		<scope>application</scope>
 		<class>com.lovecws.mumu.common.template.velocity.MumuUtilTag</class>
 	</tool>
+	<!--导出模型-->
+	<tool>
+		<key>model</key>
+		<scope>application</scope>
+		<class>com.lovecws.mumu.common.template.velocity.ExportModelTag</class>
+	</tool>
 </toolbox>

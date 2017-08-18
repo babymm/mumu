@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.data.car.dao.impl.DataCarBrandDaoImpl">
+
+	<resultMap id="DataCarBrandResultMap"
+		type="com.lovecws.mumu.data.car.entity.DataCarBrand">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="initial" property="initial" jdbcType="VARCHAR" />
+		<result column="parentid" property="parentId" jdbcType="INTEGER" />
+		<result column="logo" property="logo" jdbcType="VARCHAR" />
+		<result column="depth" property="depth" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="DataCarBrandColumn">
+		id, name, initial, parentid, logo, depth, status
+	</sql>
+
+	<!-- 获取所有的汽车品牌 -->
+	<select id="listByColumn" resultMap="DataCarBrandResultMap"
+		parameterType="map">
+		select
+		<include refid="DataCarBrandColumn" />
+		from data_car_brand
+		<where>
+			<if test="status!=null and status!=''">
+				and status=#{status}
+			</if>
+		</where>
+		order by initial ASC,id ASC
+	</select>
+
+	<!-- 获取热门推荐的汽车品牌 -->
+	<select id="listBy" resultMap="DataCarBrandResultMap"
+		parameterType="map">
+		select b.* from sys_hot_car_brand hb
+		LEFT JOIN
+		data_car_brand b on(b.id=hb.brand_id)
+		ORDER BY hb.h_order DESC
+	</select>
+
+	<!-- ==========================web后台接口========================= -->
+	<!-- 根据id获取汽车品牌 -->
+	<select id="getByColumn" resultMap="DataCarBrandResultMap"
+		parameterType="map">
+		select id, name, initial, parentid, logo
+		from
+		data_car_brand
+		where id=#{id}
+	</select>
+
+	<!-- 获取汽车品牌的总数 -->
+	<select id="listPageCount" resultType="long" parameterType="map">
+		select count(*)
+		from data_car_brand
+		<where>
+			<if test="searchContent!=null and searchContent!=''">
+				and name like concat('%',#{searchContent},'%')
+			</if>
+			<if test="status!=null and status!=''">
+				and status=#{status}
+			</if>
+		</where>
+		order by initial ASC,id ASC
+	</select>
+
+	<!-- 获取所有的汽车品牌（分页+搜索） -->
+	<select id="listPage" resultMap="DataCarBrandResultMap"
+		parameterType="map">
+		select id, name, initial, parentid, logo
+		from data_car_brand
+		<where>
+			<if test="searchContent!=null and searchContent!=''">
+				and name like concat('%',#{searchContent},'%')
+			</if>
+			<if test="status!=null and status!=''">
+				and status=#{status}
+			</if>
+		</where>
+		order by initial ASC,id ASC
+		<if test="beginIndex!=null and numPerPage!=null">
+			limit #{beginIndex},#{numPerPage}
+		</if>
+	</select>
+
+	<!-- 添加汽车品牌 -->
+	<insert id="insert" parameterType="com.lovecws.mumu.data.car.entity.DataCarBrand"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into data_car_brand
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				id,
+			</if>
+			<if test="name!=null">
+				name,
+			</if>
+			<if test="initial!=null">
+				initial,
+			</if>
+			<if test="parentId!=null">
+				parentid,
+			</if>
+			<if test="logo!=null">
+				logo,
+			</if>
+			<if test="depth!=null">
+				depth,
+			</if>
+			<if test="status!=null">
+				status,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				#{id},
+			</if>
+			<if test="name!=null">
+				#{name},
+			</if>
+			<if test="initial!=null">
+				#{initial},
+			</if>
+			<if test="parentId!=null">
+				#{parentId},
+			</if>
+			<if test="logo!=null">
+				#{logo},
+			</if>
+			<if test="depth!=null">
+				#{depth},
+			</if>
+			<if test="status!=null">
+				#{status},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 修改汽车品牌 -->
+	<update id="updateByPrimaryKey" parameterType="com.lovecws.mumu.data.car.entity.DataCarBrand">
+		update data_car_brand
+		<set>
+			<if test="name!=null">
+				name=#{name},
+			</if>
+			<if test="initial!=null">
+				initial=#{initial},
+			</if>
+			<if test="parentId!=null and parentId!=0">
+				parentid=#{parentId},
+			</if>
+			<if test="logo!=null">
+				logo=#{logo},
+			</if>
+			<if test="depth!=null">
+				depth=#{depth},
+			</if>
+			<if test="status!=null and status!=0">
+				status=#{status},
+			</if>
+		</set>
+		<where>
+			<if test="id!=null">
+				id=#{id}
+			</if>
+		</where>
+	</update>
+
+</mapper>

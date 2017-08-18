@@ -12,16 +12,11 @@
           <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-audit:1.0.7.GA" />
           <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-error:1.0.7.GA" />
           <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-common:1.0.7.GA" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:3.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-core:4.0.0" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: org.jasig.service.persondir:person-directory-impl:1.5.1" />
@@ -52,8 +47,6 @@
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.2" />
           <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-support-generic:4.0.0" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.opensymphony.quartz:quartz:1.6.1" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.2.0.Final" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.7.2" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.7.2" />
@@ -62,14 +55,27 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.5" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.5" />
           <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-support-jdbc:4.0.0" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:3.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.2" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.20" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.2.3" />
+          <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.1" />
+          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz-jobs:2.2.3" />
+          <element id="library" level="project" name="Maven: org.opensymphony.quartz:quartz:1.6.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

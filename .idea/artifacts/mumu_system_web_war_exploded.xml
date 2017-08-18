@@ -112,6 +112,15 @@
           <element id="archive" name="mumu-common-sms-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-common-sms" />
           </element>
+          <element id="archive" name="mumu-common-excel-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-common-excel" />
+          </element>
+          <element id="library" level="project" name="Maven: org.apache.poi:poi-ooxml:3.14" />
+          <element id="library" level="project" name="Maven: org.apache.poi:poi-ooxml-schemas:3.14" />
+          <element id="library" level="project" name="Maven: org.apache.xmlbeans:xmlbeans:2.6.0" />
+          <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
+          <element id="library" level="project" name="Maven: com.github.virtuald:curvesapi:1.03" />
+          <element id="library" level="project" name="Maven: com.itextpdf:itextpdf:5.5.6" />
           <element id="archive" name="mumu-system-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-system-api" />
           </element>

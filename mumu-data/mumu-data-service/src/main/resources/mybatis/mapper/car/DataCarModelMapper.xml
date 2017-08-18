@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.data.car.dao.impl.DataCarModelDaoImpl">
+	<!-- <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/> -->
+	<!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache" readOnly="true" 
+		/> -->
+	<resultMap id="DataCarModelResultMap"
+		type="com.lovecws.mumu.data.car.entity.DataCarModel">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="initial" property="initial" jdbcType="VARCHAR" />
+		<result column="parentid" property="parentId" jdbcType="INTEGER" />
+		<result column="price" property="price" jdbcType="VARCHAR" />
+		<result column="yeartype" property="yearType" jdbcType="VARCHAR" />
+		<result column="productionstate" property="productionState"
+			jdbcType="VARCHAR" />
+		<result column="salestate" property="saleState" jdbcType="VARCHAR" />
+		<result column="sizetype" property="sizeType" jdbcType="INTEGER" />
+		<result column="maxhorsepower" property="maxhorsepower"
+			jdbcType="VARCHAR" />
+		<result column="gearbox" property="gearbox" jdbcType="VARCHAR" />
+		<result column="depth" property="depth" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="DataCarModelColumn">
+		id, name, initial, parentid,
+		price,yeartype,productionstate,salestate,sizetype,maxhorsepower,gearbox,depth
+	</sql>
+
+	<!-- 根据父id获取汽车实体 -->
+	<select id="listByColumn" resultMap="DataCarModelResultMap"
+		parameterType="map">
+		select
+		<include refid="DataCarModelColumn" />
+		from data_car_model
+		where parentid = #{parentId}
+	</select>
+
+	<!-- 获取所有的汽车实体 -->
+	<select id="listBy" resultMap="DataCarModelResultMap"
+		parameterType="map">
+		select
+		<include refid="DataCarModelColumn" />
+		from data_car_model
+	</select>
+
+	<!-- ==========================web后台接口========================= -->
+	<!-- 根据id获取汽车车型 -->
+	<select id="selectByPrimaryKey" resultMap="DataCarModelResultMap"
+		parameterType="java.lang.String">
+		select id, name, initial, parentid,
+		price,yeartype,productionstate,salestate,sizetype,maxhorsepower,gearbox
+		from data_car_model
+		where id=#{id}
+	</select>
+
+	<!-- 获取汽车车型的总数 -->
+	<select id="listPageCount" resultType="long" parameterType="map">
+		select count(*)
+		from data_car_model
+		<where>
+			<if test="parentId!=null and parentId!=''">
+				and parentid=#{parentId}
+			</if>
+			<if test="searchContent!=null and searchContent!=''">
+				and name like concat('%',#{searchContent},'%')
+			</if>
+		</where>
+	</select>
+
+	<!-- 获取所有的汽车车型（分页+搜索） -->
+	<select id="listPage" resultMap="DataCarModelResultMap"
+		parameterType="map">
+		select id, name, initial, parentid,
+		price,yeartype,productionstate,salestate,sizetype,maxhorsepower,gearbox
+		from data_car_model
+		<where>
+			<if test="parentId!=null and parentId!=''">
+				and parentid=#{parentId}
+			</if>
+			<if test="searchContent!=null and searchContent!=''">
+				and name like concat('%',#{searchContent},'%')
+			</if>
+		</where>
+		<if test="beginIndex!=null and numPerPage!=null">
+			limit #{beginIndex},#{numPerPage}
+		</if>
+	</select>
+	
+	<!-- 删除汽车车型 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete 
+		from data_car_model
+		where id=#{id}
+	</delete>
+
+	<!-- 添加汽车车型 -->
+	<insert id="insert" parameterType="com.lovecws.mumu.data.car.entity.DataCarModel"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into data_car_model
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="name!=null">
+				name,
+			</if>
+			<if test="initial!=null">
+				initial,
+			</if>
+			<if test="parentId!=null">
+				parentid,
+			</if>
+			<if test="price!=null">
+				price,
+			</if>
+			<if test="yearType!=null">
+				yeartype,
+			</if>
+			<if test="productionState!=null">
+				productionstate,
+			</if>
+			<if test="saleState!=null">
+				salestate,
+			</if>
+			<if test="sizeType!=null">
+				sizetype,
+			</if>
+			<if test="maxhorsepower!=null">
+				maxhorsepower,
+			</if>
+			<if test="gearbox!=null">
+				gearbox,
+			</if>
+			<if test="depth!=null">
+				depth,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="name!=null">
+				#{name},
+			</if>
+			<if test="initial!=null">
+				#{initial},
+			</if>
+			<if test="parentId!=null">
+				#{parentId},
+			</if>
+			<if test="price!=null">
+				#{price},
+			</if>
+			<if test="yearType!=null">
+				#{yearType},
+			</if>
+			<if test="productionState!=null">
+				#{productionState},
+			</if>
+			<if test="saleState!=null">
+				#{saleState},
+			</if>
+			<if test="sizeType!=null">
+				#{sizeType},
+			</if>
+			<if test="maxhorsepower!=null">
+				#{maxhorsepower},
+			</if>
+			<if test="gearbox!=null">
+				#{gearbox},
+			</if>
+			<if test="depth!=null">
+				#{depth},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 修改汽车车型 -->
+	<update id="updateByPrimaryKey" parameterType="com.lovecws.mumu.data.car.entity.DataCarModel">
+		update data_car_model
+		<set>
+			<if test="name!=null">
+				name=#{name},
+			</if>
+			<if test="initial!=null">
+				initial=#{initial},
+			</if>
+			<if test="parentId!=null and parentId!=0">
+				parentid=#{parentId},
+			</if>
+			<if test="price!=null">
+				price=#{price},
+			</if>
+			<if test="yearType!=null">
+				yeartype=#{yearType},
+			</if>
+			<if test="productionState!=null">
+				productionstate=#{productionState},
+			</if>
+			<if test="saleState!=null">
+				salestate=#{saleState},
+			</if>
+			<if test="sizeType!=null and sizeType!=0">
+				sizetype=#{sizeType},
+			</if>
+			<if test="maxhorsepower!=null">
+				maxhorsepower=#{maxhorsepower},
+			</if>
+			<if test="gearbox!=null">
+				gearbox=#{gearbox},
+			</if>
+			<if test="depth!=null and depth!=0">
+				depth=#{depth},
+			</if>
+		</set>
+		<where>
+			<if test="id!=null">
+				id=#{id}
+			</if>
+		</where>
+	</update>
+
+</mapper>

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.data.car.dao.impl.DataCarAttributeDaoImpl">
+
+	<resultMap id="DataCarAttributeResultMap"
+		type="com.lovecws.mumu.data.car.entity.DataCarAttribute">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="initial" property="initial" jdbcType="VARCHAR" />
+		<result column="parentid" property="parentid" jdbcType="INTEGER" />
+		<result column="price" property="price" jdbcType="VARCHAR" />
+		<result column="yeartype" property="yeartype" jdbcType="VARCHAR" />
+		<result column="productionstate" property="productionstate"
+			jdbcType="VARCHAR" />
+		<result column="salestate" property="salestate" jdbcType="VARCHAR" />
+		<result column="sizetype" property="sizetype" jdbcType="VARCHAR" />
+		<result column="depth" property="depth" jdbcType="INTEGER" />
+		<result column="basic" property="basic" jdbcType="VARCHAR" />
+		<result column="body" property="body" jdbcType="VARCHAR" />
+		<result column="engine" property="engine" jdbcType="VARCHAR" />
+		<result column="gearbox" property="gearbox" jdbcType="VARCHAR" />
+		<result column="chassisbrake" property="chassisbrake" jdbcType="VARCHAR" />
+		<result column="safe" property="safe" jdbcType="VARCHAR" />
+		<result column="wheel" property="wheel" jdbcType="VARCHAR" />
+		<result column="drivingauxiliary" property="drivingauxiliary"
+			jdbcType="VARCHAR" />
+		<result column="doormirror" property="doormirror" jdbcType="VARCHAR" />
+		<result column="light" property="light" jdbcType="VARCHAR" />
+		<result column="internalconfig" property="internalconfig"
+			jdbcType="VARCHAR" />
+		<result column="seat" property="seat" jdbcType="VARCHAR" />
+		<result column="entcom" property="entcom" jdbcType="VARCHAR" />
+		<result column="aircondrefrigerator" property="aircondrefrigerator"
+			jdbcType="VARCHAR" />
+		<result column="actualtest" property="actualtest" jdbcType="VARCHAR" />
+		<result column="facade_img" property="facadeImage" jdbcType="VARCHAR" />
+		<result column="facade_img_count" property="facadeImageCount"
+			jdbcType="INTEGER" />
+		<result column="central_img" property="centralImage" jdbcType="VARCHAR" />
+		<result column="central_img_count" property="centralImageCount"
+			jdbcType="INTEGER" />
+		<result column="seat_img" property="seatImage" jdbcType="VARCHAR" />
+		<result column="seat_img_count" property="seatImageCount"
+			jdbcType="INTEGER" />
+		<result column="detail_img" property="detailImage" jdbcType="VARCHAR" />
+		<result column="detail_img_count" property="detailImageCount"
+			jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="DataCarAttributeColumn">
+		id, name, initial, parentid,
+		price,yeartype,productionstate,salestate,sizetype, depth,
+		basic, body,
+		engine, gearbox,chassisbrake,safe,wheel,drivingauxiliary,
+		doormirror,
+		light, internalconfig, seat,
+		entcom,aircondrefrigerator,actualtest,
+		facade_img,facade_img_count,central_img,central_img_count,seat_img,seat_img_count,detail_img,detail_img_count
+	</sql>
+
+	<select id="getCountByColumn" resultType="long" parameterType="map">
+		select count(id) from sys_car_attr where id=#{id}
+	</select>
+
+	<select id="selectByPrimaryKey" resultMap="DataCarAttributeResultMap"
+		parameterType="java.lang.String">
+		select id, name, initial,
+		parentid,price,yeartype,productionstate,salestate,sizetype,
+		depth,basic, body,engine,
+		gearbox,chassisbrake,safe,wheel,drivingauxiliary,doormirror,light,
+		internalconfig, seat,entcom,aircondrefrigerator,actualtest
+		from
+		data_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 获取车系所属的所有车型的图片及图片数量（外观、中控、座椅、细节） -->
+	<select id="listByColumn" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select
+		sca.facade_img facade_img,sca.central_img central_img,sca.seat_img seat_img,sca.detail_img detail_img
+		from sys_car_attr sca
+		<where>
+			<if test="parentId!=null and parentId!=''">
+				sca.parentid=#{parentId}
+			</if>
+		</where>
+	</select>
+
+	<!-- 添加汽车配置信息 -->
+	<insert id="insert" parameterType="com.lovecws.mumu.data.car.entity.DataCarAttribute">
+		insert into sys_car_attr
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				id,
+			</if>
+			<if test="name!=null">
+				name,
+			</if>
+			<if test="initial!=null">
+				initial,
+			</if>
+			<if test="parentid!=null">
+				parentid,
+			</if>
+			<if test="price!=null">
+				price,
+			</if>
+			<if test="yeartype!=null">
+				yeartype,
+			</if>
+			<if test="productionstate!=null">
+				productionstate,
+			</if>
+			<if test="salestate!=null">
+				salestate,
+			</if>
+			<if test="sizetype!=null">
+				sizetype,
+			</if>
+			<if test="depth!=null">
+				depth,
+			</if>
+			<if test="basic!=null">
+				basic,
+			</if>
+			<if test="body!=null">
+				body,
+			</if>
+			<if test="engine!=null">
+				engine,
+			</if>
+			<if test="gearbox!=null">
+				gearbox,
+			</if>
+			<if test="chassisbrake!=null">
+				chassisbrake,
+			</if>
+			<if test="safe!=null">
+				safe,
+			</if>
+			<if test="wheel!=null">
+				wheel,
+			</if>
+			<if test="drivingauxiliary!=null">
+				drivingauxiliary,
+			</if>
+			<if test="doormirror!=null">
+				doormirror,
+			</if>
+			<if test="light!=null">
+				light,
+			</if>
+			<if test="internalconfig!=null">
+				internalconfig,
+			</if>
+			<if test="seat!=null">
+				seat,
+			</if>
+			<if test="entcom!=null">
+				entcom,
+			</if>
+			<if test="aircondrefrigerator!=null">
+				aircondrefrigerator,
+			</if>
+			<if test="actualtest!=null">
+				actualtest,
+			</if>
+			<if test="facadeImage!=null">
+				facade_img,
+			</if>
+			<if test="facadeImageCount!=null">
+				facade_img_count,
+			</if>
+			<if test="centralImage!=null">
+				central_img,
+			</if>
+			<if test="centralImageCount!=null">
+				central_img_count,
+			</if>
+			<if test="seatImage!=null">
+				seat_img,
+			</if>
+			<if test="seatImageCount!=null">
+				seat_img_count,
+			</if>
+			<if test="detailImage!=null">
+				detail_img,
+			</if>
+			<if test="detailImageCount!=null">
+				detail_img_count,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id!=null">
+				#{id},
+			</if>
+			<if test="name!=null">
+				#{name},
+			</if>
+			<if test="initial!=null">
+				#{initial},
+			</if>
+			<if test="parentid!=null">
+				#{parentid},
+			</if>
+			<if test="price!=null">
+				#{price},
+			</if>
+			<if test="yeartype!=null">
+				#{yeartype},
+			</if>
+			<if test="productionstate!=null">
+				#{productionstate},
+			</if>
+			<if test="salestate!=null">
+				#{salestate},
+			</if>
+			<if test="sizetype!=null">
+				#{sizetype},
+			</if>
+			<if test="depth!=null">
+				#{depth},
+			</if>
+			<if test="basic!=null">
+				#{basic},
+			</if>
+			<if test="body!=null">
+				#{body},
+			</if>
+			<if test="engine!=null">
+				#{engine},
+			</if>
+			<if test="gearbox!=null">
+				#{gearbox},
+			</if>
+			<if test="chassisbrake!=null">
+				#{chassisbrake},
+			</if>
+			<if test="safe!=null">
+				#{safe},
+			</if>
+			<if test="wheel!=null">
+				#{wheel},
+			</if>
+			<if test="drivingauxiliary!=null">
+				#{drivingauxiliary},
+			</if>
+			<if test="doormirror!=null">
+				#{doormirror},
+			</if>
+			<if test="light!=null">
+				#{light},
+			</if>
+			<if test="internalconfig!=null">
+				#{internalconfig},
+			</if>
+			<if test="seat!=null">
+				#{seat},
+			</if>
+			<if test="entcom!=null">
+				#{entcom},
+			</if>
+			<if test="aircondrefrigerator!=null">
+				#{aircondrefrigerator},
+			</if>
+			<if test="actualtest!=null">
+				#{actualtest},
+			</if>
+			<if test="facadeImage!=null">
+				#{facadeImage},
+			</if>
+			<if test="facadeImageCount!=null">
+				#{facadeImageCount},
+			</if>
+			<if test="centralImage!=null">
+				#{centralImage},
+			</if>
+			<if test="centralImageCount!=null">
+				#{centralImageCount},
+			</if>
+			<if test="seatImage!=null">
+				#{seatImage},
+			</if>
+			<if test="seatImageCount!=null">
+				#{seatImageCount},
+			</if>
+			<if test="detailImage!=null">
+				#{detailImage},
+			</if>
+			<if test="detailImageCount!=null">
+				#{detailImageCount},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- insert into sys_car_attr (id, name, initial, parentid, price,yeartype,productionstate,salestate,sizetype, 
+		depth, basic, body, engine, gearbox,chassisbrake,safe,wheel,drivingauxiliary, 
+		doormirror, light, internalconfig, seat, entcom,aircondrefrigerator,actualtest) 
+		values (#{id}, #{name}, #{initial}, #{parentid}, #{price},#{yeartype},#{productionstate},#{salestate},#{sizetype},#{depth}, 
+		#{basic},#{body},#{engine},#{gearbox},#{chassisbrake},#{safe},#{wheel},#{drivingauxiliary},#{doormirror}, 
+		#{light},#{internalconfig},#{seat},#{entcom},#{aircondrefrigerator},#{actualtest}) -->
+
+	<!-- ========web后台接口======= -->
+	<!-- 获取基础信息+基本信息 -->
+	<select id="getbasic" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select
+		name,price,yeartype,productionstate,salestate,sizetype,basic
+		from
+		sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 车体 -->
+	<select id="getbody" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select body
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 发动机 -->
+	<select id="getengine" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select engine
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 变速箱 -->
+	<select id="getgearbox" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select gearbox
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 底盘制动 -->
+	<select id="getchassisbrake" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select chassisbrake
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 安全配置 -->
+	<select id="getsafe" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select safe
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 车轮 -->
+	<select id="getwheel" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select wheel
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 行车辅助 -->
+	<select id="getdrivingauxiliary" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select drivingauxiliary
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 门窗/后视镜 -->
+	<select id="getdoormirror" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select doormirror
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 灯光 -->
+	<select id="getlight" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select light
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 内部配置 -->
+	<select id="getinternalconfig" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select internalconfig
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 车座 -->
+	<select id="getseat" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select seat
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 娱乐通讯 -->
+	<select id="getentcom" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select entcom
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 空调/冰箱 -->
+	<select id="getaircondrefrigerator" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select aircondrefrigerator
+		from sys_car_attr
+		where
+		id=#{id}
+	</select>
+
+	<!-- 实际测试 -->
+	<select id="getactualtest" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select actualtest
+		from sys_car_attr
+		where id=#{id}
+	</select>
+
+	<!-- 外观图片 -->
+	<select id="getfacadeImage" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select facade_img,facade_img_count
+		from sys_car_attr
+		where
+		id=#{id}
+	</select>
+
+	<!-- 中控图片 -->
+	<select id="getcentralImage" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select central_img,central_img_count
+		from sys_car_attr
+		where
+		id=#{id}
+	</select>
+
+	<!-- 座椅图片 -->
+	<select id="getseatImage" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select seat_img,seat_img_count
+		from sys_car_attr
+		where
+		id=#{id}
+	</select>
+
+	<!-- 细节图片 -->
+	<select id="getdetailImage" resultMap="DataCarAttributeResultMap"
+		parameterType="map">
+		select detail_img,detail_img_count
+		from sys_car_attr
+		where
+		id=#{id}
+	</select>
+
+	<!-- 删除汽车配置信息 -->
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete
+		from
+		sys_car_attr
+		where id=#{id}
+	</delete>
+
+	<!-- 修改汽车配置信息 -->
+	<update id="updateByPrimaryKey" parameterType="com.lovecws.mumu.data.car.entity.DataCarAttribute">
+		update sys_car_attr
+		<set>
+			<if test="name!=null">
+				name=#{name},
+			</if>
+			<if test="initial!=null">
+				initial=#{initial},
+			</if>
+			<if test="parentid!=null and parentid!=0">
+				parentid=#{parentid},
+			</if>
+			<if test="price!=null">
+				price=#{price},
+			</if>
+			<if test="yeartype!=null">
+				yeartype=#{yeartype},
+			</if>
+			<if test="productionstate!=null">
+				productionstate=#{productionstate},
+			</if>
+			<if test="salestate!=null">
+				salestate=#{salestate},
+			</if>
+			<if test="sizetype!=null">
+				sizetype=#{sizetype},
+			</if>
+			<if test="depth!=null and depth!=0">
+				depth=#{depth},
+			</if>
+			<if test="basic!=null">
+				basic=#{basic},
+			</if>
+			<if test="body!=null">
+				body=#{body},
+			</if>
+			<if test="engine!=null">
+				engine=#{engine},
+			</if>
+			<if test="gearbox!=null">
+				gearbox=#{gearbox},
+			</if>
+			<if test="chassisbrake!=null">
+				chassisbrake=#{chassisbrake},
+			</if>
+			<if test="safe!=null">
+				safe=#{safe},
+			</if>
+			<if test="wheel!=null">
+				wheel=#{wheel},
+			</if>
+			<if test="drivingauxiliary!=null">
+				drivingauxiliary=#{drivingauxiliary},
+			</if>
+			<if test="doormirror!=null">
+				doormirror=#{doormirror},
+			</if>
+			<if test="light!=null">
+				light=#{light},
+			</if>
+			<if test="internalconfig!=null">
+				internalconfig=#{internalconfig},
+			</if>
+			<if test="seat!=null">
+				seat=#{seat},
+			</if>
+			<if test="entcom!=null">
+				entcom=#{entcom},
+			</if>
+			<if test="aircondrefrigerator!=null">
+				aircondrefrigerator=#{aircondrefrigerator},
+			</if>
+			<if test="actualtest!=null">
+				actualtest=#{actualtest},
+			</if>
+			<if test="facadeImage!=null">
+				facade_img=#{facadeImage},
+			</if>
+			<if test="facadeImageCount!=null and facadeImageCount!=0">
+				facade_img_count=#{facadeImageCount},
+			</if>
+			<if test="centralImage!=null">
+				central_img=#{centralImage},
+			</if>
+			<if test="centralImageCount!=null and centralImageCount!=0">
+				central_img_count=#{centralImageCount},
+			</if>
+			<if test="seatImage!=null">
+				seat_img=#{seatImage},
+			</if>
+			<if test="seatImageCount!=null and seatImageCount!=0">
+				seat_img_count=#{seatImageCount},
+			</if>
+			<if test="detailImage!=null">
+				detail_img=#{detailImage},
+			</if>
+			<if test="detailImageCount!=null and detailImageCount!=0">
+				detail_img_count=#{detailImageCount},
+			</if>
+		</set>
+		<where>
+			<if test="id!=null">
+				id=#{id}
+			</if>
+		</where>
+	</update>
+
+</mapper>

@@ -20,11 +20,15 @@
         <module name="mumu-cms-web" />
         <module name="mumu-common-core" />
         <module name="mumu-common-email" />
+        <module name="mumu-common-excel" />
         <module name="mumu-common-fdfs" />
         <module name="mumu-common-redis" />
         <module name="mumu-common-security" />
         <module name="mumu-common-sms" />
         <module name="mumu-common-template" />
+        <module name="mumu-data-api" />
+        <module name="mumu-data-service" />
+        <module name="mumu-data-web" />
         <module name="mumu-oa" />
         <module name="mumu-oauth-client" />
         <module name="mumu-oauth-server" />
@@ -43,11 +47,16 @@
       <module name="mumu-common" target="1.8" />
       <module name="mumu-common-core" target="1.8" />
       <module name="mumu-common-email" target="1.8" />
+      <module name="mumu-common-excel" target="1.8" />
       <module name="mumu-common-fdfs" target="1.8" />
       <module name="mumu-common-redis" target="1.8" />
       <module name="mumu-common-security" target="1.8" />
       <module name="mumu-common-sms" target="1.8" />
       <module name="mumu-common-template" target="1.8" />
+      <module name="mumu-data" target="1.8" />
+      <module name="mumu-data-api" target="1.8" />
+      <module name="mumu-data-service" target="1.8" />
+      <module name="mumu-data-web" target="1.8" />
       <module name="mumu-oa" target="1.8" />
       <module name="mumu-oauth" target="1.8" />
       <module name="mumu-oauth-client" target="1.8" />

@@ -270,8 +270,8 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
         <!--<dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-scratchpad</artifactId>
+            <groupId>org.apache.excel</groupId>
+            <artifactId>excel-scratchpad</artifactId>
             <version>3.16</version>
         </dependency>-->
 

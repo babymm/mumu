@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.data.area.dao.impl.DataAreaCityDaoImpl">
+	<resultMap id="SystemCityResultMap" type="com.lovecws.mumu.data.area.entity.DataAreaCity">
+		<id column="c_id" property="cId" jdbcType="INTEGER" />
+		<result column="c_code" property="cCode" jdbcType="VARCHAR" />
+		<result column="p_code" property="pCode" jdbcType="VARCHAR" />
+		<result column="c_name" property="cName" jdbcType="VARCHAR" />
+		<result column="c_sname" property="cSname" jdbcType="VARCHAR" />
+		<result column="c_pinying" property="cPinying" jdbcType="VARCHAR" />
+		<result column="c_py" property="cPy" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="SystemCityColumn">
+		c_id, c_code, p_code, c_name, c_sname, c_pinying, c_py
+	</sql>
+
+	<!-- 根据省份code，获取省下的所有城市 -->
+	<select id="listByColumn" resultMap="SystemCityResultMap"
+		parameterType="map">
+		select
+		<include refid="SystemCityColumn" />
+		from data_area_city
+		<where>
+			<if test="provinceCode!=null">
+				p_code=#{provinceCode}
+			</if>
+		</where>
+	</select>
+
+</mapper>
