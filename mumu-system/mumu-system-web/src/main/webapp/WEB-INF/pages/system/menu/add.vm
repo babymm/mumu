@@ -56,7 +56,7 @@
                             <label class="layui-form-label">可见性</label>
                             <div class="layui-input-inline">
                                 <input type="radio" name="menuVisible" value="show" title="可见" checked>
-                                <input type="radio" name="menuVisible" value=hidden title="隐藏">
+                                <input type="radio" name="menuVisible" value="hidden" title="隐藏">
                             </div>
                         </div>
                         <div class="layui-form-item">

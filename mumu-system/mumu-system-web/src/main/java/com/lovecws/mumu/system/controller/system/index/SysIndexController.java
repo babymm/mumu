@@ -1,8 +1,10 @@
 package com.lovecws.mumu.system.controller.system.index;
 
 import com.lovecws.mumu.system.entity.SysMenu;
+import com.lovecws.mumu.system.entity.SysMessageContainer;
 import com.lovecws.mumu.system.entity.SysUser;
 import com.lovecws.mumu.system.service.SysMenuService;
+import com.lovecws.mumu.system.service.SysMessageContainerService;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +24,8 @@ public class SysIndexController {
 
     @Autowired
     private SysMenuService menuService;
+    @Autowired
+    private SysMessageContainerService messageContainerService;
 
     /**
      * 管理系统后台首页
@@ -29,6 +33,7 @@ public class SysIndexController {
      */
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(HttpServletRequest request){
+        //获取菜单树
         String loginName = SecurityUtils.getSubject().getPrincipal().toString();
         List<SysMenu> treeMenus=new ArrayList<SysMenu>();
         //获取保存在session中的用户
@@ -51,6 +56,10 @@ public class SysIndexController {
             }
         }
         request.setAttribute("menuTree", treeMenus);
+
+        //获取用户未读的站内消息
+        List<SysMessageContainer> messageContainers = messageContainerService.querySysMessageByCondition(user.getUserId(), null, SysMessageContainer.MESSAGECONTAINERSTATUS_UNREAD);
+        request.setAttribute("messageContainers", messageContainers);
         return "index";
     }
 

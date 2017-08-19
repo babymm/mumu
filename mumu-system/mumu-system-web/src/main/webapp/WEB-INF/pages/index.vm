@@ -103,24 +103,26 @@
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge">5</span>
+                            #if($!messageContainers.size()>0)
+                                <span class="badge">$!messageContainers.size()</span>
+                            #end
                         </a>
                         <div class="dropdown-menu dropdown-menu-head pull-right">
-                            <h5 class="title">网站留言消息</h5>
+                            <h5 class="title">我的消息</h5>
                             <ul class="dropdown-list normal-list">
-                                <li class="new">
-                                    <a href="">
-                                            <span class="thumb"><img
-                                                    src="$request.getContextPath()/resources/images/photos/user1.png"
-                                                    alt=""/></span>
-                                        <span class="desc">
-                                          <span class="name">John Doe <span
-                                                  class="badge badge-success">new</span></span>
-                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="new"><a href="">查看所有邮件</a></li>
+                                #foreach($!messageContainer in $!messageContainers)
+                                    <li class="new">
+                                        <a href="javascript:void(0)" onclick="messageDetailClick()">
+                                            <span class="thumb"><img src="$!messageContainer.avator" alt="发送人头像"/></span>
+                                            <span class="desc">
+                                                <span class="name">$!messageContainer.userName<span  class="badge badge-success">new</span></span>
+                                                #*<span class="msg">$!date.format('yyyy-MM-dd HH:mm:ss ',$!messageContainer.createDate)</span>*#
+                                                <span class="msg">$!messageContainer.messageTitle</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                #end
+                                <li class="new"><a href="javascript:void(0)" onclick="hasMoreMessageClick()">查看所有消息</a></li>
                             </ul>
                         </div>
                     </li>
@@ -158,6 +160,28 @@
     //改变iframe高度
     window.onresize=function(){
         changeFrameHeight();
+    }
+    //获取更多消息点击事件
+    function hasMoreMessageClick() {
+        //页面跳转
+        changeFrameSrc('$request.getContextPath()/personal/message/index','userMessage');
+        //菜单栏高亮
+        var modularEle=$("#userMessage");
+        $("#main").removeClass("active");
+        $(".menu-list").removeClass("nav-active");
+        modularEle.parent().parent().addClass("nav-active");
+        modularEle.addClass("active");
+    }
+    //消息详情点击事件
+    function messageDetailClick(messageId) {
+        //页面跳转
+        changeFrameSrc('$request.getContextPath()/personal/message/index','userMessage');
+        //菜单栏高亮
+        var modularEle=$("#userMessage");
+        $("#main").removeClass("active");
+        $(".menu-list").removeClass("nav-active");
+        modularEle.parent().parent().addClass("nav-active");
+        modularEle.addClass("active");
     }
     $(function () {
         var href=window.location.href,redirectLocation=null,modular="main",withUrl=false;

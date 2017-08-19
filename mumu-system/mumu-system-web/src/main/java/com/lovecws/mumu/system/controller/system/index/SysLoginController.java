@@ -22,7 +22,6 @@ import java.util.Map;
 @Controller
 @RequestMapping("/system")
 public class SysLoginController {
-
     /**
      * 跳转到登录页面
      * @return
@@ -65,6 +64,8 @@ public class SysLoginController {
         map.put("code","200");
         map.put("msg","success");
         map.put("data","登录成功");
+
         return new ModelAndView("redirect:/system/index",map);
     }
+
 }

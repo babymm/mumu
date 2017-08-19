@@ -1,17 +1,13 @@
 package com.lovecws.mumu.common.security.shiro.credentials;
 
-import com.lovecws.mumu.common.core.utils.ValidateUtils;
 import com.lovecws.mumu.common.redis.JedisClient;
 import com.lovecws.mumu.system.entity.SysUser;
-import com.lovecws.mumu.system.service.SysUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.ExcessiveAttemptsException;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
 
 /**
  * @desc 自定义的市容凭证匹配器 
@@ -20,11 +16,11 @@ import java.util.List;
  */
 public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher {
 
-	@Autowired(required = false)
-	private SysUserService userService;
 	@Autowired
 	private JedisClient jedisClient;
 
+	@Autowired(required = false)
+	private LoginCredentialsHandler loginCredentialsHandler;
 	/**
 	 * 做认证匹配
 	 */
@@ -47,24 +43,14 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 				throw new ExcessiveAttemptsException();
 			}
 		}
+		loginCredentialsHandler.before();
 		boolean matches = super.doCredentialsMatch(token, info);
 		if (matches) {
 			// clear retry count
 			jedisClient.del(cacheName);
-			//从数据库获取用户信息 将用户信息保存到session中
-			/*List<SysUser> users =null;
-			if(ValidateUtils.isEmail(loginName)){
-				users = userService.querySysUserByCondition(null, null, loginName, null, null);
-			}else if(ValidateUtils.isMobile(loginName)){
-				users = userService.querySysUserByCondition(null, null, null, loginName, null);
-			}else{
-				users = userService.querySysUserByCondition(loginName, null, null, null, null);
-			}
-			if(users!=null&&users.size()==1){
-				SecurityUtils.getSubject().getSession().setAttribute(SysUser.SYS_USER, users.get(0));
-			}else{
-				throw new IllegalArgumentException();
-			}*/
+
+			//用户认证成功之后 进行相关操作
+			loginCredentialsHandler.after();
 		}else{
 			SysUser unloginUser=new SysUser();
 			unloginUser.setUserName(loginName);

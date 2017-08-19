@@ -1,12 +1,13 @@
 <link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
-        <h3>导出设置</h3>
+        <h3>消息管理</h3>
         <ul class="breadcrumb">
             <li>系统管理</li>
-            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/export/index','exports')">导出设置</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/message/index','messages')">消息管理</li>
         </ul>
     </div>
     <div class="wrapper">
@@ -14,17 +15,16 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        #if($shiro.hasPermission('system:export:add'))
-                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/export/add','exports',true)"> <span class="fa fa-plus-square"></span>添加</button>
+                        #if($shiro.hasPermission('system:message:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/system/message/add','messages',true)"><span class="fa fa-plus-square"></span>添加</button>
                         #end
-                        #if($!model.has("sys_export"))
-                            #if($shiro.hasPermission('system:export:export'))
-                                <a href="/common/export/excel/sys_export" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
+                        #if($!model.has("sys_message"))
+                            #if($shiro.hasPermission('system:message:export'))
+                                <a href="/common/export/excel/sys_message" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-export"></span>导出</a>
                             #end
                         #end
                     </div>
                     <table id="table"
-                           class="table table-hover table-bordered table-striped table-responsive fixed-table"
                            data-toggle="table"
                            data-toolbar="#toolbar"
                            data-show-refresh="false"
@@ -32,7 +32,7 @@
                            data-show-toggle="false"
                            data-show-columns="false"
                            data-show-export="false"
-                           data-id-field="orgId"
+                           data-id-field="permissionId"
                            data-pagination="true"
                            data-query-params="queryParams"
                            data-query-type="limit"
@@ -41,7 +41,7 @@
                            data-single-select="false"
                            data-striped="false"
                            data-method="get"
-                           data-url="$request.getContextPath()/system/export/page"
+                           data-url="$request.getContextPath()/system/message/page"
                            data-side-pagination="server"
                            data-page-list="[15, 30, 50, 100, ALL]"
                            data-show-pagination-switch="false"
@@ -50,11 +50,12 @@
                            data-show-pagination-switch="false">
                         <thead>
                         <tr>
-                            <th data-field="modelName" data-valign="middle" data-align="center">模型名称</th>
-                            <th data-field="cnames" data-valign="middle" data-align="center">中文字段集合</th>
-                            <th data-field="enames" data-valign="middle" data-align="center">英文字段集合</th>
-                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作
-                            </th>
+                            <th data-field="messageId" data-visible="true" data-align="center">消息ID</th>
+                            <th data-field="messageTitle" data-valign="middle" data-align="center">消息标题</th>
+                            <th data-field="messageType" data-valign="middle" data-align="center" data-formatter="messageTypeFormatter">消息类型</th>
+                            <th data-field="messageContent" data-visible="false" data-valign="middle" data-align="center">消息内容</th>
+                            <th data-field="createDate" data-valign="middle" data-align="center">创建时间</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
                         </tr>
                         </thead>
                     </table>
@@ -80,42 +81,46 @@
             pageSize: params.limit
         };
     }
-    //查询导出设置
-    function queryExportModels() {
+    //查询消息
+    function querymessages() {
         var $table =$('#table');
         $table.bootstrapTable("refresh");
     }
     //操作按钮
     function operateFormatter(value, row, index) {
         var buttons = [];
-        var viewPermission = "$shiro.hasPermission('system:export:view')";
+        var viewPermission = "$shiro.hasPermission('system:message:view')";
         if (viewPermission && viewPermission == "true") {
-            buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsDetail"><span class="fa fa-eye"></span>详情</button>');
+            buttons.push('<button type="button" class="btn btn-default btn-sm messagesDetail"><span class="fa fa-eye"></span>详情</button>');
         }
-        var editPermission = "$shiro.hasPermission('system:export:edit')";
+        var editPermission = "$shiro.hasPermission('system:message:edit')";
         if (editPermission && editPermission == "true") {
-            buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsEdit"><span class="fa fa-edit"></span>编辑</button>');
+            buttons.push('<button type="button" class="btn btn-default btn-sm messagesEdit"><span class="fa fa-edit"></span>编辑</button>');
         }
-        var deletePermission = "$shiro.hasPermission('system:export:delete')";
+        var deletePermission = "$shiro.hasPermission('system:message:delete')";
         if (deletePermission && deletePermission == "true") {
-            buttons.push('<button type="button" class="btn btn-default btn-sm ExportModelsDelete"><span class="fa fa-trash-o"></span>删除</button>');
+            buttons.push('<button type="button" class="btn btn-default btn-sm messagesDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        var receiverPermission = "$shiro.hasPermission('system:message:receiver')";
+        if (receiverPermission && receiverPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm messagesReceiver"><span class="fa fa-user"></span>消息</button>');
         }
         return buttons.join('');
     }
     //表格点击事件
     var operateEvents = {
-        //导出设置详情
-        'click .ExportModelsDetail': function (e, value, row, index) {
-            changeFrameSrc("$request.getContextPath()/system/export/view/" + row.modelId, "exports", true)
+        //消息详情
+        'click .messagesDetail': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/message/view/" + row.messageId, "messages", true)
         },
-        //编辑导出设置
-        'click .ExportModelsEdit': function (e, value, row, index) {
-            changeFrameSrc("$request.getContextPath()/system/export/edit/" + row.modelId, "exports", true)
+        //编辑消息
+        'click .messagesEdit': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/message/edit/" + row.messageId, "messages", true)
         },
-        //删除导出设置
-        'click .ExportModelsDelete': function (e, value, row, index) {
-            layer.confirm('你确定要删除导出设置【' + row.modelName + '】吗?', {icon: 3, title: '提示'}, function (index) {
-                $.post("$request.getContextPath()/system/export/delete/" + row.modelId ,{_method: 'delete'}, function (data) {
+        //删除消息
+        'click .messagesDelete': function (e, value, row, index) {
+            layer.confirm('你确定要删除消息【' + row.messageTitle + '】吗?', {icon: 3, title: '提示'}, function (index) {
+                $.post("$request.getContextPath()/system/message/delete/" + row.messageId ,{_method: 'delete'}, function (data) {
                     if (data.code == 200) {
                         layer.msg(data.msg, {
                             icon: 1,
@@ -125,7 +130,7 @@
                             area: ['300px', '200px'],
                             offset: 'rb',
                             end: function () {
-                                queryExportModels();
+                                querymessages();
                             }
                         });
                     } else {
@@ -133,15 +138,21 @@
                     }
                 });
             });
+        },
+        //编辑消息
+        'click .messagesReceiver': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/system/message/receiver/" + row.messageId, "messages", true)
         }
     };
-    //表格行点击事件
-    $('#table').bootstrapTable({
-        onClickCell: function (field, value, row, el){
-            console.log(value);
-            if(field=="cnames"||field=="enames"){
-                layer.tips(value, el,{tips: [1,"#00c0ef"]});
-            }
+    //消息类型
+    function messageTypeFormatter(value, row, index) {
+        if(value=="user"){
+            return "用户";
+        }else if(value=="group"){
+            return "群组";
+        }else if(value=="all"){
+            return "全体";
         }
-    });
+        return value;
+    }
 </script>

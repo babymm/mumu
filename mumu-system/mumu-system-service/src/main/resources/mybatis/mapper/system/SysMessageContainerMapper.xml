@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysMessageContainerDaoImpl">
+	<resultMap id="SysMessageContainerResultMap" type="com.lovecws.mumu.system.entity.SysMessageContainer">
+		<id column="message_container_id" property="messageContainerId" />
+		<result column="message_container_status" property="messageContainerStatus"/>
+
+		<result column="create_date" property="createDate"/>
+		<result column="edit_date" property="editDate"/>
+
+		<result column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="message_id" property="messageId" jdbcType="INTEGER" />
+
+		<result column="user_name" property="userName" jdbcType="VARCHAR" />
+		<result column="avator" property="avator" jdbcType="VARCHAR" />
+		<result column="message_title" property="messageTitle" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="SysMessageContainerColumn">
+		message_container_id,message_container_status,create_date,edit_date,user_id,message_id
+	</sql>
+	
+	<!-- 查询消息容器列表 -->
+	<select id="listPage" resultMap="SysMessageContainerResultMap" parameterType="map">
+		select
+		u.user_id,u.user_name,mc.message_container_status,mc.message_container_id,mc.create_date,mc.edit_date
+		from sys_message_container mc inner join sys_user u on(u.user_id=mc.user_id)
+		<where>
+			<if test="userId!=null and userId!=''">
+				and mc.user_id=#{userId}
+			</if>
+			<if test="messageId!=null and messageId!=''">
+				and mc.message_id=#{messageId}
+			</if>
+			<if test="messageContainerStatus!=null and messageContainerStatus!=''">
+				and mc.message_container_status=#{messageContainerStatus}
+			</if>
+		</where>
+		ORDER BY mc.create_date DESC
+		<if test="pageFirst!=null and pageSize!=null">
+			limit #{pageFirst},#{pageSize}
+		</if>
+	</select>
+
+	<!-- 查询消息容器列表 简单获取消息容器 -->
+	<select id="querySysMessageContainerByCondition" resultMap="SysMessageContainerResultMap" parameterType="map">
+		select
+		<include refid="SysMessageContainerColumn"></include>
+		from sys_message_container
+		<where>
+			<if test="userId!=null and userId!=''">
+				and user_id=#{userId}
+			</if>
+			<if test="messageId!=null and messageId!=''">
+				and message_id=#{messageId}
+			</if>
+			<if test="messageContainerStatus!=null and messageContainerStatus!=''">
+				and message_container_status=#{messageContainerStatus}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查询消息容器列表 获取消息容器内的消息-->
+	<select id="querySysMessageByCondition" resultMap="SysMessageContainerResultMap" parameterType="map">
+		select
+		mc.message_id,
+		m.message_title,m.create_date,
+		u.user_id,u.user_name,u.avator
+		from sys_message_container mc
+		inner join sys_message m on(m.message_id=mc.message_id)
+	    inner join sys_user u on(u.user_id=m.create_user_id)
+		<where>
+			<if test="userId!=null and userId!=''">
+				and mc.user_id=#{userId}
+			</if>
+			<if test="messageId!=null and messageId!=''">
+				and mc.message_id=#{messageId}
+			</if>
+			<if test="messageContainerStatus!=null and messageContainerStatus!=''">
+				and mc.message_container_status=#{messageContainerStatus}
+			</if>
+		</where>
+	</select>
+    
+    <!-- 查询消息容器数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(message_container_id) from sys_message_container
+    	<where>
+			<if test="userId!=null and userId!=''">
+				and user_id=#{userId}
+			</if>
+			<if test="messageId!=null and messageId!=''">
+				and message_id=#{messageId}
+			</if>
+			<if test="messageContainerStatus!=null and messageContainerStatus!=''">
+				and message_container_status=#{messageContainerStatus}
+			</if>
+		</where>
+    </select>
+    
+	<!-- 获取消息容器详情 -->
+	<select id="selectByPrimaryKey" resultType="SysMessageContainer" parameterType="map">
+		select
+		<include refid="SysMessageContainerColumn"></include>
+		from sys_message_container where message_container_id = #{messageContainerId}
+	</select>
+	
+    <!-- 删除消息容器 -->
+    <delete id="deleteByPrimaryKey" parameterType="map">
+       delete from sys_message_container where message_container_id=#{messageContainerId}
+    </delete>
+
+	<!-- 插入消息容器-->
+	<insert id="insert" parameterType="SysMessageContainer" useGeneratedKeys="true" keyProperty="messageContainerId">
+		insert into sys_message_container
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="messageContainerId != null">
+				message_container_id,
+			</if>
+			<if test="messageContainerStatus != null">
+				message_container_status,
+			</if>
+			<if test="createDate != null">
+				create_date,
+			</if>
+			<if test="editDate != null">
+				edit_date,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="messageId != null">
+				message_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="messageContainerId != null">
+				#{messageContainerId},
+			</if>
+			<if test="messageContainerStatus != null">
+				#{messageContainerStatus},
+			</if>
+			<if test="createDate != null">
+				#{createDate},
+			</if>
+			<if test="editDate != null">
+				#{editDate},
+			</if>
+			<if test="userId != null">
+				#{userId},
+			</if>
+			<if test="messageId != null">
+				#{messageId},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 批量添加 -->
+	<insert id="batchInsert" parameterType="SysMessageContainer">
+		insert into sys_message_container(message_container_status,create_date,edit_date,user_id,message_id)
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+			(
+			#{item.messageContainerStatus},
+			#{item.createDate},
+			#{item.editDate},
+			#{item.userId},
+			#{item.messageId}
+			)
+		</foreach>
+	</insert>
+
+	<!-- 更改消息容器信息 -->
+	<update id="updateByPrimaryKey" parameterType="SysMessageContainer">
+		update sys_message_container
+		<set>
+			<if test="messageContainerStatus != null">
+				message_container_status=#{messageContainerStatus},
+			</if>
+			<if test="createDate != null">
+				create_date=#{createDate},
+			</if>
+			<if test="editDate != null">
+				edit_date=#{editDate},
+			</if>
+			<if test="userId != null">
+				user_id=#{userId},
+			</if>
+			<if test="messageId != null">
+				message_id=#{messageId},
+			</if>
+		</set>
+		where message_container_id = #{messageContainerId}
+	</update>
+
+	<!-- 批量删除消息容器 -->
+	<delete id="batchDeleteByColumn" parameterType="map">
+		delete from sys_message_container
+		<where>
+			<if test="userId != null">
+				and user_id=#{userId}
+			</if>
+			<if test="messageId != null">
+				and message_id=#{messageId}
+			</if>
+		</where>
+	</delete>
+</mapper>

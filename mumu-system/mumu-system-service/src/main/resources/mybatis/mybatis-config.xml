@@ -32,6 +32,8 @@
 		<typeAlias type="com.lovecws.mumu.system.entity.SysGroup" alias="SysGroup" />
 		<typeAlias type="com.lovecws.mumu.system.entity.SysUserGroup" alias="SysUserGroup" />
 		<typeAlias type="com.lovecws.mumu.system.entity.SysGroupRole" alias="SysGroupRole" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysMessage" alias="SysMessage" />
+		<typeAlias type="com.lovecws.mumu.system.entity.SysMessageContainer" alias="SysMessageContainer" />
 	</typeAliases>
 
 	<!-- 配置映射文件 -->
@@ -51,5 +53,7 @@
 		<mapper resource="mybatis/mapper/system/SysGroupMapper.xml" />
 		<mapper resource="mybatis/mapper/system/SysUserGroupMapper.xml" />
 		<mapper resource="mybatis/mapper/system/SysGroupRoleMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysMessageMapper.xml" />
+		<mapper resource="mybatis/mapper/system/SysMessageContainerMapper.xml" />
 	</mappers>
 </configuration>

@@ -10,10 +10,10 @@ import java.util.Date;
 public class SysMessage extends PersistentEntity{
 
     private  int messageId;//消息id
-    private  int messageStatus;//消息状态 PublicEnum
+    private  String messageStatus;//消息状态 PublicEnum
     private Date createDate;//创建日期
 
-    private Integer createUserId;//创建消息的用户id
+    private int createUserId;//创建消息的用户id
     private String messageTitle;//标题
     private String messageContent;//内容
 
@@ -33,11 +33,11 @@ public class SysMessage extends PersistentEntity{
         this.messageId = messageId;
     }
 
-    public int getMessageStatus() {
+    public String getMessageStatus() {
         return messageStatus;
     }
 
-    public void setMessageStatus(int messageStatus) {
+    public void setMessageStatus(String messageStatus) {
         this.messageStatus = messageStatus;
     }
 
@@ -95,5 +95,24 @@ public class SysMessage extends PersistentEntity{
 
     public void setMessageType(String messageType) {
         this.messageType = messageType;
+    }
+
+    private String userId;//用户id
+    private String groupId;//群组id
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
     }
 }

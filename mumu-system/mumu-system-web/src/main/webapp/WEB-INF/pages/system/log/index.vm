@@ -128,6 +128,9 @@
             todayHighlight: 1
         });
     });
+    function showAllParameterValue() {
+        alert(1);
+    }
     //表格查询参数
     function queryParams(params) {
         return {
@@ -180,4 +183,12 @@
             });
         }
     };
+    //表格行点击事件
+    $('#table').bootstrapTable({
+        onClickCell: function (field, value, row, el){
+            if(field=="result"||field=="parameter"){
+                layer.tips(value, el,{tips: [1,"#00c0ef"]});
+            }
+        }
+    });
 </script>

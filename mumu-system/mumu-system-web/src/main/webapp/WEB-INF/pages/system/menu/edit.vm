@@ -58,10 +58,10 @@
                             <div class="layui-input-inline">
                                 #if($!menu.menuVisible=='show')
                                     <input type="radio" name="menuVisible" value="show" title="可见" checked>
-                                    <input type="radio" name="menuVisible" value=hidden title="隐藏">
+                                    <input type="radio" name="menuVisible" value="hidden" title="隐藏">
                                 #else
                                     <input type="radio" name="menuVisible" value="show" title="可见">
-                                    <input type="radio" name="menuVisible" value=hidden title="隐藏" checked>
+                                    <input type="radio" name="menuVisible" value="hidden" title="隐藏" checked>
                                 #end
 
                             </div>

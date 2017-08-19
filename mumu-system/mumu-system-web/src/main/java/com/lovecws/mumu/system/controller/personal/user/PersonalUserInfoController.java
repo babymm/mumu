@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 @RequestMapping("/personal/user")
-public class SysUserInfoController {
+public class PersonalUserInfoController {
 
     @Autowired
     private SysUserService userService;

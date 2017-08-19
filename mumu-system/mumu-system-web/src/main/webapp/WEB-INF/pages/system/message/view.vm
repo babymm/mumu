@@ -1,0 +1,119 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="$request.getContextPath()/resources/layui/css/layui.css">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>添加消息</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li onclick="changeFrameSrc('$request.getContextPath()/system/message/index','messages')">消息管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/system/message/view/$!message.messageId','messages',true)">消息详情</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">消息标题</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="messageTitle" value="$!message.messageTitle" required lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">请输入消息标题*</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">消息类型</label>
+                            <div class="layui-input-inline" id="messageTypeRadio">
+                                #if($!message.messageType=="user")
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="user" title="用户" checked>
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="group" title="群组">
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="all" title="全体">
+                                #elseif($!message.messageType=="group")
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="user" title="用户">
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="group" title="群组" checked>
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="all" title="全体">
+                                #elseif($!message.messageType=="all")
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="user" title="用户">
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="group" title="群组">
+                                    <input type="radio" name="messageType" lay-skin="radio" lay-filter="messageTypeRadio" value="all" title="全体" checked>
+                                #end
+                            </div>
+                        </div>
+                        <div class="layui-form-item select-user">
+                            <label class="layui-form-label">选择用户</label>
+                            <div class="layui-input-inline">
+                                <select id="parentMenuIdSelect" name="userId" required lay-verify="required">
+                                    #if($!users.size()>0)
+                                        #foreach($user in $!users)
+                                            #if($!user.userId==$!message.userId)
+                                                <option value="$!user.userId" selected="selected">$!user.userName</option>
+                                            #else
+                                                <option value="$!user.userId">$!user.userName</option>
+                                            #end
+                                        #end
+                                    #else
+                                        <option value="0">请添加用户</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">选择要发送的用户消息</div>
+                        </div>
+                        <div class="layui-form-item select-group" style="display: none">
+                            <label class="layui-form-label">选择群组</label>
+                            <div class="layui-input-inline">
+                                <select id="parentMenuIdSelect" name="groupId" required lay-verify="required">
+                                    #if($!groups.size()>0)
+                                        #foreach($group in $!groups)
+                                            #if($!group.groupId==$!message.groupId)
+                                                <option value="$!group.groupId" selected="selected">$!group.groupName</option>
+                                            #else
+                                                <option value="$!group.groupId">$!group.groupName</option>
+                                            #end
+                                        #end
+                                    #else
+                                        <option value="0">请添加群组</option>
+                                    #end
+                                </select>
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">选择要发送的群组</div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">消息内容</label>
+                            <div class="layui-input-block">
+                                <textarea id="messageContentDesc" name="messageContent" placeholder="请输入消息内容" class="layui-textarea">$!message.messageContent</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layui/layui.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        layui.use(['form', 'layedit'], function(){
+            var form = layui.form(), layer = layui.layer, layedit = layui.layedit, laydate = layui.laydate;
+            var messageContentDescIndex=layedit.build('messageContentDesc',{height:400});
+            form.on('radio(messageTypeRadio)', function(data){
+                if(data.value=="user"){
+                    $(".select-user").css("display","block");
+                    $(".select-group").css("display","none");
+                }else if(data.value=="group"){
+                    $(".select-user").css("display","none");
+                    $(".select-group").css("display","block");
+                }else if(data.value=="all"){
+                    $(".select-user").css("display","none");
+                    $(".select-group").css("display","none");
+                }
+            });
+        });
+    });
+</script>

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 @RequestMapping("/personal/message")
-public class SysMessageController {
+public class PersonalMessageController {
 
     /**
      * 进入个人消息页面

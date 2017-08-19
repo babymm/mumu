@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lovecws.mumu.system.dao.impl.SysMessageDaoImpl">
+	<resultMap id="SysMessageResultMap" type="com.lovecws.mumu.system.entity.SysMessage">
+		<id column="message_id" property="messageId" />
+		<result column="message_status" property="messageStatus"/>
+		<result column="create_date" property="createDate"/>
+
+		<result column="create_user_id" property="createUserId" />
+		<result column="message_title" property="messageTitle" jdbcType="VARCHAR" />
+		<result column="message_content" property="messageContent" />
+
+		<result column="message_image" property="messageImage" jdbcType="VARCHAR" />
+		<result column="message_link" property="messageLink" jdbcType="VARCHAR" />
+		<result column="message_type" property="messageType" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="SysMessageColumn">
+		message_id,message_status,create_date,create_user_id,message_title,message_content,message_image,message_link,message_type
+	</sql>
+	
+	<!-- 查询消息列表 -->
+	<select id="listPage" resultMap="SysMessageResultMap" parameterType="map">
+		select
+		<include refid="SysMessageColumn"></include>
+		from sys_message
+		<where>
+			<if test="messageType!=null and messageType!=''">
+				and message_type=#{messageType}
+			</if>
+			<if test="messageStatus!=null and messageStatus!=''">
+				and message_status=#{messageStatus}
+			</if>
+		</where>
+		ORDER BY create_date DESC
+		<if test="pageFirst!=null and pageSize!=null">
+			limit #{pageFirst},#{pageSize}
+		</if>
+	</select>
+    
+    <!-- 查询消息数量  -->
+    <select id="listPageCount" resultType="LONG">
+    	select count(message_id) from sys_message
+    	<where>
+			<if test="messageType!=null and messageType!=''">
+				and message_type=#{messageType}
+			</if>
+			<if test="messageStatus!=null and messageStatus!=''">
+				and message_status=#{messageStatus}
+			</if>
+		</where>
+    </select>
+    
+	<!-- 获取消息详情 -->
+	<select id="selectByPrimaryKey" resultType="SysMessage" parameterType="map">
+		select
+		<include refid="SysMessageColumn"></include>
+		from sys_message
+		where message_id = #{messageId}
+	</select>
+	
+    <!-- 删除消息 -->
+    <delete id="deleteByPrimaryKey" parameterType="map">
+       delete from sys_message where message_id=#{messageId}
+    </delete>
+
+	<!-- 插入消息-->
+	<insert id="insert" parameterType="SysMessage" useGeneratedKeys="true" keyProperty="messageId">
+		insert into sys_message
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="messageId != null">
+				message_id,
+			</if>
+			<if test="messageStatus != null">
+				message_status,
+			</if>
+			<if test="createDate != null">
+				create_date,
+			</if>
+			<if test="createUserId != null">
+				create_user_id,
+			</if>
+			<if test="messageTitle != null">
+				message_title,
+			</if>
+			<if test="messageContent != null">
+				message_content,
+			</if>
+			<if test="messageImage != null">
+				message_image,
+			</if>
+			<if test="messageLink != null">
+				message_link,
+			</if>
+			<if test="messageType != null">
+				message_type,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="messageId != null">
+				#{messageId},
+			</if>
+			<if test="messageStatus != null">
+				#{messageStatus},
+			</if>
+			<if test="createDate != null">
+				#{createDate},
+			</if>
+			<if test="createUserId != null">
+				#{createUserId},
+			</if>
+			<if test="messageTitle != null">
+				#{messageTitle},
+			</if>
+			<if test="messageContent != null">
+				#{messageContent},
+			</if>
+			<if test="messageImage != null">
+				#{messageImage},
+			</if>
+			<if test="messageLink != null">
+				#{messageLink},
+			</if>
+			<if test="messageType != null">
+				#{messageType},
+			</if>
+		</trim>
+	</insert>
+
+	<!-- 更改消息信息 -->
+	<update id="updateByPrimaryKey" parameterType="SysMessage">
+		update sys_message
+		<set>
+			<if test="messageStatus != null">
+				message_status=#{messageStatus},
+			</if>
+			<if test="createDate != null">
+				create_date=#{createDate},
+			</if>
+			<if test="createUserId != null">
+				create_user_id=#{createUserId},
+			</if>
+			<if test="messageTitle != null">
+				message_title=#{messageTitle},
+			</if>
+			<if test="messageContent != null">
+				message_content=#{messageContent},
+			</if>
+			<if test="messageImage != null">
+				message_image=#{messageImage},
+			</if>
+			<if test="messageLink != null">
+				message_link=#{messageLink},
+			</if>
+			<if test="messageType != null">
+				message_type=#{messageType},
+			</if>
+		</set>
+		where message_id = #{messageId}
+	</update>
+</mapper>
