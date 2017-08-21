@@ -1,1 +1,122 @@
-消息页面（正在开发中....）
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css">
+<link rel="shortcut icon" href="$request.getContextPath()/resources/images/favicon.ico" type="image/x-icon">
+<style type="text/css">
+    .btn.disabled, .btn[disabled]{
+        text-shadow: none;
+        filter: none;
+        opacity: 1;
+        color: #bbb;
+        border: 1px solid #ddd;
+        background-color: #F7F7F7;
+    }
+    tr{
+        height: 50px;
+    }
+    a{
+        text-underline: none;
+    }
+</style>
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>消息管理</h3>
+        <ul class="breadcrumb">
+            <li>系统管理</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/personal/message/index','userMessage')">消息管理</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        <a class="btn btn-default btn-sm" style="" disabled="disabled">删除</a>
+                        <a class="btn btn-default btn-sm" disabled="disabled">标记已读</a>
+                        <a class="btn btn-default btn-sm">全部已读</a>
+                    </div>
+                    <table id="table"
+                           radio="true"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="permissionId"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/personal/message/page"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="state" data-checkbox="true" data-valign="middle"></th>
+                            <th data-field="messageTitle" data-valign="middle"  data-formatter="messageTitleFormatter">标题内容</th>
+                            <th data-field="createDate" data-valign="middle">创建时间</th>
+                            <th data-field="messageType" data-formatter="messageTypeFormatter" data-valign="middle">类型</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            beginIndex: params.offset,
+            pageSize: params.limit
+        };
+    }
+    //查询消息
+    function querymessages() {
+        var $table =$('#table');
+            $table.bootstrapTable("refresh");
+    }
+    //给消息标题添加超链接
+    function messageTitleFormatter(value, row, index) {
+        console.log(row);
+        if(row.messageContainerStatus=="unread"){
+            return "<a href='javascript:void(0)' onclick='messageTitleClick("+row.messageId+")' class='messageTitleClass' style='color:black;text-underline: none;'>"+value+"</a>";
+        }else if(row.messageContainerStatus=="read"){
+            return "<a href='javascript:void(0)' onclick='messageTitleClick("+row.messageId+")' class='messageTitleClass' style='color:silver;text-underline: none;'>"+value+"</a>";
+        }
+    }
+    function messageTitleClick(messageId) {
+        changeFrameSrc('$request.getContextPath()/personal/message/view/'+messageId,'userMessage',true);
+    }
+    //消息类型
+    function messageTypeFormatter(value, row, index) {
+        if(value=="user"){
+            return "用户";
+        }else if(value=="group"){
+            return "群组";
+        }else if(value=="all"){
+            return "全体";
+        }
+        return value;
+    }
+</script>

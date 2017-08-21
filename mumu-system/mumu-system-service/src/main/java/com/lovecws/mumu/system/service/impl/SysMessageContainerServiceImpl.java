@@ -50,8 +50,9 @@ public class SysMessageContainerServiceImpl implements SysMessageContainerServic
     }
 
     @Override
-    public PageBean<SysMessageContainer> listPage(String messageId, int beginIndex, int pageSize) {
+    public PageBean<SysMessageContainer> listPage(Integer userId,Integer messageId,int beginIndex, int pageSize) {
         Map<String,Object> paramMap=new HashMap<String,Object>();
+        paramMap.put("userId",userId);
         paramMap.put("messageId",messageId);
         PageParam pageParam=new PageParam(beginIndex/pageSize+1,pageSize);
         return messageContainerDao.listPage(pageParam,paramMap);
@@ -73,5 +74,11 @@ public class SysMessageContainerServiceImpl implements SysMessageContainerServic
         paramMap.put("messageId",messageId);
         paramMap.put("messageContainerStatus",messageContainerStatus);
         return messageContainerDao.selectList("querySysMessageByCondition",paramMap);
+    }
+
+    @Override
+    @Transactional(propagation= Propagation.REQUIRED,readOnly=false)
+    public void updateSysMessageContainerById(SysMessageContainer messageContainer) {
+        messageContainerDao.update(messageContainer);
     }
 }

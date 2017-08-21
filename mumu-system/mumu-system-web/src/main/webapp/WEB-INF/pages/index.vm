@@ -112,7 +112,7 @@
                             <ul class="dropdown-list normal-list">
                                 #foreach($!messageContainer in $!messageContainers)
                                     <li class="new">
-                                        <a href="javascript:void(0)" onclick="messageDetailClick()">
+                                        <a href="javascript:void(0)" onclick="messageDetailClick('$!messageContainer.messageId')">
                                             <span class="thumb"><img src="$!messageContainer.avator" alt="发送人头像"/></span>
                                             <span class="desc">
                                                 <span class="name">$!messageContainer.userName<span  class="badge badge-success">new</span></span>
@@ -134,15 +134,15 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right unmenubar">
                             #if($shiro.hasPermission("personal:user:view"))
-                                <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i> 个人信息</a></li>
+                                <li key="userInfo" title="personal/user/info"><a href="javascript:void(0)"><i class="fa fa-user"></i>个人信息</a></li>
                             #end
                             #if($shiro.hasPermission("personal:password:edit"))
-                                <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i> 修改密码</a></li>
+                                <li key="changePassword" title="personal/user/password"><a href="javascript:void(0)"><i class="fa fa-cog"></i>修改密码</a></li>
                             #end
                             #if($shiro.hasPermission("personal:message:view"))
                                 <li key="userMessage" title="personal/message/index"><a href="javascript:void(0)"><i class="fa fa-cog"></i>我的消息</a></li>
                             #end
-                            <li><a href="$request.getContextPath()/system/logout"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                            <li><a href="$request.getContextPath()/system/logout"><i class="fa fa-sign-out"></i>退出登录</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -175,7 +175,7 @@
     //消息详情点击事件
     function messageDetailClick(messageId) {
         //页面跳转
-        changeFrameSrc('$request.getContextPath()/personal/message/index','userMessage');
+        changeFrameSrc('$request.getContextPath()/personal/message/view/'+messageId,'userMessage',true);
         //菜单栏高亮
         var modularEle=$("#userMessage");
         $("#main").removeClass("active");

@@ -169,8 +169,8 @@ public class SysMessageController {
      */
     @ResponseBody
     @RequestMapping(value={"/receiverPage"})
-    public Map<String,Object> receiverPage(String messageId,int beginIndex, int pageSize){
-        PageBean<SysMessageContainer> pageBean = messageContainerService.listPage(messageId,beginIndex,pageSize);
+    public Map<String,Object> receiverPage(int messageId,int beginIndex, int pageSize){
+        PageBean<SysMessageContainer> pageBean = messageContainerService.listPage(null,messageId,beginIndex,pageSize);
         Map<String, Object> page = new HashMap<String, Object>();
         page.put("total", pageBean.getTotalCount());
         page.put("rows", pageBean.getRecordList());

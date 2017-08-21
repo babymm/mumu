@@ -7,43 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72a99e8e-7558-4ef5-8287-0667ef603dd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/LoginCredentialsHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/SysMessageContainerDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/SysMessageDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/impl/SysMessageContainerDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/impl/SysMessageDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/LoginCredentialsHandlerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/add.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/edit.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/index.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/receiver.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/README.md" afterPath="$PROJECT_DIR$/mumu-system/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessage.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/SysLogRecoderAspect.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/SysLogRecoderAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/export/index.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/export/index.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/log/index.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/log/index.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/add.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/add.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/edit.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/edit.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/view.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/view.vm" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/SysMessageController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/user/SysUserInfoController.java" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/user/PersonalUserInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm" />
     </list>
     <ignored path="$PROJECT_DIR$/mumu-cms/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,65 +61,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SysMessageMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageMapper.xml">
+      <file leaf-file-name="view.vm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="228">
+              <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
-                <marker date="1503106553618" expanded="true" signature="1186:1602" ph="select from sys_message" />
-                <marker date="1503106553618" expanded="true" signature="2081:2146" ph="select from sys_role" />
-                <marker date="1503106553618" expanded="true" signature="2081:2187" ph="select from sys_message" />
-                <marker date="1503106553618" expanded="true" signature="2283:2336" ph="delete from " />
-                <marker date="1503106553618" expanded="true" signature="3865:4572" ph="update sys_m... " />
-                <marker date="1503106553618" expanded="true" signature="3882:4572" ph="update sys_r... " />
+                <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysIndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java">
+      <file leaf-file-name="index.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysMessageHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1981#2002#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginCredentialsHandlerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/LoginCredentialsHandlerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#619#620#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RetryLimitHashedCredentialsMatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state relative-caret-position="177">
+              <caret line="114" column="126" lean-forward="false" selection-start-line="114" selection-start-column="126" selection-end-line="114" selection-end-column="126" />
               <folding />
             </state>
           </provider>
@@ -163,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>com.xiaomoc.system.car.entity.SystemCarsEntity</find>
       <find>com.xiaomoc.system.car.entity.SystemCarBrandEntity</find>
       <find>com.xiaomoc.system.car.entity.SystemCarAttrEntity</find>
       <find>com.xiaomoc.system.car.entity.SystemCarSizetype</find>
@@ -193,6 +125,7 @@
       <find>cachingEnabled</find>
       <find>storedCredentialsHexEncoded</find>
       <find>clear</find>
+      <find>int userId,int messageId,</find>
     </findStrings>
     <replaceStrings>
       <replace>iforget</replace>
@@ -238,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/group/index.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/organize/index.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/index.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/view.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/edit.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysPermissionMapper.xml" />
@@ -265,30 +195,33 @@
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/add.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/edit.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/view.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/add.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/edit.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/index.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/receiver.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessage.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/Handler.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/SysLogRecoderAspect.java" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/LoginAfterHandler.java" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/LoginHandler.java" />
         <option value="$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/LoginCredentialsHandlerImpl.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageHandler.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm" />
       </list>
     </option>
   </component>
@@ -358,6 +291,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,175 +299,12 @@
               <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
               <item name="mumu" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="credentials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-common-security" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="realm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mumu" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system" type="462c0819:PsiDirectoryNode" />
-              <item name="mumu-system-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -548,19 +319,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\system\message" />
-      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-service\src\main\resources\mybatis\mapper\system" />
-      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-system\doc\sql" />
-      <recent name="E:\EclipseWorkspace\mumu\mumu-data\mumu-data-service\src\main\resources\spring" />
-      <recent name="E:\EclipseWorkspace\mumu\mumu-data\mumu-data-service\src\main\java\com\lovecws\mumu\data\car" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\resources\tpl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lovecws.mumu.system.entity" />
       <recent name="com.lovecws.mumu.common.core.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\resources\tpl" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\personal\message" />
+      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\system\message" />
+      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-service\src\main\resources\mybatis\mapper\system" />
+      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-system\doc\sql" />
+      <recent name="E:\EclipseWorkspace\mumu\mumu-data\mumu-data-service\src\main\resources\spring" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1322,7 +1093,9 @@
       <workItem from="1503047669590" duration="69000" />
       <workItem from="1503055170560" duration="163000" />
       <workItem from="1503055379267" duration="11827000" />
-      <workItem from="1503097411645" duration="35165000" />
+      <workItem from="1503097411645" duration="35314000" />
+      <workItem from="1503190665438" duration="3020000" />
+      <workItem from="1503314670932" duration="8442000" />
     </task>
     <task id="LOCAL-00001" summary="添加注册逻辑">
       <created>1502876161638</created>
@@ -1352,7 +1125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503068485599</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="表格数据tips展示，添加站内消息的实现（支持单发、群发、全体发送三种消息发送模式）。">
+      <created>1503162488770</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1503162488770</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1370,7 +1150,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176342000" />
+    <option name="totallyTimeSpent" value="187953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -1394,7 +1174,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46728015" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3425358" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29583332" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
@@ -1432,7 +1212,9 @@
     <MESSAGE value="实现找回密码业务逻辑，将权限信息添加到页面和控制层。" />
     <MESSAGE value="添加数据中心管理系统，权限管理系统中添加站内信。" />
     <MESSAGE value="修改mumu-system权限管理系统页面一些显示bug。" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改mumu-system权限管理系统页面一些显示bug。" />
+    <MESSAGE value="表格数据tips展示，添加站内消息的实现（支持单发、群发、全体发送三种消息发送模式）。" />
+    <MESSAGE value="我的消息列表和详情页面编写，并实现业务逻辑。" />
+    <option name="LAST_COMMIT_MESSAGE" value="我的消息列表和详情页面编写，并实现业务逻辑。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1445,53 +1227,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/SysMessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="53" column="74" lean-forward="true" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/dao/impl/BaseDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="60" column="80" lean-forward="false" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/view.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="60" column="89" lean-forward="false" selection-start-line="60" selection-start-column="89" selection-end-line="60" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/edit.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="63" column="88" lean-forward="false" selection-start-line="63" selection-start-column="88" selection-end-line="63" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/add.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="58" column="84" lean-forward="false" selection-start-line="58" selection-start-column="84" selection-end-line="58" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1499,9 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-224">
           <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#1893#1908#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1509,7 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1517,7 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="105" column="30" lean-forward="true" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1525,19 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="104" column="46" lean-forward="false" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#form#0;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="121" lean-forward="false" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="121" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1545,7 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="123" column="32" lean-forward="true" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1553,7 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1561,7 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1332">
           <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1569,18 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding>
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1588,38 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="57" column="60" lean-forward="true" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/index.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="148" column="8" lean-forward="true" selection-start-line="148" selection-start-column="8" selection-end-line="155" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1519#1534#0" expanded="true" />
-            <element signature="e#3844#3865#0" expanded="true" />
-            <element signature="e#4813#4828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1627,7 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="64" column="25" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1635,51 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-798">
           <caret line="107" column="16" lean-forward="true" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="74" column="73" lean-forward="false" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1918#1933#0" expanded="true" />
-            <element signature="e#2235#2250#0" expanded="true" />
-            <element signature="e#2648#2663#0" expanded="true" />
-            <element signature="e#3117#3132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-          <folding>
-            <element signature="e#2054#2055#0" expanded="true" />
-            <element signature="e#2098#2099#0" expanded="true" />
-            <element signature="e#2134#2135#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2208#2209#0" expanded="true" />
-            <element signature="e#2264#2265#0" expanded="true" />
-            <element signature="e#2312#2313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <marker date="1503155734588" expanded="true" signature="3780:3922" ph="select from sys_message_container" />
-            <marker date="1503155734588" expanded="true" signature="4020:4102" ph="delete from " />
-            <marker date="1503155734588" expanded="true" signature="5717:6201" ph="update sys_m... " />
-            <marker date="1503155734588" expanded="true" signature="6174:6201" ph="update sys_m... " />
-            <marker date="1503155734588" expanded="true" signature="6290:6323" ph="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1687,7 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1699,50 +1326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/ddl/index.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="161" lean-forward="false" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="161" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="200" column="5" lean-forward="true" selection-start-line="200" selection-start-column="5" selection-end-line="200" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="111" column="66" lean-forward="true" selection-start-line="111" selection-start-column="66" selection-end-line="111" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <marker date="1503106553618" expanded="true" signature="1186:1602" ph="select from sys_message" />
-            <marker date="1503106553618" expanded="true" signature="2081:2146" ph="select from sys_role" />
-            <marker date="1503106553618" expanded="true" signature="2081:2187" ph="select from sys_message" />
-            <marker date="1503106553618" expanded="true" signature="2283:2336" ph="delete from " />
-            <marker date="1503106553618" expanded="true" signature="3865:4572" ph="update sys_m... " />
-            <marker date="1503106553618" expanded="true" signature="3882:4572" ph="update sys_r... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1750,10 +1337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="198" column="18" lean-forward="false" selection-start-line="198" selection-start-column="18" selection-end-line="198" selection-end-column="18" />
-          <folding>
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#3786#3787#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1769,7 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1777,7 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
           <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1785,7 +1366,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1793,7 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1809,9 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-          <folding>
-            <element signature="e#2153#2168#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1819,7 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1827,7 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="83" column="73" lean-forward="false" selection-start-line="83" selection-start-column="73" selection-end-line="83" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1835,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="222" column="47" lean-forward="false" selection-start-line="222" selection-start-column="19" selection-end-line="222" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1843,7 +1416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1851,7 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1863,23 +1434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1087">
-          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2065#2081#0" expanded="true" />
-            <element signature="e#6060#6076#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/realm/AuthenticatingRealm.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1887,7 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1895,11 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#619#620#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1907,9 +1459,167 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="72" column="13" lean-forward="true" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/bootstrap-table/css/bootstrap-table.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1981#2002#0" expanded="true" />
+            <element signature="e#1977#2275#2" expanded="false" />
+            <element signature="e#2330#2573#2" expanded="false" />
+            <element signature="e#2629#2868#2" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/index.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/resources/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="188" column="21" lean-forward="false" selection-start-line="188" selection-start-column="13" selection-end-line="188" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="174" column="23" lean-forward="false" selection-start-line="174" selection-start-column="23" selection-end-line="174" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/dao/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="64" column="67" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="171" column="46" lean-forward="false" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="101" column="36" lean-forward="false" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+          <folding>
+            <element signature="e#2416#2417#0" expanded="true" />
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="25" column="139" lean-forward="false" selection-start-line="25" selection-start-column="139" selection-end-line="25" selection-end-column="139" />
+          <folding>
+            <marker date="1503322578928" expanded="true" signature="3947:4089" ph="select from sys_message_container" />
+            <marker date="1503322578928" expanded="true" signature="4187:4269" ph="delete from " />
+            <marker date="1503322578928" expanded="true" signature="5884:6368" ph="update sys_m... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="102" column="140" lean-forward="false" selection-start-line="102" selection-start-column="140" selection-end-line="102" selection-end-column="140" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1503322344198" expanded="true" signature="4977:5010" ph="..." />
+            <marker date="1503322344198" expanded="true" signature="5211:5245" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="114" column="126" lean-forward="false" selection-start-line="114" selection-start-column="126" selection-end-line="114" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#section#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -14,6 +14,7 @@
 		<result column="user_name" property="userName" jdbcType="VARCHAR" />
 		<result column="avator" property="avator" jdbcType="VARCHAR" />
 		<result column="message_title" property="messageTitle" jdbcType="VARCHAR" />
+		<result column="message_type" property="messageType" jdbcType="VARCHAR" />
 	</resultMap>
 	<sql id="SysMessageContainerColumn">
 		message_container_id,message_container_status,create_date,edit_date,user_id,message_id
@@ -22,8 +23,10 @@
 	<!-- 查询消息容器列表 -->
 	<select id="listPage" resultMap="SysMessageContainerResultMap" parameterType="map">
 		select
-		u.user_id,u.user_name,mc.message_container_status,mc.message_container_id,mc.create_date,mc.edit_date
-		from sys_message_container mc inner join sys_user u on(u.user_id=mc.user_id)
+		u.user_id,u.user_name,mc.message_container_status,mc.message_container_id,m.message_title,m.create_date,m.message_id,m.message_type
+		from sys_message_container mc
+		inner join sys_user u on(u.user_id=mc.user_id)
+		inner join sys_message m on(m.message_id=mc.message_id)
 		<where>
 			<if test="userId!=null and userId!=''">
 				and mc.user_id=#{userId}

@@ -49,4 +49,5 @@ public interface SysMessageService {
      * @return
      */
     public List<SysMessage> querySysMessageByCondition(String messageType, String messageStatus);
+
 }

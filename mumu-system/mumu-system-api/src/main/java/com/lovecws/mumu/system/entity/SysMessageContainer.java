@@ -73,6 +73,7 @@ public class SysMessageContainer extends PersistentEntity{
     private String userName;
     private String avator;
     private String messageTitle;
+    private String messageType;
 
     public String getUserName() {
         return userName;
@@ -96,5 +97,13 @@ public class SysMessageContainer extends PersistentEntity{
 
     public void setMessageTitle(String messageTitle) {
         this.messageTitle = messageTitle;
+    }
+
+    public String getMessageType() {
+        return messageType;
+    }
+
+    public void setMessageType(String messageType) {
+        this.messageType = messageType;
     }
 }

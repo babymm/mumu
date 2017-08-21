@@ -3,7 +3,7 @@
 <link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
 <div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
     <div class="page-heading">
-        <h3>添加消息</h3>
+        <h3>消息详情</h3>
         <ul class="breadcrumb">
             <li>系统管理</li>
             <li onclick="changeFrameSrc('$request.getContextPath()/system/message/index','messages')">消息管理</li>

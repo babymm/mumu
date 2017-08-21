@@ -28,12 +28,13 @@ public interface SysMessageContainerService {
 
     /**
      * 分页获取消息容器
+     * @param userId 用户id
      * @param messageId 消息id
      * @param beginIndex 开始索引
      * @param pageSize 一页大小
      * @return
      */
-    public PageBean<SysMessageContainer> listPage(String messageId, int beginIndex, int pageSize);
+    public PageBean<SysMessageContainer> listPage(Integer userId,Integer messageId, int beginIndex, int pageSize);
 
     /**
      * 获取用户所有的广播消息
@@ -52,4 +53,10 @@ public interface SysMessageContainerService {
      * @return
      */
     public List<SysMessageContainer> querySysMessageByCondition(Integer userId, Integer messageId, String messageContainerStatus);
+
+    /**
+     * 更新系统消息容器
+     * @param messageContainer
+     */
+    public void updateSysMessageContainerById(SysMessageContainer messageContainer);
 }
