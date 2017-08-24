@@ -7,219 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72a99e8e-7558-4ef5-8287-0667ef603dd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_authzserver_0_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_client_0_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_common_0_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_resourceserver_0_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/credentials/RetryLimitHashedCredentialsMatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/entity/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/entity/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/realm/UserRealm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/ClientService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/ClientServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/PasswordHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/UserServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AccessTokenController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AuthorizeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/ClientController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/IndexController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/LoginController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/UserInfoController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/exception/DefaultExceptionHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/ehcache/ehcache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/resources.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-dao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/sql/shiro-data.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/sql/shiro-schema.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/client/edit.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/client/list.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/oauth2login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/user/changePassword.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/user/edit.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/user/list.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/static/css/css.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/static/js/jquery-1.11.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/login.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_common_oauth_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_common_oauth_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_audit_1_0_7_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_common_1_0_7_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_error_1_0_7_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_support_spring_1_0_7_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jexl_commons_jexl_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_7_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_core_4_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_support_generic_4_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_support_jdbc_4_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_webapp_support_4_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_service_persondir_person_directory_api_1_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_service_persondir_person_directory_impl_1_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_CR2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensymphony_quartz_quartz_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_perf4j_perf4j_log4jonly_0_9_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_jobs_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_binding_2_3_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_2_3_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_resources_2_3_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_webflow_2_3_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/cas/authentication/handler/DcpPasswordEncoder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/cas/authentication/handler/QueryDatabaseAuthenticationHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/services/support/AccoutAttributeDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/services/support/LoginNameUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/cas-theme-default.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/cas.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/default_views.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/log4j.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ar.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ca.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_cs.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_de.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_es.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_fa.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_fr.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_hr.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_it.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ja.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_mk.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_nl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_pl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_pt_BR.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_pt_PT.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ru.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_sl.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_sv.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_tr.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ur.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_zh_CN.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_zh_TW.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/protocol_views.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/saml_views.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/cas-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/deployerConfigContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/login-webflow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/logout-webflow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/restlet-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/argumentExtractorsConfiguration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/auditTrailContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/filters.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/log4jConfiguration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/propertyFileConfigurer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/securityContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketExpirationPolicies.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketGrantingTicketCookieGenerator.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketRegistry.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/uniqueIdGenerators.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/warnCookieGenerator.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/unused-spring-configuration/clearpass-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/unused-spring-configuration/lppe-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/unused-spring-configuration/mbeans.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/authorizationFailure.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casAccountDisabledView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casAccountLockedView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casBadHoursView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casBadWorkstationView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casConfirmView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casExpiredPassView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casGenericSuccess.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casLoginMessageView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casLoginView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casLogoutView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casMustChangePassView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/includes/bottom.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/includes/top.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/serviceErrorSsoView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/serviceErrorView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/errors.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/monitoring/viewStatistics.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casProxyFailureView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casProxySuccessView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casServiceValidationFailure.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casServiceValidationSuccess.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/3.0/casServiceValidationFailure.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/3.0/casServiceValidationSuccess.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/casPostResponseView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/clearPass/clearPassFailure.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/clearPass/clearPassSuccess.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/oauth/confirm.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdAssociationFailureView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdAssociationSuccessView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdServiceFailureView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdServiceSuccessView.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/user.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/css/cas.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/confirm.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/error.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/green.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/info.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/ja-sig-logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_bl.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_br.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_tl.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_tr.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/red.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/js/cas.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_client_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_client_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Realm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Token.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/ehcache/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml" afterPath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/pom.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/pom.xml" afterPath="$PROJECT_DIR$/mumu-oauth/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/mumu-cms/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -261,7 +67,108 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="cache.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/properties/cache.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-common-redis.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-common-redis.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-shiro.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-shiro.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-config-shiro.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="874">
+              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-config-cache.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="11" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-config-shiro.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="859">
+              <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExecutorServiceSessionValidationScheduler.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/session/mgt/ExecutorServiceSessionValidationScheduler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="19" selection-end-line="393" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -349,11 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/view.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/edit.vm" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysPermissionMapper.xml" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/role/SystemRoleController.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/role/allowPermission.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/group/memberAdd.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/group/SystemGroupController.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml" />
@@ -400,6 +302,11 @@
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm" />
+        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java" />
+        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml" />
+        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" />
       </list>
     </option>
   </component>
@@ -423,10 +330,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1924" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -498,11 +405,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-oauth\mumu-oauth-client\src\main\java\com\lovecws\mumu\oauth\client" />
+      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-oauth\mumu-oauth-client\src\main\resources" />
       <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\personal\message" />
       <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\system\message" />
       <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-service\src\main\resources\mybatis\mapper\system" />
-      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-system\doc\sql" />
-      <recent name="E:\EclipseWorkspace\mumu\mumu-data\mumu-data-service\src\main\resources\spring" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lovecws.mumu.system.entity" />
@@ -1491,7 +1398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503162488770</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="换掉cas，该由apache-oltu来实现oauth2。">
+      <created>1503566463301</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1503566463301</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1509,7 +1423,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187978000" />
+    <option name="totallyTimeSpent" value="188784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -1599,7 +1513,8 @@
     <MESSAGE value="修改mumu-system权限管理系统页面一些显示bug。" />
     <MESSAGE value="表格数据tips展示，添加站内消息的实现（支持单发、群发、全体发送三种消息发送模式）。" />
     <MESSAGE value="我的消息列表和详情页面编写，并实现业务逻辑。" />
-    <option name="LAST_COMMIT_MESSAGE" value="我的消息列表和详情页面编写，并实现业务逻辑。" />
+    <MESSAGE value="换掉cas，该由apache-oltu来实现oauth2。" />
+    <option name="LAST_COMMIT_MESSAGE" value="换掉cas，该由apache-oltu来实现oauth2。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1612,111 +1527,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/receiver.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="57" column="60" lean-forward="true" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="64" column="25" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/user/SystemUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798">
-          <caret line="107" column="16" lean-forward="true" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/login.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/velocityToolBox.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/ddl/index.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="161" lean-forward="false" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUserLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="198" column="18" lean-forward="false" selection-start-line="198" selection-start-column="18" selection-end-line="198" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/SysLogConsoleAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/authz/SimpleAuthorizationInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/realm/CachingRealm.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/subject/PrincipalCollection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-spring/1.2.5/shiro-spring-1.2.5.jar!/org/apache/shiro/spring/web/ShiroFilterFactoryBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="122" column="66" lean-forward="true" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/authc/credential/HashedCredentialsMatcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -1749,6 +1559,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="85" column="14" lean-forward="false" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1906,14 +1717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/credentials/RetryLimitHashedCredentialsMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1948,22 +1751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/cache/CacheManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1976,6 +1763,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Realm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/ehcache/ehcache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/properties/cache.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-common-redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="19" selection-end-line="393" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/session/mgt/SessionValidationScheduler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/session/mgt/ExecutorServiceSessionValidationScheduler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="859">
+          <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
           <folding />
         </state>
       </provider>
