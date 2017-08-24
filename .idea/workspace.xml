@@ -7,25 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72a99e8e-7558-4ef5-8287-0667ef603dd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Realm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Token.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/ehcache/ehcache.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/UnsafeUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml" afterPath="$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" afterPath="$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" afterPath="$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" afterPath="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" afterPath="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" />
     </list>
     <ignored path="$PROJECT_DIR$/mumu-cms/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,101 +54,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cache.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/properties/cache.properties">
+      <file leaf-file-name="RetryLimitHashedCredentialsMatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/credentials/RetryLimitHashedCredentialsMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="16" column="80" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-common-redis.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-common-redis.xml">
+      <file leaf-file-name="ClientDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-shiro.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-shiro.xml">
+      <file leaf-file-name="ClientDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+            <state relative-caret-position="640">
+              <caret line="88" column="56" lean-forward="false" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="56" />
+              <folding>
+                <marker date="1503570457858" expanded="true" signature="837:915" ph="insert into oauth2_client... " />
+                <marker date="1503570457858" expanded="true" signature="1715:1794" ph="update oauth... " />
+                <marker date="1503570457858" expanded="true" signature="2050:2086" ph="delete from " />
+                <marker date="1503570457858" expanded="true" signature="2219:2297" ph="select id, c... oauth2_client" />
+                <marker date="1503570457858" expanded="true" signature="2595:2662" ph="select id, c... oauth2_client" />
+                <marker date="1503570457858" expanded="true" signature="2842:2927" ph="select id, c... oauth2_client" />
+                <marker date="1503570457858" expanded="true" signature="3250:3339" ph="select id, c... oauth2_client" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-config-shiro.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml">
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state relative-caret-position="190">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <marker date="1503570457859" expanded="true" signature="823:886" ph="insert into oauth2_user... " />
+                <marker date="1503570457859" expanded="true" signature="1658:1722" ph="update oauth... " />
+                <marker date="1503570457859" expanded="true" signature="1954:1988" ph="delete from " />
+                <marker date="1503570457859" expanded="true" signature="2115:2178" ph="select id, u... oauth2_user" />
+                <marker date="1503570457859" expanded="true" signature="2462:2514" ph="select id, u... oauth2_user" />
+                <marker date="1503570457859" expanded="true" signature="2690:2759" ph="select id, u... oauth2_user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRealm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/realm/UserRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="811">
+              <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-config-cache.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml">
+      <file leaf-file-name="AccessTokenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AccessTokenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="11" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="564">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorizeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AuthorizeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="659">
+              <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-config-shiro.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml">
+      <file leaf-file-name="ClientController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/ClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+            <state relative-caret-position="190">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml">
+      <file leaf-file-name="RetryLimitHashedCredentialsMatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExecutorServiceSessionValidationScheduler.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/session/mgt/ExecutorServiceSessionValidationScheduler.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="19" selection-end-line="393" selection-end-column="19" />
+            <state relative-caret-position="127">
+              <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -256,6 +259,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysPermissionMapper.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/role/SystemRoleController.java" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/role/allowPermission.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/group/memberAdd.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/group/SystemGroupController.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml" />
@@ -296,17 +302,14 @@
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm" />
         <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml" />
-        <option value="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml" />
+        <option value="$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/CasUtil.java" />
+        <option value="$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/UnsafeUtil.java" />
       </list>
     </option>
   </component>
@@ -330,10 +333,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1924" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -376,10 +379,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -387,10 +386,124 @@
               <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
               <item name="mumu" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="credentials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="realm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mumu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mumu" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="mumu-oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,19 +517,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-oauth\mumu-oauth-client\src\main\java\com\lovecws\mumu\oauth\client" />
-      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-oauth\mumu-oauth-client\src\main\resources" />
-      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\personal\message" />
-      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\system\message" />
-      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-service\src\main\resources\mybatis\mapper\system" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\resources\tpl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lovecws.mumu.system.entity" />
       <recent name="com.lovecws.mumu.common.core.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\EclipseWorkspace\mumu\mumu-system\mumu-system-web\src\main\resources\tpl" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\personal\message" />
+      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-web\src\main\webapp\WEB-INF\pages\system\message" />
+      <recent name="D:\IntelliJWorkSpace2017.2.2\mumu\mumu-system\mumu-system-service\src\main\resources\mybatis\mapper\system" />
+      <recent name="E:\IntelliJWorkspace2017\mumu\mumu-system\doc\sql" />
+      <recent name="E:\EclipseWorkspace\mumu\mumu-data\mumu-data-service\src\main\resources\spring" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -433,54 +546,26 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/artifacts/mumu_oauth_client_war_exploded.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/artifacts/mumu_oauth_server_war_exploded.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-cms/mumu-cms-web/mumu-cms-web.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-common/mumu-common-core/mumu-common-core.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-common/mumu-common-security/mumu-common-security.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-common/mumu-common-template/mumu-common-template.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-data/mumu-data-api/mumu-data-api.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-data/mumu-data-service/mumu-data-service.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/mumu-oauth-client.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/mumu-oauth-server.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/pom.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/web.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/index.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/pom.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/mumu-system-api.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessage.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysMessageContainer.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/entity/SysUser.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/mumu-system-service.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysPermissionMapper.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysUserMapper.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mybatis-config.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/mumu-system-web.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/SysLogRecoderAspect.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/common/export/ExportController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/group/SystemGroupController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysIndexController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/role/SystemRoleController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/jdbc.properties</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/properties/jedis.properties</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-context.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/ddl/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/export/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/group/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/group/memberAdd.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/log/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/add.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/edit.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/menu/view.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/organize/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/edit.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/permission/view.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/role/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/user/index.vm</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -488,28 +573,61 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/LoginCredentialsHandler.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageContainerService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-api/src/main/java/com/lovecws/mumu/system/service/SysMessageService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/SysMessageContainerDao.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/SysMessageDao.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/impl/SysMessageContainerDaoImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/dao/impl/SysMessageDaoImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageContainerServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/java/com/lovecws/mumu/system/service/impl/SysMessageServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageContainerMapper.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-service/src/main/resources/mybatis/mapper/system/SysMessageMapper.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/configuration/LoginCredentialsHandlerImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/PersonalMessageController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/user/PersonalUserInfoController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/message/SysMessageHandler.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/add.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/edit.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/index.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/receiver.vm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/system/message/view.vm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_authzserver_0_31.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_client_0_31.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_common_0_31.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_apache_oltu_oauth2_org_apache_oltu_oauth2_resourceserver_0_31.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/sqldialects.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationFilter.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Realm.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Token.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/ehcache/ehcache.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/Constants.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/credentials/RetryLimitHashedCredentialsMatcher.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDao.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDaoImpl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDao.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDaoImpl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/entity/Client.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/entity/User.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/realm/UserRealm.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/ClientService.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/ClientServiceImpl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthService.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthServiceImpl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/PasswordHelper.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/UserService.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/UserServiceImpl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AccessTokenController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AuthorizeController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/ClientController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/IndexController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/LoginController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/UserController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/UserInfoController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/exception/DefaultExceptionHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/ehcache/ehcache.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/resources.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-dao.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/sql/shiro-data.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/sql/shiro-schema.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/client/edit.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/client/list.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/index.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/login.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/oauth2login.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/user/changePassword.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/user/edit.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/user/list.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/static/css/css.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/static/js/jquery-1.11.0.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/login.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -517,8 +635,159 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/message/SysMessageController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/personal/user/SysUserInfoController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/artifacts/mumu_common_oauth_war.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/artifacts/mumu_common_oauth_war_exploded.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_audit_1_0_7_GA.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_common_1_0_7_GA.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_error_1_0_7_GA.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_github_inspektr_inspektr_support_spring_1_0_7_GA.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__commons_jexl_commons_jexl_1_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_7_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_7_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_1_0_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_2_0_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_core_4_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_support_generic_4_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_support_jdbc_4_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_cas_server_webapp_support_4_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_service_persondir_person_directory_api_1_5_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_service_persondir_person_directory_impl_1_5_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_0_CR2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_opensymphony_quartz_quartz_1_6_1.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_perf4j_perf4j_log4jonly_0_9_16.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_jobs_2_2_3.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_5.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_2_0_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_2_0_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_2_0_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_6_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_binding_2_3_2_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_2_3_2_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_resources_2_3_2_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_webflow_2_3_2_RELEASE.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/cas/authentication/handler/DcpPasswordEncoder.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/cas/authentication/handler/QueryDatabaseAuthenticationHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/services/support/AccoutAttributeDao.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/jeedcp/services/support/LoginNameUtils.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/cas-theme-default.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/cas.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/default_views.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/log4j.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ar.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ca.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_cs.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_de.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_es.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_fa.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_fr.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_hr.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_it.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ja.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_mk.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_nl.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_pl.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_pt_BR.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_pt_PT.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ru.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_sl.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_sv.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_tr.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_ur.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_zh_CN.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/messages_zh_TW.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/protocol_views.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/saml_views.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/cas-servlet.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/deployerConfigContext.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/login-webflow.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/logout-webflow.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/restlet-servlet.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/README.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/applicationContext.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/argumentExtractorsConfiguration.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/auditTrailContext.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/filters.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/log4jConfiguration.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/propertyFileConfigurer.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/securityContext.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketExpirationPolicies.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketGrantingTicketCookieGenerator.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/ticketRegistry.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/uniqueIdGenerators.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/spring-configuration/warnCookieGenerator.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/unused-spring-configuration/clearpass-configuration.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/unused-spring-configuration/lppe-configuration.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/unused-spring-configuration/mbeans.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/authorizationFailure.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casAccountDisabledView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casAccountLockedView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casBadHoursView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casBadWorkstationView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casConfirmView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casExpiredPassView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casGenericSuccess.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casLoginMessageView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casLoginView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casLogoutView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/casMustChangePassView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/includes/bottom.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/includes/top.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/serviceErrorSsoView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/default/ui/serviceErrorView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/errors.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/monitoring/viewStatistics.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casProxyFailureView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casProxySuccessView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casServiceValidationFailure.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/2.0/casServiceValidationSuccess.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/3.0/casServiceValidationFailure.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/3.0/casServiceValidationSuccess.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/casPostResponseView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/clearPass/clearPassFailure.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/clearPass/clearPassSuccess.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/oauth/confirm.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdAssociationFailureView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdAssociationSuccessView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdServiceFailureView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/casOpenIdServiceSuccessView.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/view/jsp/protocol/openid/user.jsp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/css/cas.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/favicon.ico</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/confirm.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/error.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/green.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/info.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/ja-sig-logo.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_bl.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_br.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_tl.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/key-point_tr.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/images/red.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/js/cas.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -612,7 +881,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.system">
+  <component name="RunManager" selected="Application.UnsafeUtil">
+    <configuration name="UnsafeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.lovecws.mumu.common.core.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.lovecws.mumu.common.core.utils.UnsafeUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="mumu-common-core" />
+      <envs />
+    </configuration>
     <configuration name="XLSExcelGenerateDemo.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -719,6 +1007,18 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="mumu" />
+      <envs />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -997,18 +1297,6 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="mumu" />
-      <envs />
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1317,18 +1605,20 @@
         </option>
       </method>
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.oauth-client" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.oauth-server" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.system" />
       <item index="3" class="java.lang.String" itemvalue="Maven.clean" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.XLSExcelGenerateDemo.test" />
       <item index="5" class="java.lang.String" itemvalue="JUnit.XLSXExcelGenerateDemo.test" />
+      <item index="6" class="java.lang.String" itemvalue="Application.UnsafeUtil" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.XLSXExcelGenerateDemo.test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.XLSExcelGenerateDemo.test" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.UnsafeUtil" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.XLSXExcelGenerateDemo.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.XLSExcelGenerateDemo.test" />
       </list>
     </recent_temporary>
   </component>
@@ -1361,7 +1651,10 @@
       <workItem from="1503055379267" duration="11827000" />
       <workItem from="1503097411645" duration="35314000" />
       <workItem from="1503190665438" duration="3020000" />
-      <workItem from="1503314670932" duration="8442000" />
+      <workItem from="1503314670932" duration="8466000" />
+      <workItem from="1503398032346" duration="4726000" />
+      <workItem from="1503487721646" duration="4500000" />
+      <workItem from="1503570331371" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="添加注册逻辑">
       <created>1502876161638</created>
@@ -1398,12 +1691,12 @@
       <option name="project" value="LOCAL" />
       <updated>1503162488770</updated>
     </task>
-    <task id="LOCAL-00006" summary="换掉cas，该由apache-oltu来实现oauth2。">
-      <created>1503566463301</created>
+    <task id="LOCAL-00006" summary="我的消息列表和详情页面编写，并实现业务逻辑。">
+      <created>1503323131038</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1503566463301</updated>
+      <updated>1503323131038</updated>
     </task>
     <option name="localTasksCounter" value="7" />
     <servers />
@@ -1423,10 +1716,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188784000" />
+    <option name="totallyTimeSpent" value="199202000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35255712" sideWeight="0.5053305" order="7" side_tool="true" content_ui="tabs" />
@@ -1434,38 +1728,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3610515" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26455027" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37566137" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30096567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35255712" sideWeight="0.5053305" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18645833" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1477,17 +1739,23 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3425358" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425358" sideWeight="0.4946695" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29583332" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29583332" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29583332" sideWeight="0.5057283" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18645833" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1513,8 +1781,7 @@
     <MESSAGE value="修改mumu-system权限管理系统页面一些显示bug。" />
     <MESSAGE value="表格数据tips展示，添加站内消息的实现（支持单发、群发、全体发送三种消息发送模式）。" />
     <MESSAGE value="我的消息列表和详情页面编写，并实现业务逻辑。" />
-    <MESSAGE value="换掉cas，该由apache-oltu来实现oauth2。" />
-    <option name="LAST_COMMIT_MESSAGE" value="换掉cas，该由apache-oltu来实现oauth2。" />
+    <option name="LAST_COMMIT_MESSAGE" value="我的消息列表和详情页面编写，并实现业务逻辑。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1527,6 +1794,42 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/subject/PrincipalCollection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-spring/1.2.5/shiro-spring-1.2.5.jar!/org/apache/shiro/spring/web/ShiroFilterFactoryBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/resources/spring/spring-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="122" column="66" lean-forward="true" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/java/com/lovecws/mumu/system/controller/system/index/SysLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/authc/credential/HashedCredentialsMatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/realm/UserRealm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -1567,13 +1870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1696,217 +1992,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="102" column="140" lean-forward="false" selection-start-line="102" selection-start-column="140" selection-end-line="102" selection-end-column="140" />
+        <state relative-caret-position="-152">
+          <caret line="114" column="126" lean-forward="false" selection-start-line="114" selection-start-column="126" selection-end-line="114" selection-end-column="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/index.vm">
+    <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/index.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="114" column="126" lean-forward="false" selection-start-line="114" selection-start-column="126" selection-end-line="114" selection-end-column="126" />
+        <state relative-caret-position="551">
+          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mumu-system/mumu-system-web/src/main/webapp/WEB-INF/pages/personal/message/view.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/concurrent/atomic/AtomicIntegerArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/concurrent/atomic/AtomicInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="325" column="0" lean-forward="true" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/InstanceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3287">
+          <caret line="196" column="90" lean-forward="false" selection-start-line="196" selection-start-column="86" selection-end-line="196" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-core/src/main/java/com/lovecws/mumu/common/core/utils/UnsafeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/cache/EHCacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-common/mumu-common-security/src/main/java/com/lovecws/mumu/common/security/shiro/credentials/RetryLimitHashedCredentialsMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/credentials/RetryLimitHashedCredentialsMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="37" />
+        <state relative-caret-position="171">
+          <caret line="16" column="80" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/ClientDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="88" column="56" lean-forward="false" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="56" />
+          <folding>
+            <marker date="1503570457858" expanded="true" signature="837:915" ph="insert into oauth2_client... " />
+            <marker date="1503570457858" expanded="true" signature="1715:1794" ph="update oauth... " />
+            <marker date="1503570457858" expanded="true" signature="2050:2086" ph="delete from " />
+            <marker date="1503570457858" expanded="true" signature="2219:2297" ph="select id, c... oauth2_client" />
+            <marker date="1503570457858" expanded="true" signature="2595:2662" ph="select id, c... oauth2_client" />
+            <marker date="1503570457858" expanded="true" signature="2842:2927" ph="select id, c... oauth2_client" />
+            <marker date="1503570457858" expanded="true" signature="3250:3339" ph="select id, c... oauth2_client" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/dao/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <marker date="1503570457859" expanded="true" signature="823:886" ph="insert into oauth2_user... " />
+            <marker date="1503570457859" expanded="true" signature="1658:1722" ph="update oauth... " />
+            <marker date="1503570457859" expanded="true" signature="1954:1988" ph="delete from " />
+            <marker date="1503570457859" expanded="true" signature="2115:2178" ph="select id, u... oauth2_user" />
+            <marker date="1503570457859" expanded="true" signature="2462:2514" ph="select id, u... oauth2_user" />
+            <marker date="1503570457859" expanded="true" signature="2690:2759" ph="select id, u... oauth2_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/realm/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/oltu/oauth2/org.apache.oltu.oauth2.authzserver/0.31/org.apache.oltu.oauth2.authzserver-0.31.jar!/org/apache/oltu/oauth2/as/issuer/OAuthIssuerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AccessTokenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/oauth2login.jsp">
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/service/OAuthServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="308">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <element signature="e#680#681#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#1194#1195#0" expanded="false" />
+            <element signature="e#1244#1245#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1506#1507#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/oltu/oauth2/org.apache.oltu.oauth2.common/0.31/org.apache.oltu.oauth2.common-0.31.jar!/org/apache/oltu/oauth2/common/OAuth.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/webapp/WEB-INF/jsp/login.jsp">
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/AuthorizeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="659">
+          <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-dao.xml">
+    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/java/com/lovecws/mumu/oauth/server/web/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-580">
-          <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/cache/CacheManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-ehcache/1.2.5/shiro-ehcache-1.2.5.jar!/org/apache/shiro/cache/ehcache/EhCacheManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Realm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/java/com/lovecws/mumu/oauth/client/OAuth2AuthenticationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/ehcache/ehcache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/properties/cache.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-common-redis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring/spring-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="142" column="21" lean-forward="false" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="393" column="19" lean-forward="false" selection-start-line="393" selection-start-column="19" selection-end-line="393" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/session/mgt/SessionValidationScheduler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.5/shiro-core-1.2.5.jar!/org/apache/shiro/session/mgt/ExecutorServiceSessionValidationScheduler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client/src/main/resources/spring-config-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-cache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="48" column="87" lean-forward="false" selection-start-line="48" selection-start-column="87" selection-end-line="48" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/spring-config-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+        <state relative-caret-position="190">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
       </provider>

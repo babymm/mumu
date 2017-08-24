@@ -31,9 +31,9 @@
             <div class="col-sm-12">
                 <section class="panel">
                     <div id="toolbar">
-                        <a class="btn btn-default btn-sm" style="" disabled="disabled">删除</a>
+                        #*<a class="btn btn-default btn-sm" style="" disabled="disabled">删除</a>
                         <a class="btn btn-default btn-sm" disabled="disabled">标记已读</a>
-                        <a class="btn btn-default btn-sm">全部已读</a>
+                        <a class="btn btn-default btn-sm">全部已读</a>*#
                     </div>
                     <table id="table"
                            radio="true"
