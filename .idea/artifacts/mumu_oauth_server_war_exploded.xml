@@ -1,85 +1,50 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="mumu-oauth-server:war exploded">
-    <output-path>$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/target/oauth-client</output-path>
+    <output-path>$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/target/oauth-server</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="mumu-oauth-server" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-webapp-support:4.0.0" />
-          <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-support-spring:1.0.7.GA" />
-          <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-audit:1.0.7.GA" />
-          <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-error:1.0.7.GA" />
-          <element id="library" level="project" name="Maven: com.github.inspektr:inspektr-common:1.0.7.GA" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:3.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:3.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:3.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-core:4.0.0" />
-          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
-          <element id="library" level="project" name="Maven: org.jasig.service.persondir:person-directory-impl:1.5.1" />
-          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2" />
-          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2" />
-          <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
-          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
-          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
-          <element id="library" level="project" name="Maven: org.jasig.service.persondir:person-directory-api:1.5.1" />
+          <element id="library" level="project" name="Maven: org.apache.oltu.oauth2:org.apache.oltu.oauth2.authzserver:0.31" />
+          <element id="library" level="project" name="Maven: org.apache.oltu.oauth2:org.apache.oltu.oauth2.common:0.31" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.1.0.Final" />
-          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
-          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.0.Final" />
-          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
-          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.0.b2" />
-          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.0.CR2" />
-          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
-          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.1.Final" />
-          <element id="library" level="project" name="Maven: org.perf4j:perf4j:log4jonly:0.9.16" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-webflow:2.3.2.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-binding:2.3.2.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js:2.3.2.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.webflow:spring-js-resources:2.3.2.RELEASE" />
-          <element id="library" level="project" name="Maven: commons-jexl:commons-jexl:1.1" />
-          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
-          <element id="library" level="project" name="Maven: joda-time:joda-time:2.2" />
-          <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-support-generic:4.0.0" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.2.0.Final" />
-          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.7.2" />
-          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.7.2" />
-          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.0.0.GA" />
+          <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.2" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.5" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.5" />
-          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.5" />
-          <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-support-jdbc:4.0.0" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.oltu.oauth2:org.apache.oltu.oauth2.resourceserver:0.31" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-test:3.2.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:3.2.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.1.2" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.20" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
-          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.2.3" />
-          <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.1" />
-          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz-jobs:2.2.3" />
-          <element id="library" level="project" name="Maven: org.opensymphony.quartz:quartz:1.6.1" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.5" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.2.5" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.5" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-ehcache:1.2.5" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.6.11" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-cas:1.2.5" />
+          <element id="library" level="project" name="Maven: org.jasig.cas.client:cas-client-core:3.2.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/target/oauth-client/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/target/oauth-server/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="mumu-oauth-server/web/Web" />
     </root>

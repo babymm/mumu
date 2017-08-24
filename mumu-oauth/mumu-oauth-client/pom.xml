@@ -11,6 +11,19 @@
     <name>mumu-oauth-client Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
+
+        <!--oltu-->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.client</artifactId>
+            <version>0.31</version>
+        </dependency>
+
         <!--日志-->
         <dependency>
             <groupId>log4j</groupId>
