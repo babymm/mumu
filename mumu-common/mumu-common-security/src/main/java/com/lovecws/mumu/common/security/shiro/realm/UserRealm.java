@@ -16,6 +16,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
@@ -39,6 +40,14 @@ public class UserRealm extends AuthorizingRealm {
 	private SysRoleService roleService;
 	@Autowired(required = false)
 	private SysPermissionService permissionService;
+
+	public UserRealm() {
+		super();
+	}
+
+	public UserRealm(CacheManager cacheManager) {
+		super(cacheManager);
+	}
 
 	/**
 	 * 获取当前用户的角色集合,权限集合

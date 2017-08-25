@@ -1,7 +1,7 @@
 package com.lovecws.mumu.oauth.server.service;
 
 /**
- * <p>User: Zhang Kaitao
+ * <p>OauthUser: Zhang Kaitao
  * <p>Date: 14-2-17
  * <p>Version: 1.0
  */

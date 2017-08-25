@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<div class="error">${error}</div>
-<form action="" method="post">
+<div class="error">${shiroLoginFailure}</div>
+<form action="/login" method="post">
     用户名：<input type="text" name="username" value="<shiro:principal/>"><br/>
     密码：<input type="password" name="password"><br/>
     自动登录：<input type="checkbox" name="rememberMe" value="true"><br/>

@@ -73,7 +73,6 @@ public class OAuth2Realm extends AuthorizingRealm {
     }
 
     private String extractUsername(String code) {
-
         try {
             OAuthClient oAuthClient = new OAuthClient(new URLConnectionClient());
 

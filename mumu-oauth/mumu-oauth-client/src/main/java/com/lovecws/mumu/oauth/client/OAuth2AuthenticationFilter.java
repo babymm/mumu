@@ -98,6 +98,7 @@ public class OAuth2AuthenticationFilter extends AuthenticatingFilter {
         Subject subject = getSubject(request, response);
         if (subject.isAuthenticated() || subject.isRemembered()) {
             try {
+                System.out.println(""+subject);
                 issueSuccessRedirect(request, response);
             } catch (Exception e) {
                 e.printStackTrace();

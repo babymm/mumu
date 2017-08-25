@@ -43,14 +43,18 @@ public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher
 				throw new ExcessiveAttemptsException();
 			}
 		}
-		loginCredentialsHandler.before();
+		if(loginCredentialsHandler!=null){
+			loginCredentialsHandler.before();
+		}
 		boolean matches = super.doCredentialsMatch(token, info);
 		if (matches) {
 			// clear retry count
 			jedisClient.del(cacheName);
 
 			//用户认证成功之后 进行相关操作
-			loginCredentialsHandler.after();
+			if(loginCredentialsHandler!=null){
+				loginCredentialsHandler.after();
+			}
 		}else{
 			SysUser unloginUser=new SysUser();
 			unloginUser.setUserName(loginName);
