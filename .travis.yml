@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - oraclejdk8
+
+script: mvn clean package cobertura:cobertura
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

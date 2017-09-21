@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xmlns:context="http://www.springframework.org/schema/context"
-	   xmlns:aop="http://www.springframework.org/schema/aop"
-	   xmlns:tx="http://www.springframework.org/schema/tx"
-	   xsi:schemaLocation="
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
 		http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
@@ -13,10 +11,6 @@
 		http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx.xsd">
-
-	<!--配置数据库相关参数 -->
-	<!--<context:property-placeholder location="classpath:properties/*.properties"
-		ignore-unresolvable="true" />-->
 
 	<!-- 密码加密回调 -->
 	<bean id="dbPasswordCallback" class="com.lovecws.mumu.common.core.config.DBPasswordCallback">
@@ -65,24 +59,24 @@
 		<property name="testOnBorrow" value="false" />
 		<property name="testOnReturn" value="false" />
 		<property name="validationQuery" value="SELECT 'x'" />
-		<property name="timeBetweenLogStatsMillis" value="600000" />
+		<!-- 配置多久打印一次数据库日志 -->
+		<property name="timeBetweenLogStatsMillis" value="300000" />
 		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
 		<property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
 		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
 		<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
 	</bean>
-
-	<!--配置SqlSessionFactory对象 -->
+	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<!--注入数据库连接池 -->
+		<!-- 注入数据库连接池 -->
 		<property name="dataSource" ref="dataSource" />
-		<!--配置mybatis全局配置文件:mybatis-system-config.xml -->
-		<property name="configLocation" value="classpath:mybatis/mybatis-system-config.xml" />
+		<!-- 配置mybatis全局配置文件:mybatis-config.xml -->
+		<!-- <property name="configLocation" value="classpath*:mybatis/mybatis-config.xml" /> -->
+		<!-- <property name="mapperLocations" value="classpath*:mybatis/mapper/**/*Mapper.xml" /> -->
 	</bean>
 
 	<!-- SqlSession模板类实例 -->
-	<bean id="sessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"
-		destroy-method="close">
+	<bean id="sessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="close">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 
@@ -90,7 +84,6 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
-	<!--配置基于注解的声明式事务,默认使用注解来管理事务行为-->
-	<tx:annotation-driven transaction-manager="transactionManager"/>
-
+	<!--配置基于注解的声明式事务,默认使用注解来管理事务行为 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 </beans>

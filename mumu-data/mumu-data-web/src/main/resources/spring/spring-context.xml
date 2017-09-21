@@ -18,7 +18,7 @@
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 
 	<!-- 配置要扫描的包 -->
-	<context:component-scan base-package="com.lovecws.mumu.system,com.lovecws.mumu.common.core"/>
+	<context:component-scan base-package="com.lovecws.mumu.data,com.lovecws.mumu.common.core"/>
 
 	<!---加载配置文件-->
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
@@ -38,9 +38,8 @@
 		<property name="properties" ref="configProperties"/>
 	</bean>
 
-	<!-- 直接加载系统mapper -->
-	<!--<import resource="classpath*:spring/spring-system-service.xml" />-->
-	<import resource="classpath*:spring/spring-system-context.xml" />
+	<!-- 加载数据中心 -->
+	<!--<import resource="classpath*:spring/spring-data-service.xml" />-->
 	<import resource="classpath*:spring/spring-data-context.xml" />
 	<import resource="classpath:spring/spring-dao.xml" />
 

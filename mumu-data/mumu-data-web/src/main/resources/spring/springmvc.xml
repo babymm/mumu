@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- 采用注释的方式配置bean -->
+	<context:annotation-config />
+
+	<!-- 配置要扫描的包 -->
+	<context:component-scan base-package="com.lovecws.mumu.data"></context:component-scan>
+
+	<!-- 字符串格式转化器 -->
+	<bean id="stringHttpMessageConverter"
+		class="org.springframework.http.converter.StringHttpMessageConverter">
+		<constructor-arg value="UTF-8" index="0"></constructor-arg>
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/plain;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<!-- json格式转换器 -->
+	<bean id="fastJsonHttpMessageConverter"
+		class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+				<value>text/html;charset=UTF-8</value><!-- 避免IE出现下载JSON文件的情况 -->
+			</list>
+		</property>
+		<property name="features">
+			<list>
+				<value>QuoteFieldNames</value>
+				<value>WriteDateUseDateFormat</value>
+			</list>
+		</property>
+	</bean>
+	<!-- xml 格式转换器 -->
+	<bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller" />
+	<bean id="marshallingHttpMessageConverter"
+		class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+		<property name="marshaller" ref="castorMarshaller" />
+		<property name="unmarshaller" ref="castorMarshaller" />
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/xml;charset=UTF-8</value>
+				<value>application/xml;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<ref bean="stringHttpMessageConverter" />
+			<ref bean="fastJsonHttpMessageConverter" />
+			<ref bean="marshallingHttpMessageConverter" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!--2:静态资源默认servlet配置 1、加入对静态资源的处理:js,css,gif,png 2、允许使用"/"做整体映射 -->
+	<mvc:default-servlet-handler />
+	<!--配置JSP 显示ViewResolver -->
+	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/pages" />
+		 <property name="suffix" value=".html"/>
+	 </bean>-->
+
+	<bean id="velocityConfigurer"
+		  class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/pages/" />
+		<property name="configLocation" value="classpath:properties/velocity.properties" />
+	</bean>
+	<!-- 配置视图的显示 -->
+	<bean id="ViewResolver"
+		  class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+		<property name="cache" value="false" />
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".vm" />
+		<property name="dateToolAttribute" value="date" /><!--日期函数名称 -->
+		<property name="numberToolAttribute" value="number" /><!--数字函数名称 -->
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<property name="exposeSpringMacroHelpers" value="true" /><!--是否使用spring对宏定义的支持 -->
+		<property name="exposeRequestAttributes" value="true" /><!--是否开放request属性 -->
+		<property name="requestContextAttribute" value="request" /><!--request属性引用名称 -->
+		<property name="layoutUrl" value="/common/layout/layout.vm" /><!--指定layout文件 -->
+		<!-- 加载 toolbox配置文件 -->
+		<property name="toolboxConfigLocation" value="/WEB-INF/velocityToolBox.xml" />
+	</bean>
+
+	<!-- 不进行拦截的 -->
+    <mvc:resources location="/resources/" mapping="/resources/"
+		cache-period="1024" />
+
+	<bean class="com.lovecws.mumu.common.security.shiro.exception.GlobalHandlerException">
+		<!-- 定义默认的异常处理页面，当该异常类型的注册搜索时使用 -->
+		<property name="defaultErrorView" value="error"></property>
+		<!-- 定义异常处理页面用来获取异常信息的变量名，默认名为exception -->
+		<property name="exceptionAttribute" value="ex"></property>
+		<!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->     
+        <property name="warnLogCategory" value="WARN"></property>     
+        <!-- 默认HTTP状态码 -->     
+        <property name="defaultStatusCode" value="500"></property>   
+		<!-- 定义需要特殊处理的异常，用类名或完全路径名作为key，异常也页名作为值 -->
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.apache.shiro.authz.UnauthorizedException">common/error/unauth</prop>
+				<prop key="java.lang.Throwable">common/error/500</prop>
+			</props>
+		</property>
+		<property name="statusCodes">     
+             <props>     
+                 <prop key="common/error/500">500</prop>     
+                 <prop key="common/error/405">405</prop>     
+                 <prop key="common/error/404">404</prop>     
+             </props>     
+         </property>
+	</bean>
+	
+	<!-- 支持上传文件 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10485780" />
+	</bean>
+
+</beans>

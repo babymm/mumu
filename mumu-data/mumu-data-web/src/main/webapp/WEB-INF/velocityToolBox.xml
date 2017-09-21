@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox>
+	<!-- 日期工具类 -->
+	<tool>
+		<key>date</key>
+		<scope>application</scope>
+		<class>org.apache.velocity.tools.generic.DateTool</class>
+	</tool>
+	<!-- 权限工具类 -->
+	<tool>
+		<key>shiro</key>
+		<scope>application</scope>
+		<class>com.lovecws.mumu.common.template.velocity.ShiroPermissingTag</class>
+	</tool>
+	<!--基本字符串工具类-->
+	<tool>
+		<key>mumu</key>
+		<scope>application</scope>
+		<class>com.lovecws.mumu.common.template.velocity.MumuUtilTag</class>
+	</tool>
+	<!--导出模型-->
+	<tool>
+		<key>model</key>
+		<scope>application</scope>
+		<class>com.lovecws.mumu.common.template.velocity.ExportModelTag</class>
+	</tool>
+</toolbox>

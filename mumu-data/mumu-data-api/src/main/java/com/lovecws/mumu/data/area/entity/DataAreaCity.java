@@ -1,6 +1,5 @@
 package com.lovecws.mumu.data.area.entity;
 
-
 import com.lovecws.mumu.common.core.entity.PersistentEntity;
 
 /**

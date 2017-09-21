@@ -12,14 +12,385 @@
     <url>http://maven.apache.org</url>
     <description>数据中心控制层，主要展示数据，并且维护数据。同时提供一些基本信息查询功能。</description>
     <dependencies>
+        <!--common -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml</groupId>
+            <artifactId>jackson-xml-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+        </dependency>
+
+        <!--spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+        </dependency>
+        <!--springmvc 控制层 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!--mybatis 数据访问层 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+
+        <!-- mysql 数据库连接 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- druid连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+
+        <!-- jstl 标签库 -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- 动态代理 -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+        </dependency>
+
+        <!-- spring oxm -->
+        <dependency>
+            <groupId>org.codehaus.castor</groupId>
+            <artifactId>castor</artifactId>
+        </dependency>
+        <!-- Castor need this -->
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+        </dependency>
+        <!-- 测试 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+        </dependency>
+
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+        </dependency>
+
+        <!-- shiro安全认证 -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-cas</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+        </dependency>
+
+        <!-- velocity模板 -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+        </dependency>
+
+        <!-- redis緩存服務器 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.14</version>
+        </dependency>
+
+        <!--基本组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-core</artifactId>
+        </dependency>
+        <!--redis缓存组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-redis</artifactId>
+        </dependency>
+        <!--fafs分布式文件上传-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-fdfs</artifactId>
+        </dependency>
+        <!--shiro安全组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-security</artifactId>
+        </dependency>
+        <!--shiro安全组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-template</artifactId>
+        </dependency>
+        <!--email邮件发送协议-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-email</artifactId>
+        </dependency>
+        <!--短信发送组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-sms</artifactId>
+        </dependency>
+        <!--解析、生成excel组件-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-excel</artifactId>
+        </dependency>
+        <!--system接口层-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-system-api</artifactId>
+        </dependency>
+        <!--system接口实现层-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-system-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-data-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-data-service</artifactId>
         </dependency>
     </dependencies>
     <build>
-        <finalName>mumu-data-web</finalName>
+        <finalName>system</finalName>
+        <filters>
+            <filter>src/main/resources/env/${env}.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>config/*</include>
+                    <include>properties/*</include>
+                    <include>spring/*</include>
+                    <include>tpl/*</include>
+                    <include>log4j.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/env/*</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <!-- tomcat 启动服务 -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <backgroundProcessorDelay>5</backgroundProcessorDelay>
+                    <url>http://localhost:8080/redis</url>
+                    <server>tomcat7</server>
+                    <path>/redis</path>
+                    <port>8080</port>
+                </configuration>
+            </plugin>
+            <!-- jetty 启动服务 -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.6.v20170531</version>
+                <configuration>
+                    <httpConnector>
+                        <port>8080</port>
+                    </httpConnector>
+                    <stopKey>stop</stopKey>
+                    <stopPort>9966</stopPort>
+                    <reload>manual</reload>
+                    <dumpOnStart>true</dumpOnStart>
+                    <webApp>
+                        <contextPath>/redis</contextPath>
+                    </webApp>
+                    <requestLog implementation="org.eclipse.jetty.server.NCSARequestLog">
+                        <filename>target/access-yyyy_mm_dd.log</filename>
+                        <filenameDateFormat>yyyy_MM_dd</filenameDateFormat>
+                        <logDateFormat>yyyy-MM-dd HH:mm:ss</logDateFormat>
+                        <logTimeZone>GMT+8:00</logTimeZone>
+                        <append>true</append>
+                        <logServer>true</logServer>
+                        <retainDays>120</retainDays>
+                        <logCookies>true</logCookies>
+                    </requestLog>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
