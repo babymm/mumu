@@ -597,13 +597,15 @@
         <activeByDefault>true</activeByDefault><!--默认启用的是dev环境配置-->
       </activation>
     </profile>
+
     <!-- 生产环境 -->
     <profile>
-      <id>production</id>
+      <id>pro</id>
       <properties>
-        <env>production</env>
+        <env>pro</env>
       </properties>
     </profile>
+
     <!-- 测试环境 -->
     <profile>
       <id>test</id>

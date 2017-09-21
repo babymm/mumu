@@ -321,5 +321,24 @@
     </dependencies>
     <build>
         <finalName>system</finalName>
+        <filters>
+            <filter>src/main/resources/env/${env}.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>config/*</include>
+                    <include>properties/*</include>
+                    <include>spring/*</include>
+                    <include>tpl/*</include>
+                    <include>log4j.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/env/*</directory>
+            </resource>
+        </resources>
     </build>
 </project>
