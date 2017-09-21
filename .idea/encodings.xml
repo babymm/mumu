@@ -12,10 +12,12 @@
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-email" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-excel" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-fdfs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-ftp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-sms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-template" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mumu-common/mumu-common-thirdPartyLogin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-data" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-data/mumu-data-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mumu-data/mumu-data-service" charset="UTF-8" />

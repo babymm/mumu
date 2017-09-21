@@ -23,7 +23,8 @@
 	<bean id="fdfsAttachmentService" class="com.lovecws.mumu.common.fdfs.service.FDFSAttachmentServiceImpl"
 		init-method="init" destroy-method="destory" scope="singleton"
 		lazy-init="true">
-		<property name="configPath" value="${fdfs.configPath}" />
+		<property name="configPath" value="config/fdfs.conf" />
+		<property name="tracker_server" value="${fdfs.tracker_server}" />
 		<property name="webPath" value="${fdfs.webPath}" />
 	</bean>
 </beans>

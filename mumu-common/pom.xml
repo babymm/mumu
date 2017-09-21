@@ -21,6 +21,8 @@
         <module>mumu-common-email</module>
         <module>mumu-common-sms</module>
         <module>mumu-common-excel</module>
+        <module>mumu-common-ftp</module>
+        <module>mumu-common-thirdPartyLogin</module>
     </modules>
 
     <properties>

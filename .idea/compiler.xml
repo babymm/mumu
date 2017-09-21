@@ -22,10 +22,12 @@
         <module name="mumu-common-email" />
         <module name="mumu-common-excel" />
         <module name="mumu-common-fdfs" />
+        <module name="mumu-common-ftp" />
         <module name="mumu-common-redis" />
         <module name="mumu-common-security" />
         <module name="mumu-common-sms" />
         <module name="mumu-common-template" />
+        <module name="mumu-common-thirdPartyLogin" />
         <module name="mumu-data-api" />
         <module name="mumu-data-service" />
         <module name="mumu-data-web" />
@@ -49,10 +51,12 @@
       <module name="mumu-common-email" target="1.8" />
       <module name="mumu-common-excel" target="1.8" />
       <module name="mumu-common-fdfs" target="1.8" />
+      <module name="mumu-common-ftp" target="1.8" />
       <module name="mumu-common-redis" target="1.8" />
       <module name="mumu-common-security" target="1.8" />
       <module name="mumu-common-sms" target="1.8" />
       <module name="mumu-common-template" target="1.8" />
+      <module name="mumu-common-thirdPartyLogin" target="1.8" />
       <module name="mumu-data" target="1.8" />
       <module name="mumu-data-api" target="1.8" />
       <module name="mumu-data-service" target="1.8" />

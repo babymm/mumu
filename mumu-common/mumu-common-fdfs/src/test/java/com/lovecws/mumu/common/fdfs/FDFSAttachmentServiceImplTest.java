@@ -29,7 +29,7 @@ public class FDFSAttachmentServiceImplTest {
         //String url=fdfsAttachmentService.uploadWithUrl(new File("C:\\header.jpg"));
         //String url=fdfsAttachmentService.uploadWithUrl(new File("C:\\ERWin 7.3.zip"));
         //String url=fdfsAttachmentService.uploadWithUrl(new File("C:\\8月4日应用答疑（上）_知识讲解.avi"));
-        String url = fdfsAttachmentService.uploadWithUrl(new File("D:\\1.jpg"));
+        String url = fdfsAttachmentService.uploadWithUrl(new File("D:\\logs\\error.log"));
         System.out.println(url);
         applicationContext.stop();
     }
@@ -40,7 +40,7 @@ public class FDFSAttachmentServiceImplTest {
         CheckedInputStream checkedinputstream = null;
         String crc = null;
         try {
-            fileinputstream = new FileInputStream(new File("D:\\1.jpg"));
+            fileinputstream = new FileInputStream(new File("D:\\logs\\error.log"));
             checkedinputstream = new CheckedInputStream(fileinputstream, crc32);
             while (checkedinputstream.read() != -1) {
             }

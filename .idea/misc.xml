@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/mumu-cms/mumu-cms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/mumu-common/mumu-common-thirdPartyLogin" />
     <file type="web" url="file://$PROJECT_DIR$/mumu-data/mumu-data-web" />
     <file type="web" url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-client" />
     <file type="web" url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server" />
@@ -14,13 +15,6 @@
         <option value="$PROJECT_DIR$/mumu-blog/pom.xml" />
       </list>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/cas-theme-default.properties" />
-    <file url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/default_views.properties" />
-    <file url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/log4j.xml" />
-    <file url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/protocol_views.properties" />
-    <file url="file://$PROJECT_DIR$/mumu-oauth/mumu-oauth-server/src/main/resources/saml_views.properties" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
