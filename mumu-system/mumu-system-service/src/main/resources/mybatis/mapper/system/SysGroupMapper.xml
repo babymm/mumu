@@ -192,7 +192,7 @@
 	</update>
 
 	<!-- 获取用户组详情 -->
-	<select id="selectByPrimaryKey" resultType="SysGroup" parameterType="map">
+	<select id="selectByPrimaryKey" resultMap="SysGroupResultMap" parameterType="map">
 		select
 		g.group_id,g.group_status,g.creator,g.create_time,g.editor,g.edit_time,g.remark,g.group_name,g.group_motto,g.group_honors,g.org_id,
 		(select org_name from sys_organize where org_id=g.org_id) org_name
@@ -206,7 +206,7 @@
 		sys_group where group_id=#{groupId}
 	</delete>
 
-	<select id="queryGroupStatistics" resultType="SysGroup" parameterType="map">
+	<select id="queryGroupStatistics" resultMap="SysGroupResultMap" parameterType="map">
 		 select count(ug.user_id) user_count,ug.group_id,g.group_name from sys_user_group ug LEFT JOIN sys_group g on(g.group_id=ug.group_id) group by ug.group_id
 	</select>
 </mapper>

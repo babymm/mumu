@@ -56,7 +56,7 @@ public class MapperScanApplication {
 	 * 加载配置文件属性
 	 * 
 	 * @param configuration
-	 * @param settings
+	 * @param root
 	 */
 	private void handleSetting(Configuration configuration, XNode root) {
 		XNode settingsNode = root.evalNode("settings");

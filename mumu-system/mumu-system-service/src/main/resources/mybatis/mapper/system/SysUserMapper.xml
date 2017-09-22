@@ -77,7 +77,7 @@
 	</select>
 
 	<!-- 分页查询用户列表 -->
-	<select id="listPage" resultType="SysUser"
+	<select id="listPage" resultMap="SysUserResultMap"
 		parameterType="map">
 		select
 		<include refid="SysUserColumn"></include>
@@ -126,7 +126,7 @@
 	</select>
 
 	<!-- 根据数据字典id 获取数据字典详情 -->
-	<select id="selectByPrimaryKey" resultType="SysUser"
+	<select id="selectByPrimaryKey" resultMap="SysUserResultMap"
 		parameterType="map">
 		select
 		<include refid="SysUserColumn"></include>

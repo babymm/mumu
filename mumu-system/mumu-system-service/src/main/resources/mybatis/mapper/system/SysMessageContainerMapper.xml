@@ -101,7 +101,7 @@
     </select>
     
 	<!-- 获取消息容器详情 -->
-	<select id="selectByPrimaryKey" resultType="SysMessageContainer" parameterType="map">
+	<select id="selectByPrimaryKey" resultMap="SysMessageContainerResultMap" parameterType="map">
 		select
 		<include refid="SysMessageContainerColumn"></include>
 		from sys_message_container where message_container_id = #{messageContainerId}
