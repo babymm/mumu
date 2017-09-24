@@ -3168,7 +3168,8 @@ div.tagsinput span.tag a {
 ----------------------------*/
 
 .error-page {
-    background: #6bc5a4;
+    /*background: #6bc5a4;*/
+    background: #c4e3f3;
 }
 
 .error-wrapper {

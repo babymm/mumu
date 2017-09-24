@@ -127,11 +127,11 @@
           <element id="archive" name="mumu-system-service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-system-service" />
           </element>
-          <element id="archive" name="mumu-data-service-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="mumu-data-service" />
-          </element>
           <element id="archive" name="mumu-data-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-data-api" />
+          </element>
+          <element id="archive" name="mumu-data-service-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="mumu-data-service" />
           </element>
         </element>
       </element>
