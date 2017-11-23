@@ -1,0 +1,133 @@
+<link href="$request.getContextPath()/resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="$request.getContextPath()/resources/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="$request.getContextPath()/resources/bootstrap-table/css/bootstrap-table.min.css" >
+<div class="main-content" style="margin-left: 0px;overflow-y: hidden;">
+    <div class="page-heading">
+        <h3>IP地址</h3>
+        <ul class="breadcrumb">
+            <li>数据中心</li>
+            <li class="active" onclick="changeFrameSrc('$request.getContextPath()/dataset/ip/index','ip')">IP地址</li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div id="toolbar">
+                        #if($shiro.hasPermission('dataset:ip:add'))
+                            <button type="button" class="btn btn-default btn-sm" onclick="changeFrameSrc('$request.getContextPath()/dataset/ip/add','ip',true)"><span class="fa fa-plus-square"></span>添加</button>
+                        #end
+                    </div>
+                    <table id="table"
+                           data-toggle="table"
+                           data-toolbar="#toolbar"
+                           data-show-refresh="false"
+                           data-search="false"
+                           data-show-toggle="false"
+                           data-show-columns="false"
+                           data-show-export="false"
+                           data-id-field="id"
+                           data-pagination="true"
+                           data-query-params="queryParams"
+                           data-query-type="limit"
+                           data-show-footer="false"
+                           data-click-to-select="true"
+                           data-single-select="false"
+                           data-striped="false"
+                           data-method="get"
+                           data-url="$request.getContextPath()/dataset/ip/page"
+                           data-side-pagination="server"
+                           data-page-list="[15, 30, 50, 100, ALL]"
+                           data-show-pagination-switch="false"
+                           data-search-on-enter-key="true"
+                           data-pagination-v-align="bottom"
+                           data-show-pagination-switch="false">
+                        <thead>
+                        <tr>
+                            <th data-field="startIp" data-valign="middle" data-align="center">开始IP</th>
+                            <th data-field="endIp" data-valign="middle" data-align="center">结束IP</th>
+                            <th data-field="cityName" data-valign="middle" data-align="center">城市名称</th>
+                            <th data-field="companyName" data-valign="middle" data-align="center">公司名称</th>
+                            <th data-field="operate" data-valign="middle" data-align="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </section>
+            </div>
+        </div>
+        #include("/system/footer.vm")
+    </div>
+</div>
+<script type="text/javascript" src="$request.getContextPath()/resources/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/layer/layer.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="$request.getContextPath()/resources/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="$request.getContextPath()/resources/js/jquery.nicescroll.js"></script>
+<script src="$request.getContextPath()/resources/js/scripts.js"></script>
+<script type="text/javascript">
+    //表格查询参数
+    function queryParams(params) {
+        return {
+            withDDLTables:'true',
+            beginIndex:params.offset,
+            pageSize:params.limit
+        };
+    }
+    //查询
+    function queryDDLS(){
+        var $table = $('#table');
+        $table.bootstrapTable("refresh");
+    }
+    //操作按钮
+    function operateFormatter(value, row, index) {
+        var buttons=[];
+        var viewPermission = "$shiro.hasPermission('dataset:ip:view')";
+        if (viewPermission && viewPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLSDetail"><span class="fa fa-eye"></span>详情</button>');
+        }
+        var editPermission = "$shiro.hasPermission('dataset:ip:edit')";
+        if (editPermission && editPermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLSEdit"><span class="fa fa-edit"></span>编辑</button>');
+        }
+        var deletePermission = "$shiro.hasPermission('dataset:ip:delete')";
+        if (deletePermission && deletePermission == "true") {
+            buttons.push('<button type="button" class="btn btn-default btn-sm DDLSDelete"><span class="fa fa-trash-o"></span>删除</button>');
+        }
+        return buttons.join('');
+    }
+    //表格点击事件
+    var operateEvents = {
+        //获取ip地址信息
+        'click .DDLSDetail': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/dataset/ip/view/"+row.id,"ddls",true)
+        },
+        //编辑ip地址信息
+        'click .DDLSEdit': function (e, value, row, index) {
+            changeFrameSrc("$request.getContextPath()/dataset/ip/edit/"+row.id,"ddls",true)
+        },
+        //删除ip地址信息
+        'click .DDLSDelete': function (e, value, row, index) {
+            layer.confirm('你确定要删IP地址【'+row.ddlCode+'】吗?', {icon: 3, title:'提示'}, function(index){
+                $.post("$request.getContextPath()/dataset/ip/delete/"+row.id,{_method:'delete'},function(data){
+                    if(data.code==200){
+                        layer.msg(data.msg,{
+                            icon: 1,
+                            skin: 'demo-class',
+                            title :'信息',
+                            time:2000,
+                            area: ['300px', '200px'],
+                            offset: 'rb',
+                            end :function(){
+                                queryDDLS();
+                            }
+                        });
+                    }else{
+                        layer.alert(data.msg);
+                    }
+                });
+            });
+        }
+    };
+</script>

@@ -156,7 +156,7 @@
 	</delete>
 	
 	<!-- 获取详情 -->
-	<select id="selectByPrimaryKey" resultType="SysUserGroup"
+	<select id="selectByPrimaryKey" resultMap="SysUserGroupResultMap"
 		parameterType="map">
 		select
 		ug.*,u.user_name

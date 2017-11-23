@@ -162,7 +162,7 @@
 	</update>
 
 	<!-- 获取组织机构详情 -->
-	<select id="selectByPrimaryKey" resultType="SysOrganize" parameterType="map">
+	<select id="selectByPrimaryKey" resultMap="SysOrgResultMap" parameterType="map">
 		select
 		org.org_id,org.org_status,org.creator,org.create_time,org.editor,org.edit_time,org.remark,org.org_name,org.parent_org_id,
 		(select org_name from sys_organize where org_id=org.parent_org_id) parent_org_name

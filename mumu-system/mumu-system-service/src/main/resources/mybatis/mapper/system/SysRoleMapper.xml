@@ -79,7 +79,7 @@
     </select>
     
 	<!-- 获取角色详情 -->
-	<select id="selectByPrimaryKey" resultType="SysRole"
+	<select id="selectByPrimaryKey" resultMap="SysRoleResultMap"
 		parameterType="map">
 		select
 		<include refid="SysRoleColumn"></include>

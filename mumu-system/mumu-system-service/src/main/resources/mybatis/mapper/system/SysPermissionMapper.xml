@@ -89,7 +89,7 @@
     </select>
     
 	<!-- 获取权限详情 -->
-	<select id="selectByPrimaryKey" resultType="SysPermission"
+	<select id="selectByPrimaryKey" resultMap="SysPermissionResultMap"
 		parameterType="map">
 		select
 		<include refid="SysPermissionColumn"></include>

@@ -214,6 +214,8 @@
         <blockquote class="layui-elem-quote title">系统公告</blockquote>
         <div class="layui-elem-quote layui-quote-nm">
             <h3>2017-08-10 baby慕慕权限管理系统基本已经完成，目前正在优化代码...</h3>
+            <h3>2017-09-21 计划开发数据中心模块（IP地址信息、省市区地址信息、常用车辆信息等数据）,对这些数据进行维护。</h3>
+            <h3>2017-09-21 计划开发流程引擎功能模块，管理员可以在线制作流程引擎，然后部署流程影青供用户使用。</h3>
         </div>
     </div>
 </div>

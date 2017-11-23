@@ -318,10 +318,16 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-system-service</artifactId>
         </dependency>
+
+        <!--数据中心接口层-->
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-data-api</artifactId>
+        </dependency>
+        <!--数据中心接口实现层-->
         <dependency>
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-data-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <build>

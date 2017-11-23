@@ -1,40 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.lovecws.mumu.data.ip.dao.impl.DataIPAddressDaoImpl">
-	<resultMap id="SystemIPAddressResultMap" type="com.lovecws.mumu.data.ip.entity.DataIPAddress">
-		<id column="start_ip" property="startIp"/>
-		<result column="end_ip" property="endIp"/>
-		<result column="city_name" property="cityName" jdbcType="VARCHAR" />
-		<result column="company_name" property="companyName" jdbcType="VARCHAR" />
-	</resultMap>
-	<sql id="SystemIPAddressColumn">
+    <resultMap id="SystemIPAddressResultMap" type="com.lovecws.mumu.data.ip.entity.DataIPAddress">
+        <id column="start_ip" property="startIp"/>
+        <result column="end_ip" property="endIp"/>
+        <result column="city_name" property="cityName" jdbcType="VARCHAR"/>
+        <result column="company_name" property="companyName" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="SystemIPAddressColumn">
 		start_ip, end_ip, city_name, company_name
 	</sql>
 
-	<!-- 获取所有的汽车品牌 -->
-	<select id="listBy" resultMap="SystemIPAddressResultMap"
-		parameterType="map">
-		select
-		<include refid="SystemIPAddressColumn" />
-		from data_ip_addr
-		<where>
-			<if test="ip!=null">
-			    <![CDATA[and eip>#{ip} and sip<=#{ip}]]>
-			    <!-- and STRCMP(#{ip},start_ip)>=0 and STRCMP(end_ip,#{ip})>=0 -->
-			</if>
-			<if test="address!=null">
-				and city_name like CONCAT('%',#{address},'%')
-			</if>
-		</where>
-		order by start_ip desc
+    <!-- 获取所有的ip地址信息-->
+    <select id="listBy" resultMap="SystemIPAddressResultMap"
+            parameterType="map">
+        select
+        <include refid="SystemIPAddressColumn"/>
+        from data_ip_addr
+        <where>
+            <if test="ip!=null">
+                <![CDATA[and eip>#{ip} and sip<=#{ip}]]>
+                <!-- and STRCMP(#{ip},start_ip)>=0 and STRCMP(end_ip,#{ip})>=0 -->
+            </if>
+            <if test="address!=null">
+                and city_name like CONCAT('%',#{address},'%')
+            </if>
+        </where>
+        order by start_ip desc
+    </select>
+
+    <!-- 批量插入数据 -->
+    <insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+        insert into data_ip_addr(sip,start_ip,eip,end_ip,city_name,company_name)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.sip},#{item.startIp},#{item.eip},#{item.endIp},#{item.cityName},#{item.companyName})
+        </foreach>
+    </insert>
+
+    <!-- 分页查询IP地址 -->
+    <select id="listPage" resultMap="SystemIPAddressResultMap"
+            parameterType="map">
+        select
+        <include refid="SystemIPAddressColumn"></include>
+        from data_ip_addr
+        order by start_ip ASC
+        limit #{pageFirst},#{pageSize}
+    </select>
+
+    <!-- 分页获取IP地址数量  -->
+    <select id="listPageCount" resultType="LONG">
+		select count(start_ip) from data_ip_addr
 	</select>
-	
-	<!-- 批量插入数据 -->
-	<insert id="batchInsert"  parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
-		insert into data_ip_addr(sip,start_ip,eip,end_ip,city_name,company_name)
-    	values  
-	    <foreach collection="list" item="item" index="index" separator="," >  
-	        (#{item.sip},#{item.startIp},#{item.eip},#{item.endIp},#{item.cityName},#{item.companyName})  
-	    </foreach> 
-	</insert>
 </mapper>

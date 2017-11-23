@@ -169,7 +169,7 @@ public class FDFSAttachmentServiceImpl implements FDFSAttachmentService {
 			//path = path.replace("!", "");
 			log.info("读取fdfs配置文件:" + configPath);
 
-			ClientGlobal.init(configPath);
+			ClientGlobal.init(configPath,tracker_server);
 
 			trackerClient = new TrackerClient();
 			trackerServer = trackerClient.getConnection();
@@ -205,6 +205,7 @@ public class FDFSAttachmentServiceImpl implements FDFSAttachmentService {
 	private String configPath;//fastdfs 客户端配置文件
 	private String webPath;//web服务器地址
 	private boolean metaData=false;//是否保存文件属性信息
+	private String tracker_server;
 	public String getConfigPath() {
 		return configPath;
 	}
@@ -234,5 +235,13 @@ public class FDFSAttachmentServiceImpl implements FDFSAttachmentService {
 
 	public void setMetaData(boolean metaData) {
 		this.metaData = metaData;
+	}
+
+	public String getTracker_server() {
+		return tracker_server;
+	}
+
+	public void setTracker_server(String tracker_server) {
+		this.tracker_server = tracker_server;
 	}
 }

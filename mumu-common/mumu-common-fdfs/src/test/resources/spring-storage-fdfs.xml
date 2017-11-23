@@ -20,11 +20,12 @@
 	<!--<context:component-scan base-package="com.lovecws.mumu.storage.fdfs.service" />-->
 
 	<!-- fastdfs分布式文件系统 -->
-	<bean id="fdfsAttachmentService" class="com.lovecws.mumu.storage.fdfs.service.FDFSAttachmentServiceImpl"
+	<bean id="fdfsAttachmentService" class="com.lovecws.mumu.common.fdfs.service.FDFSAttachmentServiceImpl"
 		init-method="init" destroy-method="destory" scope="singleton"
 		lazy-init="true">
 		<property name="configPath" value="fdfs_client.conf" />
-		<property name="webPath" value="192.168.11.25" />
+		<property name="tracker_server" value="192.168.0.25:22122" />
+		<property name="webPath" value="192.168.0.25" />
 		<property name="metaData" value="false" />
 	</bean>
 </beans>

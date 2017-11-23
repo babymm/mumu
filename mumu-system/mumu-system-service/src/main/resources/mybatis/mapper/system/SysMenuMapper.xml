@@ -96,7 +96,7 @@
 	</select>
 	
 	<!-- 获取菜单详情 -->
-	<select id="selectByPrimaryKey" resultType="SysMenu"
+	<select id="selectByPrimaryKey" resultMap="SysMenuResultMap"
 		parameterType="map">
 		select m1.*,m2.menu_name parentMenuName
 		from sys_menu m1 left join sys_menu m2 on(m1.parent_menu_id=m2.menu_id)
