@@ -1,6 +1,6 @@
 package com.lovecws.mumu.common.security.shiro.session;
 
-import com.lovecws.mumu.common.core.utils.SerializeUtils;
+import com.lovecws.mumu.common.core.serialize.JavaSerializeUtil;
 import com.lovecws.mumu.common.redis.JedisClient;
 import org.apache.log4j.Logger;
 import org.apache.shiro.session.Session;
@@ -35,7 +35,7 @@ public class RedisSessionDAO extends AbstractSessionDAO {
         }
         
         byte[] key = getByteKey(session.getId());
-        byte[] value = SerializeUtils.serialize(session);
+        byte[] value = JavaSerializeUtil.serialize(session);
         session.setTimeout(expire*1000);
         try {
             this.jedisClient.set(key, value, expire);
@@ -63,7 +63,7 @@ public class RedisSessionDAO extends AbstractSessionDAO {
             Set<byte[]> keys = jedisClient.keys((this.keyPrefix + "*").getBytes());
             if (keys != null && keys.size() > 0) {
                 for (byte[] key : keys) {
-                    Session s = (Session) SerializeUtils.deserialize(jedisClient.get(key));
+                    Session s = (Session) JavaSerializeUtil.deserialize(jedisClient.get(key));
                     sessions.add(s);
                 }
             }
@@ -95,7 +95,7 @@ public class RedisSessionDAO extends AbstractSessionDAO {
             if (c == null) {
                 return null;
             }
-            Session s = (Session) SerializeUtils.deserialize(c);
+            Session s = (Session) JavaSerializeUtil.deserialize(c);
             return s;
         }catch (Exception e){
             e.printStackTrace();

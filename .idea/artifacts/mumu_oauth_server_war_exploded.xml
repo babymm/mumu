@@ -95,6 +95,9 @@
           <element id="library" level="project" name="Maven: xerces:xercesImpl:2.8.1" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.2" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: com.caucho:hessian:4.0.38" />
+          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.2.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling-serial:2.0.2.Final" />
           <element id="archive" name="mumu-system-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-system-api" />
           </element>

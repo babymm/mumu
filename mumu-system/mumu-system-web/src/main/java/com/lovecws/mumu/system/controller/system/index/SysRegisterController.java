@@ -1,9 +1,9 @@
 package com.lovecws.mumu.system.controller.system.index;
 
 import com.lovecws.mumu.common.core.response.ResponseEntity;
+import com.lovecws.mumu.common.core.serialize.JavaSerializeUtil;
 import com.lovecws.mumu.common.core.utils.DateUtils;
 import com.lovecws.mumu.common.core.utils.SecurityUtil;
-import com.lovecws.mumu.common.core.utils.SerializeUtils;
 import com.lovecws.mumu.common.core.utils.ValidateUtils;
 import com.lovecws.mumu.common.email.exception.EmailException;
 import com.lovecws.mumu.common.email.service.SimpleEmailService;
@@ -13,7 +13,6 @@ import com.lovecws.mumu.common.sms.exception.SMSException;
 import com.lovecws.mumu.common.sms.service.JPushSMSService;
 import com.lovecws.mumu.system.entity.SysUser;
 import com.lovecws.mumu.system.service.SysUserService;
-import org.apache.commons.lang3.RandomUtils;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,11 +22,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
+
+;
 
 /**
  * Created by Administrator on 2017/8/15/015.
@@ -276,7 +276,7 @@ public class SysRegisterController {
             paramMap.put("email",email);
             paramMap.put("date",new Date());
             //生成验证码
-            String checkcode = SecurityUtil.encryptBASE64(SerializeUtils.serialize(paramMap));
+            String checkcode = SecurityUtil.encryptBASE64(JavaSerializeUtil.serialize(paramMap));
             modelMap.put("VERIFYURL", basePath + "system/register/mailprove?checkcode=" + checkcode);
             modelMap.put("LOGINURL",basePath+"system/login");
             modelMap.put("OFFICIALURL",basePath);
@@ -325,7 +325,7 @@ public class SysRegisterController {
         }
         //获取校验参数
         byte[] bytes = SecurityUtil.decryptBASE64(checkcode);
-        Map<String,Object> paramMap = ( Map<String,Object>)SerializeUtils.deserialize(bytes);
+        Map<String,Object> paramMap = ( Map<String,Object>) JavaSerializeUtil.deserialize(bytes);
         String email = (String) paramMap.get("email");
         Date date = (Date) paramMap.get("date");
         model.addAttribute("contact", email);

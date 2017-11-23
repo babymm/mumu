@@ -1,6 +1,6 @@
 package com.lovecws.mumu.common.security.shiro.session;
 
-import com.lovecws.mumu.common.core.utils.SerializeUtils;
+import com.lovecws.mumu.common.core.serialize.JavaSerializeUtil;
 import com.lovecws.mumu.common.redis.JedisClient;
 import org.apache.log4j.Logger;
 import org.apache.shiro.cache.Cache;
@@ -76,7 +76,7 @@ public class RedisCache<K,V> implements Cache<K,V> {
             String preKey = this.keyPrefix + key;
             return preKey.getBytes();
         }else{
-            return SerializeUtils.serialize(key);
+            return JavaSerializeUtil.serialize(key);
         }
     }
 
@@ -88,7 +88,7 @@ public class RedisCache<K,V> implements Cache<K,V> {
                 return null;
             }else{
                 byte[] rawValue = cache.get(getByteKey(key));
-                V value = (V)SerializeUtils.deserialize(rawValue);
+                V value = (V)JavaSerializeUtil.deserialize(rawValue);
                 return value;
             }
         } catch (Throwable t) {
@@ -101,7 +101,7 @@ public class RedisCache<K,V> implements Cache<K,V> {
     public V put(K key, V value) throws CacheException {
         logger.debug("根据key从存储 key [" + key + "]");
         try {
-            cache.set(getByteKey(key), SerializeUtils.serialize(value));
+            cache.set(getByteKey(key), JavaSerializeUtil.serialize(value));
             return value;
         } catch (Throwable t) {
             throw new CacheException(t);

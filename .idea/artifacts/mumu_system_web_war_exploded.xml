@@ -93,6 +93,9 @@
           <element id="library" level="project" name="Maven: net.coobird:thumbnailator:0.4.8" />
           <element id="library" level="project" name="Maven: com.jcraft:jsch:0.1.53" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:fluent-hc:4.3.5" />
+          <element id="library" level="project" name="Maven: com.caucho:hessian:4.0.38" />
+          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.2.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.marshalling:jboss-marshalling-serial:2.0.2.Final" />
           <element id="archive" name="mumu-common-redis-1.0-SNAPSHOT.jar">
             <element id="module-output" name="mumu-common-redis" />
           </element>

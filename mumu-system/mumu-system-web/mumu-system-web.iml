@@ -128,6 +128,9 @@
     <orderEntry type="library" name="Maven: net.coobird:thumbnailator:0.4.8" level="project" />
     <orderEntry type="library" name="Maven: com.jcraft:jsch:0.1.53" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:fluent-hc:4.3.5" level="project" />
+    <orderEntry type="library" name="Maven: com.caucho:hessian:4.0.38" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling-serial:2.0.2.Final" level="project" />
     <orderEntry type="module" module-name="mumu-common-redis" />
     <orderEntry type="module" module-name="mumu-common-fdfs" />
     <orderEntry type="module" module-name="mumu-common-security" />

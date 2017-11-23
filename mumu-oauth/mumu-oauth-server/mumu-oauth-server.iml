@@ -126,6 +126,9 @@
     <orderEntry type="library" name="Maven: xerces:xercesImpl:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.2" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.caucho:hessian:4.0.38" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling-serial:2.0.2.Final" level="project" />
     <orderEntry type="module" module-name="mumu-system-api" />
     <orderEntry type="module" module-name="mumu-system-service" />
   </component>

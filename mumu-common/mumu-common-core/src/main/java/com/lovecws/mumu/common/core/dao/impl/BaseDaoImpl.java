@@ -329,7 +329,7 @@ public abstract class BaseDaoImpl<T> extends SqlSessionDaoSupport implements Bas
     }
     
     @Override
-    public List<T> listSimplePage(PageParam pageParam,Map<String, Object> paramMap){
+    public List<T> listSimplePage(PageParam pageParam, Map<String, Object> paramMap){
     	if (paramMap == null) {
             paramMap = new HashMap<String, Object>();
         }
