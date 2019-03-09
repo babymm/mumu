@@ -1,6 +1,6 @@
 package com.lovecws.mumu.oauth.server.service.impl;
 
-import com.lovecws.mumu.common.core.utils.SerializeUtils;
+import com.lovecws.mumu.common.core.serialize.JavaSerializeUtil;
 import com.lovecws.mumu.common.redis.JedisClient;
 import com.lovecws.mumu.oauth.server.entity.OauthClient;
 import com.lovecws.mumu.oauth.server.service.ClientService;
@@ -31,13 +31,13 @@ public class ClientServiceImpl implements ClientService {
         client.setId(id);
         client.setClientId(UUID.randomUUID().toString());
         client.setClientSecret(UUID.randomUUID().toString());
-        jedisClient.hset(MUMU_OAUTH_CLIENT.getBytes(), client.getId().toString().getBytes(),SerializeUtils.serialize(client));
+        jedisClient.hset(MUMU_OAUTH_CLIENT.getBytes(), client.getId().toString().getBytes(),JavaSerializeUtil.serialize(client));
         return client;
     }
 
     @Override
     public OauthClient updateClient(OauthClient client) {
-        jedisClient.hset(MUMU_OAUTH_CLIENT.getBytes(), client.getId().toString().getBytes(),SerializeUtils.serialize(client));
+        jedisClient.hset(MUMU_OAUTH_CLIENT.getBytes(), client.getId().toString().getBytes(),JavaSerializeUtil.serialize(client));
         return client;
     }
 
@@ -49,7 +49,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public OauthClient findOne(Long clientId) {
         byte[] clientBytes = jedisClient.hget(MUMU_OAUTH_CLIENT.getBytes(), clientId.toString().getBytes());
-        return (OauthClient)SerializeUtils.deserialize(clientBytes);
+        return (OauthClient) JavaSerializeUtil.deserialize(clientBytes);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class ClientServiceImpl implements ClientService {
         Map<byte[], byte[]> clientMaps = jedisClient.hgetall(MUMU_OAUTH_CLIENT.getBytes());
         List<OauthClient> clients=new ArrayList<OauthClient>();
         for (Map.Entry<byte[], byte[]> entry:clientMaps.entrySet()){
-            clients.add((OauthClient)SerializeUtils.deserialize(entry.getValue()));
+            clients.add((OauthClient)JavaSerializeUtil.deserialize(entry.getValue()));
         }
         return clients;
     }
@@ -67,7 +67,7 @@ public class ClientServiceImpl implements ClientService {
         Map<byte[], byte[]> clientMaps = jedisClient.hgetall(MUMU_OAUTH_CLIENT.getBytes());
         List<OauthClient> clients=new ArrayList<OauthClient>();
         for (Map.Entry<byte[], byte[]> entry:clientMaps.entrySet()){
-            OauthClient client = (OauthClient) SerializeUtils.deserialize(entry.getValue());
+            OauthClient client = (OauthClient) JavaSerializeUtil.deserialize(entry.getValue());
             if(client.getClientId().equals(clientId)){
                 return client;
             }
@@ -80,7 +80,7 @@ public class ClientServiceImpl implements ClientService {
         Map<byte[], byte[]> clientMaps = jedisClient.hgetall(MUMU_OAUTH_CLIENT.getBytes());
         List<OauthClient> clients=new ArrayList<OauthClient>();
         for (Map.Entry<byte[], byte[]> entry:clientMaps.entrySet()){
-            OauthClient client = (OauthClient) SerializeUtils.deserialize(entry.getValue());
+            OauthClient client = (OauthClient) JavaSerializeUtil.deserialize(entry.getValue());
             if(client.getClientSecret().equals(clientSecret)){
                 return client;
             }

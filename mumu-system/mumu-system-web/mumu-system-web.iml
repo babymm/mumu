@@ -149,5 +149,6 @@
     <orderEntry type="module" module-name="mumu-system-service" />
     <orderEntry type="module" module-name="mumu-data-api" />
     <orderEntry type="module" module-name="mumu-data-service" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.6.11" level="project" />
   </component>
 </module>

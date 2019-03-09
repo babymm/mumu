@@ -117,5 +117,6 @@
     <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling:2.0.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.marshalling:jboss-marshalling-serial:2.0.2.Final" level="project" />
     <orderEntry type="module" module-name="mumu-system-api" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.6.11" level="project" />
   </component>
 </module>

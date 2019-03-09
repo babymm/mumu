@@ -255,10 +255,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
@@ -329,6 +325,7 @@
             <groupId>com.lovecws.mumu</groupId>
             <artifactId>mumu-data-service</artifactId>
         </dependency>
+
     </dependencies>
     <build>
         <finalName>system</finalName>

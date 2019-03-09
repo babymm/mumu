@@ -24,5 +24,9 @@
             <artifactId>mumu-common-core</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.lovecws.mumu</groupId>
+            <artifactId>mumu-common-core</artifactId>
+        </dependency>
     </dependencies>
 </project>

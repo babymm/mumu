@@ -40,5 +40,6 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient-cache:4.5.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.6.11" level="project" />
   </component>
 </module>

@@ -145,5 +145,6 @@
     <orderEntry type="module" module-name="mumu-common-template" />
     <orderEntry type="module" module-name="mumu-cms-api" />
     <orderEntry type="module" module-name="mumu-cms-service" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.6.11" level="project" />
   </component>
 </module>
